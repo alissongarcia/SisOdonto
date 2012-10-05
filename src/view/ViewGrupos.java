@@ -4,7 +4,6 @@
  */
 package view;
 
-
 import javax.swing.JFrame;
 import negocio.Grupo_I;
 
@@ -67,7 +66,6 @@ public class ViewGrupos extends JFrame {
     private javax.swing.JLabel rotuloQuestionario;
     private javax.swing.JLabel rotuloResultado;
     private javax.swing.JButton botaoDiagnosticar;
-    
     public Grupo_I grupo = new Grupo_I();
     String aux = "";
     int rq3, somaq8, somaq10, rq1, rq4a, rq4b, rq4c, rq4d;
@@ -255,84 +253,84 @@ public class ViewGrupos extends JFrame {
 
     private void configurarBotoes() {
         botaoDiagnosticar.addActionListener(new java.awt.event.ActionListener() {
+
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                String rqe3= ComboBoxRespostaQE3.getSelectedItem().toString();
-                if("sim".equalsIgnoreCase(rqe3)){
-                    rq3=1;
+                String rqe3 = ComboBoxRespostaQE3.getSelectedItem().toString();
+                if ("sim".equalsIgnoreCase(rqe3)) {
+                    rq3 = 1;
+                } else {
+                    rq3 = 0;
                 }
-                else{
-                    rq3=0;
+                String rqe8ald = "";
+                String rqe8ale = "";
+                int cont = 0;
+
+                rqe8ald = ComboBoxQE8AD.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(rqe8ald)) {
+                    cont++;
                 }
-                String rqe8ald="";
-                String rqe8ale="";
-                int cont= 0;
-                
-                rqe8ald= ComboBoxQE8AD.getSelectedItem().toString();
-                if(!"O".equalsIgnoreCase(rqe8ald)){
+                rqe8ale = ComboBoxQE8AE.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(rqe8ale)) {
                     cont++;
-                }                
-                rqe8ale= ComboBoxQE8AE.getSelectedItem().toString();
-                if(!"O".equalsIgnoreCase(rqe8ale)){
+                }
+
+                rqe8ald = ComboBoxQE8BD.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(rqe8ald)) {
                     cont++;
-                }         
-                
-                rqe8ald= ComboBoxQE8BD.getSelectedItem().toString();
-                if(!"O".equalsIgnoreCase(rqe8ald)){
+                }
+                rqe8ale = ComboBoxQE8BE.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(rqe8ale)) {
                     cont++;
-                }                
-                rqe8ale= ComboBoxQE8BE.getSelectedItem().toString();
-                if(!"O".equalsIgnoreCase(rqe8ale)){
+                }
+
+                rqe8ald = ComboBoxQE8CD.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(rqe8ald)) {
                     cont++;
-                } 
-                
-                rqe8ald= ComboBoxQE8CD.getSelectedItem().toString();
-                if(!"O".equalsIgnoreCase(rqe8ald)){
+                }
+                rqe8ale = ComboBoxQE8CE.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(rqe8ale)) {
                     cont++;
-                }                
-                rqe8ale= ComboBoxQE8CE.getSelectedItem().toString();
-                if(!"O".equalsIgnoreCase(rqe8ale)){
+                }
+
+                rqe8ald = ComboBoxQE8DD.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(rqe8ald)) {
                     cont++;
-                } 
-                
-                rqe8ald= ComboBoxQE8DD.getSelectedItem().toString();
-                if(!"O".equalsIgnoreCase(rqe8ald)){
+                }
+                rqe8ale = ComboBoxQE8DE.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(rqe8ale)) {
                     cont++;
-                }                
-                rqe8ale= ComboBoxQE8DE.getSelectedItem().toString();
-                if(!"O".equalsIgnoreCase(rqe8ale)){
+                }
+
+                rqe8ald = ComboBoxQE8ED.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(rqe8ald)) {
                     cont++;
-                } 
-                
-                rqe8ald= ComboBoxQE8ED.getSelectedItem().toString();
-                if(!"O".equalsIgnoreCase(rqe8ald)){
+                }
+                rqe8ale = ComboBoxQE8EE.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(rqe8ale)) {
                     cont++;
-                }                
-                rqe8ale= ComboBoxQE8EE.getSelectedItem().toString();
-                if(!"O".equalsIgnoreCase(rqe8ale)){
+                }
+
+                rqe8ald = ComboBoxQE8FD.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(rqe8ald)) {
                     cont++;
-                } 
-                
-                rqe8ald= ComboBoxQE8FD.getSelectedItem().toString();
-                if(!"O".equalsIgnoreCase(rqe8ald)){
+                }
+                rqe8ale = ComboBoxQE8FE.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(rqe8ale)) {
                     cont++;
-                }                
-                rqe8ale= ComboBoxQE8FE.getSelectedItem().toString();
-                if(!"O".equalsIgnoreCase(rqe8ale)){
+                }
+
+                rqe8ald = ComboBoxQE8GD.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(rqe8ald)) {
                     cont++;
-                } 
-                
-                rqe8ald= ComboBoxQE8GD.getSelectedItem().toString();
-                if(!"O".equalsIgnoreCase(rqe8ald)){
+                }
+                rqe8ale = ComboBoxQE8GE.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(rqe8ale)) {
                     cont++;
-                }                
-                rqe8ale= ComboBoxQE8GE.getSelectedItem().toString();
-                if(!"O".equalsIgnoreCase(rqe8ale)){
-                    cont++;
-                }             
-                
+                }
+
                 grupo.diagnostico(rq3, cont, 0, 0, 0, 0, 0, 0);
-                
-                
+
+
             }
         });
     }
@@ -344,233 +342,27 @@ public class ViewGrupos extends JFrame {
         javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
         jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
         jInternalFrame1Layout.setHorizontalGroup(
-                jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGap(0, 0, Short.MAX_VALUE));
+                jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 0, Short.MAX_VALUE));
         jInternalFrame1Layout.setVerticalGroup(
-                jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGap(0, 0, Short.MAX_VALUE));
+                jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 0, Short.MAX_VALUE));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         javax.swing.GroupLayout PanelQuestionariosLayout = new javax.swing.GroupLayout(PanelQuestionarios);
         PanelQuestionarios.setLayout(PanelQuestionariosLayout);
         PanelQuestionariosLayout.setHorizontalGroup(
-                PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(PanelQuestionariosLayout.createSequentialGroup()
-                .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(PanelQuestionariosLayout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(rotuloBQE8)
-                .addComponent(rotuloCQE8)
-                .addComponent(rotuloDQE8)
-                .addComponent(rotuloEQE8)
-                .addComponent(rotuloFQE8)
-                .addComponent(rotuloAQE8)
-                .addComponent(rotuloGQE8))
-                .addGap(51, 51, 51)
-                .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(ComboBoxQE8AD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(rotuloLDQE8)
-                .addComponent(ComboBoxQE8BD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(ComboBoxQE8CD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(ComboBoxQE8DD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(ComboBoxQE8ED, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(ComboBoxQE8FD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(ComboBoxQE8GD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
-                .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(ComboBoxQE8GE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(ComboBoxQE8FE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(ComboBoxQE8EE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(ComboBoxQE8DE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(ComboBoxQE8CE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(rotuloLEQE8)
-                .addComponent(ComboBoxQE8AE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(ComboBoxQE8BE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(PanelQuestionariosLayout.createSequentialGroup()
-                .addGap(225, 225, 225)
-                .addComponent(rotuloQuestionario))
-                .addGroup(PanelQuestionariosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(rotuloPerguntas))
-                .addGroup(PanelQuestionariosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(QE3))
-                .addGroup(PanelQuestionariosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(rotuloQE10))
-                .addGroup(PanelQuestionariosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(rotuloQE8))
-                .addGroup(PanelQuestionariosLayout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(rotuloQE10A)
-                .addComponent(rotuloQE10B))
-                .addGap(85, 85, 85)
-                .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(rotuloLDQE10)
-                .addComponent(ComboBoxQE10AD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(ComboBoxQE10BD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(38, 38, 38)
-                .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(ComboBoxQE10BE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(rotuloLEQE10)
-                .addComponent(ComboBoxQE10AE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(PanelQuestionariosLayout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(ComboBoxRespostaQE3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(PanelQuestionariosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(rotuloQE1))
-                .addGroup(PanelQuestionariosLayout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(ComboBoxQE1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(PanelQuestionariosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(rotuloQE4))
-                .addGroup(PanelQuestionariosLayout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(PanelQuestionariosLayout.createSequentialGroup()
-                .addComponent(rotuloQE4A)
-                .addGap(18, 18, 18)
-                .addComponent(campoQE4A, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(PanelQuestionariosLayout.createSequentialGroup()
-                .addComponent(rotuloQE4B)
-                .addGap(18, 18, 18)
-                .addComponent(campoQE4B, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(PanelQuestionariosLayout.createSequentialGroup()
-                .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(rotuloQE4C)
-                .addComponent(rotuloQE4D))
-                .addGap(18, 18, 18)
-                .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(campoQE4D, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(campoQE4C, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGroup(PanelQuestionariosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(botaoDiagnosticar)
-                .addGap(47, 47, 47)
-                .addComponent(rotuloResultado)))
-                .addContainerGap(78, Short.MAX_VALUE)));
+                PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGroup(PanelQuestionariosLayout.createSequentialGroup().addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGroup(PanelQuestionariosLayout.createSequentialGroup().addGap(37, 37, 37).addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addComponent(rotuloBQE8).addComponent(rotuloCQE8).addComponent(rotuloDQE8).addComponent(rotuloEQE8).addComponent(rotuloFQE8).addComponent(rotuloAQE8).addComponent(rotuloGQE8)).addGap(51, 51, 51).addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addComponent(ComboBoxQE8AD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE).addComponent(rotuloLDQE8).addComponent(ComboBoxQE8BD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE).addComponent(ComboBoxQE8CD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE).addComponent(ComboBoxQE8DD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE).addComponent(ComboBoxQE8ED, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE).addComponent(ComboBoxQE8FD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE).addComponent(ComboBoxQE8GD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)).addGap(29, 29, 29).addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addComponent(ComboBoxQE8GE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE).addComponent(ComboBoxQE8FE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE).addComponent(ComboBoxQE8EE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE).addComponent(ComboBoxQE8DE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE).addComponent(ComboBoxQE8CE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE).addComponent(rotuloLEQE8).addComponent(ComboBoxQE8AE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE).addComponent(ComboBoxQE8BE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))).addGroup(PanelQuestionariosLayout.createSequentialGroup().addGap(225, 225, 225).addComponent(rotuloQuestionario)).addGroup(PanelQuestionariosLayout.createSequentialGroup().addContainerGap().addComponent(rotuloPerguntas)).addGroup(PanelQuestionariosLayout.createSequentialGroup().addContainerGap().addComponent(QE3)).addGroup(PanelQuestionariosLayout.createSequentialGroup().addContainerGap().addComponent(rotuloQE10)).addGroup(PanelQuestionariosLayout.createSequentialGroup().addContainerGap().addComponent(rotuloQE8)).addGroup(PanelQuestionariosLayout.createSequentialGroup().addGap(35, 35, 35).addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addComponent(rotuloQE10A).addComponent(rotuloQE10B)).addGap(85, 85, 85).addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addComponent(rotuloLDQE10).addComponent(ComboBoxQE10AD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE).addComponent(ComboBoxQE10BD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)).addGap(38, 38, 38).addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addComponent(ComboBoxQE10BE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE).addComponent(rotuloLEQE10).addComponent(ComboBoxQE10AE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))).addGroup(PanelQuestionariosLayout.createSequentialGroup().addGap(38, 38, 38).addComponent(ComboBoxRespostaQE3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)).addGroup(PanelQuestionariosLayout.createSequentialGroup().addContainerGap().addComponent(rotuloQE1)).addGroup(PanelQuestionariosLayout.createSequentialGroup().addGap(35, 35, 35).addComponent(ComboBoxQE1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)).addGroup(PanelQuestionariosLayout.createSequentialGroup().addContainerGap().addComponent(rotuloQE4)).addGroup(PanelQuestionariosLayout.createSequentialGroup().addGap(36, 36, 36).addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGroup(PanelQuestionariosLayout.createSequentialGroup().addComponent(rotuloQE4A).addGap(18, 18, 18).addComponent(campoQE4A, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)).addGroup(PanelQuestionariosLayout.createSequentialGroup().addComponent(rotuloQE4B).addGap(18, 18, 18).addComponent(campoQE4B, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)).addGroup(PanelQuestionariosLayout.createSequentialGroup().addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addComponent(rotuloQE4C).addComponent(rotuloQE4D)).addGap(18, 18, 18).addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addComponent(campoQE4D, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE).addComponent(campoQE4C, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))))).addGroup(PanelQuestionariosLayout.createSequentialGroup().addContainerGap().addComponent(botaoDiagnosticar).addGap(47, 47, 47).addComponent(rotuloResultado))).addContainerGap(78, Short.MAX_VALUE)));
         PanelQuestionariosLayout.setVerticalGroup(
-                PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(PanelQuestionariosLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(rotuloQuestionario)
-                .addGap(57, 57, 57)
-                .addComponent(rotuloPerguntas)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(QE3)
-                .addGap(11, 11, 11)
-                .addComponent(ComboBoxRespostaQE3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(rotuloQE8)
-                .addGap(9, 9, 9)
-                .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(rotuloLDQE8)
-                .addComponent(rotuloLEQE8))
-                .addGap(10, 10, 10)
-                .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(rotuloAQE8)
-                .addComponent(ComboBoxQE8AD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(ComboBoxQE8AE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(rotuloBQE8)
-                .addComponent(ComboBoxQE8BD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(ComboBoxQE8BE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(rotuloCQE8)
-                .addComponent(ComboBoxQE8CD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(ComboBoxQE8CE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(rotuloDQE8)
-                .addComponent(ComboBoxQE8DD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(ComboBoxQE8DE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(rotuloEQE8)
-                .addComponent(ComboBoxQE8ED, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(ComboBoxQE8EE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(rotuloFQE8)
-                .addComponent(ComboBoxQE8FD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(ComboBoxQE8FE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(rotuloGQE8)
-                .addComponent(ComboBoxQE8GD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(ComboBoxQE8GE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(PanelQuestionariosLayout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(rotuloQE10)
-                .addGap(28, 28, 28))
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelQuestionariosLayout.createSequentialGroup()
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(rotuloLDQE10)
-                .addComponent(rotuloLEQE10))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(PanelQuestionariosLayout.createSequentialGroup()
-                .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(rotuloQE10A)
-                .addComponent(ComboBoxQE10AD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(rotuloQE10B)
-                .addComponent(ComboBoxQE10BD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(PanelQuestionariosLayout.createSequentialGroup()
-                .addComponent(ComboBoxQE10AE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(ComboBoxQE10BE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(44, 44, 44)
-                .addComponent(rotuloQE1)
-                .addGap(18, 18, 18)
-                .addComponent(ComboBoxQE1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(rotuloQE4)
-                .addGap(18, 18, 18)
-                .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(rotuloQE4A)
-                .addComponent(campoQE4A, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(rotuloQE4B)
-                .addComponent(campoQE4B, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(rotuloQE4C)
-                .addComponent(campoQE4C, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(rotuloQE4D)
-                .addComponent(campoQE4D, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(63, 63, 63)
-                .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(botaoDiagnosticar)
-                .addComponent(rotuloResultado))
-                .addContainerGap(117, Short.MAX_VALUE)));
+                PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGroup(PanelQuestionariosLayout.createSequentialGroup().addGap(21, 21, 21).addComponent(rotuloQuestionario).addGap(57, 57, 57).addComponent(rotuloPerguntas).addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED).addComponent(QE3).addGap(11, 11, 11).addComponent(ComboBoxRespostaQE3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE).addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED).addComponent(rotuloQE8).addGap(9, 9, 9).addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE).addComponent(rotuloLDQE8).addComponent(rotuloLEQE8)).addGap(10, 10, 10).addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE).addComponent(rotuloAQE8).addComponent(ComboBoxQE8AD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE).addComponent(ComboBoxQE8AE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)).addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED).addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE).addComponent(rotuloBQE8).addComponent(ComboBoxQE8BD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE).addComponent(ComboBoxQE8BE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)).addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED).addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE).addComponent(rotuloCQE8).addComponent(ComboBoxQE8CD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE).addComponent(ComboBoxQE8CE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)).addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED).addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE).addComponent(rotuloDQE8).addComponent(ComboBoxQE8DD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE).addComponent(ComboBoxQE8DE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)).addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED).addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE).addComponent(rotuloEQE8).addComponent(ComboBoxQE8ED, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE).addComponent(ComboBoxQE8EE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)).addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED).addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE).addComponent(rotuloFQE8).addComponent(ComboBoxQE8FD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE).addComponent(ComboBoxQE8FE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)).addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED).addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE).addComponent(rotuloGQE8).addComponent(ComboBoxQE8GD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE).addComponent(ComboBoxQE8GE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)).addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGroup(PanelQuestionariosLayout.createSequentialGroup().addGap(43, 43, 43).addComponent(rotuloQE10).addGap(28, 28, 28)).addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelQuestionariosLayout.createSequentialGroup().addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED).addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE).addComponent(rotuloLDQE10).addComponent(rotuloLEQE10)).addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))).addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGroup(PanelQuestionariosLayout.createSequentialGroup().addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE).addComponent(rotuloQE10A).addComponent(ComboBoxQE10AD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)).addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED).addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE).addComponent(rotuloQE10B).addComponent(ComboBoxQE10BD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))).addGroup(PanelQuestionariosLayout.createSequentialGroup().addComponent(ComboBoxQE10AE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE).addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED).addComponent(ComboBoxQE10BE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))).addGap(44, 44, 44).addComponent(rotuloQE1).addGap(18, 18, 18).addComponent(ComboBoxQE1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE).addGap(18, 18, 18).addComponent(rotuloQE4).addGap(18, 18, 18).addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE).addComponent(rotuloQE4A).addComponent(campoQE4A, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)).addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED).addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE).addComponent(rotuloQE4B).addComponent(campoQE4B, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)).addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED).addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE).addComponent(rotuloQE4C).addComponent(campoQE4C, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)).addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED).addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE).addComponent(rotuloQE4D).addComponent(campoQE4D, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)).addGap(63, 63, 63).addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE).addComponent(botaoDiagnosticar).addComponent(rotuloResultado)).addContainerGap(117, Short.MAX_VALUE)));
 
         jScrollPane1.setViewportView(PanelQuestionarios);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 795, Short.MAX_VALUE));
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 795, Short.MAX_VALUE));
         layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 915, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE)));
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 584, javax.swing.GroupLayout.PREFERRED_SIZE));
 
         pack();
     }
