@@ -79,6 +79,9 @@ public class TelaGrupoI extends javax.swing.JFrame {
         campoQE4D = new javax.swing.JFormattedTextField();
         botaoDiagnosticar = new javax.swing.JButton();
         rotuloResultado = new javax.swing.JLabel();
+        rotuloHQE8 = new javax.swing.JLabel();
+        ComboBoxQE8HD = new javax.swing.JComboBox();
+        ComboBoxQE8HE = new javax.swing.JComboBox();
 
         jInternalFrame1.setVisible(true);
 
@@ -216,6 +219,12 @@ public class TelaGrupoI extends javax.swing.JFrame {
 
         rotuloResultado.setText("*");
 
+        rotuloHQE8.setText("Região sumandibular posterior (pterigódeo media/suprahióide/ região anterior do digástrico) \"abaixo do queixo\"");
+
+        ComboBoxQE8HD.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3" }));
+
+        ComboBoxQE8HE.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3" }));
+
         javax.swing.GroupLayout PanelQuestionariosLayout = new javax.swing.GroupLayout(PanelQuestionarios);
         PanelQuestionarios.setLayout(PanelQuestionariosLayout);
         PanelQuestionariosLayout.setHorizontalGroup(
@@ -231,7 +240,8 @@ public class TelaGrupoI extends javax.swing.JFrame {
                             .addComponent(rotuloEQE8)
                             .addComponent(rotuloFQE8)
                             .addComponent(rotuloAQE8)
-                            .addComponent(rotuloGQE8))
+                            .addComponent(rotuloGQE8)
+                            .addComponent(rotuloHQE8))
                         .addGap(51, 51, 51)
                         .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(ComboBoxQE8AD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -241,7 +251,8 @@ public class TelaGrupoI extends javax.swing.JFrame {
                             .addComponent(ComboBoxQE8DD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(ComboBoxQE8ED, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(ComboBoxQE8FD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ComboBoxQE8GD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(ComboBoxQE8GD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ComboBoxQE8HD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(29, 29, 29)
                         .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(ComboBoxQE8GE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -251,7 +262,8 @@ public class TelaGrupoI extends javax.swing.JFrame {
                             .addComponent(ComboBoxQE8CE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(rotuloLEQE8)
                             .addComponent(ComboBoxQE8AE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ComboBoxQE8BE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(ComboBoxQE8BE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ComboBoxQE8HE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(PanelQuestionariosLayout.createSequentialGroup()
                         .addGap(225, 225, 225)
                         .addComponent(rotuloQuestionario))
@@ -318,7 +330,7 @@ public class TelaGrupoI extends javax.swing.JFrame {
                         .addComponent(botaoDiagnosticar)
                         .addGap(47, 47, 47)
                         .addComponent(rotuloResultado)))
-                .addContainerGap(78, Short.MAX_VALUE))
+                .addContainerGap(226, Short.MAX_VALUE))
         );
         PanelQuestionariosLayout.setVerticalGroup(
             PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -372,13 +384,17 @@ public class TelaGrupoI extends javax.swing.JFrame {
                     .addComponent(rotuloGQE8)
                     .addComponent(ComboBoxQE8GD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ComboBoxQE8GE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PanelQuestionariosLayout.createSequentialGroup()
-                        .addGap(43, 43, 43)
+                        .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(rotuloHQE8)
+                            .addComponent(ComboBoxQE8HE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ComboBoxQE8HD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(15, 15, 15)
                         .addComponent(rotuloQE10)
                         .addGap(28, 28, 28))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelQuestionariosLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(rotuloLDQE10)
                             .addComponent(rotuloLEQE10))
@@ -431,11 +447,11 @@ public class TelaGrupoI extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 795, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1023, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 584, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 606, Short.MAX_VALUE)
         );
 
         pack();
@@ -506,6 +522,8 @@ public class TelaGrupoI extends javax.swing.JFrame {
     private javax.swing.JComboBox ComboBoxQE8FE;
     private javax.swing.JComboBox ComboBoxQE8GD;
     private javax.swing.JComboBox ComboBoxQE8GE;
+    private javax.swing.JComboBox ComboBoxQE8HD;
+    private javax.swing.JComboBox ComboBoxQE8HE;
     private javax.swing.JComboBox ComboBoxRespostaQE3;
     private javax.swing.JPanel PanelQuestionarios;
     private javax.swing.JLabel QE3;
@@ -523,6 +541,7 @@ public class TelaGrupoI extends javax.swing.JFrame {
     private javax.swing.JLabel rotuloEQE8;
     private javax.swing.JLabel rotuloFQE8;
     private javax.swing.JLabel rotuloGQE8;
+    private javax.swing.JLabel rotuloHQE8;
     private javax.swing.JLabel rotuloLDQE10;
     private javax.swing.JLabel rotuloLDQE8;
     private javax.swing.JLabel rotuloLEQE10;
