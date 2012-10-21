@@ -4,3 +4,6 @@
 /nbproject/
 /hsqldb.jar
 /build.xml
+/.settings
+/.project
+/.classpath
