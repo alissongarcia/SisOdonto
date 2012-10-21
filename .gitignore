@@ -1,7 +1,6 @@
-/nbproject/
-/bin/
-/build.xml
 /manifest.mf
-/build/
 /bdSisOdonto/
+/bin/
+/nbproject/
 /hsqldb.jar
+/build.xml
