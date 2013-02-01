@@ -12,9 +12,9 @@ public class Grupo_II {
     String diagnostico;
     int dif, MAX, ABE;
     
-    public String diagnostico(int rE5a, int med_est_abert, int med_est_fecho, int rE5b, int rE5c, int E7dir_excur_direita, int E7dir_excur_esquerda, int E7dir_Protusao, int rq14a, int E4b, int E4c, int E4d, int E6b, int E3){
+    public String diagnostico(int rE5a, int med_est_abert, int med_est_fecho, int rE5b, int rE5c, int E7_excursao_direita, int E7_excursao_esquerda, int E7_protusao, int rq14a, int E4b, int E4c, int E4d, int E6b, int E3, int E5ad, int E5bd, int E5cd, int E7_dir_exc_dir, int E7_dir_exc_esq, int E7_dir_prot){
         if(rE5a == 0 && rE5b == 0){
-            diagnostico = segundaParte(rq14a, E4b, E4c, E4d, E6b, E3);
+            diagnostico = segundaParte(rq14a, E4b, E4c, E4d, E6b, E3, E5ad, E5bd, E5cd, E7_excursao_direita, E7_excursao_esquerda, E7_protusao);
         }
         else if(rE5a > 0 && rE5b > 0){
             dif = med_est_abert - med_est_fecho;
@@ -24,65 +24,67 @@ public class Grupo_II {
                     diagnostico = "IIa DD Direita com Redução";
                 }
                 else if(rE5c == 0/*->para não*/){
-                    if(E7dir_excur_direita > 0 || E7dir_excur_esquerda > 0 || E7dir_Protusao > 0){
+                    if(E7_excursao_direita > 0 || E7_excursao_esquerda > 0 || E7_protusao > 0){
                         diagnostico = "IIa DD Direita com Redução";
                     }
                     else{
-                        diagnostico = segundaParte(rq14a, E4b, E4c, E4d, E6b, E3);
+                        diagnostico = segundaParte(rq14a, E4b, E4c, E4d, E6b, E3, E5ad, E5bd, E5cd, E7_dir_exc_dir, E7_dir_exc_esq, E7_dir_prot);
                     }
                 }
             }
             else if(dif < 5){
-                if(E7dir_excur_direita > 0 || E7dir_excur_esquerda > 0 || E7dir_Protusao > 0){
+                if(E7_excursao_direita > 0 || E7_excursao_esquerda > 0 || E7_protusao > 0){
                     diagnostico = "IIa DD Direita com Redução";
                 }
                 else{
-                    diagnostico = segundaParte(rq14a, E4b, E4c, E4d, E6b, E3);
+                    diagnostico = segundaParte(rq14a, E4b, E4c, E4d, E6b, E3, E5ad, E5bd, E5cd, E7_dir_exc_dir, E7_dir_exc_esq, E7_dir_prot);
                 }
             }
         }
         else if(rE5a > 0 || rE5b > 0){
-            if(E7dir_excur_direita > 0 || E7dir_excur_esquerda > 0 || E7dir_Protusao > 0){
+            if(E7_excursao_direita > 0 || E7_excursao_esquerda > 0 || E7_protusao > 0){
                 diagnostico = "IIa DD Direita com Redução";
             }
             else{
-                diagnostico = segundaParte(rq14a, E4b, E4c, E4d, E6b, E3);
+                diagnostico = segundaParte(rq14a, E4b, E4c, E4d, E6b, E3, E5ad, E5bd, E5cd, E7_dir_exc_dir, E7_dir_exc_esq, E7_dir_prot);
             }
         }
         
         return diagnostico;
     }
     
-    public String segundaParte(int rq14a, int E4b, int E4c, int E4d, int E6b, int E3){
+    public String segundaParte(int rq14a, int E4b, int E4c, int E4d, int E6a_b, int E3_direita_esquerda, int E5ad, int E5bd, int E5cd, int E7_excursao_direita, int E7_excursao_esquerda, int E7_protusao){
         String resultado = "";
         if(rq14a == 1){
             MAX = E4b + E4d;
             ABE = E4c - E4b;
             
             if(MAX <= 35 && ABE <= 4){
-                if(E6b < 7){
+                if(E6a_b < 7){
                     resultado = "IIb DD Direita sem redução e com limitação de abertura";
                 }
-                else if(E6b >= 7){
-                    //Tirar dúvida com o cliente sobre esse trecho
-                    if(E3 == 1){
+                
+                else{
+                    if(E3_direita_esquerda == 1){
                         resultado = "IIb DD Direita sem redução e com limitação de abertura";
                     }
-                    else if(E3 != 1){
+                    
+                    else{
                         resultado = "Sem diagnóstico do grupo II do lado Direito";
                     }
                 }
             }
             
             else if(MAX > 35 && ABE > 4){
-                if(E6b >= 7){
-                    if(/*Não entendi essa parte*/MAX == 1){
+                if(E6a_b >= 7){
+                    if(E5ad != 0 || E5bd != 0 || E5cd != 0 || E7_excursao_direita != 0 || E7_excursao_esquerda != 0 || E7_protusao != 0){
                         resultado = "IIc DD Direita sem redução e sem limitação de abertura";
                     }
-                    else if(E6b < 7){
+                    else {
                         resultado = "Sem diagnóstico do grupo II do lado Direito";
                     }
                 }
+                
             }
             //Combinação diferente das duas acima
             else{
