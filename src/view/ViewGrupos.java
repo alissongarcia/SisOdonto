@@ -607,7 +607,8 @@ public class ViewGrupos extends JFrame {
     }
 
     private void configurarBotoes() {
-
+        
+        botaoDiagnosticar.setText("Diagnosticar");
         botaoDiagnosticar.addActionListener(new java.awt.event.ActionListener() {
             @Override
             public void actionPerformed(java.awt.event.ActionEvent evt) {
