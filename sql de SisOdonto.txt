@@ -1,0 +1,73 @@
+
+
+CREATE TABLE diagnostico (
+id INTEGER NOT NULL PRIMARY KEY,
+d1 VARCHAR (40),
+d2 VARCHAR (40),
+d3 VARCHAR (40),
+d4 VARCHAR (40),
+d5 VARCHAR (40)
+
+);
+
+CREATE TABLE resposta (
+
+id INTEGER NOT NULL PRIMARY KEY,
+
+rq1 VARCHAR (40),
+rq2 VARCHAR (40),
+rq3 VARCHAR (40),
+rq4 VARCHAR (40),
+rq5 VARCHAR (40),
+
+rq6 VARCHAR (40),
+rq7 VARCHAR (40),
+rq8 VARCHAR (40),
+rq9 VARCHAR (40),
+rq10 VARCHAR (40),
+
+rq11 VARCHAR (40),
+rq12 VARCHAR (40),
+rq13 VARCHAR (40),
+rq14 VARCHAR (40),
+rq15 VARCHAR (40),
+
+rq16 VARCHAR (40),
+rq17 VARCHAR (40),
+rq18 VARCHAR (40),
+rq19 VARCHAR (40),
+rq20 VARCHAR (40),
+
+rq21 VARCHAR (40),
+rq22 VARCHAR (40),
+rq23 VARCHAR (40),
+rq24 VARCHAR (40),
+rq25 VARCHAR (40),
+rq26 VARCHAR (40)
+
+
+);
+
+
+
+CREATE TABLE paciente (
+id INTEGER NOT NULL PRIMARY KEY,
+nome VARCHAR (40),
+rua VARCHAR (40),
+raca VARCHAR (40),
+cep VARCHAR (40),
+numero INTEGER,
+bairro VARCHAR (40),
+cidade VARCHAR (40),
+uf VARCHAR (40),
+telefone VARCHAR (40),
+celular VARCHAR (40),
+sexo VARCHAR (40),
+idade INTEGER,
+naturalidade VARCHAR (40),
+nacionalidade VARCHAR (40),
+
+coddiagnostico INTEGER CONSTRAINT tbldiagnosticoFK REFERENCES diagnostico,
+codpergunta INTEGER CONSTRAINT tblrespostaFK REFERENCES resposta
+);
+

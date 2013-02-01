@@ -6,16 +6,25 @@ package modelo;
 
 import java.io.Serializable;
 import java.util.List;
-import javax.persistence.*;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author Aragon
+ * @author Carlos
  */
 @Entity
-@Table(name = "DIAGNOSTICO")
+@Table(name = "diagnostico")
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Diagnostico.findAll", query = "SELECT d FROM Diagnostico d"),
@@ -30,47 +39,33 @@ public class Diagnostico implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "ID")
-    private Long id;
-    @Basic(optional = false)
-    @Column(name = "D1")
+    @Column(name = "id")
+    private Integer id;
+    @Column(name = "d1")
     private String d1;
-    @Basic(optional = false)
-    @Column(name = "D2")
+    @Column(name = "d2")
     private String d2;
-    @Basic(optional = false)
-    @Column(name = "D3")
+    @Column(name = "d3")
     private String d3;
-    @Basic(optional = false)
-    @Column(name = "D4")
+    @Column(name = "d4")
     private String d4;
-    @Basic(optional = false)
-    @Column(name = "D5")
+    @Column(name = "d5")
     private String d5;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "iddiagnostico")
+    @OneToMany(mappedBy = "coddiagnostico")
     private List<Paciente> pacienteList;
 
     public Diagnostico() {
     }
 
-    public Diagnostico(Long id) {
+    public Diagnostico(Integer id) {
         this.id = id;
     }
 
-    public Diagnostico(Long id, String d1, String d2, String d3, String d4, String d5) {
-        this.id = id;
-        this.d1 = d1;
-        this.d2 = d2;
-        this.d3 = d3;
-        this.d4 = d4;
-        this.d5 = d5;
-    }
-
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

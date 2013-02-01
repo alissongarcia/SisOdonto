@@ -17,13 +17,12 @@ public class Main {
      */
     public static void main(String[] args) {
 
-        /*
-        ViewGrupos view = new ViewGrupos();
-        view.setVisible(true);
-        view.iniciar();
-        * 
-        */
-
+      
+         ViewGrupos view = new ViewGrupos();
+         view.setVisible(true);
+         view.iniciar();
+       
+       /*
 
         PacienteJpaController daoPaciente;
         DiagnosticoJpaController daoDiagnostico;
@@ -45,9 +44,13 @@ public class Main {
         daoPaciente = new PacienteJpaController(emf.getEmf());
         daoDiagnostico = new DiagnosticoJpaController(emf.getEmf());
         daoResposta = new RespostaJpaController(emf.getEmf());
-        
-        
-        daoPaciente.create(paciente);
+
+        try {
+            daoPaciente.create(paciente);
+        } catch (Exception e) {
+        }
+
         System.out.println(daoPaciente.getPacienteCount());
+        */
     }
 }

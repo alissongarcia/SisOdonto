@@ -4,7 +4,6 @@
  */
 package dao;
 
-import dao.exceptions.IllegalOrphanException;
 import dao.exceptions.NonexistentEntityException;
 import java.io.Serializable;
 import javax.persistence.Query;
@@ -20,7 +19,7 @@ import modelo.Diagnostico;
 
 /**
  *
- * @author Aragon
+ * @author Carlos
  */
 public class DiagnosticoJpaController implements Serializable {
 
@@ -49,12 +48,12 @@ public class DiagnosticoJpaController implements Serializable {
             diagnostico.setPacienteList(attachedPacienteList);
             em.persist(diagnostico);
             for (Paciente pacienteListPaciente : diagnostico.getPacienteList()) {
-                Diagnostico oldIddiagnosticoOfPacienteListPaciente = pacienteListPaciente.getIddiagnostico();
-                pacienteListPaciente.setIddiagnostico(diagnostico);
+                Diagnostico oldCoddiagnosticoOfPacienteListPaciente = pacienteListPaciente.getCoddiagnostico();
+                pacienteListPaciente.setCoddiagnostico(diagnostico);
                 pacienteListPaciente = em.merge(pacienteListPaciente);
-                if (oldIddiagnosticoOfPacienteListPaciente != null) {
-                    oldIddiagnosticoOfPacienteListPaciente.getPacienteList().remove(pacienteListPaciente);
-                    oldIddiagnosticoOfPacienteListPaciente = em.merge(oldIddiagnosticoOfPacienteListPaciente);
+                if (oldCoddiagnosticoOfPacienteListPaciente != null) {
+                    oldCoddiagnosticoOfPacienteListPaciente.getPacienteList().remove(pacienteListPaciente);
+                    oldCoddiagnosticoOfPacienteListPaciente = em.merge(oldCoddiagnosticoOfPacienteListPaciente);
                 }
             }
             em.getTransaction().commit();
@@ -65,7 +64,7 @@ public class DiagnosticoJpaController implements Serializable {
         }
     }
 
-    public void edit(Diagnostico diagnostico) throws IllegalOrphanException, NonexistentEntityException, Exception {
+    public void edit(Diagnostico diagnostico) throws NonexistentEntityException, Exception {
         EntityManager em = null;
         try {
             em = getEntityManager();
@@ -73,18 +72,6 @@ public class DiagnosticoJpaController implements Serializable {
             Diagnostico persistentDiagnostico = em.find(Diagnostico.class, diagnostico.getId());
             List<Paciente> pacienteListOld = persistentDiagnostico.getPacienteList();
             List<Paciente> pacienteListNew = diagnostico.getPacienteList();
-            List<String> illegalOrphanMessages = null;
-            for (Paciente pacienteListOldPaciente : pacienteListOld) {
-                if (!pacienteListNew.contains(pacienteListOldPaciente)) {
-                    if (illegalOrphanMessages == null) {
-                        illegalOrphanMessages = new ArrayList<String>();
-                    }
-                    illegalOrphanMessages.add("You must retain Paciente " + pacienteListOldPaciente + " since its iddiagnostico field is not nullable.");
-                }
-            }
-            if (illegalOrphanMessages != null) {
-                throw new IllegalOrphanException(illegalOrphanMessages);
-            }
             List<Paciente> attachedPacienteListNew = new ArrayList<Paciente>();
             for (Paciente pacienteListNewPacienteToAttach : pacienteListNew) {
                 pacienteListNewPacienteToAttach = em.getReference(pacienteListNewPacienteToAttach.getClass(), pacienteListNewPacienteToAttach.getId());
@@ -93,14 +80,20 @@ public class DiagnosticoJpaController implements Serializable {
             pacienteListNew = attachedPacienteListNew;
             diagnostico.setPacienteList(pacienteListNew);
             diagnostico = em.merge(diagnostico);
+            for (Paciente pacienteListOldPaciente : pacienteListOld) {
+                if (!pacienteListNew.contains(pacienteListOldPaciente)) {
+                    pacienteListOldPaciente.setCoddiagnostico(null);
+                    pacienteListOldPaciente = em.merge(pacienteListOldPaciente);
+                }
+            }
             for (Paciente pacienteListNewPaciente : pacienteListNew) {
                 if (!pacienteListOld.contains(pacienteListNewPaciente)) {
-                    Diagnostico oldIddiagnosticoOfPacienteListNewPaciente = pacienteListNewPaciente.getIddiagnostico();
-                    pacienteListNewPaciente.setIddiagnostico(diagnostico);
+                    Diagnostico oldCoddiagnosticoOfPacienteListNewPaciente = pacienteListNewPaciente.getCoddiagnostico();
+                    pacienteListNewPaciente.setCoddiagnostico(diagnostico);
                     pacienteListNewPaciente = em.merge(pacienteListNewPaciente);
-                    if (oldIddiagnosticoOfPacienteListNewPaciente != null && !oldIddiagnosticoOfPacienteListNewPaciente.equals(diagnostico)) {
-                        oldIddiagnosticoOfPacienteListNewPaciente.getPacienteList().remove(pacienteListNewPaciente);
-                        oldIddiagnosticoOfPacienteListNewPaciente = em.merge(oldIddiagnosticoOfPacienteListNewPaciente);
+                    if (oldCoddiagnosticoOfPacienteListNewPaciente != null && !oldCoddiagnosticoOfPacienteListNewPaciente.equals(diagnostico)) {
+                        oldCoddiagnosticoOfPacienteListNewPaciente.getPacienteList().remove(pacienteListNewPaciente);
+                        oldCoddiagnosticoOfPacienteListNewPaciente = em.merge(oldCoddiagnosticoOfPacienteListNewPaciente);
                     }
                 }
             }
@@ -108,7 +101,7 @@ public class DiagnosticoJpaController implements Serializable {
         } catch (Exception ex) {
             String msg = ex.getLocalizedMessage();
             if (msg == null || msg.length() == 0) {
-                Long id = diagnostico.getId();
+                Integer id = diagnostico.getId();
                 if (findDiagnostico(id) == null) {
                     throw new NonexistentEntityException("The diagnostico with id " + id + " no longer exists.");
                 }
@@ -121,7 +114,7 @@ public class DiagnosticoJpaController implements Serializable {
         }
     }
 
-    public void destroy(Long id) throws IllegalOrphanException, NonexistentEntityException {
+    public void destroy(Integer id) throws NonexistentEntityException {
         EntityManager em = null;
         try {
             em = getEntityManager();
@@ -133,16 +126,10 @@ public class DiagnosticoJpaController implements Serializable {
             } catch (EntityNotFoundException enfe) {
                 throw new NonexistentEntityException("The diagnostico with id " + id + " no longer exists.", enfe);
             }
-            List<String> illegalOrphanMessages = null;
-            List<Paciente> pacienteListOrphanCheck = diagnostico.getPacienteList();
-            for (Paciente pacienteListOrphanCheckPaciente : pacienteListOrphanCheck) {
-                if (illegalOrphanMessages == null) {
-                    illegalOrphanMessages = new ArrayList<String>();
-                }
-                illegalOrphanMessages.add("This Diagnostico (" + diagnostico + ") cannot be destroyed since the Paciente " + pacienteListOrphanCheckPaciente + " in its pacienteList field has a non-nullable iddiagnostico field.");
-            }
-            if (illegalOrphanMessages != null) {
-                throw new IllegalOrphanException(illegalOrphanMessages);
+            List<Paciente> pacienteList = diagnostico.getPacienteList();
+            for (Paciente pacienteListPaciente : pacienteList) {
+                pacienteListPaciente.setCoddiagnostico(null);
+                pacienteListPaciente = em.merge(pacienteListPaciente);
             }
             em.remove(diagnostico);
             em.getTransaction().commit();
@@ -177,7 +164,7 @@ public class DiagnosticoJpaController implements Serializable {
         }
     }
 
-    public Diagnostico findDiagnostico(Long id) {
+    public Diagnostico findDiagnostico(Integer id) {
         EntityManager em = getEntityManager();
         try {
             return em.find(Diagnostico.class, id);

@@ -19,7 +19,7 @@ import modelo.Paciente;
 
 /**
  *
- * @author Aragon
+ * @author Carlos
  */
 public class PacienteJpaController implements Serializable {
 
@@ -37,24 +37,24 @@ public class PacienteJpaController implements Serializable {
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            Resposta idresposta = paciente.getIdresposta();
-            if (idresposta != null) {
-                idresposta = em.getReference(idresposta.getClass(), idresposta.getId());
-                paciente.setIdresposta(idresposta);
+            Resposta codpergunta = paciente.getCodpergunta();
+            if (codpergunta != null) {
+                codpergunta = em.getReference(codpergunta.getClass(), codpergunta.getId());
+                paciente.setCodpergunta(codpergunta);
             }
-            Diagnostico iddiagnostico = paciente.getIddiagnostico();
-            if (iddiagnostico != null) {
-                iddiagnostico = em.getReference(iddiagnostico.getClass(), iddiagnostico.getId());
-                paciente.setIddiagnostico(iddiagnostico);
+            Diagnostico coddiagnostico = paciente.getCoddiagnostico();
+            if (coddiagnostico != null) {
+                coddiagnostico = em.getReference(coddiagnostico.getClass(), coddiagnostico.getId());
+                paciente.setCoddiagnostico(coddiagnostico);
             }
             em.persist(paciente);
-            if (idresposta != null) {
-                idresposta.getPacienteList().add(paciente);
-                idresposta = em.merge(idresposta);
+            if (codpergunta != null) {
+                codpergunta.getPacienteList().add(paciente);
+                codpergunta = em.merge(codpergunta);
             }
-            if (iddiagnostico != null) {
-                iddiagnostico.getPacienteList().add(paciente);
-                iddiagnostico = em.merge(iddiagnostico);
+            if (coddiagnostico != null) {
+                coddiagnostico.getPacienteList().add(paciente);
+                coddiagnostico = em.merge(coddiagnostico);
             }
             em.getTransaction().commit();
         } finally {
@@ -70,40 +70,40 @@ public class PacienteJpaController implements Serializable {
             em = getEntityManager();
             em.getTransaction().begin();
             Paciente persistentPaciente = em.find(Paciente.class, paciente.getId());
-            Resposta idrespostaOld = persistentPaciente.getIdresposta();
-            Resposta idrespostaNew = paciente.getIdresposta();
-            Diagnostico iddiagnosticoOld = persistentPaciente.getIddiagnostico();
-            Diagnostico iddiagnosticoNew = paciente.getIddiagnostico();
-            if (idrespostaNew != null) {
-                idrespostaNew = em.getReference(idrespostaNew.getClass(), idrespostaNew.getId());
-                paciente.setIdresposta(idrespostaNew);
+            Resposta codperguntaOld = persistentPaciente.getCodpergunta();
+            Resposta codperguntaNew = paciente.getCodpergunta();
+            Diagnostico coddiagnosticoOld = persistentPaciente.getCoddiagnostico();
+            Diagnostico coddiagnosticoNew = paciente.getCoddiagnostico();
+            if (codperguntaNew != null) {
+                codperguntaNew = em.getReference(codperguntaNew.getClass(), codperguntaNew.getId());
+                paciente.setCodpergunta(codperguntaNew);
             }
-            if (iddiagnosticoNew != null) {
-                iddiagnosticoNew = em.getReference(iddiagnosticoNew.getClass(), iddiagnosticoNew.getId());
-                paciente.setIddiagnostico(iddiagnosticoNew);
+            if (coddiagnosticoNew != null) {
+                coddiagnosticoNew = em.getReference(coddiagnosticoNew.getClass(), coddiagnosticoNew.getId());
+                paciente.setCoddiagnostico(coddiagnosticoNew);
             }
             paciente = em.merge(paciente);
-            if (idrespostaOld != null && !idrespostaOld.equals(idrespostaNew)) {
-                idrespostaOld.getPacienteList().remove(paciente);
-                idrespostaOld = em.merge(idrespostaOld);
+            if (codperguntaOld != null && !codperguntaOld.equals(codperguntaNew)) {
+                codperguntaOld.getPacienteList().remove(paciente);
+                codperguntaOld = em.merge(codperguntaOld);
             }
-            if (idrespostaNew != null && !idrespostaNew.equals(idrespostaOld)) {
-                idrespostaNew.getPacienteList().add(paciente);
-                idrespostaNew = em.merge(idrespostaNew);
+            if (codperguntaNew != null && !codperguntaNew.equals(codperguntaOld)) {
+                codperguntaNew.getPacienteList().add(paciente);
+                codperguntaNew = em.merge(codperguntaNew);
             }
-            if (iddiagnosticoOld != null && !iddiagnosticoOld.equals(iddiagnosticoNew)) {
-                iddiagnosticoOld.getPacienteList().remove(paciente);
-                iddiagnosticoOld = em.merge(iddiagnosticoOld);
+            if (coddiagnosticoOld != null && !coddiagnosticoOld.equals(coddiagnosticoNew)) {
+                coddiagnosticoOld.getPacienteList().remove(paciente);
+                coddiagnosticoOld = em.merge(coddiagnosticoOld);
             }
-            if (iddiagnosticoNew != null && !iddiagnosticoNew.equals(iddiagnosticoOld)) {
-                iddiagnosticoNew.getPacienteList().add(paciente);
-                iddiagnosticoNew = em.merge(iddiagnosticoNew);
+            if (coddiagnosticoNew != null && !coddiagnosticoNew.equals(coddiagnosticoOld)) {
+                coddiagnosticoNew.getPacienteList().add(paciente);
+                coddiagnosticoNew = em.merge(coddiagnosticoNew);
             }
             em.getTransaction().commit();
         } catch (Exception ex) {
             String msg = ex.getLocalizedMessage();
             if (msg == null || msg.length() == 0) {
-                Long id = paciente.getId();
+                Integer id = paciente.getId();
                 if (findPaciente(id) == null) {
                     throw new NonexistentEntityException("The paciente with id " + id + " no longer exists.");
                 }
@@ -116,7 +116,7 @@ public class PacienteJpaController implements Serializable {
         }
     }
 
-    public void destroy(Long id) throws NonexistentEntityException {
+    public void destroy(Integer id) throws NonexistentEntityException {
         EntityManager em = null;
         try {
             em = getEntityManager();
@@ -128,15 +128,15 @@ public class PacienteJpaController implements Serializable {
             } catch (EntityNotFoundException enfe) {
                 throw new NonexistentEntityException("The paciente with id " + id + " no longer exists.", enfe);
             }
-            Resposta idresposta = paciente.getIdresposta();
-            if (idresposta != null) {
-                idresposta.getPacienteList().remove(paciente);
-                idresposta = em.merge(idresposta);
+            Resposta codpergunta = paciente.getCodpergunta();
+            if (codpergunta != null) {
+                codpergunta.getPacienteList().remove(paciente);
+                codpergunta = em.merge(codpergunta);
             }
-            Diagnostico iddiagnostico = paciente.getIddiagnostico();
-            if (iddiagnostico != null) {
-                iddiagnostico.getPacienteList().remove(paciente);
-                iddiagnostico = em.merge(iddiagnostico);
+            Diagnostico coddiagnostico = paciente.getCoddiagnostico();
+            if (coddiagnostico != null) {
+                coddiagnostico.getPacienteList().remove(paciente);
+                coddiagnostico = em.merge(coddiagnostico);
             }
             em.remove(paciente);
             em.getTransaction().commit();
@@ -171,7 +171,7 @@ public class PacienteJpaController implements Serializable {
         }
     }
 
-    public Paciente findPaciente(Long id) {
+    public Paciente findPaciente(Integer id) {
         EntityManager em = getEntityManager();
         try {
             return em.find(Paciente.class, id);

@@ -5,177 +5,114 @@
 package modelo;
 
 import java.io.Serializable;
-import javax.persistence.*;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author Aragon
+ * @author Carlos
  */
 @Entity
-@Table(name = "PACIENTE")
+@Table(name = "paciente")
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Paciente.findAll", query = "SELECT p FROM Paciente p"),
     @NamedQuery(name = "Paciente.findById", query = "SELECT p FROM Paciente p WHERE p.id = :id"),
-    @NamedQuery(name = "Paciente.findByNome", query = "SELECT p FROM Paciente p WHERE p.nome = :nome"),
-    @NamedQuery(name = "Paciente.findByRaca", query = "SELECT p FROM Paciente p WHERE p.raca = :raca"),
-    @NamedQuery(name = "Paciente.findBySexo", query = "SELECT p FROM Paciente p WHERE p.sexo = :sexo"),
-    @NamedQuery(name = "Paciente.findByIdade", query = "SELECT p FROM Paciente p WHERE p.idade = :idade"),
-    @NamedQuery(name = "Paciente.findByNaturalidade", query = "SELECT p FROM Paciente p WHERE p.naturalidade = :naturalidade"),
-    @NamedQuery(name = "Paciente.findByNacionalidade", query = "SELECT p FROM Paciente p WHERE p.nacionalidade = :nacionalidade"),
-    @NamedQuery(name = "Paciente.findByEndereco", query = "SELECT p FROM Paciente p WHERE p.endereco = :endereco"),
-    @NamedQuery(name = "Paciente.findByCidade", query = "SELECT p FROM Paciente p WHERE p.cidade = :cidade"),
-    @NamedQuery(name = "Paciente.findByUf", query = "SELECT p FROM Paciente p WHERE p.uf = :uf"),
+    @NamedQuery(name = "Paciente.findByBairro", query = "SELECT p FROM Paciente p WHERE p.bairro = :bairro"),
+    @NamedQuery(name = "Paciente.findByCelular", query = "SELECT p FROM Paciente p WHERE p.celular = :celular"),
     @NamedQuery(name = "Paciente.findByCep", query = "SELECT p FROM Paciente p WHERE p.cep = :cep"),
-    @NamedQuery(name = "Paciente.findByTelefone", query = "SELECT p FROM Paciente p WHERE p.telefone = :telefone")})
+    @NamedQuery(name = "Paciente.findByCidade", query = "SELECT p FROM Paciente p WHERE p.cidade = :cidade"),
+    @NamedQuery(name = "Paciente.findByIdade", query = "SELECT p FROM Paciente p WHERE p.idade = :idade"),
+    @NamedQuery(name = "Paciente.findByNacionalidade", query = "SELECT p FROM Paciente p WHERE p.nacionalidade = :nacionalidade"),
+    @NamedQuery(name = "Paciente.findByNaturalidade", query = "SELECT p FROM Paciente p WHERE p.naturalidade = :naturalidade"),
+    @NamedQuery(name = "Paciente.findByNome", query = "SELECT p FROM Paciente p WHERE p.nome = :nome"),
+    @NamedQuery(name = "Paciente.findByNumero", query = "SELECT p FROM Paciente p WHERE p.numero = :numero"),
+    @NamedQuery(name = "Paciente.findByRaca", query = "SELECT p FROM Paciente p WHERE p.raca = :raca"),
+    @NamedQuery(name = "Paciente.findByRua", query = "SELECT p FROM Paciente p WHERE p.rua = :rua"),
+    @NamedQuery(name = "Paciente.findBySexo", query = "SELECT p FROM Paciente p WHERE p.sexo = :sexo"),
+    @NamedQuery(name = "Paciente.findByTelefone", query = "SELECT p FROM Paciente p WHERE p.telefone = :telefone"),
+    @NamedQuery(name = "Paciente.findByUf", query = "SELECT p FROM Paciente p WHERE p.uf = :uf")})
 public class Paciente implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "ID")
-    private Long id;
-    @Basic(optional = false)
-    @Column(name = "NOME")
-    private String nome;
-    @Basic(optional = false)
-    @Column(name = "RACA")
-    private String raca;
-    @Basic(optional = false)
-    @Column(name = "SEXO")
-    private String sexo;
-    @Basic(optional = false)
-    @Column(name = "IDADE")
-    private int idade;
-    @Basic(optional = false)
-    @Column(name = "NATURALIDADE")
-    private String naturalidade;
-    @Basic(optional = false)
-    @Column(name = "NACIONALIDADE")
-    private String nacionalidade;
-    @Basic(optional = false)
-    @Column(name = "ENDERECO")
-    private String endereco;
-    @Basic(optional = false)
-    @Column(name = "CIDADE")
-    private String cidade;
-    @Basic(optional = false)
-    @Column(name = "UF")
-    private String uf;
-    @Basic(optional = false)
-    @Column(name = "CEP")
+    @Column(name = "id")
+    private Integer id;
+    @Column(name = "bairro")
+    private String bairro;
+    @Column(name = "celular")
+    private String celular;
+    @Column(name = "cep")
     private String cep;
-    @Basic(optional = false)
-    @Column(name = "TELEFONE")
+    @Column(name = "cidade")
+    private String cidade;
+    @Column(name = "idade")
+    private Integer idade;
+    @Column(name = "nacionalidade")
+    private String nacionalidade;
+    @Column(name = "naturalidade")
+    private String naturalidade;
+    @Column(name = "nome")
+    private String nome;
+    @Column(name = "numero")
+    private Integer numero;
+    @Column(name = "raca")
+    private String raca;
+    @Column(name = "rua")
+    private String rua;
+    @Column(name = "sexo")
+    private String sexo;
+    @Column(name = "telefone")
     private String telefone;
-    @JoinColumn(name = "IDRESPOSTA", referencedColumnName = "ID")
-    @ManyToOne(optional = false)
-    private Resposta idresposta;
-    @JoinColumn(name = "IDDIAGNOSTICO", referencedColumnName = "ID")
-    @ManyToOne(optional = false)
-    private Diagnostico iddiagnostico;
+    @Column(name = "uf")
+    private String uf;
+    @JoinColumn(name = "codpergunta", referencedColumnName = "id")
+    @ManyToOne
+    private Resposta codpergunta;
+    @JoinColumn(name = "coddiagnostico", referencedColumnName = "id")
+    @ManyToOne
+    private Diagnostico coddiagnostico;
 
     public Paciente() {
     }
 
-    public Paciente(Long id) {
+    public Paciente(Integer id) {
         this.id = id;
     }
 
-    public Paciente(Long id, String nome, String raca, String sexo, int idade, String naturalidade, String nacionalidade, String endereco, String cidade, String uf, String cep, String telefone) {
-        this.id = id;
-        this.nome = nome;
-        this.raca = raca;
-        this.sexo = sexo;
-        this.idade = idade;
-        this.naturalidade = naturalidade;
-        this.nacionalidade = nacionalidade;
-        this.endereco = endereco;
-        this.cidade = cidade;
-        this.uf = uf;
-        this.cep = cep;
-        this.telefone = telefone;
-    }
-
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getBairro() {
+        return bairro;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
     }
 
-    public String getRaca() {
-        return raca;
+    public String getCelular() {
+        return celular;
     }
 
-    public void setRaca(String raca) {
-        this.raca = raca;
-    }
-
-    public String getSexo() {
-        return sexo;
-    }
-
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
-    }
-
-    public int getIdade() {
-        return idade;
-    }
-
-    public void setIdade(int idade) {
-        this.idade = idade;
-    }
-
-    public String getNaturalidade() {
-        return naturalidade;
-    }
-
-    public void setNaturalidade(String naturalidade) {
-        this.naturalidade = naturalidade;
-    }
-
-    public String getNacionalidade() {
-        return nacionalidade;
-    }
-
-    public void setNacionalidade(String nacionalidade) {
-        this.nacionalidade = nacionalidade;
-    }
-
-    public String getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
-
-    public String getCidade() {
-        return cidade;
-    }
-
-    public void setCidade(String cidade) {
-        this.cidade = cidade;
-    }
-
-    public String getUf() {
-        return uf;
-    }
-
-    public void setUf(String uf) {
-        this.uf = uf;
+    public void setCelular(String celular) {
+        this.celular = celular;
     }
 
     public String getCep() {
@@ -186,6 +123,78 @@ public class Paciente implements Serializable {
         this.cep = cep;
     }
 
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public Integer getIdade() {
+        return idade;
+    }
+
+    public void setIdade(Integer idade) {
+        this.idade = idade;
+    }
+
+    public String getNacionalidade() {
+        return nacionalidade;
+    }
+
+    public void setNacionalidade(String nacionalidade) {
+        this.nacionalidade = nacionalidade;
+    }
+
+    public String getNaturalidade() {
+        return naturalidade;
+    }
+
+    public void setNaturalidade(String naturalidade) {
+        this.naturalidade = naturalidade;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Integer getNumero() {
+        return numero;
+    }
+
+    public void setNumero(Integer numero) {
+        this.numero = numero;
+    }
+
+    public String getRaca() {
+        return raca;
+    }
+
+    public void setRaca(String raca) {
+        this.raca = raca;
+    }
+
+    public String getRua() {
+        return rua;
+    }
+
+    public void setRua(String rua) {
+        this.rua = rua;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
     public String getTelefone() {
         return telefone;
     }
@@ -194,20 +203,28 @@ public class Paciente implements Serializable {
         this.telefone = telefone;
     }
 
-    public Resposta getIdresposta() {
-        return idresposta;
+    public String getUf() {
+        return uf;
     }
 
-    public void setIdresposta(Resposta idresposta) {
-        this.idresposta = idresposta;
+    public void setUf(String uf) {
+        this.uf = uf;
     }
 
-    public Diagnostico getIddiagnostico() {
-        return iddiagnostico;
+    public Resposta getCodpergunta() {
+        return codpergunta;
     }
 
-    public void setIddiagnostico(Diagnostico iddiagnostico) {
-        this.iddiagnostico = iddiagnostico;
+    public void setCodpergunta(Resposta codpergunta) {
+        this.codpergunta = codpergunta;
+    }
+
+    public Diagnostico getCoddiagnostico() {
+        return coddiagnostico;
+    }
+
+    public void setCoddiagnostico(Diagnostico coddiagnostico) {
+        this.coddiagnostico = coddiagnostico;
     }
 
     @Override
