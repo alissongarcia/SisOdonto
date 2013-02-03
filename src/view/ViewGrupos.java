@@ -605,6 +605,37 @@ public class ViewGrupos extends JFrame {
 
         rotuloQE3Especifique.setText("(especifique)");
     }
+    
+    private void analiseGrupoII_direita(){
+        
+        //ESTALIDO NA ABERTURA E NO FECHO
+        if("Estalido - 1".equalsIgnoreCase(ComboBoxQE5ADireito.getSelectedItem().toString()) && "Estalido - 1".equalsIgnoreCase(ComboBoxQE5BDireito.getSelectedItem().toString())){
+            rqE5a = 1;
+            rqE5b = 1;
+            
+            rqE5amm = Integer.parseInt(campoQE5ADireito.getText());
+            rqE5bmm = Integer.parseInt(campoQE5BDireito.getText());
+            
+            //PAREI AQUI EM 03/02/2013
+        }
+        
+        //ESTALIDO NA ABERTURA OU NO FECHO
+        else if("Estalido - 1".equalsIgnoreCase(ComboBoxQE5ADireito.getSelectedItem().toString()) || "Estalido - 1".equalsIgnoreCase(ComboBoxQE5BDireito.getSelectedItem().toString())){
+            
+            if ("Estalido - 1".equalsIgnoreCase(ComboBoxQE5ADireito.getSelectedItem().toString())){
+                rqE5a = 1;
+            }
+            
+            else{
+                rqE5b = 1;
+            }
+        }
+        
+        //SEM ESTALIDO NO MOVIMENTO VERTICAL
+        else{
+            
+        }
+    }
 
     private void configurarBotoes() {
         

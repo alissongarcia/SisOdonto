@@ -13,10 +13,13 @@ public class Grupo_II {
     int dif, MAX, ABE;
     
     public String diagnostico(int rE5a, int med_est_abert, int med_est_fecho, int rE5b, int rE5c, int E7_excursao_direita, int E7_excursao_esquerda, int E7_protusao, int rq14a, int E4b, int E4c, int E4d, int E6b, int E3, int E5ad, int E5bd, int E5cd, int E7_dir_exc_dir, int E7_dir_exc_esq, int E7_dir_prot){
-        if(rE5a == 0 && rE5b == 0){
+        
+        if(rE5a != 1 && rE5b != 1){
             diagnostico = segundaParte(rq14a, E4b, E4c, E4d, E6b, E3, E5ad, E5bd, E5cd, E7_excursao_direita, E7_excursao_esquerda, E7_protusao);
         }
-        else if(rE5a > 0 && rE5b > 0){
+        
+        
+        else if(rE5a == 1 && rE5b == 1){
             dif = med_est_abert - med_est_fecho;
             
             if(dif >= 5){
@@ -41,7 +44,8 @@ public class Grupo_II {
                 }
             }
         }
-        else if(rE5a > 0 || rE5b > 0){
+        
+        else if(rE5a == 1 || rE5b == 1){
             if(E7_excursao_direita > 0 || E7_excursao_esquerda > 0 || E7_protusao > 0){
                 diagnostico = "IIa DD Direita com Redução";
             }
