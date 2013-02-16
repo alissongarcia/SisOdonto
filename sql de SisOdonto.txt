@@ -67,7 +67,7 @@ idade INTEGER,
 naturalidade VARCHAR (40),
 nacionalidade VARCHAR (40),
 
-coddiagnostico INTEGER CONSTRAINT tbldiagnosticoFK REFERENCES diagnostico,
-codresposta INTEGER CONSTRAINT tblrespostaFK REFERENCES resposta
+coddiagnostico INTEGER CONSTRAINT tbldiagnosticoFK REFERENCES diagnostico (id),
+codresposta INTEGER CONSTRAINT tblrespostaFK REFERENCES resposta (id)
 );
 

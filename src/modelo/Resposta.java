@@ -6,22 +6,13 @@ package modelo;
 
 import java.io.Serializable;
 import java.util.List;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author Carlos
+ * @author alisson
  */
 @Entity
 @Table(name = "resposta")
@@ -30,6 +21,14 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Resposta.findAll", query = "SELECT r FROM Resposta r"),
     @NamedQuery(name = "Resposta.findById", query = "SELECT r FROM Resposta r WHERE r.id = :id"),
     @NamedQuery(name = "Resposta.findByRq1", query = "SELECT r FROM Resposta r WHERE r.rq1 = :rq1"),
+    @NamedQuery(name = "Resposta.findByRq2", query = "SELECT r FROM Resposta r WHERE r.rq2 = :rq2"),
+    @NamedQuery(name = "Resposta.findByRq3", query = "SELECT r FROM Resposta r WHERE r.rq3 = :rq3"),
+    @NamedQuery(name = "Resposta.findByRq4", query = "SELECT r FROM Resposta r WHERE r.rq4 = :rq4"),
+    @NamedQuery(name = "Resposta.findByRq5", query = "SELECT r FROM Resposta r WHERE r.rq5 = :rq5"),
+    @NamedQuery(name = "Resposta.findByRq6", query = "SELECT r FROM Resposta r WHERE r.rq6 = :rq6"),
+    @NamedQuery(name = "Resposta.findByRq7", query = "SELECT r FROM Resposta r WHERE r.rq7 = :rq7"),
+    @NamedQuery(name = "Resposta.findByRq8", query = "SELECT r FROM Resposta r WHERE r.rq8 = :rq8"),
+    @NamedQuery(name = "Resposta.findByRq9", query = "SELECT r FROM Resposta r WHERE r.rq9 = :rq9"),
     @NamedQuery(name = "Resposta.findByRq10", query = "SELECT r FROM Resposta r WHERE r.rq10 = :rq10"),
     @NamedQuery(name = "Resposta.findByRq11", query = "SELECT r FROM Resposta r WHERE r.rq11 = :rq11"),
     @NamedQuery(name = "Resposta.findByRq12", query = "SELECT r FROM Resposta r WHERE r.rq12 = :rq12"),
@@ -40,30 +39,38 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Resposta.findByRq17", query = "SELECT r FROM Resposta r WHERE r.rq17 = :rq17"),
     @NamedQuery(name = "Resposta.findByRq18", query = "SELECT r FROM Resposta r WHERE r.rq18 = :rq18"),
     @NamedQuery(name = "Resposta.findByRq19", query = "SELECT r FROM Resposta r WHERE r.rq19 = :rq19"),
-    @NamedQuery(name = "Resposta.findByRq2", query = "SELECT r FROM Resposta r WHERE r.rq2 = :rq2"),
     @NamedQuery(name = "Resposta.findByRq20", query = "SELECT r FROM Resposta r WHERE r.rq20 = :rq20"),
     @NamedQuery(name = "Resposta.findByRq21", query = "SELECT r FROM Resposta r WHERE r.rq21 = :rq21"),
     @NamedQuery(name = "Resposta.findByRq22", query = "SELECT r FROM Resposta r WHERE r.rq22 = :rq22"),
     @NamedQuery(name = "Resposta.findByRq23", query = "SELECT r FROM Resposta r WHERE r.rq23 = :rq23"),
     @NamedQuery(name = "Resposta.findByRq24", query = "SELECT r FROM Resposta r WHERE r.rq24 = :rq24"),
     @NamedQuery(name = "Resposta.findByRq25", query = "SELECT r FROM Resposta r WHERE r.rq25 = :rq25"),
-    @NamedQuery(name = "Resposta.findByRq26", query = "SELECT r FROM Resposta r WHERE r.rq26 = :rq26"),
-    @NamedQuery(name = "Resposta.findByRq3", query = "SELECT r FROM Resposta r WHERE r.rq3 = :rq3"),
-    @NamedQuery(name = "Resposta.findByRq4", query = "SELECT r FROM Resposta r WHERE r.rq4 = :rq4"),
-    @NamedQuery(name = "Resposta.findByRq5", query = "SELECT r FROM Resposta r WHERE r.rq5 = :rq5"),
-    @NamedQuery(name = "Resposta.findByRq6", query = "SELECT r FROM Resposta r WHERE r.rq6 = :rq6"),
-    @NamedQuery(name = "Resposta.findByRq7", query = "SELECT r FROM Resposta r WHERE r.rq7 = :rq7"),
-    @NamedQuery(name = "Resposta.findByRq8", query = "SELECT r FROM Resposta r WHERE r.rq8 = :rq8"),
-    @NamedQuery(name = "Resposta.findByRq9", query = "SELECT r FROM Resposta r WHERE r.rq9 = :rq9")})
+    @NamedQuery(name = "Resposta.findByRq26", query = "SELECT r FROM Resposta r WHERE r.rq26 = :rq26")})
 public class Resposta implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "id")
     private Integer id;
     @Column(name = "rq1")
     private String rq1;
+    @Column(name = "rq2")
+    private String rq2;
+    @Column(name = "rq3")
+    private String rq3;
+    @Column(name = "rq4")
+    private String rq4;
+    @Column(name = "rq5")
+    private String rq5;
+    @Column(name = "rq6")
+    private String rq6;
+    @Column(name = "rq7")
+    private String rq7;
+    @Column(name = "rq8")
+    private String rq8;
+    @Column(name = "rq9")
+    private String rq9;
     @Column(name = "rq10")
     private String rq10;
     @Column(name = "rq11")
@@ -84,8 +91,6 @@ public class Resposta implements Serializable {
     private String rq18;
     @Column(name = "rq19")
     private String rq19;
-    @Column(name = "rq2")
-    private String rq2;
     @Column(name = "rq20")
     private String rq20;
     @Column(name = "rq21")
@@ -100,21 +105,7 @@ public class Resposta implements Serializable {
     private String rq25;
     @Column(name = "rq26")
     private String rq26;
-    @Column(name = "rq3")
-    private String rq3;
-    @Column(name = "rq4")
-    private String rq4;
-    @Column(name = "rq5")
-    private String rq5;
-    @Column(name = "rq6")
-    private String rq6;
-    @Column(name = "rq7")
-    private String rq7;
-    @Column(name = "rq8")
-    private String rq8;
-    @Column(name = "rq9")
-    private String rq9;
-    @OneToMany(mappedBy = "codpergunta")
+    @OneToMany(mappedBy = "codresposta")
     private List<Paciente> pacienteList;
 
     public Resposta() {
@@ -138,6 +129,70 @@ public class Resposta implements Serializable {
 
     public void setRq1(String rq1) {
         this.rq1 = rq1;
+    }
+
+    public String getRq2() {
+        return rq2;
+    }
+
+    public void setRq2(String rq2) {
+        this.rq2 = rq2;
+    }
+
+    public String getRq3() {
+        return rq3;
+    }
+
+    public void setRq3(String rq3) {
+        this.rq3 = rq3;
+    }
+
+    public String getRq4() {
+        return rq4;
+    }
+
+    public void setRq4(String rq4) {
+        this.rq4 = rq4;
+    }
+
+    public String getRq5() {
+        return rq5;
+    }
+
+    public void setRq5(String rq5) {
+        this.rq5 = rq5;
+    }
+
+    public String getRq6() {
+        return rq6;
+    }
+
+    public void setRq6(String rq6) {
+        this.rq6 = rq6;
+    }
+
+    public String getRq7() {
+        return rq7;
+    }
+
+    public void setRq7(String rq7) {
+        this.rq7 = rq7;
+    }
+
+    public String getRq8() {
+        return rq8;
+    }
+
+    public void setRq8(String rq8) {
+        this.rq8 = rq8;
+    }
+
+    public String getRq9() {
+        return rq9;
+    }
+
+    public void setRq9(String rq9) {
+        this.rq9 = rq9;
     }
 
     public String getRq10() {
@@ -220,14 +275,6 @@ public class Resposta implements Serializable {
         this.rq19 = rq19;
     }
 
-    public String getRq2() {
-        return rq2;
-    }
-
-    public void setRq2(String rq2) {
-        this.rq2 = rq2;
-    }
-
     public String getRq20() {
         return rq20;
     }
@@ -282,62 +329,6 @@ public class Resposta implements Serializable {
 
     public void setRq26(String rq26) {
         this.rq26 = rq26;
-    }
-
-    public String getRq3() {
-        return rq3;
-    }
-
-    public void setRq3(String rq3) {
-        this.rq3 = rq3;
-    }
-
-    public String getRq4() {
-        return rq4;
-    }
-
-    public void setRq4(String rq4) {
-        this.rq4 = rq4;
-    }
-
-    public String getRq5() {
-        return rq5;
-    }
-
-    public void setRq5(String rq5) {
-        this.rq5 = rq5;
-    }
-
-    public String getRq6() {
-        return rq6;
-    }
-
-    public void setRq6(String rq6) {
-        this.rq6 = rq6;
-    }
-
-    public String getRq7() {
-        return rq7;
-    }
-
-    public void setRq7(String rq7) {
-        this.rq7 = rq7;
-    }
-
-    public String getRq8() {
-        return rq8;
-    }
-
-    public void setRq8(String rq8) {
-        this.rq8 = rq8;
-    }
-
-    public String getRq9() {
-        return rq9;
-    }
-
-    public void setRq9(String rq9) {
-        this.rq9 = rq9;
     }
 
     @XmlTransient

@@ -29,6 +29,10 @@ public class Controlador {
     
     String diagnostico_GrupoI = "";
     
+    int somaqE8 = 0;
+    int somaqE10 = 0;
+    int rqE4a, rqE4b, rqE4c, rqE4d;
+    
     
     public Controlador(){
         grupo_1 = new Grupo_I();
@@ -61,10 +65,9 @@ public class Controlador {
     public void diagnosticar(String resposta1, String resposta2, String resposta3, String resposta4, String resposta5, String resposta6, String resposta7,
             String resposta8, String resposta9, String resposta10, String resposta11, String resposta12, String resposta13, String resposta14, String resposta15, String resposta16, 
             String resposta17, String resposta18, String resposta19, String resposta20, String resposta21, String resposta22, String resposta23, 
-            String resposta24, String resposta25, String resposta26, int q3,int somaq8,int somaq10,int q1,
-            int rq4a,int rq4b,int rq4c,int rq4d){
+            String resposta24, String resposta25, String resposta26){
         
-        resposta= new Resposta();
+        resposta = new Resposta();
         
         resposta.setRq1(resposta1);
         resposta.setRq2(resposta2);
@@ -102,7 +105,7 @@ public class Controlador {
         
         
         
-        diagnostico = new Diagnostico();
+         diagnostico = new Diagnostico();
         diagnostico.setD1(diagnostico_GrupoI);
         
         try {
@@ -117,15 +120,7 @@ public class Controlador {
                         String QE8DD, String QE8DE, String QE8ED, String QE8EE, String QE8FD, String QE8FE, String QE8GD, 
                         String QE8GE, String QE8HD, String QE8HE, String QE10AD, String QE10AE, String QE10BD, String QE10BE, 
                         String q1, String rq4a, String rq4b, String rq4c, String rq4d){
-        
-        
-                int somaqE8 = 0;
-                int somaqE10 = 0;
-                int rqE4a, rqE4b, rqE4c, rqE4d;
                 
-
-
-
                 //QE8 - Dor muscular extra-oral com palpação
                 // A                
                 //QE8AD = ComboBoxQE8AD.getSelectedItem().toString();

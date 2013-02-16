@@ -5,6 +5,7 @@
 package dao;
 
 import dao.exceptions.NonexistentEntityException;
+import dao.exceptions.PreexistingEntityException;
 import java.io.Serializable;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
@@ -19,7 +20,7 @@ import modelo.Resposta;
 
 /**
  *
- * @author Carlos
+ * @author alisson
  */
 public class RespostaJpaController implements Serializable {
 
@@ -32,7 +33,7 @@ public class RespostaJpaController implements Serializable {
         return emf.createEntityManager();
     }
 
-    public void create(Resposta resposta) {
+    public void create(Resposta resposta) throws PreexistingEntityException, Exception {
         if (resposta.getPacienteList() == null) {
             resposta.setPacienteList(new ArrayList<Paciente>());
         }
@@ -48,15 +49,20 @@ public class RespostaJpaController implements Serializable {
             resposta.setPacienteList(attachedPacienteList);
             em.persist(resposta);
             for (Paciente pacienteListPaciente : resposta.getPacienteList()) {
-                Resposta oldCodperguntaOfPacienteListPaciente = pacienteListPaciente.getCodpergunta();
-                pacienteListPaciente.setCodpergunta(resposta);
+                Resposta oldCodrespostaOfPacienteListPaciente = pacienteListPaciente.getCodresposta();
+                pacienteListPaciente.setCodresposta(resposta);
                 pacienteListPaciente = em.merge(pacienteListPaciente);
-                if (oldCodperguntaOfPacienteListPaciente != null) {
-                    oldCodperguntaOfPacienteListPaciente.getPacienteList().remove(pacienteListPaciente);
-                    oldCodperguntaOfPacienteListPaciente = em.merge(oldCodperguntaOfPacienteListPaciente);
+                if (oldCodrespostaOfPacienteListPaciente != null) {
+                    oldCodrespostaOfPacienteListPaciente.getPacienteList().remove(pacienteListPaciente);
+                    oldCodrespostaOfPacienteListPaciente = em.merge(oldCodrespostaOfPacienteListPaciente);
                 }
             }
             em.getTransaction().commit();
+        } catch (Exception ex) {
+            if (findResposta(resposta.getId()) != null) {
+                throw new PreexistingEntityException("Resposta " + resposta + " already exists.", ex);
+            }
+            throw ex;
         } finally {
             if (em != null) {
                 em.close();
@@ -82,18 +88,18 @@ public class RespostaJpaController implements Serializable {
             resposta = em.merge(resposta);
             for (Paciente pacienteListOldPaciente : pacienteListOld) {
                 if (!pacienteListNew.contains(pacienteListOldPaciente)) {
-                    pacienteListOldPaciente.setCodpergunta(null);
+                    pacienteListOldPaciente.setCodresposta(null);
                     pacienteListOldPaciente = em.merge(pacienteListOldPaciente);
                 }
             }
             for (Paciente pacienteListNewPaciente : pacienteListNew) {
                 if (!pacienteListOld.contains(pacienteListNewPaciente)) {
-                    Resposta oldCodperguntaOfPacienteListNewPaciente = pacienteListNewPaciente.getCodpergunta();
-                    pacienteListNewPaciente.setCodpergunta(resposta);
+                    Resposta oldCodrespostaOfPacienteListNewPaciente = pacienteListNewPaciente.getCodresposta();
+                    pacienteListNewPaciente.setCodresposta(resposta);
                     pacienteListNewPaciente = em.merge(pacienteListNewPaciente);
-                    if (oldCodperguntaOfPacienteListNewPaciente != null && !oldCodperguntaOfPacienteListNewPaciente.equals(resposta)) {
-                        oldCodperguntaOfPacienteListNewPaciente.getPacienteList().remove(pacienteListNewPaciente);
-                        oldCodperguntaOfPacienteListNewPaciente = em.merge(oldCodperguntaOfPacienteListNewPaciente);
+                    if (oldCodrespostaOfPacienteListNewPaciente != null && !oldCodrespostaOfPacienteListNewPaciente.equals(resposta)) {
+                        oldCodrespostaOfPacienteListNewPaciente.getPacienteList().remove(pacienteListNewPaciente);
+                        oldCodrespostaOfPacienteListNewPaciente = em.merge(oldCodrespostaOfPacienteListNewPaciente);
                     }
                 }
             }
@@ -128,7 +134,7 @@ public class RespostaJpaController implements Serializable {
             }
             List<Paciente> pacienteList = resposta.getPacienteList();
             for (Paciente pacienteListPaciente : pacienteList) {
-                pacienteListPaciente.setCodpergunta(null);
+                pacienteListPaciente.setCodresposta(null);
                 pacienteListPaciente = em.merge(pacienteListPaciente);
             }
             em.remove(resposta);

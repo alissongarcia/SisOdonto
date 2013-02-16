@@ -5,6 +5,7 @@
 package dao;
 
 import dao.exceptions.NonexistentEntityException;
+import dao.exceptions.PreexistingEntityException;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.EntityManager;
@@ -19,7 +20,7 @@ import modelo.Paciente;
 
 /**
  *
- * @author Carlos
+ * @author alisson
  */
 public class PacienteJpaController implements Serializable {
 
@@ -32,15 +33,15 @@ public class PacienteJpaController implements Serializable {
         return emf.createEntityManager();
     }
 
-    public void create(Paciente paciente) {
+    public void create(Paciente paciente) throws PreexistingEntityException, Exception {
         EntityManager em = null;
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            Resposta codpergunta = paciente.getCodpergunta();
-            if (codpergunta != null) {
-                codpergunta = em.getReference(codpergunta.getClass(), codpergunta.getId());
-                paciente.setCodpergunta(codpergunta);
+            Resposta codresposta = paciente.getCodresposta();
+            if (codresposta != null) {
+                codresposta = em.getReference(codresposta.getClass(), codresposta.getId());
+                paciente.setCodresposta(codresposta);
             }
             Diagnostico coddiagnostico = paciente.getCoddiagnostico();
             if (coddiagnostico != null) {
@@ -48,15 +49,20 @@ public class PacienteJpaController implements Serializable {
                 paciente.setCoddiagnostico(coddiagnostico);
             }
             em.persist(paciente);
-            if (codpergunta != null) {
-                codpergunta.getPacienteList().add(paciente);
-                codpergunta = em.merge(codpergunta);
+            if (codresposta != null) {
+                codresposta.getPacienteList().add(paciente);
+                codresposta = em.merge(codresposta);
             }
             if (coddiagnostico != null) {
                 coddiagnostico.getPacienteList().add(paciente);
                 coddiagnostico = em.merge(coddiagnostico);
             }
             em.getTransaction().commit();
+        } catch (Exception ex) {
+            if (findPaciente(paciente.getId()) != null) {
+                throw new PreexistingEntityException("Paciente " + paciente + " already exists.", ex);
+            }
+            throw ex;
         } finally {
             if (em != null) {
                 em.close();
@@ -70,26 +76,26 @@ public class PacienteJpaController implements Serializable {
             em = getEntityManager();
             em.getTransaction().begin();
             Paciente persistentPaciente = em.find(Paciente.class, paciente.getId());
-            Resposta codperguntaOld = persistentPaciente.getCodpergunta();
-            Resposta codperguntaNew = paciente.getCodpergunta();
+            Resposta codrespostaOld = persistentPaciente.getCodresposta();
+            Resposta codrespostaNew = paciente.getCodresposta();
             Diagnostico coddiagnosticoOld = persistentPaciente.getCoddiagnostico();
             Diagnostico coddiagnosticoNew = paciente.getCoddiagnostico();
-            if (codperguntaNew != null) {
-                codperguntaNew = em.getReference(codperguntaNew.getClass(), codperguntaNew.getId());
-                paciente.setCodpergunta(codperguntaNew);
+            if (codrespostaNew != null) {
+                codrespostaNew = em.getReference(codrespostaNew.getClass(), codrespostaNew.getId());
+                paciente.setCodresposta(codrespostaNew);
             }
             if (coddiagnosticoNew != null) {
                 coddiagnosticoNew = em.getReference(coddiagnosticoNew.getClass(), coddiagnosticoNew.getId());
                 paciente.setCoddiagnostico(coddiagnosticoNew);
             }
             paciente = em.merge(paciente);
-            if (codperguntaOld != null && !codperguntaOld.equals(codperguntaNew)) {
-                codperguntaOld.getPacienteList().remove(paciente);
-                codperguntaOld = em.merge(codperguntaOld);
+            if (codrespostaOld != null && !codrespostaOld.equals(codrespostaNew)) {
+                codrespostaOld.getPacienteList().remove(paciente);
+                codrespostaOld = em.merge(codrespostaOld);
             }
-            if (codperguntaNew != null && !codperguntaNew.equals(codperguntaOld)) {
-                codperguntaNew.getPacienteList().add(paciente);
-                codperguntaNew = em.merge(codperguntaNew);
+            if (codrespostaNew != null && !codrespostaNew.equals(codrespostaOld)) {
+                codrespostaNew.getPacienteList().add(paciente);
+                codrespostaNew = em.merge(codrespostaNew);
             }
             if (coddiagnosticoOld != null && !coddiagnosticoOld.equals(coddiagnosticoNew)) {
                 coddiagnosticoOld.getPacienteList().remove(paciente);
@@ -128,10 +134,10 @@ public class PacienteJpaController implements Serializable {
             } catch (EntityNotFoundException enfe) {
                 throw new NonexistentEntityException("The paciente with id " + id + " no longer exists.", enfe);
             }
-            Resposta codpergunta = paciente.getCodpergunta();
-            if (codpergunta != null) {
-                codpergunta.getPacienteList().remove(paciente);
-                codpergunta = em.merge(codpergunta);
+            Resposta codresposta = paciente.getCodresposta();
+            if (codresposta != null) {
+                codresposta.getPacienteList().remove(paciente);
+                codresposta = em.merge(codresposta);
             }
             Diagnostico coddiagnostico = paciente.getCoddiagnostico();
             if (coddiagnostico != null) {

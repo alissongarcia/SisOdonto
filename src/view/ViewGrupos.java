@@ -708,10 +708,12 @@ public class ViewGrupos extends JFrame {
 
                 String diagnostico = "";
                 diagnostico = controlador.grupo_I(rqe3, QE8AD, QE8AE, QE8BD, QE8BE, QE8CD, QE8CE, QE8DD, QE8DE, QE8ED, QE8EE, QE8FD, QE8FE, QE8GD, QE8GE, QE8HD, QE8HE, QE10AD, QE10AE, QE10BD, QE10BE, rqe1, rqE4a, rqE4b, rqE4c, rqE4d);
-                rotuloResultado.setText(diagnostico);
-                /*controlador.diagnosticar(rqe3, QE8AD, QE8AE, QE8BD, QE8BE, QE8CD, QE8CE, QE8DD, QE8DE, QE8ED, QE8EE, QE8FD, QE8FE, 
+                
+                controlador.diagnosticar(rqe3, QE8AD, QE8AE, QE8BD, QE8BE, QE8CD, QE8CE, QE8DD, QE8DE, QE8ED, QE8EE, QE8FD, QE8FE, 
                         QE8GD, QE8GE, QE8HD, QE8HE, QE10AD, QE10AE, QE10BD, QE10BE, rqe1, campoQE4A.getText(), campoQE4B.getText(), campoQE4C.getText(),
-                        campoQE4D.getText(), rq3, somaqE8, somaqE10, rqE1, rqE4a, rqE4b, rqE4c, rqE4d);*/
+                        campoQE4D.getText());
+                
+                rotuloResultado.setText(diagnostico);
             }
         });
 

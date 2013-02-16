@@ -41,11 +41,11 @@ public class Main {
          view.setVisible(true);
          view.iniciar();
        
-       /*
+       
 
-        PacienteJpaController daoPaciente;
-        DiagnosticoJpaController daoDiagnostico;
-        RespostaJpaController daoResposta;
+        /*PacienteJpaController daoPaciente;
+        //DiagnosticoJpaController daoDiagnostico;
+        //RespostaJpaController daoResposta;
         JPAUtil emf;
         Paciente paciente;
         Diagnostico diagnostico;
@@ -56,20 +56,20 @@ public class Main {
 
         paciente = new Paciente();
         paciente.setNome("Aragon");
-        diagnostico = new Diagnostico();
-        resposta = new Resposta();
-        grupo_1 = new Grupo_I();
+        //diagnostico = new Diagnostico();
+        //resposta = new Resposta();
+        //grupo_1 = new Grupo_I();
         emf = new JPAUtil();
         daoPaciente = new PacienteJpaController(emf.getEmf());
-        daoDiagnostico = new DiagnosticoJpaController(emf.getEmf());
-        daoResposta = new RespostaJpaController(emf.getEmf());
+        //daoDiagnostico = new DiagnosticoJpaController(emf.getEmf());
+        //daoResposta = new RespostaJpaController(emf.getEmf());
 
         try {
             daoPaciente.create(paciente);
         } catch (Exception e) {
         }
 
-        System.out.println(daoPaciente.getPacienteCount());
-        */
+        System.out.println(daoPaciente.getPacienteCount());*/
+        
     }
 }

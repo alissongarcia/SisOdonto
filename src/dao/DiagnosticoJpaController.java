@@ -5,6 +5,7 @@
 package dao;
 
 import dao.exceptions.NonexistentEntityException;
+import dao.exceptions.PreexistingEntityException;
 import java.io.Serializable;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
@@ -19,7 +20,7 @@ import modelo.Diagnostico;
 
 /**
  *
- * @author Carlos
+ * @author alisson
  */
 public class DiagnosticoJpaController implements Serializable {
 
@@ -32,7 +33,7 @@ public class DiagnosticoJpaController implements Serializable {
         return emf.createEntityManager();
     }
 
-    public void create(Diagnostico diagnostico) {
+    public void create(Diagnostico diagnostico) throws PreexistingEntityException, Exception {
         if (diagnostico.getPacienteList() == null) {
             diagnostico.setPacienteList(new ArrayList<Paciente>());
         }
@@ -57,6 +58,11 @@ public class DiagnosticoJpaController implements Serializable {
                 }
             }
             em.getTransaction().commit();
+        } catch (Exception ex) {
+            if (findDiagnostico(diagnostico.getId()) != null) {
+                throw new PreexistingEntityException("Diagnostico " + diagnostico + " already exists.", ex);
+            }
+            throw ex;
         } finally {
             if (em != null) {
                 em.close();
