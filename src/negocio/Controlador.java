@@ -28,6 +28,7 @@ public class Controlador {
     private Grupo_II grupo_2;
     
     String diagnostico_GrupoI = "";
+    String diagnostico_GrupoII = "";
     
     int somaqE8 = 0;
     int somaqE10 = 0;
@@ -233,5 +234,12 @@ public class Controlador {
                 diagnostico_GrupoI = grupo_1.diagnostico(q3, somaqE8, somaqE10, q1, rqE4a, rqE4b, rqE4c, rqE4d);
                 
                 return diagnostico_GrupoI;        
+    }
+    
+    public String diagnostico_grupo_II(String rqE5A_Abertura_Dir, String rqE5B_Fecho_Dir, String rqE5A_Medida_Abert_Dir, String rqE5B_Medida_Fecho_Dir, String rqE5C_Direito, String rqE7A_Dir_Excursão_Direita, String rqE7A_Dir_Excursão_Esquerda, String rqE7A_Dir_Protusao, String rqE6_Medida_Excursao_Esquerda, String rqE3_Combo, String rqE3_Campo, String rq14A){
+        
+        
+        return diagnostico_GrupoII;
+        
     }
 }
