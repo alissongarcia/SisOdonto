@@ -4,8 +4,8 @@ package negocio;
 public class Grupo_I {
 	String diagnostico;
 	
-	public String diagnostico(int q3, int somaq8, int somaq10, int q1, int rq4a, int rq4b, int rq4c, int rq4d){
-		if(q3 == 0){
+	public String diagnostico(String q3, int somaq8, int somaq10, String q1, int rq4a, int rq4b, int rq4c, int rq4d){
+		if("não".equalsIgnoreCase(q3)){
 			diagnostico = "Sem diagnostico";
 			return diagnostico;
 		}
@@ -17,7 +17,7 @@ public class Grupo_I {
 				return diagnostico;
 			}
 			else{
-				if(q1 == 0){
+				if("não".equalsIgnoreCase(q1)){
 					diagnostico = "Sem diagnostico";
 					return diagnostico;
 				}

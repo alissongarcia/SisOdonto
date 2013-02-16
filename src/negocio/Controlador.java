@@ -27,10 +27,12 @@ public class Controlador {
     private Grupo_I grupo_1;
     private Grupo_II grupo_2;
     
+    String diagnostico_GrupoI = "";
+    
     
     public Controlador(){
-        grupo_1= new Grupo_I();
-        emf= new JPAUtil();
+        grupo_1 = new Grupo_I();
+        emf = new JPAUtil();
         daoPaciente = new PacienteJpaController(emf.getEmf());
         daoDiagnostico= new DiagnosticoJpaController(emf.getEmf());
         daoResposta= new RespostaJpaController(emf.getEmf());
@@ -99,9 +101,9 @@ public class Controlador {
         }       
         
         
-        grupo_1.diagnostico(q3, somaq8, somaq10, q1, rq4a, rq4b, rq4c, rq4d);  
+        
         diagnostico = new Diagnostico();
-        diagnostico.setD1(grupo_1.diagnostico(q3, somaq8, somaq10, q1, rq4a, rq4b, rq4c, rq4d));
+        diagnostico.setD1(diagnostico_GrupoI);
         
         try {
             
@@ -109,5 +111,132 @@ public class Controlador {
         } catch (Exception e) {
         }
         
+    }
+    
+    public String grupo_I(String q3, String QE8AD, String QE8AE, String QE8BD, String QE8BE, String QE8CD, String QE8CE,
+                        String QE8DD, String QE8DE, String QE8ED, String QE8EE, String QE8FD, String QE8FE, String QE8GD, 
+                        String QE8GE, String QE8HD, String QE8HE, String QE10AD, String QE10AE, String QE10BD, String QE10BE, 
+                        String q1, String rq4a, String rq4b, String rq4c, String rq4d){
+        
+        
+                int somaqE8 = 0;
+                int somaqE10 = 0;
+                int rqE4a, rqE4b, rqE4c, rqE4d;
+                
+
+
+
+                //QE8 - Dor muscular extra-oral com palpação
+                // A                
+                //QE8AD = ComboBoxQE8AD.getSelectedItem().toString();
+                if (!"O".equals(QE8AD)) {
+                    somaqE8++;
+                }
+
+                //QE8AE = ComboBoxQE8AE.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(QE8AE)) {
+                    somaqE8++;
+                }
+                // B                
+                //QE8BD = ComboBoxQE8BD.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(QE8BD)) {
+                    somaqE8++;
+                }
+                //QE8BE = ComboBoxQE8BE.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(QE8BE)) {
+                    somaqE8++;
+                }
+                // C
+                //QE8CD = ComboBoxQE8CD.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(QE8CD)) {
+                    somaqE8++;
+                }
+                //QE8CE = ComboBoxQE8CE.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(QE8CE)) {
+                    somaqE8++;
+                }
+                
+                // D
+                //QE8DD = ComboBoxQE8DD.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(QE8DD)) {
+                    somaqE8++;
+                }
+                
+                //QE8DE = ComboBoxQE8DE.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(QE8DE)) {
+                    somaqE8++;
+                }
+                
+                // E
+                //QE8ED = ComboBoxQE8ED.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(QE8ED)) {
+                    somaqE8++;
+                }
+                
+                //QE8EE = ComboBoxQE8EE.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(QE8EE)) {
+                    somaqE8++;
+                }
+                
+                // F
+                //QE8FD = ComboBoxQE8FD.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(QE8FD)) {
+                    somaqE8++;
+                }
+                
+                //QE8FE = ComboBoxQE8FE.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(QE8FE)) {
+                    somaqE8++;
+                }
+                
+                // G
+                //QE8GD = ComboBoxQE8GD.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(QE8GD)) {
+                    somaqE8++;
+                }
+                
+                //QE8GE = ComboBoxQE8GE.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(QE8GE)) {
+                    somaqE8++;
+                }
+                
+                // H
+                //QE8HD = ComboBoxQE8HD.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(QE8HD)) {
+                    somaqE8++;
+                }
+                
+                //QE8HE = ComboBoxQE8HE.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(QE8HE)) {
+                    somaqE8++;
+                }
+
+                // QE10 - Dor muscular intra-oral com palpação   QE10AD, QE10AE, QE10BD, QE10BE
+                //QE10AD = ComboBoxQE10AD.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(QE10AD)) {
+                    somaqE10++;
+                }
+                //QE10AE = ComboBoxQE10AE.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(QE10AE)) {
+                    somaqE10++;
+                }
+
+                //QE10BD = ComboBoxQE10BD.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(QE10BD)) {
+                    somaqE10++;
+                }
+                //QE10BE = ComboBoxQE10BE.getSelectedItem().toString();
+                if (!"O".equalsIgnoreCase(QE10BE)) {
+                    somaqE10++;
+                }
+                
+                rqE4a = Integer.parseInt(rq4a);
+                rqE4b = Integer.parseInt(rq4b);
+                rqE4c = Integer.parseInt(rq4c);
+                rqE4d = Integer.parseInt(rq4d);
+                
+                diagnostico_GrupoI = grupo_1.diagnostico(q3, somaqE8, somaqE10, q1, rqE4a, rqE4b, rqE4c, rqE4d);
+                
+                return diagnostico_GrupoI;        
     }
 }

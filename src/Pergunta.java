@@ -32,7 +32,7 @@ public class Pergunta {
 		aux = JOptionPane.showInputDialog("QE4d - Trespasse incisal vertical___ ___mm");
 		rq4d = Integer.parseInt(aux);
 		
-		grupo.diagnostico(rq3, somaq8, somaq10, rq1, rq4a, rq4b, rq4c, rq4d);
+		//grupo.diagnostico(rq3, somaq8, somaq10, rq1, rq4a, rq4b, rq4c, rq4d);
 	}
 	
 
