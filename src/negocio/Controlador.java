@@ -37,6 +37,7 @@ public class Controlador {
     
     public Controlador(){
         grupo_1 = new Grupo_I();
+        grupo_2 = new Grupo_II();
         emf = new JPAUtil();
         daoPaciente = new PacienteJpaController(emf.getEmf());
         daoDiagnostico= new DiagnosticoJpaController(emf.getEmf());
@@ -237,8 +238,15 @@ public class Controlador {
     }
     
     public String diagnostico_grupo_II(String rqE5A_Abertura_Dir, String rqE5B_Fecho_Dir, String rqE5A_Medida_Abert_Dir, String rqE5B_Medida_Fecho_Dir, String rqE5C_Direito, String rqE7A_Dir_Excursão_Direita, String rqE7A_Dir_Excursão_Esquerda, String rqE7A_Dir_Protusao, String rqE6_Medida_Excursao_Esquerda, String rqE3_Combo, String rqE3_Campo, String rq14A){
+        int rE5A_Med_Abert_Direita;
+        int rE5B_Med_Fecho_Direita;
+        int rqE6_Med_Excursao_Esquerda;
         
+        rE5A_Med_Abert_Direita = Integer.parseInt(rqE5A_Medida_Abert_Dir);
+        rE5B_Med_Fecho_Direita = Integer.parseInt(rqE5B_Medida_Fecho_Dir);
+        rqE6_Med_Excursao_Esquerda = Integer.parseInt(rqE6_Medida_Excursao_Esquerda);
         
+        diagnostico_GrupoII = grupo_2.diagnostico(rqE5A_Abertura_Dir, rE5A_Med_Abert_Direita, rE5B_Med_Fecho_Direita, rqE5B_Fecho_Dir, rqE5C_Direito, rqE7A_Dir_Excursão_Direita, rqE7A_Dir_Excursão_Esquerda, rqE7A_Dir_Protusao, rq14A, rqE4d, rqE4c, rqE4d, rqE6_Med_Excursao_Esquerda, rqE3_Combo);
         return diagnostico_GrupoII;
         
     }
