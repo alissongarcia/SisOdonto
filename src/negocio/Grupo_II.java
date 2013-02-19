@@ -9,12 +9,12 @@ package negocio;
  * @author alisson
  */
 public class Grupo_II {
-    String diagnostico;
+    String diagnostico, resultado;
     int dif, MAX, ABE;
     
     public String diagnostico(String rE5a, int med_est_abert, int med_est_fecho, String rE5b, String rE5c, String E7_dir_exc_dir, String E7_dir_exc_esq, String E7_dir_prot, String rq14a, int E4b, int E4c, int E4d, int E6b, String E3){
-        
-        if(!"Estalido - 1".equalsIgnoreCase(rE5a) && !"Estalido - 1".equalsIgnoreCase(rE5b)){
+        diagnostico = "";
+        if(rE5a.equalsIgnoreCase("Estalido - 1") == false && rE5b.equalsIgnoreCase("Estalido - 1") == false){
             
             diagnostico = segundaParte(rq14a, E4b, E4c, E4d, E6b, E3, rE5a, rE5b, rE5c, E7_dir_exc_dir, E7_dir_exc_esq, E7_dir_prot);
         }
@@ -60,7 +60,7 @@ public class Grupo_II {
     }
     
     public String segundaParte(String rq14a, int E4b, int E4c, int E4d, int E6a_b, String E3_direita_esquerda, String E5ad, String E5bd, String E5cd, String E7_excursao_direita, String E7_excursao_esquerda, String E7_protusao){
-        String resultado = "";
+        resultado = "";
         if("Sim".equalsIgnoreCase(rq14a)){
             MAX = E4b + E4d;
             ABE = E4c - E4b;

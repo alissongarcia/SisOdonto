@@ -708,8 +708,10 @@ public class ViewGrupos extends JFrame {
                 
                 //DIAGNOSTICO DO GRUPO 1
                 String diagnostico = "";
+                String diagnostico2 = "";
+                
                 diagnostico = controlador.grupo_I(rqe3, QE8AD, QE8AE, QE8BD, QE8BE, QE8CD, QE8CE, QE8DD, QE8DE, QE8ED, QE8EE, QE8FD, QE8FE, QE8GD, QE8GE, QE8HD, QE8HE, QE10AD, QE10AE, QE10BD, QE10BE, rqe1, rqE4a, rqE4b, rqE4c, rqE4d);
-                //rotuloResultado.setText(diagnostico);
+                rotuloResultado.setText(diagnostico);
                 /*controlador.diagnosticar(rqe3, QE8AD, QE8AE, QE8BD, QE8BE, QE8CD, QE8CE, QE8DD, QE8DE, QE8ED, QE8EE, QE8FD, QE8FE, 
                         QE8GD, QE8GE, QE8HD, QE8HE, QE10AD, QE10AE, QE10BD, QE10BE, rqe1, campoQE4A.getText(), campoQE4B.getText(), campoQE4C.getText(),
                         campoQE4D.getText());*/
@@ -726,29 +728,28 @@ public class ViewGrupos extends JFrame {
                 
                 
                 //ATRIBUIÇÃO ÀS VARIÁVEIS DO CONTEUDO QUE VEM DA INTERFACE GRÁFICA
-                rqE5A_Abertura_Dir = ComboBoxQE5ADireito.toString();
-                rqE5B_Fecho_Dir = ComboBoxQE5BDireito.toString();
+                rqE5A_Abertura_Dir = (String)ComboBoxQE5ADireito.getSelectedItem();
+                rqE5B_Fecho_Dir = (String)ComboBoxQE5BDireito.getSelectedItem();
                 
                 rqE5A_Medida_Abert_Dir = campoQE5ADireito.getText();
                 rqE5B_Medida_Fecho_Dir = campoQE5BDireito.getText();
                 
-                rqE5C_Direito = ComboBoxQE5CDireito.toString();
+                rqE5C_Direito = (String)ComboBoxQE5CDireito.getSelectedItem();
                 
-                rqE7A_Dir_Excursão_Direita = ComboBoxQE7AExcusãoDireita.toString();
-                rqE7A_Dir_Excursão_Esquerda = ComboBoxQE7AExcusãoEsquerda.toString();
-                rqE7A_Dir_Protusao = ComboBoxQE7AProtusão.toString();
+                rqE7A_Dir_Excursão_Direita = (String)ComboBoxQE7AExcusãoDireita.getSelectedItem();
+                rqE7A_Dir_Excursão_Esquerda = (String)ComboBoxQE7AExcusãoEsquerda.getSelectedItem();
+                rqE7A_Dir_Protusao = (String)ComboBoxQE7AProtusão.getSelectedItem();
                 
-                rq14A = ComboBoxQE14a.toString();
+                rq14A = (String)ComboBoxQE14a.getSelectedItem();
                 
                 //Nesse ponto deveria ser atribuido algum conteúdo as questões 4b e 4d, mas
                 //elas já estão com conteúdos atribuidos acima.
                 
                 //Continuação
                 rqE6_Medida_Excursao_Esquerda = campoQE6B.getText();
-                rqE3_Combo = ComboBoxRespostaQE3.toString();
+                rqE3_Combo = (String)ComboBoxRespostaQE3.getSelectedItem();
                 rqE3_Campo = campoQE3.getText();
                 
-                String diagnostico2 = "";
                 diagnostico2 = controlador.diagnostico_grupo_II(rqE5A_Abertura_Dir, rqE5B_Fecho_Dir, rqE5A_Medida_Abert_Dir, rqE5B_Medida_Fecho_Dir, rqE5C_Direito, rqE7A_Dir_Excursão_Direita, rqE7A_Dir_Excursão_Esquerda, rqE7A_Dir_Protusao, rqE6_Medida_Excursao_Esquerda, rqE3_Combo, rqE3_Campo, rq14A);
                 rotuloResultado.setText(diagnostico2);
             }
