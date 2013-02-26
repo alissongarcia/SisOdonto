@@ -61,6 +61,7 @@ public class Grupo_II {
     
     public String segundaParte(String rq14a, int E4b, int E4c, int E4d, int E6a_b, String E3_direita_esquerda, String E5ad, String E5bd, String E5cd, String E7_excursao_direita, String E7_excursao_esquerda, String E7_protusao){
         resultado = "";
+        
         if("Sim".equalsIgnoreCase(rq14a)){
             MAX = E4b + E4d;
             ABE = E4c - E4b;
@@ -96,6 +97,11 @@ public class Grupo_II {
             else{
                 resultado = "Sem diagnóstico do grupo II do lado Direito";
             }
+        }
+        
+        //Se o conteúdo da questão 14a for NÃO
+        else{
+            resultado = "Sem diagnóstico do grupo II do lado Direito";
         }
         return resultado;
     }

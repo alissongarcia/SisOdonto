@@ -49,7 +49,7 @@ public class ViewGrupos extends JFrame {
     private javax.swing.JComboBox ComboBoxQE7AExcusãoDireita;
     private javax.swing.JComboBox ComboBoxQE7AExcusãoEsquerda;
     private javax.swing.JComboBox ComboBoxQE7AProtusão;
-    private javax.swing.JComboBox ComboBoxQE7BExcusão;
+    private javax.swing.JComboBox ComboBoxQE7BProtusao;
     private javax.swing.JComboBox ComboBoxQE7BExcusãoDireita;
     private javax.swing.JComboBox ComboBoxQE7BExcusãoEsquerda;
     private javax.swing.JComboBox ComboBoxQE8AD;
@@ -271,7 +271,7 @@ public class ViewGrupos extends JFrame {
         ComboBoxQE7BExcusãoEsquerda = new javax.swing.JComboBox();
         rotuloQE7BExcusãoEsquerda = new javax.swing.JLabel();
         rotuloQE7BProtusão = new javax.swing.JLabel();
-        ComboBoxQE7BExcusão = new javax.swing.JComboBox();
+        ComboBoxQE7BProtusao = new javax.swing.JComboBox();
         rotuloQE14A = new javax.swing.JLabel();
         ComboBoxQE14a = new javax.swing.JComboBox();
         rotuloQE6 = new javax.swing.JLabel();
@@ -476,9 +476,9 @@ public class ViewGrupos extends JFrame {
 
         rotuloLDQE5CEsquerdo.setText("Esquerdo");
 
-        ComboBoxQE5CDireito.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Sim - 0", "Não - 1", "N/A - 8" }));
+        ComboBoxQE5CDireito.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não - 0", "Sim - 1", "N/A - 8" }));
 
-        ComboBoxQE5CEsquerdo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Sim - 0", "Não - 1", "N/A - 8" }));
+        ComboBoxQE5CEsquerdo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não - 0", "Sim - 1", "N/A - 8" }));
 
         rotuloQE7.setText("QE7 - Ruídos articulares nas excursões");
 
@@ -508,7 +508,7 @@ public class ViewGrupos extends JFrame {
 
         rotuloQE7BProtusão.setText("Protrusão");
 
-        ComboBoxQE7BExcusão.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
+        ComboBoxQE7BProtusao.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
 
         rotuloQE14A.setText("QE14a - Você alguma vez teve travamento de forma que não foi possivel abrir a boca por todo o trajeto?");
 
@@ -597,42 +597,11 @@ public class ViewGrupos extends JFrame {
 
         rotuloQE3.setText("QE3 - Padrão de Abertura");
 
-        ComboBoxQE3Abertura.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Reto - 1", "Desvio lateral direito (não corrigido) - 1", "Desvio lateral direito (S) - 2", "Desvio lateral esquerdo (não corrigido) - 3", "Desvio lateral direito (S) - 4", "Outro - 5" }));
+        ComboBoxQE3Abertura.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Reto - 0", "Desvio lateral direito (não corrigido) - 1", "Desvio lateral direito (S) - 2", "Desvio lateral esquerdo (não corrigido) - 3", "Desvio lateral direito (S) - 4", "Outro - 5" }));
 
         rotuloQE3Tipo.setText("Tipo");
 
         rotuloQE3Especifique.setText("(especifique)");
-    }
-    
-    private void analiseGrupoII_direita(){
-        
-        //ESTALIDO NA ABERTURA E NO FECHO
-        if("Estalido - 1".equalsIgnoreCase(ComboBoxQE5ADireito.getSelectedItem().toString()) && "Estalido - 1".equalsIgnoreCase(ComboBoxQE5BDireito.getSelectedItem().toString())){
-            rqE5a = 1;
-            rqE5b = 1;
-            
-            rqE5amm = Integer.parseInt(campoQE5ADireito.getText());
-            rqE5bmm = Integer.parseInt(campoQE5BDireito.getText());
-            
-            //PAREI AQUI EM 03/02/2013
-        }
-        
-        //ESTALIDO NA ABERTURA OU NO FECHO
-        else if("Estalido - 1".equalsIgnoreCase(ComboBoxQE5ADireito.getSelectedItem().toString()) || "Estalido - 1".equalsIgnoreCase(ComboBoxQE5BDireito.getSelectedItem().toString())){
-            
-            if ("Estalido - 1".equalsIgnoreCase(ComboBoxQE5ADireito.getSelectedItem().toString())){
-                rqE5a = 1;
-            }
-            
-            else{
-                rqE5b = 1;
-            }
-        }
-        
-        //SEM ESTALIDO NO MOVIMENTO VERTICAL
-        else{
-            
-        }
     }
 
     private void configurarBotoes() {
@@ -711,46 +680,14 @@ public class ViewGrupos extends JFrame {
                 String diagnostico2 = "";
                 
                 diagnostico = controlador.grupo_I(rqe3, QE8AD, QE8AE, QE8BD, QE8BE, QE8CD, QE8CE, QE8DD, QE8DE, QE8ED, QE8EE, QE8FD, QE8FE, QE8GD, QE8GE, QE8HD, QE8HE, QE10AD, QE10AE, QE10BD, QE10BE, rqe1, rqE4a, rqE4b, rqE4c, rqE4d);
-                rotuloResultado.setText(diagnostico);
+                //rotuloResultado.setText(diagnostico);
                 /*controlador.diagnosticar(rqe3, QE8AD, QE8AE, QE8BD, QE8BE, QE8CD, QE8CE, QE8DD, QE8DE, QE8ED, QE8EE, QE8FD, QE8FE, 
                         QE8GD, QE8GE, QE8HD, QE8HE, QE10AD, QE10AE, QE10BD, QE10BE, rqe1, campoQE4A.getText(), campoQE4B.getText(), campoQE4C.getText(),
                         campoQE4D.getText());*/
                 
                 //DIAGNOSTICO DO GRUPO 2
                 
-                //VARIÁVEIS
-                String rqE5A_Abertura_Dir, rqE5B_Fecho_Dir, rqE5A_Medida_Abert_Dir, rqE5B_Medida_Fecho_Dir, rqE5C_Direito, 
-                        rqE7A_Dir_Excursão_Direita, rqE7A_Dir_Excursão_Esquerda, rqE7A_Dir_Protusao,
-                        rqE6_Medida_Excursao_Esquerda, rqE3_Combo, rqE3_Campo;
-                
-                //ESSA VARIÁVEL POSSIVELMENTE DEIXARÁ DE EXISTIR
-                String rq14A;
-                
-                
-                //ATRIBUIÇÃO ÀS VARIÁVEIS DO CONTEUDO QUE VEM DA INTERFACE GRÁFICA
-                rqE5A_Abertura_Dir = (String)ComboBoxQE5ADireito.getSelectedItem();
-                rqE5B_Fecho_Dir = (String)ComboBoxQE5BDireito.getSelectedItem();
-                
-                rqE5A_Medida_Abert_Dir = campoQE5ADireito.getText();
-                rqE5B_Medida_Fecho_Dir = campoQE5BDireito.getText();
-                
-                rqE5C_Direito = (String)ComboBoxQE5CDireito.getSelectedItem();
-                
-                rqE7A_Dir_Excursão_Direita = (String)ComboBoxQE7AExcusãoDireita.getSelectedItem();
-                rqE7A_Dir_Excursão_Esquerda = (String)ComboBoxQE7AExcusãoEsquerda.getSelectedItem();
-                rqE7A_Dir_Protusao = (String)ComboBoxQE7AProtusão.getSelectedItem();
-                
-                rq14A = (String)ComboBoxQE14a.getSelectedItem();
-                
-                //Nesse ponto deveria ser atribuido algum conteúdo as questões 4b e 4d, mas
-                //elas já estão com conteúdos atribuidos acima.
-                
-                //Continuação
-                rqE6_Medida_Excursao_Esquerda = campoQE6B.getText();
-                rqE3_Combo = (String)ComboBoxRespostaQE3.getSelectedItem();
-                rqE3_Campo = campoQE3.getText();
-                
-                diagnostico2 = controlador.diagnostico_grupo_II(rqE5A_Abertura_Dir, rqE5B_Fecho_Dir, rqE5A_Medida_Abert_Dir, rqE5B_Medida_Fecho_Dir, rqE5C_Direito, rqE7A_Dir_Excursão_Direita, rqE7A_Dir_Excursão_Esquerda, rqE7A_Dir_Protusao, rqE6_Medida_Excursao_Esquerda, rqE3_Combo, rqE3_Campo, rq14A);
+                diagnostico2 = diagnostico_GrupoII_Direita();
                 rotuloResultado.setText(diagnostico2);
             }
         });
@@ -778,6 +715,94 @@ public class ViewGrupos extends JFrame {
             }
         });
 
+    }
+    
+    private String diagnostico_GrupoII_Direita(){
+        //DIAGNOSTICO DO GRUPO 2
+                
+        //VARIÁVEIS
+        String rqE5A_Abertura_Dir, rqE5B_Fecho_Dir, rqE5A_Medida_Abert_Dir, rqE5B_Medida_Fecho_Dir, rqE5C_Direito,
+                rqE7A_Dir_Excursão_Direita, rqE7A_Dir_Excursão_Esquerda, rqE7A_Dir_Protusao,
+                rqE6_Medida_Excursao_Esquerda, rqE3_Combo, rqE3_Campo;
+                
+        //ESSA VARIÁVEL POSSIVELMENTE DEIXARÁ DE EXISTIR
+        String rq14A;
+                
+                
+                //ATRIBUIÇÃO ÀS VARIÁVEIS DO CONTEUDO QUE VEM DA INTERFACE GRÁFICA
+        rqE5A_Abertura_Dir = (String)ComboBoxQE5ADireito.getSelectedItem();
+        rqE5B_Fecho_Dir = (String)ComboBoxQE5BDireito.getSelectedItem();
+                
+        rqE5A_Medida_Abert_Dir = campoQE5ADireito.getText();
+        rqE5B_Medida_Fecho_Dir = campoQE5BDireito.getText();
+               
+        rqE5C_Direito = (String)ComboBoxQE5CDireito.getSelectedItem();
+                
+        rqE7A_Dir_Excursão_Direita = (String)ComboBoxQE7AExcusãoDireita.getSelectedItem();
+        rqE7A_Dir_Excursão_Esquerda = (String)ComboBoxQE7AExcusãoEsquerda.getSelectedItem();
+        rqE7A_Dir_Protusao = (String)ComboBoxQE7AProtusão.getSelectedItem();
+                
+        rq14A = (String)ComboBoxQE14a.getSelectedItem();
+                
+        //Nesse ponto deveria ser atribuido algum conteúdo as questões 4b e 4d, mas
+        //elas já estão com conteúdos atribuidos acima.
+                
+        //Continuação
+        rqE6_Medida_Excursao_Esquerda = campoQE6B.getText();
+        rqE3_Combo = (String)ComboBoxRespostaQE3.getSelectedItem();
+        rqE3_Campo = campoQE3.getText();
+        
+        String diagnostico2;
+        diagnostico2 = controlador.diagnostico_grupo_II(rqE5A_Abertura_Dir, rqE5B_Fecho_Dir, rqE5A_Medida_Abert_Dir, rqE5B_Medida_Fecho_Dir, rqE5C_Direito, rqE7A_Dir_Excursão_Direita, rqE7A_Dir_Excursão_Esquerda, rqE7A_Dir_Protusao, rqE6_Medida_Excursao_Esquerda, rqE3_Combo, rqE3_Campo, rq14A);
+        
+        return diagnostico2;
+    }
+    
+    public String diagnostico_GrupoII_Esquerda(){
+        //DIAGNOSTICO DO GRUPO 2
+                
+        //VARIÁVEIS
+        String rqE5A_Abertura_Esq, rqE5B_Fecho_Esq, rqE5A_Medida_Abert_Esq, rqE5B_Medida_Fecho_Esq, rqE5C_Esquerda,
+                rqE7B_Esq_Excursão_Direita, rqE7B_Esq_Excursão_Esquerda, rqE7B_Esq_Protusao,
+                rqE6_Medida_Excursao_Direita, rqE3_Combo, rqE3_Campo;
+                
+        //ESSA VARIÁVEL POSSIVELMENTE DEIXARÁ DE EXISTIR
+        String rq14A;
+                
+                
+                //ATRIBUIÇÃO ÀS VARIÁVEIS DO CONTEUDO QUE VEM DA INTERFACE GRÁFICA
+        rqE5A_Abertura_Esq = (String)ComboBoxQE5AEsquerdo.getSelectedItem();
+        rqE5B_Fecho_Esq = (String)ComboBoxQE5BEsquerdo.getSelectedItem();
+                
+        rqE5A_Medida_Abert_Esq = campoQE5AEsquerdo.getText();
+        rqE5B_Medida_Fecho_Esq = campoQE5BEsquerdo.getText();
+               
+        rqE5C_Esquerda = (String)ComboBoxQE5CEsquerdo.getSelectedItem();
+                
+        rqE7B_Esq_Excursão_Direita = (String)ComboBoxQE7BExcusãoDireita.getSelectedItem();
+        rqE7B_Esq_Excursão_Esquerda = (String)ComboBoxQE7BExcusãoEsquerda.getSelectedItem();
+        rqE7B_Esq_Protusao = (String)ComboBoxQE7BProtusao.getSelectedItem();
+                
+        rq14A = (String)ComboBoxQE14a.getSelectedItem();
+                
+        //Nesse ponto deveria ser atribuido algum conteúdo as questões 4b e 4d, mas
+        //elas já estão com conteúdos atribuidos acima.
+                
+        //Continuação
+        rqE6_Medida_Excursao_Direita = campoQE6A.getText();
+        rqE3_Combo = (String)ComboBoxRespostaQE3.getSelectedItem();
+        rqE3_Campo = campoQE3.getText();
+        
+        String diagnostico2;
+        diagnostico2 = controlador.diagnostico_grupo_II(rqE5A_Abertura_Esq, rqE5B_Fecho_Esq, rqE5A_Medida_Abert_Esq, rqE5B_Medida_Fecho_Esq, rqE5C_Esquerda, rqE7B_Esq_Excursão_Direita, rqE7B_Esq_Excursão_Esquerda, rqE7B_Esq_Protusao, rqE6_Medida_Excursao_Direita, rqE3_Combo, rqE3_Campo, rq14A);
+        
+        return diagnostico2;
+    }
+    
+    public String diagnostico_GrupoIII_Direita(){
+        
+        
+        return "";
     }
 
     private void configurarPainel() {
@@ -1036,7 +1061,7 @@ public class ViewGrupos extends JFrame {
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(ComboBoxQE7BExcusãoEsquerda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(ComboBoxQE7BExcusão, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(ComboBoxQE7BProtusao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(PanelQuestionariosLayout.createSequentialGroup()
                                 .addComponent(rotuloQE5B)
                                 .addGap(100, 100, 100)
@@ -1279,7 +1304,7 @@ public class ViewGrupos extends JFrame {
                 .addGroup(PanelQuestionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ComboBoxQE7BExcusãoDireita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ComboBoxQE7BExcusãoEsquerda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ComboBoxQE7BExcusão, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ComboBoxQE7BProtusao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(rotuloQE14A)
                 .addGap(18, 18, 18)
