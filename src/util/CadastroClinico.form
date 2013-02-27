@@ -1,0 +1,2214 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.8" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="ScrollPane" min="-2" pref="751" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="ScrollPane" min="-2" pref="413" max="-2" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JScrollPane" name="ScrollPane">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="jPanel1">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="jPanel13" max="32767" attributes="0"/>
+                          <Component id="jPanel8" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jPanel7" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jPanel6" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jPanel5" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jPanel4" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jPanel9" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jPanel11" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jPanel12" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jPanel10" alignment="1" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jPanel7" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jPanel8" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jPanel9" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jPanel10" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jPanel11" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jPanel12" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jPanel13" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="45" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="jPanel12">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="rotuloQE10" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="rotuloQE10A" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rotuloQE10B" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="rotuloLDQE10" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE10AD" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE10BD" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="ComboBoxQE10BE" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rotuloLEQE10" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE10AE" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="rotuloQE10" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloLDQE10" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloLEQE10" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="rotuloQE10A" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE10AD" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="rotuloQE10B" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE10BD" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="ComboBoxQE10AE" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="ComboBoxQE10BE" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace pref="31" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="rotuloQE10">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Quest&#xe3;o 10 - Dor muscular intra-oral com palpa&#xe7;&#xe3;o"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloQE10A">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="&#xc1;rea do pterig&#xf3;ideo lateral (atr&#xe1;s dos molares superiores)"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloQE10B">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Tend&#xe3;o do temporal (infra-bucal)"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE10BD">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="0"/>
+                        <StringItem index="1" value="1"/>
+                        <StringItem index="2" value="2"/>
+                        <StringItem index="3" value="3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE10AD">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="0"/>
+                        <StringItem index="1" value="1"/>
+                        <StringItem index="2" value="2"/>
+                        <StringItem index="3" value="3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloLDQE10">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Lado Direito"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloLEQE10">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Lado Esquerdo"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE10AE">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="0"/>
+                        <StringItem index="1" value="1"/>
+                        <StringItem index="2" value="2"/>
+                        <StringItem index="3" value="3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE10BE">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="0"/>
+                        <StringItem index="1" value="1"/>
+                        <StringItem index="2" value="2"/>
+                        <StringItem index="3" value="3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanel11">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="rotuloQE09" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="rotuloQE10A1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rotuloQE10B1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="rotuloLDQE11" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE10AD1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE10BD1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="ComboBoxQE10BE1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rotuloLEQE11" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE10AE1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="rotuloQE09" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloLDQE11" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloLEQE11" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="rotuloQE10A1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE10AD1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="rotuloQE10B1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE10BD1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="ComboBoxQE10AE1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="ComboBoxQE10BE1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace pref="25" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE10BE1">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="0"/>
+                        <StringItem index="1" value="1"/>
+                        <StringItem index="2" value="2"/>
+                        <StringItem index="3" value="3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE10BD1">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="0"/>
+                        <StringItem index="1" value="1"/>
+                        <StringItem index="2" value="2"/>
+                        <StringItem index="3" value="3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloQE10B1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Ligamento posterior(dentro do ouvido)"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloQE10A1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="P&#xf3;lo lateral(por fora)"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE10AD1">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="0"/>
+                        <StringItem index="1" value="1"/>
+                        <StringItem index="2" value="2"/>
+                        <StringItem index="3" value="3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE10AE1">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="0"/>
+                        <StringItem index="1" value="1"/>
+                        <StringItem index="2" value="2"/>
+                        <StringItem index="3" value="3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloLEQE11">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Lado Esquerdo"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloLDQE11">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Lado Direito"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloQE09">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Quest&#xe3;o 09 - Dor muscularl com palpa&#xe7;&#xe3;o"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanel10">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="rotuloQE8" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="rotuloBQE8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rotuloCQE8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rotuloDQE8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rotuloEQE8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rotuloFQE8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rotuloAQE8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rotuloGQE8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rotuloHQE8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="ComboBoxQE8AD" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rotuloLDQE8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE8BD" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE8CD" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE8DD" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE8ED" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE8FD" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE8GD" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE8HD" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="ComboBoxQE8GE" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE8FE" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE8EE" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE8DE" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE8CE" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rotuloLEQE8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE8AE" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE8BE" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE8HE" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace pref="19" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="rotuloQE8" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloLDQE8" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloLEQE8" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloAQE8" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE8AD" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE8AE" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloBQE8" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE8BD" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE8BE" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloCQE8" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE8CD" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE8CE" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloDQE8" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE8DD" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE8DE" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloEQE8" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE8ED" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE8EE" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloFQE8" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE8FD" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE8FE" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloGQE8" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE8GD" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE8GE" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloHQE8" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE8HE" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE8HD" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="27" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="rotuloQE8">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Quest&#xe3;o 08 - Dor muscular extra-oral com palpa&#xe7;&#xe3;o"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloAQE8">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Temporal posterior (parte por tr&#xe1;s da t&#xea;mpora)"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloBQE8">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Temporal m&#xe9;dio (meio da t&#xea;mpora)"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloCQE8">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Temporal anteriror (parte anterior da t&#xea;mpora)"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloDQE8">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Masseter superior (bochecha/abaixo do zigoma)"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloEQE8">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Masserter m&#xe9;dio (bochecha/lado da face)"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloFQE8">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Masserter inferior (bochecha/linha da mandibula)"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloGQE8">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Regi&#xe3;o mandibular posterior (estilo-hiode / regi&#xe3;o posterior do digastrico) &quot;regi&#xe3;o da garganta&quot;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloHQE8">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Regi&#xe3;o sumandibular posterior (pterig&#xf3;deo media/suprahi&#xf3;ide/ regi&#xe3;o anterior do dig&#xe1;strico) &quot;abaixo do queixo&quot;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE8HD">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="0"/>
+                        <StringItem index="1" value="1"/>
+                        <StringItem index="2" value="2"/>
+                        <StringItem index="3" value="3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE8HE">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="0"/>
+                        <StringItem index="1" value="1"/>
+                        <StringItem index="2" value="2"/>
+                        <StringItem index="3" value="3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE8GE">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="0"/>
+                        <StringItem index="1" value="1"/>
+                        <StringItem index="2" value="2"/>
+                        <StringItem index="3" value="3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE8GD">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="0"/>
+                        <StringItem index="1" value="1"/>
+                        <StringItem index="2" value="2"/>
+                        <StringItem index="3" value="3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE8FD">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="0"/>
+                        <StringItem index="1" value="1"/>
+                        <StringItem index="2" value="2"/>
+                        <StringItem index="3" value="3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE8FE">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="0"/>
+                        <StringItem index="1" value="1"/>
+                        <StringItem index="2" value="2"/>
+                        <StringItem index="3" value="3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE8EE">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="0"/>
+                        <StringItem index="1" value="1"/>
+                        <StringItem index="2" value="2"/>
+                        <StringItem index="3" value="3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE8ED">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="0"/>
+                        <StringItem index="1" value="1"/>
+                        <StringItem index="2" value="2"/>
+                        <StringItem index="3" value="3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE8DD">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="0"/>
+                        <StringItem index="1" value="1"/>
+                        <StringItem index="2" value="2"/>
+                        <StringItem index="3" value="3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE8DE">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="0"/>
+                        <StringItem index="1" value="1"/>
+                        <StringItem index="2" value="2"/>
+                        <StringItem index="3" value="3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE8CE">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="0"/>
+                        <StringItem index="1" value="1"/>
+                        <StringItem index="2" value="2"/>
+                        <StringItem index="3" value="3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE8CD">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="0"/>
+                        <StringItem index="1" value="1"/>
+                        <StringItem index="2" value="2"/>
+                        <StringItem index="3" value="3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE8BD">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="0"/>
+                        <StringItem index="1" value="1"/>
+                        <StringItem index="2" value="2"/>
+                        <StringItem index="3" value="3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE8BE">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="0"/>
+                        <StringItem index="1" value="1"/>
+                        <StringItem index="2" value="2"/>
+                        <StringItem index="3" value="3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE8AE">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="0"/>
+                        <StringItem index="1" value="1"/>
+                        <StringItem index="2" value="2"/>
+                        <StringItem index="3" value="3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE8AD">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="0"/>
+                        <StringItem index="1" value="1"/>
+                        <StringItem index="2" value="2"/>
+                        <StringItem index="3" value="3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloLDQE8">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Lado Direito"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloLEQE8">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Lado Esquerdo"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanel9">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="rotuloQE7" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloQE7A" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloQE7B" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="rotuloQE7BExcusãoDireita" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+                                          <Component id="rotuloQE7BExcusãoEsquerda" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                                          <Component id="rotuloQE7BProtusão" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="ComboBoxQE7BExcusãoDireita" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="ComboBoxQE7BExcusãoEsquerda" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="ComboBoxQE7BExcusão" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="ComboBoxQE7AExcusãoDireita" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="ComboBoxQE7AExcusãoEsquerda" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="ComboBoxQE7AProtusão" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="rotuloQE7AExcusãoDireita" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+                                          <Component id="rotuloQE7AExcusãoEsquerda" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                                          <Component id="rotuloQE7AProtusão" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="rotuloQE7" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
+                          <Component id="rotuloQE7A" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloQE7AExcusãoDireita" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloQE7AExcusãoEsquerda" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloQE7AProtusão" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="ComboBoxQE7AExcusãoDireita" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE7AExcusãoEsquerda" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE7AProtusão" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="rotuloQE7B" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloQE7BExcusãoDireita" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloQE7BExcusãoEsquerda" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloQE7BProtusão" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="ComboBoxQE7BExcusãoDireita" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE7BExcusãoEsquerda" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE7BExcusão" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="21" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="rotuloQE7">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Quest&#xe3;o 07 - Ru&#xed;dos articulares nas excurs&#xf5;es"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE7BExcus&#xe3;oDireita">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Nenhum - 0"/>
+                        <StringItem index="1" value="Estalido - 1"/>
+                        <StringItem index="2" value="Crepita&#xe7;&#xe3;o Grosseira- 2"/>
+                        <StringItem index="3" value="Crepita&#xe7;&#xe3;o Fina - 3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE7BExcus&#xe3;oEsquerda">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Nenhum - 0"/>
+                        <StringItem index="1" value="Estalido - 1"/>
+                        <StringItem index="2" value="Crepita&#xe7;&#xe3;o Grosseira- 2"/>
+                        <StringItem index="3" value="Crepita&#xe7;&#xe3;o Fina - 3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE7BExcus&#xe3;o">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Nenhum - 0"/>
+                        <StringItem index="1" value="Estalido - 1"/>
+                        <StringItem index="2" value="Crepita&#xe7;&#xe3;o Grosseira- 2"/>
+                        <StringItem index="3" value="Crepita&#xe7;&#xe3;o Fina - 3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloQE7BProtus&#xe3;o">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Protrus&#xe3;o"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloQE7BExcus&#xe3;oEsquerda">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Excus&#xe3;o Esquerda"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloQE7BExcus&#xe3;oDireita">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Excus&#xe3;o Direita"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloQE7B">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Ru&#xed;dos -  Esquerdo"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE7AExcus&#xe3;oDireita">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Nenhum - 0"/>
+                        <StringItem index="1" value="Estalido - 1"/>
+                        <StringItem index="2" value="Crepita&#xe7;&#xe3;o Grosseira- 2"/>
+                        <StringItem index="3" value="Crepita&#xe7;&#xe3;o Fina - 3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE7AExcus&#xe3;oEsquerda">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Nenhum - 0"/>
+                        <StringItem index="1" value="Estalido - 1"/>
+                        <StringItem index="2" value="Crepita&#xe7;&#xe3;o Grosseira- 2"/>
+                        <StringItem index="3" value="Crepita&#xe7;&#xe3;o Fina - 3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE7AProtus&#xe3;o">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Nenhum - 0"/>
+                        <StringItem index="1" value="Estalido - 1"/>
+                        <StringItem index="2" value="Crepita&#xe7;&#xe3;o Grosseira- 2"/>
+                        <StringItem index="3" value="Crepita&#xe7;&#xe3;o Fina - 3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloQE7AProtus&#xe3;o">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Protrus&#xe3;o"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloQE7AExcus&#xe3;oEsquerda">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Excus&#xe3;o Esquerda"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloQE7AExcus&#xe3;oDireita">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Excus&#xe3;o Direita"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloQE7A">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Ru&#xed;dos -  Direito"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanel8">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="rotuloQE6" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="rotuloQE6A" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="campoQE6A" min="-2" pref="31" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="rotuloQE6B" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="rotuloQE6C" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="rotuloQE6D" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="campoQE6AC" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
+                                              <Component id="campoQE6B" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
+                                              <Component id="campoQE6D" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="ComboBoxQE6DDesvio" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="rotuloQE6Muscular" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="ComboBoxQE6AMuscular" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                                                  <Component id="rotuloQE6Articular" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="ComboBoxQE6BArticular" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="ComboBoxQE6AArticular" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="ComboBoxQE6CArticular" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                      <Component id="ComboBoxQE6BMuscular" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE6CMuscular" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rotuloQE6Desvio" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="rotuloQE6" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloQE6Muscular" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloQE6Articular" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloQE6A" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoQE6A" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE6AMuscular" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE6AArticular" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloQE6B" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoQE6B" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE6BMuscular" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE6BArticular" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloQE6C" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoQE6AC" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE6CMuscular" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE6CArticular" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="rotuloQE6Desvio" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="ComboBoxQE6DDesvio" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloQE6D" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoQE6D" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="28" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="rotuloQE6">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Quest&#xe3;o 06 - Excurs&#xf5;es"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloQE6A">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Excurs&#xe3;o Lateral Direita"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JFormattedTextField" name="campoQE6A">
+                  <Properties>
+                    <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                      <Format format="##" subtype="-1" type="5"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloQE6Muscular">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Dor Muscular"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloQE6Articular">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Dor Articular"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE6AArticular">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Nenhum - 0"/>
+                        <StringItem index="1" value="direito - 1"/>
+                        <StringItem index="2" value="esquerdo- 2"/>
+                        <StringItem index="3" value="ambos - 3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE6AMuscular">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Nenhum - 0"/>
+                        <StringItem index="1" value="direito - 1"/>
+                        <StringItem index="2" value="esquerdo- 2"/>
+                        <StringItem index="3" value="ambos - 3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloQE6B">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Excurs&#xe3;o Lateral Esquerda"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JFormattedTextField" name="campoQE6B">
+                  <Properties>
+                    <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                      <Format format="##" subtype="-1" type="5"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE6BMuscular">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Nenhum - 0"/>
+                        <StringItem index="1" value="direito - 1"/>
+                        <StringItem index="2" value="esquerdo- 2"/>
+                        <StringItem index="3" value="ambos - 3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE6BArticular">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Nenhum - 0"/>
+                        <StringItem index="1" value="direito - 1"/>
+                        <StringItem index="2" value="esquerdo- 2"/>
+                        <StringItem index="3" value="ambos - 3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE6CArticular">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Nenhum - 0"/>
+                        <StringItem index="1" value="direito - 1"/>
+                        <StringItem index="2" value="esquerdo- 2"/>
+                        <StringItem index="3" value="ambos - 3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE6CMuscular">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Nenhum - 0"/>
+                        <StringItem index="1" value="direito - 1"/>
+                        <StringItem index="2" value="esquerdo- 2"/>
+                        <StringItem index="3" value="ambos - 3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloQE6C">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Protus&#xe3;o"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JFormattedTextField" name="campoQE6AC">
+                  <Properties>
+                    <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                      <Format format="##" subtype="-1" type="5"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloQE6D">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Desvio de linha m&#xe9;dia"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JFormattedTextField" name="campoQE6D">
+                  <Properties>
+                    <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                      <Format format="##" subtype="-1" type="5"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campoQE6DActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE6DDesvio">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="3">
+                        <StringItem index="0" value="direito - 1"/>
+                        <StringItem index="1" value="esquerdo- 2"/>
+                        <StringItem index="2" value="nenhum - 8"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloQE6Desvio">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Desvio"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanel7">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="rotuloQE5p" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="rotuloQE5A" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="116" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="ComboBoxQE5ADireito" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="rotuloLDQE5ADireito" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="rotuloLDQE5AA" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="campoQE5ADireito" min="-2" pref="33" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="campoQE5AEsquerdo" min="-2" pref="33" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="rotuloLDQE5AEsquerdo" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE5AEsquerdo" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Component id="rotuloQE5C" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="rotuloLDQE5CDireito" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE5CDireito" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="ComboBoxQE5CEsquerdo" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rotuloLDQE5CEsquerdo" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="314" max="-2" attributes="0"/>
+                                  <Component id="campoQE5BEsquerdo" min="-2" pref="33" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="rotuloLDQE5BB" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="campoQE5BDireito" min="-2" pref="33" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                  <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="rotuloQE5B" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="ComboBoxQE5BDireito" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rotuloLDQE5BDireito" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="rotuloLDQE5BEsquerdo" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE5BEsquerdo" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="rotuloQE5p" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloLDQE5ADireito" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloLDQE5AEsquerdo" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloQE5A" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="ComboBoxQE5ADireito" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE5AEsquerdo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloLDQE5AA" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoQE5ADireito" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoQE5AEsquerdo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloLDQE5BDireito" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloLDQE5BEsquerdo" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloQE5B" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="ComboBoxQE5BDireito" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE5BEsquerdo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloLDQE5BB" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoQE5BDireito" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoQE5BEsquerdo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="rotuloQE5C" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="rotuloLDQE5CDireito" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloLDQE5CEsquerdo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="ComboBoxQE5CDireito" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE5CEsquerdo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="27" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="rotuloQE5p">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Quest&#xe3;o 05- Ru&#xed;dos articulares (palpa&#xe7;&#xe3;o)"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloQE5A">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Abertura"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloLDQE5ADireito">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Direito"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloLDQE5AEsquerdo">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Esquerdo"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE5ADireito">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Nenhum - 0"/>
+                        <StringItem index="1" value="Estalido - 1"/>
+                        <StringItem index="2" value="Crepita&#xe7;&#xe3;o Grosseira- 2"/>
+                        <StringItem index="3" value="Crepita&#xe7;&#xe3;o Fina - 3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE5AEsquerdo">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Nenhum - 0"/>
+                        <StringItem index="1" value="Estalido - 1"/>
+                        <StringItem index="2" value="Crepita&#xe7;&#xe3;o Grosseira- 2"/>
+                        <StringItem index="3" value="Crepita&#xe7;&#xe3;o Fina - 3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel12">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="mm"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JFormattedTextField" name="campoQE5AEsquerdo">
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel11">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="mm"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JFormattedTextField" name="campoQE5ADireito">
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloLDQE5AA">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Medida do estalido na abertura:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloQE5B">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Fechamento"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloLDQE5BDireito">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Direito"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloLDQE5BEsquerdo">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Esquerdo"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE5BEsquerdo">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Nenhum - 0"/>
+                        <StringItem index="1" value="Estalido - 1"/>
+                        <StringItem index="2" value="Crepita&#xe7;&#xe3;o Grosseira- 2"/>
+                        <StringItem index="3" value="Crepita&#xe7;&#xe3;o Fina - 3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE5BDireito">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Nenhum - 0"/>
+                        <StringItem index="1" value="Estalido - 1"/>
+                        <StringItem index="2" value="Crepita&#xe7;&#xe3;o Grosseira- 2"/>
+                        <StringItem index="3" value="Crepita&#xe7;&#xe3;o Fina - 3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JFormattedTextField" name="campoQE5BDireito">
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel14">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="mm"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel13">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="mm"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JFormattedTextField" name="campoQE5BEsquerdo">
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloLDQE5BB">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Medida do estalido na abertura:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloQE5C">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Estalido reciproco eliminado durante abertura protrusiva"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloLDQE5CEsquerdo">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Esquerdo"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloLDQE5CDireito">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Direito"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE5CDireito">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="3">
+                        <StringItem index="0" value="Sim - 0"/>
+                        <StringItem index="1" value="N&#xe3;o - 1"/>
+                        <StringItem index="2" value="N/A - 8"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE5CEsquerdo">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="3">
+                        <StringItem index="0" value="Sim - 0"/>
+                        <StringItem index="1" value="N&#xe3;o - 1"/>
+                        <StringItem index="2" value="N/A - 8"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanel6">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="rotuloQE4" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="rotuloQE4A" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="campoQE4A" min="-2" pref="31" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="rotuloQE4C" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="rotuloQE4D" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="campoQE4D" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
+                                              <Component id="campoQE4C" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="rotuloQE4B" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="campoQE4B" min="-2" pref="31" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="rotuloLDQE4Muscular" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                          <Component id="rotuloLDQE4Articular" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="ComboBoxQE4DMuscular" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="ComboBoxQE4DArticular1" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="ComboBoxQE4CMuscular" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="ComboBoxQE4CArticular" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="rotuloQE4" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="rotuloQE4A" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="campoQE4A" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="rotuloQE4B" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="campoQE4B" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="rotuloQE4C" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="campoQE4C" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="rotuloQE4D" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="campoQE4D" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="rotuloLDQE4Muscular" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rotuloLDQE4Articular" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="ComboBoxQE4CMuscular" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE4CArticular" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="ComboBoxQE4DMuscular" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE4DArticular1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace pref="25" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="rotuloQE4">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Quest&#xe3;o 04 - Extens&#xe3;o de movimento vertical"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloQE4A">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Abertura sem auxilio sem dor em mm"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JFormattedTextField" name="campoQE4A">
+                  <Properties>
+                    <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                      <Format format="##" subtype="-1" type="5"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JFormattedTextField" name="campoQE4B">
+                  <Properties>
+                    <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                      <Format format="##" subtype="-1" type="5"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloQE4B">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Abertura m&#xe1;xima sem auxilio em mm"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloQE4C">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Abertura m&#xe1;xima com auxilio em mm"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JFormattedTextField" name="campoQE4C">
+                  <Properties>
+                    <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                      <Format format="##" subtype="-1" type="5"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JFormattedTextField" name="campoQE4D">
+                  <Properties>
+                    <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                      <Format format="##" subtype="-1" type="5"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloQE4D">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Trespasse incisal vertical em mm"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE4DMuscular">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Nenhum - 0"/>
+                        <StringItem index="1" value="direito - 1"/>
+                        <StringItem index="2" value="esquerdo- 2"/>
+                        <StringItem index="3" value="ambos - 3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE4CMuscular">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Nenhum - 0"/>
+                        <StringItem index="1" value="direito - 1"/>
+                        <StringItem index="2" value="esquerdo- 2"/>
+                        <StringItem index="3" value="ambos - 3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloLDQE4Muscular">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Dor Muscular"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloLDQE4Articular">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Dor Articular"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE4CArticular">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Nenhum - 0"/>
+                        <StringItem index="1" value="direito - 1"/>
+                        <StringItem index="2" value="esquerdo- 2"/>
+                        <StringItem index="3" value="ambos - 3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE4DArticular1">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Nenhum - 0"/>
+                        <StringItem index="1" value="direito - 1"/>
+                        <StringItem index="2" value="esquerdo- 2"/>
+                        <StringItem index="3" value="ambos - 3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanel5">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="rotuloQE3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="ComboBoxQE3Abertura" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="rotuloQE3Tipo" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="campoQE3" max="32767" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="rotuloQE3Especifique" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="rotuloQE3" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                  <Component id="rotuloQE3Tipo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="campoQE3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="rotuloQE3Especifique" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="ComboBoxQE3Abertura" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace pref="32" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="rotuloQE3">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Quest&#xe3;o 03 - Padr&#xe3;o de Abertura"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE3Abertura">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="6">
+                        <StringItem index="0" value="Reto - 1"/>
+                        <StringItem index="1" value="Desvio lateral direito (n&#xe3;o corrigido) - 1"/>
+                        <StringItem index="2" value="Desvio lateral direito (S) - 2"/>
+                        <StringItem index="3" value="Desvio lateral esquerdo (n&#xe3;o corrigido) - 3"/>
+                        <StringItem index="4" value="Desvio lateral direito (S) - 4"/>
+                        <StringItem index="5" value="Outro - 5"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloQE3Tipo">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Tipo"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="campoQE3">
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloQE3Especifique">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="(especifique)"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanel3">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="ComboBoxQE2BLadoDireito" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE2ALadoDireito" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="labelQ02Direito" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="labelQ02Esquerdo" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE4DArticular" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE2ALadoEsquerdo" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="labelQ02Direito" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelQ02Esquerdo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="ComboBoxQE2ALadoDireito" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE2ALadoEsquerdo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="ComboBoxQE2BLadoDireito" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE4DArticular" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLabel1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Quest&#xe3;o 02 - Voc&#xea; poderia apontar as &#xe1;reas onde voc&#xea; sente dor? "/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE2ALadoDireito">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Nenhum - 0"/>
+                        <StringItem index="1" value="direito - 1"/>
+                        <StringItem index="2" value="esquerdo- 2"/>
+                        <StringItem index="3" value="ambos - 3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE2BLadoDireito">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Nenhum - 0"/>
+                        <StringItem index="1" value="direito - 1"/>
+                        <StringItem index="2" value="esquerdo- 2"/>
+                        <StringItem index="3" value="ambos - 3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE2ALadoEsquerdo">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Nenhum - 0"/>
+                        <StringItem index="1" value="direito - 1"/>
+                        <StringItem index="2" value="esquerdo- 2"/>
+                        <StringItem index="3" value="ambos - 3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE4DArticular">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Nenhum - 0"/>
+                        <StringItem index="1" value="direito - 1"/>
+                        <StringItem index="2" value="esquerdo- 2"/>
+                        <StringItem index="3" value="ambos - 3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="labelQ02Direito">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Lado Direito"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="labelQ02Esquerdo">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Lado Esquerdo"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanel4">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="labelPerguntas" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="556" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="rotuloQuestao01" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="ComboBoxQE1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="labelPerguntas" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="rotuloQuestao01" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="ComboBoxQE1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="19" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="labelPerguntas">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Perguntas:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloQuestao01">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Quest&#xe3;o 01 - Voc&#xea; tem dor no lado direito da sua face, lado esquerdo ou ambos os lados?"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE1">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="5">
+                        <StringItem index="0" value="N&#xe3;o"/>
+                        <StringItem index="1" value="Direito"/>
+                        <StringItem index="2" value="Esquerdo"/>
+                        <StringItem index="3" value="Ambos"/>
+                        <StringItem index="4" value=" "/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanel2">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="labelQuestionario" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="550" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="labelQuestionario" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="labelQuestionario">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Question&#xe1;rio"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanel13">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="0" type="rgb"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="botaoDiagnosticar" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="rotuloResultado" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="botaoDiagnosticar" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="rotuloResultado" alignment="1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JButton" name="botaoDiagnosticar">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Diagnosticar"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoDiagnosticarActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="rotuloResultado">
+                  <Properties>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="*"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>
