@@ -210,31 +210,77 @@ public class CadastroPaciente extends javax.swing.JFrame {
         jLabel105 = new javax.swing.JLabel();
         jLabel106 = new javax.swing.JLabel();
         jLabel107 = new javax.swing.JLabel();
+        jLabel108 = new javax.swing.JLabel();
+        jLabel109 = new javax.swing.JLabel();
+        jComboBox43 = new javax.swing.JComboBox();
+        jComboBox44 = new javax.swing.JComboBox();
+        jComboBox45 = new javax.swing.JComboBox();
+        jComboBox46 = new javax.swing.JComboBox();
+        jComboBox47 = new javax.swing.JComboBox();
+        jComboBox48 = new javax.swing.JComboBox();
+        jComboBox49 = new javax.swing.JComboBox();
+        jComboBox50 = new javax.swing.JComboBox();
+        jComboBox51 = new javax.swing.JComboBox();
+        jComboBox52 = new javax.swing.JComboBox();
+        jComboBox53 = new javax.swing.JComboBox();
+        jComboBox54 = new javax.swing.JComboBox();
+        jComboBox55 = new javax.swing.JComboBox();
+        jComboBox56 = new javax.swing.JComboBox();
+        jComboBox57 = new javax.swing.JComboBox();
+        jComboBox58 = new javax.swing.JComboBox();
+        jComboBox59 = new javax.swing.JComboBox();
+        jComboBox60 = new javax.swing.JComboBox();
+        jComboBox61 = new javax.swing.JComboBox();
+        jComboBox62 = new javax.swing.JComboBox();
+        jComboBox63 = new javax.swing.JComboBox();
+        jComboBox64 = new javax.swing.JComboBox();
         jPanel35 = new javax.swing.JPanel();
         jLabel40 = new javax.swing.JLabel();
+        jComboBox65 = new javax.swing.JComboBox();
         jPanel36 = new javax.swing.JPanel();
         jLabel41 = new javax.swing.JLabel();
+        jComboBox66 = new javax.swing.JComboBox();
         jPanel37 = new javax.swing.JPanel();
         jLabel42 = new javax.swing.JLabel();
+        jLabel110 = new javax.swing.JLabel();
+        jLabel111 = new javax.swing.JLabel();
+        jLabel112 = new javax.swing.JLabel();
+        jFormattedTextField4 = new javax.swing.JFormattedTextField();
+        jFormattedTextField5 = new javax.swing.JFormattedTextField();
+        jFormattedTextField6 = new javax.swing.JFormattedTextField();
         jPanel38 = new javax.swing.JPanel();
         jLabel43 = new javax.swing.JLabel();
+        jComboBox67 = new javax.swing.JComboBox();
         jPanel39 = new javax.swing.JPanel();
         jLabel44 = new javax.swing.JLabel();
+        jComboBox68 = new javax.swing.JComboBox();
         jPanel40 = new javax.swing.JPanel();
         jLabel45 = new javax.swing.JLabel();
+        jComboBox69 = new javax.swing.JComboBox();
         jPanel41 = new javax.swing.JPanel();
         jLabel46 = new javax.swing.JLabel();
+        jComboBox70 = new javax.swing.JComboBox();
         jPanel42 = new javax.swing.JPanel();
         jLabel47 = new javax.swing.JLabel();
         jLabel53 = new javax.swing.JLabel();
+        jComboBox71 = new javax.swing.JComboBox();
+        jLabel113 = new javax.swing.JLabel();
         jPanel43 = new javax.swing.JPanel();
         jLabel48 = new javax.swing.JLabel();
+        jComboBox72 = new javax.swing.JComboBox();
+        jLabel114 = new javax.swing.JLabel();
         jPanel44 = new javax.swing.JPanel();
         jLabel49 = new javax.swing.JLabel();
+        jComboBox73 = new javax.swing.JComboBox();
         jPanel45 = new javax.swing.JPanel();
         jLabel50 = new javax.swing.JLabel();
+        jComboBox74 = new javax.swing.JComboBox();
         jPanel46 = new javax.swing.JPanel();
         jLabel51 = new javax.swing.JLabel();
+        jComboBox75 = new javax.swing.JComboBox();
+        jPanel47 = new javax.swing.JPanel();
+        jLabel115 = new javax.swing.JLabel();
+        jFormattedTextField7 = new javax.swing.JFormattedTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -473,7 +519,7 @@ public class CadastroPaciente extends javax.swing.JFrame {
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6)
                     .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1500,29 +1546,77 @@ public class CadastroPaciente extends javax.swing.JFrame {
 
         jLabel95.setText("q. Dificuldade em  adormecer");
 
-        jLabel96.setText("jLabel96");
+        jLabel96.setText("r. Dificuldade em  respirar");
 
-        jLabel97.setText("jLabel97");
+        jLabel97.setText("s. Acessos de calor  ou frio");
 
-        jLabel98.setText("jLabel98");
+        jLabel98.setText("t. Dormência ou  formigueiro em  partes do corpo");
 
-        jLabel99.setText("jLabel99");
+        jLabel99.setText("u. Aperto na  garganta");
 
-        jLabel100.setText("jLabel100");
+        jLabel100.setText("v. Sentir-se  desanimado  sobre o futuro");
 
-        jLabel101.setText("jLabel101");
+        jLabel101.setText("w. Sensação de  fraqueza em  partes do corpo");
 
-        jLabel102.setText("jLabel102");
+        jLabel102.setText("x. Sensação de  peso nos braços  ou pernas");
 
-        jLabel103.setText("jLabel103");
+        jLabel103.setText("y. Pensamentos  sobre acabar com  a vida");
 
-        jLabel104.setText("jLabel104");
+        jLabel104.setText("z. Comer demais");
 
-        jLabel105.setText("jLabel105");
+        jLabel105.setText("aa. Acordar muito  cedo pela manhã");
 
-        jLabel106.setText("jLabel106");
+        jLabel106.setText("bb. Sono agitado ou  perturbado");
 
-        jLabel107.setText("jLabel107");
+        jLabel107.setText("cc. Sensação de que  tudo é um esforço");
+
+        jLabel108.setText("dd. Sentimentos de  inutilidade");
+
+        jLabel109.setText("ee. Sensação de ser  enganado ou  iludido");
+
+        jComboBox43.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nada Um - 0", "pouco - 1", "Moderadamente - 2" }));
+
+        jComboBox44.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nada Um - 0", "pouco - 1", "Moderadamente - 2" }));
+
+        jComboBox45.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nada Um - 0", "pouco - 1", "Moderadamente - 2" }));
+
+        jComboBox46.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nada Um - 0", "pouco - 1", "Moderadamente - 2" }));
+
+        jComboBox47.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nada Um - 0", "pouco - 1", "Moderadamente - 2" }));
+
+        jComboBox48.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nada Um - 0", "pouco - 1", "Moderadamente - 2" }));
+
+        jComboBox49.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nada Um - 0", "pouco - 1", "Moderadamente - 2" }));
+
+        jComboBox50.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nada Um - 0", "pouco - 1", "Moderadamente - 2" }));
+
+        jComboBox51.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nada Um - 0", "pouco - 1", "Moderadamente - 2" }));
+
+        jComboBox52.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nada Um - 0", "pouco - 1", "Moderadamente - 2" }));
+
+        jComboBox53.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nada Um - 0", "pouco - 1", "Moderadamente - 2" }));
+
+        jComboBox54.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nada Um - 0", "pouco - 1", "Moderadamente - 2" }));
+
+        jComboBox55.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nada Um - 0", "pouco - 1", "Moderadamente - 2" }));
+
+        jComboBox56.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nada Um - 0", "pouco - 1", "Moderadamente - 2" }));
+
+        jComboBox57.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nada Um - 0", "pouco - 1", "Moderadamente - 2" }));
+
+        jComboBox58.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nada Um - 0", "pouco - 1", "Moderadamente - 2" }));
+
+        jComboBox59.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nada Um - 0", "pouco - 1", "Moderadamente - 2" }));
+
+        jComboBox60.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nada Um - 0", "pouco - 1", "Moderadamente - 2" }));
+
+        jComboBox61.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nada Um - 0", "pouco - 1", "Moderadamente - 2" }));
+
+        jComboBox62.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nada Um - 0", "pouco - 1", "Moderadamente - 2" }));
+
+        jComboBox63.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nada Um - 0", "pouco - 1", "Moderadamente - 2" }));
+
+        jComboBox64.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nada Um - 0", "pouco - 1", "Moderadamente - 2" }));
 
         javax.swing.GroupLayout jPanel34Layout = new javax.swing.GroupLayout(jPanel34);
         jPanel34.setLayout(jPanel34Layout);
@@ -1542,9 +1636,53 @@ public class CadastroPaciente extends javax.swing.JFrame {
                             .addComponent(jLabel84)
                             .addComponent(jLabel85)
                             .addComponent(jLabel86)
-                            .addComponent(jLabel87))
-                        .addGap(71, 71, 71)
+                            .addComponent(jLabel87)
+                            .addComponent(jLabel88)
+                            .addComponent(jLabel89)
+                            .addComponent(jLabel90)
+                            .addComponent(jLabel91)
+                            .addComponent(jLabel92)
+                            .addComponent(jLabel93)
+                            .addComponent(jLabel94)
+                            .addComponent(jLabel95)
+                            .addComponent(jLabel96)
+                            .addComponent(jLabel97)
+                            .addComponent(jLabel98)
+                            .addComponent(jLabel99)
+                            .addComponent(jLabel100)
+                            .addComponent(jLabel101)
+                            .addComponent(jLabel102)
+                            .addComponent(jLabel103)
+                            .addComponent(jLabel104)
+                            .addComponent(jLabel105)
+                            .addComponent(jLabel106)
+                            .addComponent(jLabel107)
+                            .addComponent(jLabel108)
+                            .addComponent(jLabel109))
+                        .addGap(58, 58, 58)
                         .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jComboBox64, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox63, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox62, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox61, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox60, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox59, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox58, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox57, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox56, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox55, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox54, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox53, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jComboBox42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jComboBox41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jComboBox40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1553,27 +1691,7 @@ public class CadastroPaciente extends javax.swing.JFrame {
                             .addComponent(jComboBox37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jComboBox36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jComboBox35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jLabel88)
-                    .addComponent(jLabel89)
-                    .addComponent(jLabel90)
-                    .addComponent(jLabel91)
-                    .addComponent(jLabel92)
-                    .addComponent(jLabel93)
-                    .addComponent(jLabel94)
-                    .addComponent(jLabel95)
-                    .addComponent(jLabel96)
-                    .addComponent(jLabel97)
-                    .addComponent(jLabel98)
-                    .addComponent(jLabel99)
-                    .addComponent(jLabel100)
-                    .addComponent(jLabel101)
-                    .addComponent(jLabel102)
-                    .addComponent(jLabel103)
-                    .addComponent(jLabel104)
-                    .addComponent(jLabel105)
-                    .addComponent(jLabel106)
-                    .addComponent(jLabel107))
+                            .addComponent(jComboBox34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel34Layout.setVerticalGroup(
@@ -1618,46 +1736,94 @@ public class CadastroPaciente extends javax.swing.JFrame {
                     .addComponent(jLabel87)
                     .addComponent(jComboBox42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel88)
+                .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel88)
+                    .addComponent(jComboBox43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel89)
+                .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel89)
+                    .addComponent(jComboBox44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel90)
+                .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel90)
+                    .addComponent(jComboBox45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel91)
+                .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel91)
+                    .addComponent(jComboBox46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel92)
+                .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel92)
+                    .addComponent(jComboBox47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel93)
+                .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel93)
+                    .addComponent(jComboBox48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel94)
+                .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel94)
+                    .addComponent(jComboBox49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel95)
+                .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel95)
+                    .addComponent(jComboBox50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel96)
+                .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel96)
+                    .addComponent(jComboBox51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel97)
+                .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel97)
+                    .addComponent(jComboBox52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel98)
+                .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel98)
+                    .addComponent(jComboBox53, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel99)
+                .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel99)
+                    .addComponent(jComboBox54, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel100)
+                .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel100)
+                    .addComponent(jComboBox55, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel101)
+                .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel101)
+                    .addComponent(jComboBox56, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel102)
+                .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel102)
+                    .addComponent(jComboBox57, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel103)
+                .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel103)
+                    .addComponent(jComboBox58, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel104)
+                .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel104)
+                    .addComponent(jComboBox59, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel105)
+                .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel105)
+                    .addComponent(jComboBox60, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel106)
+                .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel106)
+                    .addComponent(jComboBox61, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel107)
-                .addContainerGap(315, Short.MAX_VALUE))
+                .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel107)
+                    .addComponent(jComboBox62, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel108)
+                    .addComponent(jComboBox63, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel109)
+                    .addComponent(jComboBox64, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         jPanel35.setBackground(new java.awt.Color(255, 255, 255));
@@ -1665,13 +1831,17 @@ public class CadastroPaciente extends javax.swing.JFrame {
 
         jLabel40.setText("21. Qual a sua opinião sobre a forma como cuida da sua saúde em geral? ");
 
+        jComboBox65.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Excelente - 1 ", "Muito boa - 2 ", "Boa - 3 ", "Satisfatória - 4 ", "Pobre - 5" }));
+
         javax.swing.GroupLayout jPanel35Layout = new javax.swing.GroupLayout(jPanel35);
         jPanel35.setLayout(jPanel35Layout);
         jPanel35Layout.setHorizontalGroup(
             jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel35Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel40)
+                .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel40)
+                    .addComponent(jComboBox65, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel35Layout.setVerticalGroup(
@@ -1679,7 +1849,9 @@ public class CadastroPaciente extends javax.swing.JFrame {
             .addGroup(jPanel35Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel40)
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jComboBox65, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         jPanel36.setBackground(new java.awt.Color(255, 255, 255));
@@ -1687,13 +1859,17 @@ public class CadastroPaciente extends javax.swing.JFrame {
 
         jLabel41.setText("22. Qual a sua opinião sobre a forma como cuida da sua saúde oral?");
 
+        jComboBox66.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Excelente - 1 ", "Muito boa - 2 ", "Boa - 3 ", "Satisfatória - 4 ", "Pobre - 5" }));
+
         javax.swing.GroupLayout jPanel36Layout = new javax.swing.GroupLayout(jPanel36);
         jPanel36.setLayout(jPanel36Layout);
         jPanel36Layout.setHorizontalGroup(
             jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel36Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel41)
+                .addGroup(jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel41)
+                    .addComponent(jComboBox66, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(264, Short.MAX_VALUE))
         );
         jPanel36Layout.setVerticalGroup(
@@ -1701,7 +1877,9 @@ public class CadastroPaciente extends javax.swing.JFrame {
             .addGroup(jPanel36Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel41)
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jComboBox66, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         jPanel37.setBackground(new java.awt.Color(255, 255, 255));
@@ -1709,13 +1887,32 @@ public class CadastroPaciente extends javax.swing.JFrame {
 
         jLabel42.setText("23. Qual a sua data de nascimento?");
 
+        jLabel110.setText("Dia:");
+
+        jLabel111.setText("Mes:");
+
+        jLabel112.setText("Ano:");
+
         javax.swing.GroupLayout jPanel37Layout = new javax.swing.GroupLayout(jPanel37);
         jPanel37.setLayout(jPanel37Layout);
         jPanel37Layout.setHorizontalGroup(
             jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel37Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel42)
+                .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel42)
+                    .addGroup(jPanel37Layout.createSequentialGroup()
+                        .addComponent(jLabel110)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jFormattedTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel111)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jFormattedTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel112)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jFormattedTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel37Layout.setVerticalGroup(
@@ -1723,7 +1920,15 @@ public class CadastroPaciente extends javax.swing.JFrame {
             .addGroup(jPanel37Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel42)
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel110)
+                    .addComponent(jLabel111)
+                    .addComponent(jLabel112)
+                    .addComponent(jFormattedTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jFormattedTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jFormattedTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         jPanel38.setBackground(new java.awt.Color(255, 255, 255));
@@ -1731,13 +1936,17 @@ public class CadastroPaciente extends javax.swing.JFrame {
 
         jLabel43.setText("24. É do sexo masculino ou feminino? ");
 
+        jComboBox67.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Masculino - 1 ", "Feminino - 2 " }));
+
         javax.swing.GroupLayout jPanel38Layout = new javax.swing.GroupLayout(jPanel38);
         jPanel38.setLayout(jPanel38Layout);
         jPanel38Layout.setHorizontalGroup(
             jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel38Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel43)
+                .addGroup(jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel43)
+                    .addComponent(jComboBox67, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel38Layout.setVerticalGroup(
@@ -1745,7 +1954,9 @@ public class CadastroPaciente extends javax.swing.JFrame {
             .addGroup(jPanel38Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel43)
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jComboBox67, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         jPanel39.setBackground(new java.awt.Color(255, 255, 255));
@@ -1753,13 +1964,17 @@ public class CadastroPaciente extends javax.swing.JFrame {
 
         jLabel44.setText("25. Qual dos seguintes grupos melhor representa a sua origem? ");
 
+        jComboBox68.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Africano  - 1 ", "Árabe - 2 ", "Asiático  - 3 ", "Europeu - 4 ", "Indiano - 5 ", "Norte-americano - 6 ", "Sul-americano - 7 ", "Outro - 8" }));
+
         javax.swing.GroupLayout jPanel39Layout = new javax.swing.GroupLayout(jPanel39);
         jPanel39.setLayout(jPanel39Layout);
         jPanel39Layout.setHorizontalGroup(
             jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel39Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel44)
+                .addGroup(jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel44)
+                    .addComponent(jComboBox68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel39Layout.setVerticalGroup(
@@ -1767,7 +1982,9 @@ public class CadastroPaciente extends javax.swing.JFrame {
             .addGroup(jPanel39Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel44)
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jComboBox68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         jPanel40.setBackground(new java.awt.Color(255, 255, 255));
@@ -1775,13 +1992,17 @@ public class CadastroPaciente extends javax.swing.JFrame {
 
         jLabel45.setText("26. Qual dos seguintes grupos melhor representa a origem dos seus  antepassados?");
 
+        jComboBox69.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Africano  - 1 ", "Árabe - 2 ", "Asiático  - 3 ", "Europeu - 4 ", "Indiano - 5 ", "Norte-americano - 6 ", "Sul-americano - 7 ", "Outro - 8" }));
+
         javax.swing.GroupLayout jPanel40Layout = new javax.swing.GroupLayout(jPanel40);
         jPanel40.setLayout(jPanel40Layout);
         jPanel40Layout.setHorizontalGroup(
             jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel40Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel45)
+                .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel45)
+                    .addComponent(jComboBox69, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel40Layout.setVerticalGroup(
@@ -1789,7 +2010,9 @@ public class CadastroPaciente extends javax.swing.JFrame {
             .addGroup(jPanel40Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel45)
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jComboBox69, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         jPanel41.setBackground(new java.awt.Color(255, 255, 255));
@@ -1797,13 +2020,17 @@ public class CadastroPaciente extends javax.swing.JFrame {
 
         jLabel46.setText("27. Qual o mais alto grau de escolaridade que obteve nos seus estudos?");
 
+        jComboBox70.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nunca estudou ou Jardim-de-infância - 0 ", "Ensino obrigatório - 1 ", "Ensino secundário - 2 ", "Ensino superior - 3 ", "Mestrado/doutoramento - 4" }));
+
         javax.swing.GroupLayout jPanel41Layout = new javax.swing.GroupLayout(jPanel41);
         jPanel41.setLayout(jPanel41Layout);
         jPanel41Layout.setHorizontalGroup(
             jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel41Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel46)
+                .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel46)
+                    .addComponent(jComboBox70, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel41Layout.setVerticalGroup(
@@ -1811,7 +2038,9 @@ public class CadastroPaciente extends javax.swing.JFrame {
             .addGroup(jPanel41Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel46)
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jComboBox70, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         jPanel42.setBackground(new java.awt.Color(255, 255, 255));
@@ -1821,6 +2050,11 @@ public class CadastroPaciente extends javax.swing.JFrame {
 
         jLabel53.setText("(inclua trabalhos e negócios familiares  não remunerados)?");
 
+        jComboBox71.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não - 0 ", "Sim - 1" }));
+
+        jLabel113.setForeground(new java.awt.Color(255, 0, 51));
+        jLabel113.setText("[Se sim, avance para a questão 29]");
+
         javax.swing.GroupLayout jPanel42Layout = new javax.swing.GroupLayout(jPanel42);
         jPanel42.setLayout(jPanel42Layout);
         jPanel42Layout.setHorizontalGroup(
@@ -1829,7 +2063,9 @@ public class CadastroPaciente extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel47)
-                    .addComponent(jLabel53))
+                    .addComponent(jLabel53)
+                    .addComponent(jComboBox71, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel113))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel42Layout.setVerticalGroup(
@@ -1839,7 +2075,11 @@ public class CadastroPaciente extends javax.swing.JFrame {
                 .addComponent(jLabel47)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel53)
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jComboBox71, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addComponent(jLabel113)
+                .addContainerGap())
         );
 
         jPanel43.setBackground(new java.awt.Color(255, 255, 255));
@@ -1847,13 +2087,21 @@ public class CadastroPaciente extends javax.swing.JFrame {
 
         jLabel48.setText("28b. Apesar de não ter trabalhado nas 2 últimas semanas, tinha um emprego  ou negócio?");
 
+        jComboBox72.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não - 0 ", "Sim - 1" }));
+
+        jLabel114.setForeground(new java.awt.Color(255, 0, 51));
+        jLabel114.setText("[Se sim, avance para a questão 29]");
+
         javax.swing.GroupLayout jPanel43Layout = new javax.swing.GroupLayout(jPanel43);
         jPanel43.setLayout(jPanel43Layout);
         jPanel43Layout.setHorizontalGroup(
             jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel43Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel48)
+                .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel48)
+                    .addComponent(jComboBox72, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel114))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel43Layout.setVerticalGroup(
@@ -1861,7 +2109,11 @@ public class CadastroPaciente extends javax.swing.JFrame {
             .addGroup(jPanel43Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel48)
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jComboBox72, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel114)
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         jPanel44.setBackground(new java.awt.Color(255, 255, 255));
@@ -1869,13 +2121,17 @@ public class CadastroPaciente extends javax.swing.JFrame {
 
         jLabel49.setText("28c. Nas últimas 2 semanas, procurou emprego ou deixou um emprego?");
 
+        jComboBox73.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Sim, procurou emprego - 1 ", "Sim, deixou emprego - 2 ", "Sim, ambos deixou e procurou emprego - 3 ", "Não - 4" }));
+
         javax.swing.GroupLayout jPanel44Layout = new javax.swing.GroupLayout(jPanel44);
         jPanel44.setLayout(jPanel44Layout);
         jPanel44Layout.setHorizontalGroup(
             jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel44Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel49)
+                .addGroup(jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel49)
+                    .addComponent(jComboBox73, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel44Layout.setVerticalGroup(
@@ -1883,7 +2139,9 @@ public class CadastroPaciente extends javax.swing.JFrame {
             .addGroup(jPanel44Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel49)
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jComboBox73, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         jPanel45.setBackground(new java.awt.Color(255, 255, 255));
@@ -1891,13 +2149,17 @@ public class CadastroPaciente extends javax.swing.JFrame {
 
         jLabel50.setText("29. Qual o seu estado civil? ");
 
+        jComboBox74.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Casado na mesma habitação - 1 ", "Casado mas em habitação diferente - 2 ", "Viúvo - 3 ", "Divorciado - 4 ", "Separado - 5 ", "Nunca casou - 6 " }));
+
         javax.swing.GroupLayout jPanel45Layout = new javax.swing.GroupLayout(jPanel45);
         jPanel45.setLayout(jPanel45Layout);
         jPanel45Layout.setHorizontalGroup(
             jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel45Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel50)
+                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel50)
+                    .addComponent(jComboBox74, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel45Layout.setVerticalGroup(
@@ -1905,7 +2167,9 @@ public class CadastroPaciente extends javax.swing.JFrame {
             .addGroup(jPanel45Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel50)
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jComboBox74, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         jPanel46.setBackground(new java.awt.Color(255, 255, 255));
@@ -1913,13 +2177,17 @@ public class CadastroPaciente extends javax.swing.JFrame {
 
         jLabel51.setText("30. Qual dos seguintes valores melhor representa o total de rendimentos em  sua casa nos últimos 12 meses?");
 
+        jComboBox75.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Até um salário mínimo - 1 ", "Duas vezes o salário mínimo - 2 ", "Três vezes o salário mínimo - 3 ", "Quatro vezes o salário mínimo - 4 ", "Cinco vezes o salário mínimo -5 ", "Seis vezes o salário mínimo - 6 ", "Sete vezes o salário mínimo - 7 ", "Oito vezes o salário mínimo - 8 ", "Nove vezes o salário mínimo - 9 ", "Dez vezes ou mais o salário mínimo - 10 " }));
+
         javax.swing.GroupLayout jPanel46Layout = new javax.swing.GroupLayout(jPanel46);
         jPanel46.setLayout(jPanel46Layout);
         jPanel46Layout.setHorizontalGroup(
             jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel46Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel51)
+                .addGroup(jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel51)
+                    .addComponent(jComboBox75, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel46Layout.setVerticalGroup(
@@ -1927,7 +2195,35 @@ public class CadastroPaciente extends javax.swing.JFrame {
             .addGroup(jPanel46Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel51)
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jComboBox75, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(15, Short.MAX_VALUE))
+        );
+
+        jPanel47.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel47.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel115.setText("31. Qual o seu código postal?");
+
+        javax.swing.GroupLayout jPanel47Layout = new javax.swing.GroupLayout(jPanel47);
+        jPanel47.setLayout(jPanel47Layout);
+        jPanel47Layout.setHorizontalGroup(
+            jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel47Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel115, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField7))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel47Layout.setVerticalGroup(
+            jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel47Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel115)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jFormattedTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -1981,9 +2277,10 @@ public class CadastroPaciente extends javax.swing.JFrame {
                         .addComponent(jPanel43, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel44, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel45, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel46, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jPanel46, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel47, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jPanel36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(445, Short.MAX_VALUE))
+                .addContainerGap(163, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2078,7 +2375,9 @@ public class CadastroPaciente extends javax.swing.JFrame {
                 .addComponent(jPanel45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(3059, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         jScrollPane1.setViewportView(jPanel1);
@@ -2087,15 +2386,11 @@ public class CadastroPaciente extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 638, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 47, Short.MAX_VALUE))
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 745, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 6239, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 61, Short.MAX_VALUE))
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         bindingGroup.bind();
@@ -2188,14 +2483,51 @@ public class CadastroPaciente extends javax.swing.JFrame {
     private javax.swing.JComboBox jComboBox40;
     private javax.swing.JComboBox jComboBox41;
     private javax.swing.JComboBox jComboBox42;
+    private javax.swing.JComboBox jComboBox43;
+    private javax.swing.JComboBox jComboBox44;
+    private javax.swing.JComboBox jComboBox45;
+    private javax.swing.JComboBox jComboBox46;
+    private javax.swing.JComboBox jComboBox47;
+    private javax.swing.JComboBox jComboBox48;
+    private javax.swing.JComboBox jComboBox49;
     private javax.swing.JComboBox jComboBox5;
+    private javax.swing.JComboBox jComboBox50;
+    private javax.swing.JComboBox jComboBox51;
+    private javax.swing.JComboBox jComboBox52;
+    private javax.swing.JComboBox jComboBox53;
+    private javax.swing.JComboBox jComboBox54;
+    private javax.swing.JComboBox jComboBox55;
+    private javax.swing.JComboBox jComboBox56;
+    private javax.swing.JComboBox jComboBox57;
+    private javax.swing.JComboBox jComboBox58;
+    private javax.swing.JComboBox jComboBox59;
     private javax.swing.JComboBox jComboBox6;
+    private javax.swing.JComboBox jComboBox60;
+    private javax.swing.JComboBox jComboBox61;
+    private javax.swing.JComboBox jComboBox62;
+    private javax.swing.JComboBox jComboBox63;
+    private javax.swing.JComboBox jComboBox64;
+    private javax.swing.JComboBox jComboBox65;
+    private javax.swing.JComboBox jComboBox66;
+    private javax.swing.JComboBox jComboBox67;
+    private javax.swing.JComboBox jComboBox68;
+    private javax.swing.JComboBox jComboBox69;
     private javax.swing.JComboBox jComboBox7;
+    private javax.swing.JComboBox jComboBox70;
+    private javax.swing.JComboBox jComboBox71;
+    private javax.swing.JComboBox jComboBox72;
+    private javax.swing.JComboBox jComboBox73;
+    private javax.swing.JComboBox jComboBox74;
+    private javax.swing.JComboBox jComboBox75;
     private javax.swing.JComboBox jComboBox8;
     private javax.swing.JComboBox jComboBox9;
     private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JFormattedTextField jFormattedTextField2;
     private javax.swing.JFormattedTextField jFormattedTextField3;
+    private javax.swing.JFormattedTextField jFormattedTextField4;
+    private javax.swing.JFormattedTextField jFormattedTextField5;
+    private javax.swing.JFormattedTextField jFormattedTextField6;
+    private javax.swing.JFormattedTextField jFormattedTextField7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
@@ -2206,7 +2538,15 @@ public class CadastroPaciente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel105;
     private javax.swing.JLabel jLabel106;
     private javax.swing.JLabel jLabel107;
+    private javax.swing.JLabel jLabel108;
+    private javax.swing.JLabel jLabel109;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel110;
+    private javax.swing.JLabel jLabel111;
+    private javax.swing.JLabel jLabel112;
+    private javax.swing.JLabel jLabel113;
+    private javax.swing.JLabel jLabel114;
+    private javax.swing.JLabel jLabel115;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -2344,6 +2684,7 @@ public class CadastroPaciente extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel44;
     private javax.swing.JPanel jPanel45;
     private javax.swing.JPanel jPanel46;
+    private javax.swing.JPanel jPanel47;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
