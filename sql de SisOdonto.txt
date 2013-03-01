@@ -100,13 +100,13 @@ rqp3 VARCHAR (40),
 rqp4 INTEGER (2),
 rqp5 VARCHAR (40),
 rqp6 VARCHAR (40),
-rqp7 INTEGER (2),
-rqp8 INTEGER (2),
-rqp9 INTEGER (2),
-rqp10 INTEGER (2),
-rqp11 INTEGER (2),
-rqp12 INTEGER (2),
-rqp13 INTEGER (2),
+rqp7 INTEGER,
+rqp8 INTEGER,
+rqp9 INTEGER,
+rqp10 INTEGER,
+rqp11 INTEGER,
+rqp12 INTEGER,
+rqp13 INTEGER,
 
 rqp14_a VARCHAR (40),
 rqp14_b VARCHAR (40),
@@ -177,9 +177,9 @@ rqp20_ee VARCHAR (40),
 rqp21 VARCHAR (40),
 rqp22 VARCHAR (40),
 
-rqp23_dia INTEGER (2),
-rqp23_mes INTEGER (2),
-rqp23_ano INTEGER (2),
+rqp23_dia INTEGER,
+rqp23_mes INTEGER,
+rqp23_ano INTEGER,
 
 rqp24 VARCHAR (40),
 rqp25 VARCHAR (40),
@@ -192,7 +192,7 @@ rqp28_c VARCHAR (40),
 
 rqp29 VARCHAR (40),
 rqp30 VARCHAR (40),
-rqp31 VARCHAR (40),
+rqp31 VARCHAR (40)
 
 );
 
