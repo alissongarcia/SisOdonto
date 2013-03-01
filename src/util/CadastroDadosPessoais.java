@@ -89,6 +89,9 @@ public class CadastroDadosPessoais extends javax.swing.JFrame {
         erroTelefone = new javax.swing.JLabel();
         erroCelular = new javax.swing.JLabel();
         erroIdade = new javax.swing.JLabel();
+        labelRaca = new javax.swing.JLabel();
+        campoRaca = new javax.swing.JTextField();
+        erroRaca = new javax.swing.JLabel();
         painelBotoes = new javax.swing.JPanel();
         painelbotoes2 = new javax.swing.JPanel();
         painelCadastrar = new javax.swing.JPanel();
@@ -380,6 +383,11 @@ public class CadastroDadosPessoais extends javax.swing.JFrame {
         erroIdade.setForeground(new java.awt.Color(255, 0, 51));
         erroIdade.setText("*");
 
+        labelRaca.setText("Raça:");
+
+        erroRaca.setForeground(new java.awt.Color(255, 0, 51));
+        erroRaca.setText("*");
+
         javax.swing.GroupLayout painelDadosLayout = new javax.swing.GroupLayout(painelDados);
         painelDados.setLayout(painelDadosLayout);
         painelDadosLayout.setHorizontalGroup(
@@ -402,7 +410,8 @@ public class CadastroDadosPessoais extends javax.swing.JFrame {
                             .addComponent(labelCep)
                             .addComponent(labelCPF)
                             .addComponent(labelUF)
-                            .addComponent(labelSexo))
+                            .addComponent(labelSexo)
+                            .addComponent(labelRaca))
                         .addGap(18, 18, 18)
                         .addGroup(painelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(campoRua)
@@ -436,20 +445,22 @@ public class CadastroDadosPessoais extends javax.swing.JFrame {
                                         .addComponent(campoCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(erroCpf))
-                                    .addGroup(painelDadosLayout.createSequentialGroup()
-                                        .addGroup(painelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(campoTelefone, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
-                                            .addComponent(campoCelular, javax.swing.GroupLayout.Alignment.LEADING))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(painelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(erroTelefone)
-                                            .addComponent(erroCelular)))
                                     .addComponent(ComboBoxSexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(painelDadosLayout.createSequentialGroup()
                                         .addComponent(campoIdade, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(83, 83, 83)
-                                        .addComponent(erroIdade)))
-                                .addGap(42, 42, 42)
+                                        .addComponent(erroIdade))
+                                    .addGroup(painelDadosLayout.createSequentialGroup()
+                                        .addGroup(painelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(campoRaca, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
+                                            .addComponent(campoTelefone, javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(campoCelular, javax.swing.GroupLayout.Alignment.LEADING))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(painelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(erroTelefone)
+                                            .addComponent(erroCelular)
+                                            .addComponent(erroRaca))))
+                                .addGap(84, 84, 84)
                                 .addComponent(painelResultadoDiagnostico, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(campoNome)
                             .addComponent(campoBairro))
@@ -533,7 +544,12 @@ public class CadastroDadosPessoais extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(painelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(labelSexo)
-                            .addComponent(ComboBoxSexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(ComboBoxSexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(painelDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(labelRaca)
+                            .addComponent(campoRaca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(erroRaca)))
                     .addComponent(painelResultadoDiagnostico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -939,6 +955,7 @@ public class CadastroDadosPessoais extends javax.swing.JFrame {
     private javax.swing.JTextField campoNaturalidade;
     private javax.swing.JTextField campoNome;
     private javax.swing.JTextField campoNumero;
+    private javax.swing.JTextField campoRaca;
     private javax.swing.JTextField campoRua;
     private javax.swing.JFormattedTextField campoTelefone;
     private javax.swing.JFormattedTextField campoUF;
@@ -952,6 +969,7 @@ public class CadastroDadosPessoais extends javax.swing.JFrame {
     private javax.swing.JLabel erroNaturalidade;
     private javax.swing.JLabel erroNome;
     private javax.swing.JLabel erroNumero;
+    private javax.swing.JLabel erroRaca;
     private javax.swing.JLabel erroRua;
     private javax.swing.JLabel erroTelefone;
     private javax.swing.JLabel erroUF;
@@ -977,6 +995,7 @@ public class CadastroDadosPessoais extends javax.swing.JFrame {
     private javax.swing.JLabel labelNaturalidade;
     private javax.swing.JLabel labelNome;
     private javax.swing.JLabel labelNumero;
+    private javax.swing.JLabel labelRaca;
     private javax.swing.JLabel labelResultadoPesquisa;
     private javax.swing.JLabel labelRua;
     private javax.swing.JLabel labelSexo;

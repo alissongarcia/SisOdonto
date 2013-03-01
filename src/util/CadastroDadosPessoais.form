@@ -173,6 +173,7 @@
                               <Component id="labelCPF" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="labelUF" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="labelSexo" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelRaca" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -215,25 +216,27 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="erroCpf" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="campoTelefone" alignment="0" pref="134" max="32767" attributes="0"/>
-                                              <Component id="campoCelular" alignment="0" max="32767" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="erroTelefone" min="-2" max="-2" attributes="0"/>
-                                              <Component id="erroCelular" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
                                       <Component id="ComboBoxSexo" min="-2" max="-2" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="campoIdade" min="-2" pref="51" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
                                           <Component id="erroIdade" min="-2" max="-2" attributes="0"/>
                                       </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                              <Component id="campoRaca" alignment="0" pref="134" max="32767" attributes="0"/>
+                                              <Component id="campoTelefone" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="campoCelular" alignment="0" max="32767" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="erroTelefone" min="-2" max="-2" attributes="0"/>
+                                              <Component id="erroCelular" min="-2" max="-2" attributes="0"/>
+                                              <Component id="erroRaca" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
                                   </Group>
-                                  <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
                                   <Component id="painelResultadoDiagnostico" max="32767" attributes="0"/>
                               </Group>
                               <Component id="campoNome" alignment="0" max="32767" attributes="0"/>
@@ -338,6 +341,12 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelSexo" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="ComboBoxSexo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="labelRaca" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoRaca" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="erroRaca" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Component id="painelResultadoDiagnostico" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -843,6 +852,21 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="erroIdade">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="33" green="0" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="*"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="labelRaca">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Ra&#xe7;a:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="campoRaca">
+        </Component>
+        <Component class="javax.swing.JLabel" name="erroRaca">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="0" red="ff" type="rgb"/>

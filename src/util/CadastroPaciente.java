@@ -2322,6 +2322,11 @@ public class CadastroPaciente extends javax.swing.JFrame {
 
         botaoCadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/cadastrar.gif"))); // NOI18N
         botaoCadastrar.setText("Cadastrar");
+        botaoCadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoCadastrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel47Layout = new javax.swing.GroupLayout(jPanel47);
         jPanel47.setLayout(jPanel47Layout);
@@ -2567,6 +2572,10 @@ public class CadastroPaciente extends javax.swing.JFrame {
     private void ComboBox19jActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboBox19jActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ComboBox19jActionPerformed
+
+    private void botaoCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCadastrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botaoCadastrarActionPerformed
 
     /**
      * @param args the command line arguments

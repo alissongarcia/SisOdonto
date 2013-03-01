@@ -9,7 +9,10 @@ import negocio.Grupo_I;
 import negocio.Grupo_II;
 import util.JPAUtil;
 import util.TelaGrupoI;
+import view.ViewExameClinico;
 import view.ViewGrupos;
+import view.ViewQuestionarioPessoal;
+import view.WiewDadosPessoais;
 
 public class Main {
 
@@ -40,8 +43,16 @@ public class Main {
          ViewGrupos view = new ViewGrupos();
          view.setVisible(true);
          view.iniciar();
+         
+         ViewExameClinico viewExameClinico = new ViewExameClinico();
+         viewExameClinico.setVisible(true);
+         
+       WiewDadosPessoais viewDadosPessoais = new WiewDadosPessoais();
+       viewDadosPessoais.setVisible(true);
        
-       
+       ViewQuestionarioPessoal viewQuestionario = new ViewQuestionarioPessoal();
+       viewQuestionario.setVisible(true);
+               
 
         /*PacienteJpaController daoPaciente;
         //DiagnosticoJpaController daoDiagnostico;
