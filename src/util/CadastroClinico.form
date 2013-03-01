@@ -28,7 +28,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="ScrollPane" alignment="0" pref="2434" max="32767" attributes="0"/>
+          <Component id="ScrollPane" min="-2" pref="510" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -75,7 +75,7 @@
                       <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanel14" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
@@ -97,7 +97,7 @@
                       <Component id="jPanel12" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanel13" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="117" max="32767" attributes="0"/>
+                      <EmptySpace pref="19" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -182,16 +182,25 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="rotuloQE10">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Quest&#xe3;o 10 - Dor muscular intra-oral com palpa&#xe7;&#xe3;o"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloQE10A">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="&#xc1;rea do pterig&#xf3;ideo lateral (atr&#xe1;s dos molares superiores)"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloQE10B">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Tend&#xe3;o do temporal (infra-bucal)"/>
                   </Properties>
                 </Component>
@@ -221,11 +230,17 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloLDQE10">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Lado Direito"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloLEQE10">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Lado Esquerdo"/>
                   </Properties>
                 </Component>
@@ -358,11 +373,17 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloQE10B1">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Ligamento posterior(dentro do ouvido)"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloQE10A1">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="P&#xf3;lo lateral(por fora)"/>
                   </Properties>
                 </Component>
@@ -392,16 +413,25 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloLEQE11">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Lado Esquerdo"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloLDQE11">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Lado Direito"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloQE09">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Quest&#xe3;o 09 - Dor muscularl com palpa&#xe7;&#xe3;o"/>
                   </Properties>
                 </Component>
@@ -533,46 +563,73 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="rotuloQE8">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Quest&#xe3;o 08 - Dor muscular extra-oral com palpa&#xe7;&#xe3;o"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloAQE8">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Temporal posterior (parte por tr&#xe1;s da t&#xea;mpora)"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloBQE8">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Temporal m&#xe9;dio (meio da t&#xea;mpora)"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloCQE8">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Temporal anteriror (parte anterior da t&#xea;mpora)"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloDQE8">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Masseter superior (bochecha/abaixo do zigoma)"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloEQE8">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Masserter m&#xe9;dio (bochecha/lado da face)"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloFQE8">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Masserter inferior (bochecha/linha da mandibula)"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloGQE8">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Regi&#xe3;o mandibular posterior (estilo-hiode / regi&#xe3;o posterior do digastrico) &quot;regi&#xe3;o da garganta&quot;"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloHQE8">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Regi&#xe3;o sumandibular posterior (pterig&#xf3;deo media/suprahi&#xf3;ide/ regi&#xe3;o anterior do dig&#xe1;strico) &quot;abaixo do queixo&quot;"/>
                   </Properties>
                 </Component>
@@ -881,6 +938,9 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="rotuloQE7">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Quest&#xe3;o 07 - Ru&#xed;dos articulares nas excurs&#xf5;es"/>
                   </Properties>
                 </Component>
@@ -922,21 +982,33 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloQE7BProtus&#xe3;o">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Protrus&#xe3;o"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloQE7BExcus&#xe3;oEsquerda">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Excus&#xe3;o Esquerda"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloQE7BExcus&#xe3;oDireita">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Excus&#xe3;o Direita"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloQE7B">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Ru&#xed;dos -  Esquerdo"/>
                   </Properties>
                 </Component>
@@ -978,21 +1050,33 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloQE7AProtus&#xe3;o">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Protrus&#xe3;o"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloQE7AExcus&#xe3;oEsquerda">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Excus&#xe3;o Esquerda"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloQE7AExcus&#xe3;oDireita">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Excus&#xe3;o Direita"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloQE7A">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Ru&#xed;dos -  Direito"/>
                   </Properties>
                 </Component>
@@ -1118,11 +1202,17 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="rotuloQE6">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Quest&#xe3;o 06 - Excurs&#xf5;es"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloQE6A">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Excurs&#xe3;o Lateral Direita"/>
                   </Properties>
                 </Component>
@@ -1135,11 +1225,17 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloQE6Muscular">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Dor Muscular"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloQE6Articular">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Dor Articular"/>
                   </Properties>
                 </Component>
@@ -1169,6 +1265,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloQE6B">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Excurs&#xe3;o Lateral Esquerda"/>
                   </Properties>
                 </Component>
@@ -1232,6 +1331,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloQE6C">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Protus&#xe3;o"/>
                   </Properties>
                 </Component>
@@ -1244,6 +1346,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloQE6D">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Desvio de linha m&#xe9;dia"/>
                   </Properties>
                 </Component>
@@ -1429,21 +1534,33 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="rotuloQE5">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Quest&#xe3;o 05- Ru&#xed;dos articulares (palpa&#xe7;&#xe3;o)"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloQE5A">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Abertura"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloLDQE5ADireito">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Direito"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloLDQE5AEsquerdo">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Esquerdo"/>
                   </Properties>
                 </Component>
@@ -1487,21 +1604,33 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloLDQE5AA">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Medida do estalido na abertura:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloQE5B">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Fechamento"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloLDQE5BDireito">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Direito"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloLDQE5BEsquerdo">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Esquerdo"/>
                   </Properties>
                 </Component>
@@ -1545,21 +1674,33 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloLDQE5BB">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Medida do estalido na abertura:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloQE5C">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Estalido reciproco eliminado durante abertura protrusiva"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloLDQE5CEsquerdo">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Esquerdo"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloLDQE5CDireito">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Direito"/>
                   </Properties>
                 </Component>
@@ -1709,11 +1850,17 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="rotuloQE4">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Quest&#xe3;o 04 - Extens&#xe3;o de movimento vertical"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloQE4A">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Abertura sem auxilio sem dor em mm"/>
                   </Properties>
                 </Component>
@@ -1733,11 +1880,17 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloQE4B">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Abertura m&#xe1;xima sem auxilio em mm"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloQE4C">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Abertura m&#xe1;xima com auxilio em mm"/>
                   </Properties>
                 </Component>
@@ -1757,6 +1910,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloQE4D">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Trespasse incisal vertical em mm"/>
                   </Properties>
                 </Component>
@@ -1786,11 +1942,17 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloLDQE4Muscular">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Dor Muscular"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloLDQE4Articular">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Dor Articular"/>
                   </Properties>
                 </Component>
@@ -1875,6 +2037,9 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="rotuloQE3">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Quest&#xe3;o 03 - Padr&#xe3;o de Abertura"/>
                   </Properties>
                 </Component>
@@ -1971,6 +2136,9 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="labelQ02">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Quest&#xe3;o 02 - Voc&#xea; poderia apontar as &#xe1;reas onde voc&#xea; sente dor? "/>
                   </Properties>
                 </Component>
@@ -2024,6 +2192,9 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="labelQ02Direito">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Lado Direito"/>
                   </Properties>
                 </Component>
@@ -2085,11 +2256,17 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="labelPerguntas">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Perguntas:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="rotuloQuestao01">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="12" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Quest&#xe3;o 01 - Voc&#xea; tem dor no lado direito da sua face, lado esquerdo ou ambos os lados?"/>
                   </Properties>
                 </Component>
@@ -2123,15 +2300,33 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="964" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="labelQuestionario1" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="550" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="149" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="labelQuestionario1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="labelQuestionario1">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="18" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Question&#xe1;rio"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="jPanel13">
               <Properties>
@@ -2161,7 +2356,7 @@
                               <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="942" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2180,7 +2375,7 @@
                           <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="67" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2251,10 +2446,13 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="labelQuestionario1" max="32767" attributes="0"/>
-                          <EmptySpace min="-2" pref="550" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="labelSelecao" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBox1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2262,16 +2460,30 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="labelQuestionario1" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelSelecao" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="labelQuestionario1">
+                <Component class="javax.swing.JLabel" name="labelSelecao">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Question&#xe1;rio"/>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="16" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Selecione o paciente:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jComboBox1">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="1">
+                        <StringItem index="0" value="Selecione o paciente"/>
+                      </StringArray>
+                    </Property>
                   </Properties>
                 </Component>
               </SubComponents>

@@ -174,6 +174,7 @@ public class CadastroClinico extends javax.swing.JFrame {
         rotuloQuestao01 = new javax.swing.JLabel();
         ComboBoxQE1 = new javax.swing.JComboBox();
         jPanel2 = new javax.swing.JPanel();
+        labelQuestionario1 = new javax.swing.JLabel();
         jPanel13 = new javax.swing.JPanel();
         botaoDiagnosticar = new javax.swing.JButton();
         rotuloResultado = new javax.swing.JLabel();
@@ -182,7 +183,8 @@ public class CadastroClinico extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jPanel14 = new javax.swing.JPanel();
-        labelQuestionario1 = new javax.swing.JLabel();
+        labelSelecao = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -191,18 +193,23 @@ public class CadastroClinico extends javax.swing.JFrame {
         jPanel12.setBackground(new java.awt.Color(255, 255, 255));
         jPanel12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        rotuloQE10.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE10.setText("Questão 10 - Dor muscular intra-oral com palpação");
 
+        rotuloQE10A.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE10A.setText("Área do pterigóideo lateral (atrás dos molares superiores)");
 
+        rotuloQE10B.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE10B.setText("Tendão do temporal (infra-bucal)");
 
         ComboBoxQE10BLD.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3" }));
 
         ComboBoxQE10ALD.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3" }));
 
+        rotuloLDQE10.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloLDQE10.setText("Lado Direito");
 
+        rotuloLEQE10.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloLEQE10.setText("Lado Esquerdo");
 
         ComboBoxQE10ALE.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3" }));
@@ -266,18 +273,23 @@ public class CadastroClinico extends javax.swing.JFrame {
 
         rotuloQE09BLD.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3" }));
 
+        rotuloQE10B1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE10B1.setText("Ligamento posterior(dentro do ouvido)");
 
+        rotuloQE10A1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE10A1.setText("Pólo lateral(por fora)");
 
         rotuloQE09ALD.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3" }));
 
         rotuloQE09ALE.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3" }));
 
+        rotuloLEQE11.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloLEQE11.setText("Lado Esquerdo");
 
+        rotuloLDQE11.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloLDQE11.setText("Lado Direito");
 
+        rotuloQE09.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE09.setText("Questão 09 - Dor muscularl com palpação");
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
@@ -333,22 +345,31 @@ public class CadastroClinico extends javax.swing.JFrame {
         jPanel10.setBackground(new java.awt.Color(255, 255, 255));
         jPanel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        rotuloQE8.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE8.setText("Questão 08 - Dor muscular extra-oral com palpação");
 
+        rotuloAQE8.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloAQE8.setText("Temporal posterior (parte por trás da têmpora)");
 
+        rotuloBQE8.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloBQE8.setText("Temporal médio (meio da têmpora)");
 
+        rotuloCQE8.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloCQE8.setText("Temporal anteriror (parte anterior da têmpora)");
 
+        rotuloDQE8.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloDQE8.setText("Masseter superior (bochecha/abaixo do zigoma)");
 
+        rotuloEQE8.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloEQE8.setText("Masserter médio (bochecha/lado da face)");
 
+        rotuloFQE8.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloFQE8.setText("Masserter inferior (bochecha/linha da mandibula)");
 
+        rotuloGQE8.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloGQE8.setText("Região mandibular posterior (estilo-hiode / região posterior do digastrico) \"região da garganta\"");
 
+        rotuloHQE8.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloHQE8.setText("Região sumandibular posterior (pterigódeo media/suprahióide/ região anterior do digástrico) \"abaixo do queixo\"");
 
         ComboBoxQE8HD.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3" }));
@@ -484,6 +505,7 @@ public class CadastroClinico extends javax.swing.JFrame {
         jPanel9.setBackground(new java.awt.Color(255, 255, 255));
         jPanel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        rotuloQE7.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE7.setText("Questão 07 - Ruídos articulares nas excursões");
 
         ComboBoxQE7BExcusãoDireita.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
@@ -492,12 +514,16 @@ public class CadastroClinico extends javax.swing.JFrame {
 
         ComboBoxQE7BExcusão.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
 
+        rotuloQE7BProtusão.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE7BProtusão.setText("Protrusão");
 
+        rotuloQE7BExcusãoEsquerda.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE7BExcusãoEsquerda.setText("Excusão Esquerda");
 
+        rotuloQE7BExcusãoDireita.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE7BExcusãoDireita.setText("Excusão Direita");
 
+        rotuloQE7B.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE7B.setText("Ruídos -  Esquerdo");
 
         ComboBoxQE7AExcusãoDireita.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
@@ -506,12 +532,16 @@ public class CadastroClinico extends javax.swing.JFrame {
 
         ComboBoxQE7AProtusão.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
 
+        rotuloQE7AProtusão.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE7AProtusão.setText("Protrusão");
 
+        rotuloQE7AExcusãoEsquerda.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE7AExcusãoEsquerda.setText("Excusão Esquerda");
 
+        rotuloQE7AExcusãoDireita.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE7AExcusãoDireita.setText("Excusão Direita");
 
+        rotuloQE7A.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE7A.setText("Ruídos -  Direito");
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
@@ -588,8 +618,10 @@ public class CadastroClinico extends javax.swing.JFrame {
         jPanel8.setBackground(new java.awt.Color(255, 255, 255));
         jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        rotuloQE6.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE6.setText("Questão 06 - Excursões");
 
+        rotuloQE6A.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE6A.setText("Excursão Lateral Direita");
 
         try {
@@ -598,14 +630,17 @@ public class CadastroClinico extends javax.swing.JFrame {
             ex.printStackTrace();
         }
 
+        rotuloQE6Muscular.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE6Muscular.setText("Dor Muscular");
 
+        rotuloQE6Articular.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE6Articular.setText("Dor Articular");
 
         ComboBoxQE6AArticular.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
 
         ComboBoxQE6AMuscular.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
 
+        rotuloQE6B.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE6B.setText("Excursão Lateral Esquerda");
 
         try {
@@ -627,6 +662,7 @@ public class CadastroClinico extends javax.swing.JFrame {
 
         ComboBoxQE6CMuscular.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
 
+        rotuloQE6C.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE6C.setText("Protusão");
 
         try {
@@ -635,6 +671,7 @@ public class CadastroClinico extends javax.swing.JFrame {
             ex.printStackTrace();
         }
 
+        rotuloQE6D.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE6D.setText("Desvio de linha média");
 
         try {
@@ -738,12 +775,16 @@ public class CadastroClinico extends javax.swing.JFrame {
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
         jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        rotuloQE5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE5.setText("Questão 05- Ruídos articulares (palpação)");
 
+        rotuloQE5A.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE5A.setText("Abertura");
 
+        rotuloLDQE5ADireito.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloLDQE5ADireito.setText("Direito");
 
+        rotuloLDQE5AEsquerdo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloLDQE5AEsquerdo.setText("Esquerdo");
 
         ComboBoxQE5ADireito.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
@@ -754,12 +795,16 @@ public class CadastroClinico extends javax.swing.JFrame {
 
         jLabel11.setText("mm");
 
+        rotuloLDQE5AA.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloLDQE5AA.setText("Medida do estalido na abertura:");
 
+        rotuloQE5B.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE5B.setText("Fechamento");
 
+        rotuloLDQE5BDireito.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloLDQE5BDireito.setText("Direito");
 
+        rotuloLDQE5BEsquerdo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloLDQE5BEsquerdo.setText("Esquerdo");
 
         ComboBoxQE5BEsquerdo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
@@ -770,12 +815,16 @@ public class CadastroClinico extends javax.swing.JFrame {
 
         jLabel13.setText("mm");
 
+        rotuloLDQE5BB.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloLDQE5BB.setText("Medida do estalido na abertura:");
 
+        rotuloQE5C.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE5C.setText("Estalido reciproco eliminado durante abertura protrusiva");
 
+        rotuloLDQE5CEsquerdo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloLDQE5CEsquerdo.setText("Esquerdo");
 
+        rotuloLDQE5CDireito.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloLDQE5CDireito.setText("Direito");
 
         ComboBoxQE5CDireito.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Sim - 0", "Não - 1", "N/A - 8" }));
@@ -897,8 +946,10 @@ public class CadastroClinico extends javax.swing.JFrame {
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        rotuloQE4.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE4.setText("Questão 04 - Extensão de movimento vertical");
 
+        rotuloQE4A.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE4A.setText("Abertura sem auxilio sem dor em mm");
 
         try {
@@ -913,8 +964,10 @@ public class CadastroClinico extends javax.swing.JFrame {
             ex.printStackTrace();
         }
 
+        rotuloQE4B.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE4B.setText("Abertura máxima sem auxilio em mm");
 
+        rotuloQE4C.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE4C.setText("Abertura máxima com auxilio em mm");
 
         try {
@@ -929,14 +982,17 @@ public class CadastroClinico extends javax.swing.JFrame {
             ex.printStackTrace();
         }
 
+        rotuloQE4D.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE4D.setText("Trespasse incisal vertical em mm");
 
         ComboBoxQE4DMuscular.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
 
         ComboBoxQE4CMuscular.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
 
+        rotuloLDQE4Muscular.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloLDQE4Muscular.setText("Dor Muscular");
 
+        rotuloLDQE4Articular.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloLDQE4Articular.setText("Dor Articular");
 
         ComboBoxQE4CArticular.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
@@ -1027,6 +1083,7 @@ public class CadastroClinico extends javax.swing.JFrame {
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        rotuloQE3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE3.setText("Questão 03 - Padrão de Abertura");
 
         ComboBoxQE3Abertura.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Reto - 1", "Desvio lateral direito (não corrigido) - 1", "Desvio lateral direito (S) - 2", "Desvio lateral esquerdo (não corrigido) - 3", "Desvio lateral direito (S) - 4", "Outro - 5" }));
@@ -1071,6 +1128,7 @@ public class CadastroClinico extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        labelQ02.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         labelQ02.setText("Questão 02 - Você poderia apontar as áreas onde você sente dor? ");
 
         ComboBoxQE2ALadoDireito.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
@@ -1081,6 +1139,7 @@ public class CadastroClinico extends javax.swing.JFrame {
 
         ComboBoxQE2BLadoEsquerdo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
 
+        labelQ02Direito.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         labelQ02Direito.setText("Lado Direito");
 
         labelQ02Esquerdo.setText("Lado Esquerdo");
@@ -1128,8 +1187,10 @@ public class CadastroClinico extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        labelPerguntas.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         labelPerguntas.setText("Perguntas:");
 
+        rotuloQuestao01.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQuestao01.setText("Questão 01 - Você tem dor no lado direito da sua face, lado esquerdo ou ambos os lados?");
 
         ComboBoxQE1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não", "Direito", "Esquerdo", "Ambos", " " }));
@@ -1166,15 +1227,24 @@ public class CadastroClinico extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        labelQuestionario1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        labelQuestionario1.setText("Questionário");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 964, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(labelQuestionario1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(550, 550, 550))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 149, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(labelQuestionario1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel13.setBackground(new java.awt.Color(0, 0, 0));
@@ -1216,7 +1286,7 @@ public class CadastroClinico extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(jLabel3)
                     .addComponent(jLabel4))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(942, Short.MAX_VALUE))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1233,13 +1303,16 @@ public class CadastroClinico extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel14.setBackground(new java.awt.Color(255, 255, 255));
         jPanel14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        labelQuestionario1.setText("Questionário");
+        labelSelecao.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        labelSelecao.setText("Selecione o paciente:");
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Selecione o paciente" }));
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
@@ -1247,14 +1320,18 @@ public class CadastroClinico extends javax.swing.JFrame {
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel14Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(labelQuestionario1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(550, 550, 550))
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelSelecao)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel14Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(labelQuestionario1)
+                .addComponent(labelSelecao)
+                .addGap(18, 18, 18)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1309,7 +1386,7 @@ public class CadastroClinico extends javax.swing.JFrame {
                 .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(117, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         ScrollPane.setViewportView(jPanel1);
@@ -1322,7 +1399,7 @@ public class CadastroClinico extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(ScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 2434, Short.MAX_VALUE)
+            .addComponent(ScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -1439,6 +1516,7 @@ public class CadastroClinico extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField campoQE6AC;
     private javax.swing.JFormattedTextField campoQE6B;
     private javax.swing.JFormattedTextField campoQE6D;
+    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -1466,6 +1544,7 @@ public class CadastroClinico extends javax.swing.JFrame {
     private javax.swing.JLabel labelQ02Direito;
     private javax.swing.JLabel labelQ02Esquerdo;
     private javax.swing.JLabel labelQuestionario1;
+    private javax.swing.JLabel labelSelecao;
     private javax.swing.JLabel rotuloAQE8;
     private javax.swing.JLabel rotuloBQE8;
     private javax.swing.JLabel rotuloCQE8;
