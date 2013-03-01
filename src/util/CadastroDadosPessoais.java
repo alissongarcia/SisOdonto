@@ -308,7 +308,7 @@ public class CadastroDadosPessoais extends javax.swing.JFrame {
                                                 .addComponent(jFormattedTextField5, javax.swing.GroupLayout.Alignment.LEADING)))))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                .addGap(0, 18, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -377,6 +377,7 @@ public class CadastroDadosPessoais extends javax.swing.JFrame {
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/cadastrar.gif"))); // NOI18N
         jButton5.setText("Cadastrar");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -399,6 +400,7 @@ public class CadastroDadosPessoais extends javax.swing.JFrame {
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/pesquisar.gif"))); // NOI18N
         jButton6.setText("Pesquisar");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
@@ -421,6 +423,7 @@ public class CadastroDadosPessoais extends javax.swing.JFrame {
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
         jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/excluir.gif"))); // NOI18N
         jButton7.setText("Excluir");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
@@ -443,6 +446,7 @@ public class CadastroDadosPessoais extends javax.swing.JFrame {
         jPanel8.setBackground(new java.awt.Color(255, 255, 255));
         jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/editar.gif"))); // NOI18N
         jButton8.setText("Alterar");
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
