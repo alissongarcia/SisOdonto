@@ -6,7 +6,7 @@ package negocio;
 
 import dao.DiagnosticoJpaController;
 import dao.PacienteJpaController;
-import dao.RespostaJpaController;
+
 import modelo.*;
 import util.JPAUtil;
 
@@ -19,11 +19,11 @@ public class Controlador {
     
     private PacienteJpaController daoPaciente;
     private DiagnosticoJpaController daoDiagnostico;
-    private RespostaJpaController daoResposta;
+    //private RespostaJpaController daoResposta;
     private JPAUtil emf;
     private Paciente paciente;
     private Diagnostico diagnostico;
-    private Resposta resposta;
+    //private Resposta resposta;
     private Grupo_I grupo_1;
     private Grupo_II grupo_2;
     
@@ -41,7 +41,7 @@ public class Controlador {
         emf = new JPAUtil();
         daoPaciente = new PacienteJpaController(emf.getEmf());
         daoDiagnostico= new DiagnosticoJpaController(emf.getEmf());
-        daoResposta= new RespostaJpaController(emf.getEmf());
+        //daoResposta= new RespostaJpaController(emf.getEmf());
     }
     
     public void cadastrarPaciente(String nome, String raca, String sexo, int idade, String naturalidade, String nacionalidade, 
@@ -64,7 +64,7 @@ public class Controlador {
         }        
     }
     
-    public void diagnosticar(String resposta1, String resposta2, String resposta3, String resposta4, String resposta5, String resposta6, String resposta7,
+    /*public void diagnosticar(String resposta1, String resposta2, String resposta3, String resposta4, String resposta5, String resposta6, String resposta7,
             String resposta8, String resposta9, String resposta10, String resposta11, String resposta12, String resposta13, String resposta14, String resposta15, String resposta16, 
             String resposta17, String resposta18, String resposta19, String resposta20, String resposta21, String resposta22, String resposta23, 
             String resposta24, String resposta25, String resposta26){
@@ -116,7 +116,7 @@ public class Controlador {
         } catch (Exception e) {
         }
         
-    }
+    }*/
     
     public String grupo_I(String q3, String QE8AD, String QE8AE, String QE8BD, String QE8BE, String QE8CD, String QE8CE,
                         String QE8DD, String QE8DE, String QE8ED, String QE8EE, String QE8FD, String QE8FE, String QE8GD, 

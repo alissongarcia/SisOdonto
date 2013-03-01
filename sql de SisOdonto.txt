@@ -1,5 +1,3 @@
-
-
 CREATE TABLE diagnostico (
 id INTEGER NOT NULL PRIMARY KEY,
 d1 VARCHAR (40),
@@ -10,55 +8,205 @@ d5 VARCHAR (40)
 
 );
 
-CREATE TABLE resposta (
+CREATE TABLE exame_clinico (
 
 id INTEGER NOT NULL PRIMARY KEY,
 
 rq1 VARCHAR (40),
-rq2 VARCHAR (40),
+rq2_1_dir VARCHAR (40),
+rq2_2_esq VARCHAR (40),
 rq3 VARCHAR (40),
-rq4 VARCHAR (40),
-rq5 VARCHAR (40),
 
-rq6 VARCHAR (40),
-rq7 VARCHAR (40),
-rq8 VARCHAR (40),
-rq9 VARCHAR (40),
-rq10 VARCHAR (40),
+rq4_a_mm VARCHAR (40),
+rq4_b_mm VARCHAR (40),
+rq4_c_mm VARCHAR (40),
+rq4_d_mm VARCHAR (40),
+rq4_b_dormusc VARCHAR (40),
+rq4_c_dormusc VARCHAR (40),
+rq4_b_dorart VARCHAR (40),
+rq4_c_dorart VARCHAR (40),
 
-rq11 VARCHAR (40),
-rq12 VARCHAR (40),
-rq13 VARCHAR (40),
-rq14 VARCHAR (40),
-rq15 VARCHAR (40),
+rq5_a_dir VARCHAR (40),
+rq5_a_esq VARCHAR (40),
+rq5_a_med_est_mm VARCHAR (40),
 
-rq16 VARCHAR (40),
-rq17 VARCHAR (40),
-rq18 VARCHAR (40),
-rq19 VARCHAR (40),
-rq20 VARCHAR (40),
+rq5_b_dir VARCHAR (40),
+rq5_b_esq VARCHAR (40),
+rq5_b_med_est_mm VARCHAR (40),
 
-rq21 VARCHAR (40),
-rq22 VARCHAR (40),
-rq23 VARCHAR (40),
-rq24 VARCHAR (40),
-rq25 VARCHAR (40),
-rq26 VARCHAR (40)
+rq5_c_dir VARCHAR (40),
+rq5_c_esq VARCHAR (40),
+
+rq6_a_mm VARCHAR (40),
+rq6_a_dormusc VARCHAR (40),
+rq6_a_dorart VARCHAR (40),
+
+rq6_b_mm VARCHAR (40),
+rq6_b_dormusc VARCHAR (40),
+rq6_b_dorart VARCHAR (40),
+
+rq6_c_mm VARCHAR (40),
+rq6_c_dormusc VARCHAR (40),
+rq6_c_dorart VARCHAR (40),
+
+rq6_d_mm VARCHAR (40),
+rq6_d_desvio VARCHAR (40),
+
+rq7_dir_exc_dir VARCHAR (40),
+rq7_dir_exc_esq VARCHAR (40),
+rq7_dir_protusao VARCHAR (40),
+
+rq7_esq_exc_dir VARCHAR (40),
+rq7_esq_exc_esq VARCHAR (40),
+rq7_esq_protusao VARCHAR (40),
+
+rq8_a_dir VARCHAR (40),
+rq8_a_esq VARCHAR (40),
+rq8_b_dir VARCHAR (40),
+rq8_b_esq VARCHAR (40),
+rq8_c_dir VARCHAR (40),
+rq8_c_esq VARCHAR (40),
+rq8_d_dir VARCHAR (40),
+rq8_d_esq VARCHAR (40),
+rq8_e_dir VARCHAR (40),
+rq8_e_esq VARCHAR (40),
+rq8_f_dir VARCHAR (40),
+rq8_f_esq VARCHAR (40),
+rq8_g_dir VARCHAR (40),
+rq8_g_esq VARCHAR (40),
+rq8_h_dir VARCHAR (40),
+rq8_h_esq VARCHAR (40),
+
+rq9_a_dir VARCHAR (40),
+rq9_a_esq VARCHAR (40),
+rq9_b_dir VARCHAR (40),
+rq9_b_esq VARCHAR (40),
+
+rq10_a_dir VARCHAR (40),
+rq10_a_esq VARCHAR (40),
+rq10_b_dir VARCHAR (40),
+rq10_b_esq VARCHAR (40)
 
 
 );
 
+CREATE TABLE questionario_pessoal (
+
+id INTEGER NOT NULL PRIMARY KEY,
+
+rqp1 VARCHAR (40),
+rqp2 VARCHAR (40),
+rqp3 VARCHAR (40),
+rqp4 INTEGER (2),
+rqp5 VARCHAR (40),
+rqp6 VARCHAR (40),
+rqp7 INTEGER (2),
+rqp8 INTEGER (2),
+rqp9 INTEGER (2),
+rqp10 INTEGER (2),
+rqp11 INTEGER (2),
+rqp12 INTEGER (2),
+rqp13 INTEGER (2),
+
+rqp14_a VARCHAR (40),
+rqp14_b VARCHAR (40),
+
+rqp15_a VARCHAR (40),
+rqp15_b VARCHAR (40),
+rqp15_c VARCHAR (40),
+rqp15_d VARCHAR (40),
+rqp15_e VARCHAR (40),
+rqp15_f VARCHAR (40),
+rqp15_g VARCHAR (40),
+
+rqp16_a VARCHAR (40),
+rqp16_b VARCHAR (40),
+rqp16_c VARCHAR (40),
+rqp16_d VARCHAR (40),
+
+rqp18 VARCHAR (40),
+
+rqp17_a VARCHAR (40),
+rqp17_b VARCHAR (40),
+
+rqp19_a VARCHAR (40),
+rqp19_b VARCHAR (40),
+rqp19_c VARCHAR (40),
+rqp19_d VARCHAR (40),
+rqp19_e VARCHAR (40),
+rqp19_f VARCHAR (40),
+rqp19_g VARCHAR (40),
+rqp19_h VARCHAR (40),
+rqp19_i VARCHAR (40),
+rqp19_j VARCHAR (40),
+rqp19_k VARCHAR (40),
+rqp19_l VARCHAR (40),
+
+rqp20_a VARCHAR (40),
+rqp20_b VARCHAR (40),
+rqp20_c VARCHAR (40),
+rqp20_d VARCHAR (40),
+rqp20_e VARCHAR (40),
+rqp20_f VARCHAR (40),
+rqp20_g VARCHAR (40),
+rqp20_h VARCHAR (40),
+rqp20_i VARCHAR (40),
+rqp20_j VARCHAR (40),
+rqp20_k VARCHAR (40),
+rqp20_l VARCHAR (40),
+rqp20_m VARCHAR (40),
+rqp20_n VARCHAR (40),
+rqp20_o VARCHAR (40),
+rqp20_p VARCHAR (40),
+rqp20_q VARCHAR (40),
+rqp20_r VARCHAR (40),
+rqp20_s VARCHAR (40),
+rqp20_t VARCHAR (40),
+rqp20_u VARCHAR (40),
+rqp20_v VARCHAR (40),
+rqp20_w VARCHAR (40),
+rqp20_x VARCHAR (40),
+rqp20_y VARCHAR (40),
+rqp20_z VARCHAR (40),
+rqp20_aa VARCHAR (40),
+rqp20_bb VARCHAR (40),
+rqp20_cc VARCHAR (40),
+rqp20_dd VARCHAR (40),
+rqp20_ee VARCHAR (40),
+
+rqp21 VARCHAR (40),
+rqp22 VARCHAR (40),
+
+rqp23_dia INTEGER (2),
+rqp23_mes INTEGER (2),
+rqp23_ano INTEGER (2),
+
+rqp24 VARCHAR (40),
+rqp25 VARCHAR (40),
+rqp26 VARCHAR (40),
+rqp27 VARCHAR (40),
+
+rqp28_a VARCHAR (40),
+rqp28_b VARCHAR (40),
+rqp28_c VARCHAR (40),
+
+rqp29 VARCHAR (40),
+rqp30 VARCHAR (40),
+rqp31 VARCHAR (40),
+
+);
 
 
 CREATE TABLE paciente (
 id INTEGER NOT NULL PRIMARY KEY,
 nome VARCHAR (40),
 rua VARCHAR (40),
+bairro VARCHAR (40),
+numero INTEGER,
+cidade VARCHAR (40),
 raca VARCHAR (40),
 cep VARCHAR (40),
-numero INTEGER,
-bairro VARCHAR (40),
-cidade VARCHAR (40),
+cpf VARCHAR (40),
 uf VARCHAR (40),
 telefone VARCHAR (40),
 celular VARCHAR (40),
@@ -67,7 +215,9 @@ idade INTEGER,
 naturalidade VARCHAR (40),
 nacionalidade VARCHAR (40),
 
-coddiagnostico INTEGER CONSTRAINT tbldiagnosticoFK REFERENCES diagnostico (id),
-codresposta INTEGER CONSTRAINT tblrespostaFK REFERENCES resposta (id)
+cod_diagnostico INTEGER CONSTRAINT tbldiagnosticoFK REFERENCES diagnostico (id),
+cod_exame_clinico INTEGER CONSTRAINT tblexame_clinicoFK REFERENCES exame_clinico (id),
+cod_quest_pessoal INTEGER CONSTRAINT tblquestionario_pessoalFK REFERENCES questionario_pessoal (id)
+
 );
 

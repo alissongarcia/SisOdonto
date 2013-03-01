@@ -5,6 +5,8 @@
     <class>modelo.Diagnostico</class>
     <class>modelo.Paciente</class>
     <class>modelo.Resposta</class>
+    <class>modelo.ExameClinico</class>
+    <class>modelo.QuestionarioPessoal</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/sisodonto"/>
       <property name="javax.persistence.jdbc.password" value="postgres"/>

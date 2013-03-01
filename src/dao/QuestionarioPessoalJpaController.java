@@ -16,15 +16,15 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-import modelo.Resposta;
+import modelo.QuestionarioPessoal;
 
 /**
  *
  * @author alisson
  */
-public class RespostaJpaController implements Serializable {
+public class QuestionarioPessoalJpaController implements Serializable {
 
-    public RespostaJpaController(EntityManagerFactory emf) {
+    public QuestionarioPessoalJpaController(EntityManagerFactory emf) {
         this.emf = emf;
     }
     private EntityManagerFactory emf = null;
@@ -33,34 +33,34 @@ public class RespostaJpaController implements Serializable {
         return emf.createEntityManager();
     }
 
-    public void create(Resposta resposta) throws PreexistingEntityException, Exception {
-        if (resposta.getPacienteList() == null) {
-            resposta.setPacienteList(new ArrayList<Paciente>());
+    public void create(QuestionarioPessoal questionarioPessoal) throws PreexistingEntityException, Exception {
+        if (questionarioPessoal.getPacienteList() == null) {
+            questionarioPessoal.setPacienteList(new ArrayList<Paciente>());
         }
         EntityManager em = null;
         try {
             em = getEntityManager();
             em.getTransaction().begin();
             List<Paciente> attachedPacienteList = new ArrayList<Paciente>();
-            for (Paciente pacienteListPacienteToAttach : resposta.getPacienteList()) {
+            for (Paciente pacienteListPacienteToAttach : questionarioPessoal.getPacienteList()) {
                 pacienteListPacienteToAttach = em.getReference(pacienteListPacienteToAttach.getClass(), pacienteListPacienteToAttach.getId());
                 attachedPacienteList.add(pacienteListPacienteToAttach);
             }
-            resposta.setPacienteList(attachedPacienteList);
-            em.persist(resposta);
-            for (Paciente pacienteListPaciente : resposta.getPacienteList()) {
-                Resposta oldCodrespostaOfPacienteListPaciente = pacienteListPaciente.getCodresposta();
-                pacienteListPaciente.setCodresposta(resposta);
+            questionarioPessoal.setPacienteList(attachedPacienteList);
+            em.persist(questionarioPessoal);
+            for (Paciente pacienteListPaciente : questionarioPessoal.getPacienteList()) {
+                QuestionarioPessoal oldCodQuestPessoalOfPacienteListPaciente = pacienteListPaciente.getCodQuestPessoal();
+                pacienteListPaciente.setCodQuestPessoal(questionarioPessoal);
                 pacienteListPaciente = em.merge(pacienteListPaciente);
-                if (oldCodrespostaOfPacienteListPaciente != null) {
-                    oldCodrespostaOfPacienteListPaciente.getPacienteList().remove(pacienteListPaciente);
-                    oldCodrespostaOfPacienteListPaciente = em.merge(oldCodrespostaOfPacienteListPaciente);
+                if (oldCodQuestPessoalOfPacienteListPaciente != null) {
+                    oldCodQuestPessoalOfPacienteListPaciente.getPacienteList().remove(pacienteListPaciente);
+                    oldCodQuestPessoalOfPacienteListPaciente = em.merge(oldCodQuestPessoalOfPacienteListPaciente);
                 }
             }
             em.getTransaction().commit();
         } catch (Exception ex) {
-            if (findResposta(resposta.getId()) != null) {
-                throw new PreexistingEntityException("Resposta " + resposta + " already exists.", ex);
+            if (findQuestionarioPessoal(questionarioPessoal.getId()) != null) {
+                throw new PreexistingEntityException("QuestionarioPessoal " + questionarioPessoal + " already exists.", ex);
             }
             throw ex;
         } finally {
@@ -70,36 +70,36 @@ public class RespostaJpaController implements Serializable {
         }
     }
 
-    public void edit(Resposta resposta) throws NonexistentEntityException, Exception {
+    public void edit(QuestionarioPessoal questionarioPessoal) throws NonexistentEntityException, Exception {
         EntityManager em = null;
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            Resposta persistentResposta = em.find(Resposta.class, resposta.getId());
-            List<Paciente> pacienteListOld = persistentResposta.getPacienteList();
-            List<Paciente> pacienteListNew = resposta.getPacienteList();
+            QuestionarioPessoal persistentQuestionarioPessoal = em.find(QuestionarioPessoal.class, questionarioPessoal.getId());
+            List<Paciente> pacienteListOld = persistentQuestionarioPessoal.getPacienteList();
+            List<Paciente> pacienteListNew = questionarioPessoal.getPacienteList();
             List<Paciente> attachedPacienteListNew = new ArrayList<Paciente>();
             for (Paciente pacienteListNewPacienteToAttach : pacienteListNew) {
                 pacienteListNewPacienteToAttach = em.getReference(pacienteListNewPacienteToAttach.getClass(), pacienteListNewPacienteToAttach.getId());
                 attachedPacienteListNew.add(pacienteListNewPacienteToAttach);
             }
             pacienteListNew = attachedPacienteListNew;
-            resposta.setPacienteList(pacienteListNew);
-            resposta = em.merge(resposta);
+            questionarioPessoal.setPacienteList(pacienteListNew);
+            questionarioPessoal = em.merge(questionarioPessoal);
             for (Paciente pacienteListOldPaciente : pacienteListOld) {
                 if (!pacienteListNew.contains(pacienteListOldPaciente)) {
-                    pacienteListOldPaciente.setCodresposta(null);
+                    pacienteListOldPaciente.setCodQuestPessoal(null);
                     pacienteListOldPaciente = em.merge(pacienteListOldPaciente);
                 }
             }
             for (Paciente pacienteListNewPaciente : pacienteListNew) {
                 if (!pacienteListOld.contains(pacienteListNewPaciente)) {
-                    Resposta oldCodrespostaOfPacienteListNewPaciente = pacienteListNewPaciente.getCodresposta();
-                    pacienteListNewPaciente.setCodresposta(resposta);
+                    QuestionarioPessoal oldCodQuestPessoalOfPacienteListNewPaciente = pacienteListNewPaciente.getCodQuestPessoal();
+                    pacienteListNewPaciente.setCodQuestPessoal(questionarioPessoal);
                     pacienteListNewPaciente = em.merge(pacienteListNewPaciente);
-                    if (oldCodrespostaOfPacienteListNewPaciente != null && !oldCodrespostaOfPacienteListNewPaciente.equals(resposta)) {
-                        oldCodrespostaOfPacienteListNewPaciente.getPacienteList().remove(pacienteListNewPaciente);
-                        oldCodrespostaOfPacienteListNewPaciente = em.merge(oldCodrespostaOfPacienteListNewPaciente);
+                    if (oldCodQuestPessoalOfPacienteListNewPaciente != null && !oldCodQuestPessoalOfPacienteListNewPaciente.equals(questionarioPessoal)) {
+                        oldCodQuestPessoalOfPacienteListNewPaciente.getPacienteList().remove(pacienteListNewPaciente);
+                        oldCodQuestPessoalOfPacienteListNewPaciente = em.merge(oldCodQuestPessoalOfPacienteListNewPaciente);
                     }
                 }
             }
@@ -107,9 +107,9 @@ public class RespostaJpaController implements Serializable {
         } catch (Exception ex) {
             String msg = ex.getLocalizedMessage();
             if (msg == null || msg.length() == 0) {
-                Integer id = resposta.getId();
-                if (findResposta(id) == null) {
-                    throw new NonexistentEntityException("The resposta with id " + id + " no longer exists.");
+                Integer id = questionarioPessoal.getId();
+                if (findQuestionarioPessoal(id) == null) {
+                    throw new NonexistentEntityException("The questionarioPessoal with id " + id + " no longer exists.");
                 }
             }
             throw ex;
@@ -125,19 +125,19 @@ public class RespostaJpaController implements Serializable {
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            Resposta resposta;
+            QuestionarioPessoal questionarioPessoal;
             try {
-                resposta = em.getReference(Resposta.class, id);
-                resposta.getId();
+                questionarioPessoal = em.getReference(QuestionarioPessoal.class, id);
+                questionarioPessoal.getId();
             } catch (EntityNotFoundException enfe) {
-                throw new NonexistentEntityException("The resposta with id " + id + " no longer exists.", enfe);
+                throw new NonexistentEntityException("The questionarioPessoal with id " + id + " no longer exists.", enfe);
             }
-            List<Paciente> pacienteList = resposta.getPacienteList();
+            List<Paciente> pacienteList = questionarioPessoal.getPacienteList();
             for (Paciente pacienteListPaciente : pacienteList) {
-                pacienteListPaciente.setCodresposta(null);
+                pacienteListPaciente.setCodQuestPessoal(null);
                 pacienteListPaciente = em.merge(pacienteListPaciente);
             }
-            em.remove(resposta);
+            em.remove(questionarioPessoal);
             em.getTransaction().commit();
         } finally {
             if (em != null) {
@@ -146,19 +146,19 @@ public class RespostaJpaController implements Serializable {
         }
     }
 
-    public List<Resposta> findRespostaEntities() {
-        return findRespostaEntities(true, -1, -1);
+    public List<QuestionarioPessoal> findQuestionarioPessoalEntities() {
+        return findQuestionarioPessoalEntities(true, -1, -1);
     }
 
-    public List<Resposta> findRespostaEntities(int maxResults, int firstResult) {
-        return findRespostaEntities(false, maxResults, firstResult);
+    public List<QuestionarioPessoal> findQuestionarioPessoalEntities(int maxResults, int firstResult) {
+        return findQuestionarioPessoalEntities(false, maxResults, firstResult);
     }
 
-    private List<Resposta> findRespostaEntities(boolean all, int maxResults, int firstResult) {
+    private List<QuestionarioPessoal> findQuestionarioPessoalEntities(boolean all, int maxResults, int firstResult) {
         EntityManager em = getEntityManager();
         try {
             CriteriaQuery cq = em.getCriteriaBuilder().createQuery();
-            cq.select(cq.from(Resposta.class));
+            cq.select(cq.from(QuestionarioPessoal.class));
             Query q = em.createQuery(cq);
             if (!all) {
                 q.setMaxResults(maxResults);
@@ -170,20 +170,20 @@ public class RespostaJpaController implements Serializable {
         }
     }
 
-    public Resposta findResposta(Integer id) {
+    public QuestionarioPessoal findQuestionarioPessoal(Integer id) {
         EntityManager em = getEntityManager();
         try {
-            return em.find(Resposta.class, id);
+            return em.find(QuestionarioPessoal.class, id);
         } finally {
             em.close();
         }
     }
 
-    public int getRespostaCount() {
+    public int getQuestionarioPessoalCount() {
         EntityManager em = getEntityManager();
         try {
             CriteriaQuery cq = em.getCriteriaBuilder().createQuery();
-            Root<Resposta> rt = cq.from(Resposta.class);
+            Root<QuestionarioPessoal> rt = cq.from(QuestionarioPessoal.class);
             cq.select(em.getCriteriaBuilder().count(rt));
             Query q = em.createQuery(cq);
             return ((Long) q.getSingleResult()).intValue();
