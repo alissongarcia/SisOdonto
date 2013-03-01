@@ -20,11 +20,12 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Paciente.findById", query = "SELECT p FROM Paciente p WHERE p.id = :id"),
     @NamedQuery(name = "Paciente.findByNome", query = "SELECT p FROM Paciente p WHERE p.nome = :nome"),
     @NamedQuery(name = "Paciente.findByRua", query = "SELECT p FROM Paciente p WHERE p.rua = :rua"),
+    @NamedQuery(name = "Paciente.findByBairro", query = "SELECT p FROM Paciente p WHERE p.bairro = :bairro"),
+    @NamedQuery(name = "Paciente.findByNumero", query = "SELECT p FROM Paciente p WHERE p.numero = :numero"),
+    @NamedQuery(name = "Paciente.findByCidade", query = "SELECT p FROM Paciente p WHERE p.cidade = :cidade"),
     @NamedQuery(name = "Paciente.findByRaca", query = "SELECT p FROM Paciente p WHERE p.raca = :raca"),
     @NamedQuery(name = "Paciente.findByCep", query = "SELECT p FROM Paciente p WHERE p.cep = :cep"),
-    @NamedQuery(name = "Paciente.findByNumero", query = "SELECT p FROM Paciente p WHERE p.numero = :numero"),
-    @NamedQuery(name = "Paciente.findByBairro", query = "SELECT p FROM Paciente p WHERE p.bairro = :bairro"),
-    @NamedQuery(name = "Paciente.findByCidade", query = "SELECT p FROM Paciente p WHERE p.cidade = :cidade"),
+    @NamedQuery(name = "Paciente.findByCpf", query = "SELECT p FROM Paciente p WHERE p.cpf = :cpf"),
     @NamedQuery(name = "Paciente.findByUf", query = "SELECT p FROM Paciente p WHERE p.uf = :uf"),
     @NamedQuery(name = "Paciente.findByTelefone", query = "SELECT p FROM Paciente p WHERE p.telefone = :telefone"),
     @NamedQuery(name = "Paciente.findByCelular", query = "SELECT p FROM Paciente p WHERE p.celular = :celular"),
@@ -35,7 +36,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Paciente implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "id")
     private Integer id;
@@ -43,16 +43,18 @@ public class Paciente implements Serializable {
     private String nome;
     @Column(name = "rua")
     private String rua;
+    @Column(name = "bairro")
+    private String bairro;
+    @Column(name = "numero")
+    private Integer numero;
+    @Column(name = "cidade")
+    private String cidade;
     @Column(name = "raca")
     private String raca;
     @Column(name = "cep")
     private String cep;
-    @Column(name = "numero")
-    private Integer numero;
-    @Column(name = "bairro")
-    private String bairro;
-    @Column(name = "cidade")
-    private String cidade;
+    @Column(name = "cpf")
+    private String cpf;
     @Column(name = "uf")
     private String uf;
     @Column(name = "telefone")
@@ -67,12 +69,15 @@ public class Paciente implements Serializable {
     private String naturalidade;
     @Column(name = "nacionalidade")
     private String nacionalidade;
-    @JoinColumn(name = "codresposta", referencedColumnName = "id")
+    @JoinColumn(name = "cod_quest_pessoal", referencedColumnName = "id")
     @ManyToOne
-    private Resposta codresposta;
-    @JoinColumn(name = "coddiagnostico", referencedColumnName = "id")
+    private QuestionarioPessoal codQuestPessoal;
+    @JoinColumn(name = "cod_exame_clinico", referencedColumnName = "id")
     @ManyToOne
-    private Diagnostico coddiagnostico;
+    private ExameClinico codExameClinico;
+    @JoinColumn(name = "cod_diagnostico", referencedColumnName = "id")
+    @ManyToOne
+    private Diagnostico codDiagnostico;
 
     public Paciente() {
     }
@@ -105,6 +110,30 @@ public class Paciente implements Serializable {
         this.rua = rua;
     }
 
+    public String getBairro() {
+        return bairro;
+    }
+
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
+    }
+
+    public Integer getNumero() {
+        return numero;
+    }
+
+    public void setNumero(Integer numero) {
+        this.numero = numero;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
     public String getRaca() {
         return raca;
     }
@@ -121,28 +150,12 @@ public class Paciente implements Serializable {
         this.cep = cep;
     }
 
-    public Integer getNumero() {
-        return numero;
+    public String getCpf() {
+        return cpf;
     }
 
-    public void setNumero(Integer numero) {
-        this.numero = numero;
-    }
-
-    public String getBairro() {
-        return bairro;
-    }
-
-    public void setBairro(String bairro) {
-        this.bairro = bairro;
-    }
-
-    public String getCidade() {
-        return cidade;
-    }
-
-    public void setCidade(String cidade) {
-        this.cidade = cidade;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
     public String getUf() {
@@ -201,20 +214,28 @@ public class Paciente implements Serializable {
         this.nacionalidade = nacionalidade;
     }
 
-    public Resposta getCodresposta() {
-        return codresposta;
+    public QuestionarioPessoal getCodQuestPessoal() {
+        return codQuestPessoal;
     }
 
-    public void setCodresposta(Resposta codresposta) {
-        this.codresposta = codresposta;
+    public void setCodQuestPessoal(QuestionarioPessoal codQuestPessoal) {
+        this.codQuestPessoal = codQuestPessoal;
     }
 
-    public Diagnostico getCoddiagnostico() {
-        return coddiagnostico;
+    public ExameClinico getCodExameClinico() {
+        return codExameClinico;
     }
 
-    public void setCoddiagnostico(Diagnostico coddiagnostico) {
-        this.coddiagnostico = coddiagnostico;
+    public void setCodExameClinico(ExameClinico codExameClinico) {
+        this.codExameClinico = codExameClinico;
+    }
+
+    public Diagnostico getCodDiagnostico() {
+        return codDiagnostico;
+    }
+
+    public void setCodDiagnostico(Diagnostico codDiagnostico) {
+        this.codDiagnostico = codDiagnostico;
     }
 
     @Override

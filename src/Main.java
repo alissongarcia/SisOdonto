@@ -1,10 +1,8 @@
 
 import dao.DiagnosticoJpaController;
 import dao.PacienteJpaController;
-import dao.RespostaJpaController;
 import modelo.Diagnostico;
 import modelo.Paciente;
-import modelo.Resposta;
 import negocio.Grupo_I;
 import negocio.Grupo_II;
 import util.JPAUtil;

@@ -14,7 +14,8 @@ import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
-import modelo.Resposta;
+import modelo.QuestionarioPessoal;
+import modelo.ExameClinico;
 import modelo.Diagnostico;
 import modelo.Paciente;
 
@@ -38,24 +39,33 @@ public class PacienteJpaController implements Serializable {
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            Resposta codresposta = paciente.getCodresposta();
-            if (codresposta != null) {
-                codresposta = em.getReference(codresposta.getClass(), codresposta.getId());
-                paciente.setCodresposta(codresposta);
+            QuestionarioPessoal codQuestPessoal = paciente.getCodQuestPessoal();
+            if (codQuestPessoal != null) {
+                codQuestPessoal = em.getReference(codQuestPessoal.getClass(), codQuestPessoal.getId());
+                paciente.setCodQuestPessoal(codQuestPessoal);
             }
-            Diagnostico coddiagnostico = paciente.getCoddiagnostico();
-            if (coddiagnostico != null) {
-                coddiagnostico = em.getReference(coddiagnostico.getClass(), coddiagnostico.getId());
-                paciente.setCoddiagnostico(coddiagnostico);
+            ExameClinico codExameClinico = paciente.getCodExameClinico();
+            if (codExameClinico != null) {
+                codExameClinico = em.getReference(codExameClinico.getClass(), codExameClinico.getId());
+                paciente.setCodExameClinico(codExameClinico);
+            }
+            Diagnostico codDiagnostico = paciente.getCodDiagnostico();
+            if (codDiagnostico != null) {
+                codDiagnostico = em.getReference(codDiagnostico.getClass(), codDiagnostico.getId());
+                paciente.setCodDiagnostico(codDiagnostico);
             }
             em.persist(paciente);
-            if (codresposta != null) {
-                codresposta.getPacienteList().add(paciente);
-                codresposta = em.merge(codresposta);
+            if (codQuestPessoal != null) {
+                codQuestPessoal.getPacienteList().add(paciente);
+                codQuestPessoal = em.merge(codQuestPessoal);
             }
-            if (coddiagnostico != null) {
-                coddiagnostico.getPacienteList().add(paciente);
-                coddiagnostico = em.merge(coddiagnostico);
+            if (codExameClinico != null) {
+                codExameClinico.getPacienteList().add(paciente);
+                codExameClinico = em.merge(codExameClinico);
+            }
+            if (codDiagnostico != null) {
+                codDiagnostico.getPacienteList().add(paciente);
+                codDiagnostico = em.merge(codDiagnostico);
             }
             em.getTransaction().commit();
         } catch (Exception ex) {
@@ -76,34 +86,48 @@ public class PacienteJpaController implements Serializable {
             em = getEntityManager();
             em.getTransaction().begin();
             Paciente persistentPaciente = em.find(Paciente.class, paciente.getId());
-            Resposta codrespostaOld = persistentPaciente.getCodresposta();
-            Resposta codrespostaNew = paciente.getCodresposta();
-            Diagnostico coddiagnosticoOld = persistentPaciente.getCoddiagnostico();
-            Diagnostico coddiagnosticoNew = paciente.getCoddiagnostico();
-            if (codrespostaNew != null) {
-                codrespostaNew = em.getReference(codrespostaNew.getClass(), codrespostaNew.getId());
-                paciente.setCodresposta(codrespostaNew);
+            QuestionarioPessoal codQuestPessoalOld = persistentPaciente.getCodQuestPessoal();
+            QuestionarioPessoal codQuestPessoalNew = paciente.getCodQuestPessoal();
+            ExameClinico codExameClinicoOld = persistentPaciente.getCodExameClinico();
+            ExameClinico codExameClinicoNew = paciente.getCodExameClinico();
+            Diagnostico codDiagnosticoOld = persistentPaciente.getCodDiagnostico();
+            Diagnostico codDiagnosticoNew = paciente.getCodDiagnostico();
+            if (codQuestPessoalNew != null) {
+                codQuestPessoalNew = em.getReference(codQuestPessoalNew.getClass(), codQuestPessoalNew.getId());
+                paciente.setCodQuestPessoal(codQuestPessoalNew);
             }
-            if (coddiagnosticoNew != null) {
-                coddiagnosticoNew = em.getReference(coddiagnosticoNew.getClass(), coddiagnosticoNew.getId());
-                paciente.setCoddiagnostico(coddiagnosticoNew);
+            if (codExameClinicoNew != null) {
+                codExameClinicoNew = em.getReference(codExameClinicoNew.getClass(), codExameClinicoNew.getId());
+                paciente.setCodExameClinico(codExameClinicoNew);
+            }
+            if (codDiagnosticoNew != null) {
+                codDiagnosticoNew = em.getReference(codDiagnosticoNew.getClass(), codDiagnosticoNew.getId());
+                paciente.setCodDiagnostico(codDiagnosticoNew);
             }
             paciente = em.merge(paciente);
-            if (codrespostaOld != null && !codrespostaOld.equals(codrespostaNew)) {
-                codrespostaOld.getPacienteList().remove(paciente);
-                codrespostaOld = em.merge(codrespostaOld);
+            if (codQuestPessoalOld != null && !codQuestPessoalOld.equals(codQuestPessoalNew)) {
+                codQuestPessoalOld.getPacienteList().remove(paciente);
+                codQuestPessoalOld = em.merge(codQuestPessoalOld);
             }
-            if (codrespostaNew != null && !codrespostaNew.equals(codrespostaOld)) {
-                codrespostaNew.getPacienteList().add(paciente);
-                codrespostaNew = em.merge(codrespostaNew);
+            if (codQuestPessoalNew != null && !codQuestPessoalNew.equals(codQuestPessoalOld)) {
+                codQuestPessoalNew.getPacienteList().add(paciente);
+                codQuestPessoalNew = em.merge(codQuestPessoalNew);
             }
-            if (coddiagnosticoOld != null && !coddiagnosticoOld.equals(coddiagnosticoNew)) {
-                coddiagnosticoOld.getPacienteList().remove(paciente);
-                coddiagnosticoOld = em.merge(coddiagnosticoOld);
+            if (codExameClinicoOld != null && !codExameClinicoOld.equals(codExameClinicoNew)) {
+                codExameClinicoOld.getPacienteList().remove(paciente);
+                codExameClinicoOld = em.merge(codExameClinicoOld);
             }
-            if (coddiagnosticoNew != null && !coddiagnosticoNew.equals(coddiagnosticoOld)) {
-                coddiagnosticoNew.getPacienteList().add(paciente);
-                coddiagnosticoNew = em.merge(coddiagnosticoNew);
+            if (codExameClinicoNew != null && !codExameClinicoNew.equals(codExameClinicoOld)) {
+                codExameClinicoNew.getPacienteList().add(paciente);
+                codExameClinicoNew = em.merge(codExameClinicoNew);
+            }
+            if (codDiagnosticoOld != null && !codDiagnosticoOld.equals(codDiagnosticoNew)) {
+                codDiagnosticoOld.getPacienteList().remove(paciente);
+                codDiagnosticoOld = em.merge(codDiagnosticoOld);
+            }
+            if (codDiagnosticoNew != null && !codDiagnosticoNew.equals(codDiagnosticoOld)) {
+                codDiagnosticoNew.getPacienteList().add(paciente);
+                codDiagnosticoNew = em.merge(codDiagnosticoNew);
             }
             em.getTransaction().commit();
         } catch (Exception ex) {
@@ -134,15 +158,20 @@ public class PacienteJpaController implements Serializable {
             } catch (EntityNotFoundException enfe) {
                 throw new NonexistentEntityException("The paciente with id " + id + " no longer exists.", enfe);
             }
-            Resposta codresposta = paciente.getCodresposta();
-            if (codresposta != null) {
-                codresposta.getPacienteList().remove(paciente);
-                codresposta = em.merge(codresposta);
+            QuestionarioPessoal codQuestPessoal = paciente.getCodQuestPessoal();
+            if (codQuestPessoal != null) {
+                codQuestPessoal.getPacienteList().remove(paciente);
+                codQuestPessoal = em.merge(codQuestPessoal);
             }
-            Diagnostico coddiagnostico = paciente.getCoddiagnostico();
-            if (coddiagnostico != null) {
-                coddiagnostico.getPacienteList().remove(paciente);
-                coddiagnostico = em.merge(coddiagnostico);
+            ExameClinico codExameClinico = paciente.getCodExameClinico();
+            if (codExameClinico != null) {
+                codExameClinico.getPacienteList().remove(paciente);
+                codExameClinico = em.merge(codExameClinico);
+            }
+            Diagnostico codDiagnostico = paciente.getCodDiagnostico();
+            if (codDiagnostico != null) {
+                codDiagnostico.getPacienteList().remove(paciente);
+                codDiagnostico = em.merge(codDiagnostico);
             }
             em.remove(paciente);
             em.getTransaction().commit();

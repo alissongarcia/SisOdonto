@@ -28,7 +28,6 @@ import javax.xml.bind.annotation.XmlTransient;
 public class Diagnostico implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "id")
     private Integer id;
@@ -42,7 +41,7 @@ public class Diagnostico implements Serializable {
     private String d4;
     @Column(name = "d5")
     private String d5;
-    @OneToMany(mappedBy = "coddiagnostico")
+    @OneToMany(mappedBy = "codDiagnostico")
     private List<Paciente> pacienteList;
 
     public Diagnostico() {
