@@ -192,4 +192,8 @@ public class QuestionarioPessoalJpaController implements Serializable {
         }
     }
     
+    /*public QuestionarioPessoal buscarCampos(){
+        
+    }*/
+    
 }

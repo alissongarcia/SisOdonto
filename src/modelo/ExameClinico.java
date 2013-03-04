@@ -209,7 +209,7 @@ public class ExameClinico implements Serializable {
     private String rq10BDir;
     @Column(name = "rq10_b_esq")
     private String rq10BEsq;
-    @OneToMany(mappedBy = "codExameClinico")
+    @OneToOne(mappedBy = "codExameClinico")
     private List<Paciente> pacienteList;
 
     public ExameClinico() {

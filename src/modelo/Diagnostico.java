@@ -41,7 +41,7 @@ public class Diagnostico implements Serializable {
     private String d4;
     @Column(name = "d5")
     private String d5;
-    @OneToMany(mappedBy = "codDiagnostico")
+    @OneToOne(mappedBy = "codDiagnostico")
     private List<Paciente> pacienteList;
 
     public Diagnostico() {

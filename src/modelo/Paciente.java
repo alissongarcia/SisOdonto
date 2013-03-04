@@ -70,13 +70,13 @@ public class Paciente implements Serializable {
     @Column(name = "nacionalidade")
     private String nacionalidade;
     @JoinColumn(name = "cod_quest_pessoal", referencedColumnName = "id")
-    @ManyToOne
+    @OneToOne
     private QuestionarioPessoal codQuestPessoal;
     @JoinColumn(name = "cod_exame_clinico", referencedColumnName = "id")
-    @ManyToOne
+    @OneToOne
     private ExameClinico codExameClinico;
     @JoinColumn(name = "cod_diagnostico", referencedColumnName = "id")
-    @ManyToOne
+    @OneToOne
     private Diagnostico codDiagnostico;
 
     public Paciente() {
