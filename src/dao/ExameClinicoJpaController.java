@@ -7,16 +7,15 @@ package dao;
 import dao.exceptions.NonexistentEntityException;
 import dao.exceptions.PreexistingEntityException;
 import java.io.Serializable;
+import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
-import modelo.Paciente;
-import java.util.ArrayList;
-import java.util.List;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 import modelo.ExameClinico;
+import modelo.Paciente;
 
 /**
  *
@@ -34,28 +33,19 @@ public class ExameClinicoJpaController implements Serializable {
     }
 
     public void create(ExameClinico exameClinico) throws PreexistingEntityException, Exception {
-        if (exameClinico.getPacienteList() == null) {
-            exameClinico.setPacienteList(new ArrayList<Paciente>());
-        }
         EntityManager em = null;
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            List<Paciente> attachedPacienteList = new ArrayList<Paciente>();
-            for (Paciente pacienteListPacienteToAttach : exameClinico.getPacienteList()) {
-                pacienteListPacienteToAttach = em.getReference(pacienteListPacienteToAttach.getClass(), pacienteListPacienteToAttach.getId());
-                attachedPacienteList.add(pacienteListPacienteToAttach);
+            Paciente codPacienteExame = exameClinico.getCodPacienteExame();
+            if (codPacienteExame != null) {
+                codPacienteExame = em.getReference(codPacienteExame.getClass(), codPacienteExame.getId());
+                exameClinico.setCodPacienteExame(codPacienteExame);
             }
-            exameClinico.setPacienteList(attachedPacienteList);
             em.persist(exameClinico);
-            for (Paciente pacienteListPaciente : exameClinico.getPacienteList()) {
-                ExameClinico oldCodExameClinicoOfPacienteListPaciente = pacienteListPaciente.getCodExameClinico();
-                pacienteListPaciente.setCodExameClinico(exameClinico);
-                pacienteListPaciente = em.merge(pacienteListPaciente);
-                if (oldCodExameClinicoOfPacienteListPaciente != null) {
-                    oldCodExameClinicoOfPacienteListPaciente.getPacienteList().remove(pacienteListPaciente);
-                    oldCodExameClinicoOfPacienteListPaciente = em.merge(oldCodExameClinicoOfPacienteListPaciente);
-                }
+            if (codPacienteExame != null) {
+                codPacienteExame.getExameClinicoList().add(exameClinico);
+                codPacienteExame = em.merge(codPacienteExame);
             }
             em.getTransaction().commit();
         } catch (Exception ex) {
@@ -76,32 +66,20 @@ public class ExameClinicoJpaController implements Serializable {
             em = getEntityManager();
             em.getTransaction().begin();
             ExameClinico persistentExameClinico = em.find(ExameClinico.class, exameClinico.getId());
-            List<Paciente> pacienteListOld = persistentExameClinico.getPacienteList();
-            List<Paciente> pacienteListNew = exameClinico.getPacienteList();
-            List<Paciente> attachedPacienteListNew = new ArrayList<Paciente>();
-            for (Paciente pacienteListNewPacienteToAttach : pacienteListNew) {
-                pacienteListNewPacienteToAttach = em.getReference(pacienteListNewPacienteToAttach.getClass(), pacienteListNewPacienteToAttach.getId());
-                attachedPacienteListNew.add(pacienteListNewPacienteToAttach);
+            Paciente codPacienteExameOld = persistentExameClinico.getCodPacienteExame();
+            Paciente codPacienteExameNew = exameClinico.getCodPacienteExame();
+            if (codPacienteExameNew != null) {
+                codPacienteExameNew = em.getReference(codPacienteExameNew.getClass(), codPacienteExameNew.getId());
+                exameClinico.setCodPacienteExame(codPacienteExameNew);
             }
-            pacienteListNew = attachedPacienteListNew;
-            exameClinico.setPacienteList(pacienteListNew);
             exameClinico = em.merge(exameClinico);
-            for (Paciente pacienteListOldPaciente : pacienteListOld) {
-                if (!pacienteListNew.contains(pacienteListOldPaciente)) {
-                    pacienteListOldPaciente.setCodExameClinico(null);
-                    pacienteListOldPaciente = em.merge(pacienteListOldPaciente);
-                }
+            if (codPacienteExameOld != null && !codPacienteExameOld.equals(codPacienteExameNew)) {
+                codPacienteExameOld.getExameClinicoList().remove(exameClinico);
+                codPacienteExameOld = em.merge(codPacienteExameOld);
             }
-            for (Paciente pacienteListNewPaciente : pacienteListNew) {
-                if (!pacienteListOld.contains(pacienteListNewPaciente)) {
-                    ExameClinico oldCodExameClinicoOfPacienteListNewPaciente = pacienteListNewPaciente.getCodExameClinico();
-                    pacienteListNewPaciente.setCodExameClinico(exameClinico);
-                    pacienteListNewPaciente = em.merge(pacienteListNewPaciente);
-                    if (oldCodExameClinicoOfPacienteListNewPaciente != null && !oldCodExameClinicoOfPacienteListNewPaciente.equals(exameClinico)) {
-                        oldCodExameClinicoOfPacienteListNewPaciente.getPacienteList().remove(pacienteListNewPaciente);
-                        oldCodExameClinicoOfPacienteListNewPaciente = em.merge(oldCodExameClinicoOfPacienteListNewPaciente);
-                    }
-                }
+            if (codPacienteExameNew != null && !codPacienteExameNew.equals(codPacienteExameOld)) {
+                codPacienteExameNew.getExameClinicoList().add(exameClinico);
+                codPacienteExameNew = em.merge(codPacienteExameNew);
             }
             em.getTransaction().commit();
         } catch (Exception ex) {
@@ -132,10 +110,10 @@ public class ExameClinicoJpaController implements Serializable {
             } catch (EntityNotFoundException enfe) {
                 throw new NonexistentEntityException("The exameClinico with id " + id + " no longer exists.", enfe);
             }
-            List<Paciente> pacienteList = exameClinico.getPacienteList();
-            for (Paciente pacienteListPaciente : pacienteList) {
-                pacienteListPaciente.setCodExameClinico(null);
-                pacienteListPaciente = em.merge(pacienteListPaciente);
+            Paciente codPacienteExame = exameClinico.getCodPacienteExame();
+            if (codPacienteExame != null) {
+                codPacienteExame.getExameClinicoList().remove(exameClinico);
+                codPacienteExame = em.merge(codPacienteExame);
             }
             em.remove(exameClinico);
             em.getTransaction().commit();

@@ -5,10 +5,8 @@
 package modelo;
 
 import java.io.Serializable;
-import java.util.List;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -209,8 +207,9 @@ public class ExameClinico implements Serializable {
     private String rq10BDir;
     @Column(name = "rq10_b_esq")
     private String rq10BEsq;
-    @OneToOne(mappedBy = "codExameClinico")
-    private List<Paciente> pacienteList;
+    @JoinColumn(name = "cod_paciente_exame", referencedColumnName = "id")
+    @ManyToOne
+    private Paciente codPacienteExame;
 
     public ExameClinico() {
     }
@@ -715,13 +714,12 @@ public class ExameClinico implements Serializable {
         this.rq10BEsq = rq10BEsq;
     }
 
-    @XmlTransient
-    public List<Paciente> getPacienteList() {
-        return pacienteList;
+    public Paciente getCodPacienteExame() {
+        return codPacienteExame;
     }
 
-    public void setPacienteList(List<Paciente> pacienteList) {
-        this.pacienteList = pacienteList;
+    public void setCodPacienteExame(Paciente codPacienteExame) {
+        this.codPacienteExame = codPacienteExame;
     }
 
     @Override

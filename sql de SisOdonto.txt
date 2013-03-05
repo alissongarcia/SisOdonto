@@ -4,7 +4,9 @@ d1 VARCHAR (40),
 d2 VARCHAR (40),
 d3 VARCHAR (40),
 d4 VARCHAR (40),
-d5 VARCHAR (40)
+d5 VARCHAR (40),
+
+cod_paciente_diag INTEGER CONSTRAINT tblpaciente_diagnosticoFK REFERENCES paciente (id)
 
 );
 
@@ -85,7 +87,9 @@ rq9_b_esq VARCHAR (40),
 rq10_a_dir VARCHAR (40),
 rq10_a_esq VARCHAR (40),
 rq10_b_dir VARCHAR (40),
-rq10_b_esq VARCHAR (40)
+rq10_b_esq VARCHAR (40),
+
+cod_paciente_exame INTEGER CONSTRAINT tblpaciente_exameFK REFERENCES paciente (id)
 
 
 );
@@ -192,7 +196,9 @@ rqp28_c VARCHAR (40),
 
 rqp29 VARCHAR (40),
 rqp30 VARCHAR (40),
-rqp31 VARCHAR (40)
+rqp31 VARCHAR (40),
+
+cod_paciente INTEGER CONSTRAINT tblpacienteFK REFERENCES paciente (id)
 
 );
 
@@ -213,11 +219,7 @@ celular VARCHAR (40),
 sexo VARCHAR (40),
 idade INTEGER,
 naturalidade VARCHAR (40),
-nacionalidade VARCHAR (40),
-
-cod_diagnostico INTEGER CONSTRAINT tbldiagnosticoFK REFERENCES diagnostico (id),
-cod_exame_clinico INTEGER CONSTRAINT tblexame_clinicoFK REFERENCES exame_clinico (id),
-cod_quest_pessoal INTEGER CONSTRAINT tblquestionario_pessoalFK REFERENCES questionario_pessoal (id)
+nacionalidade VARCHAR (40)
 
 );
 

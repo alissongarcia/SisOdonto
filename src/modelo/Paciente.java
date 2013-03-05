@@ -5,8 +5,10 @@
 package modelo;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -69,15 +71,12 @@ public class Paciente implements Serializable {
     private String naturalidade;
     @Column(name = "nacionalidade")
     private String nacionalidade;
-    @JoinColumn(name = "cod_quest_pessoal", referencedColumnName = "id")
-    @OneToOne
-    private QuestionarioPessoal codQuestPessoal;
-    @JoinColumn(name = "cod_exame_clinico", referencedColumnName = "id")
-    @OneToOne
-    private ExameClinico codExameClinico;
-    @JoinColumn(name = "cod_diagnostico", referencedColumnName = "id")
-    @OneToOne
-    private Diagnostico codDiagnostico;
+    @OneToMany(mappedBy = "codPacienteExame")
+    private List<ExameClinico> exameClinicoList;
+    @OneToMany(mappedBy = "codPacienteDiag")
+    private List<Diagnostico> diagnosticoList;
+    @OneToMany(mappedBy = "codPaciente")
+    private List<QuestionarioPessoal> questionarioPessoalList;
 
     public Paciente() {
     }
@@ -214,28 +213,31 @@ public class Paciente implements Serializable {
         this.nacionalidade = nacionalidade;
     }
 
-    public QuestionarioPessoal getCodQuestPessoal() {
-        return codQuestPessoal;
+    @XmlTransient
+    public List<ExameClinico> getExameClinicoList() {
+        return exameClinicoList;
     }
 
-    public void setCodQuestPessoal(QuestionarioPessoal codQuestPessoal) {
-        this.codQuestPessoal = codQuestPessoal;
+    public void setExameClinicoList(List<ExameClinico> exameClinicoList) {
+        this.exameClinicoList = exameClinicoList;
     }
 
-    public ExameClinico getCodExameClinico() {
-        return codExameClinico;
+    @XmlTransient
+    public List<Diagnostico> getDiagnosticoList() {
+        return diagnosticoList;
     }
 
-    public void setCodExameClinico(ExameClinico codExameClinico) {
-        this.codExameClinico = codExameClinico;
+    public void setDiagnosticoList(List<Diagnostico> diagnosticoList) {
+        this.diagnosticoList = diagnosticoList;
     }
 
-    public Diagnostico getCodDiagnostico() {
-        return codDiagnostico;
+    @XmlTransient
+    public List<QuestionarioPessoal> getQuestionarioPessoalList() {
+        return questionarioPessoalList;
     }
 
-    public void setCodDiagnostico(Diagnostico codDiagnostico) {
-        this.codDiagnostico = codDiagnostico;
+    public void setQuestionarioPessoalList(List<QuestionarioPessoal> questionarioPessoalList) {
+        this.questionarioPessoalList = questionarioPessoalList;
     }
 
     @Override

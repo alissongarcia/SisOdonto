@@ -7,15 +7,14 @@ package dao;
 import dao.exceptions.NonexistentEntityException;
 import dao.exceptions.PreexistingEntityException;
 import java.io.Serializable;
+import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import modelo.Paciente;
-import java.util.ArrayList;
-import java.util.List;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 import modelo.QuestionarioPessoal;
 
 /**
@@ -34,28 +33,19 @@ public class QuestionarioPessoalJpaController implements Serializable {
     }
 
     public void create(QuestionarioPessoal questionarioPessoal) throws PreexistingEntityException, Exception {
-        if (questionarioPessoal.getPacienteList() == null) {
-            questionarioPessoal.setPacienteList(new ArrayList<Paciente>());
-        }
         EntityManager em = null;
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            List<Paciente> attachedPacienteList = new ArrayList<Paciente>();
-            for (Paciente pacienteListPacienteToAttach : questionarioPessoal.getPacienteList()) {
-                pacienteListPacienteToAttach = em.getReference(pacienteListPacienteToAttach.getClass(), pacienteListPacienteToAttach.getId());
-                attachedPacienteList.add(pacienteListPacienteToAttach);
+            Paciente codPaciente = questionarioPessoal.getCodPaciente();
+            if (codPaciente != null) {
+                codPaciente = em.getReference(codPaciente.getClass(), codPaciente.getId());
+                questionarioPessoal.setCodPaciente(codPaciente);
             }
-            questionarioPessoal.setPacienteList(attachedPacienteList);
             em.persist(questionarioPessoal);
-            for (Paciente pacienteListPaciente : questionarioPessoal.getPacienteList()) {
-                QuestionarioPessoal oldCodQuestPessoalOfPacienteListPaciente = pacienteListPaciente.getCodQuestPessoal();
-                pacienteListPaciente.setCodQuestPessoal(questionarioPessoal);
-                pacienteListPaciente = em.merge(pacienteListPaciente);
-                if (oldCodQuestPessoalOfPacienteListPaciente != null) {
-                    oldCodQuestPessoalOfPacienteListPaciente.getPacienteList().remove(pacienteListPaciente);
-                    oldCodQuestPessoalOfPacienteListPaciente = em.merge(oldCodQuestPessoalOfPacienteListPaciente);
-                }
+            if (codPaciente != null) {
+                codPaciente.getQuestionarioPessoalList().add(questionarioPessoal);
+                codPaciente = em.merge(codPaciente);
             }
             em.getTransaction().commit();
         } catch (Exception ex) {
@@ -76,32 +66,20 @@ public class QuestionarioPessoalJpaController implements Serializable {
             em = getEntityManager();
             em.getTransaction().begin();
             QuestionarioPessoal persistentQuestionarioPessoal = em.find(QuestionarioPessoal.class, questionarioPessoal.getId());
-            List<Paciente> pacienteListOld = persistentQuestionarioPessoal.getPacienteList();
-            List<Paciente> pacienteListNew = questionarioPessoal.getPacienteList();
-            List<Paciente> attachedPacienteListNew = new ArrayList<Paciente>();
-            for (Paciente pacienteListNewPacienteToAttach : pacienteListNew) {
-                pacienteListNewPacienteToAttach = em.getReference(pacienteListNewPacienteToAttach.getClass(), pacienteListNewPacienteToAttach.getId());
-                attachedPacienteListNew.add(pacienteListNewPacienteToAttach);
+            Paciente codPacienteOld = persistentQuestionarioPessoal.getCodPaciente();
+            Paciente codPacienteNew = questionarioPessoal.getCodPaciente();
+            if (codPacienteNew != null) {
+                codPacienteNew = em.getReference(codPacienteNew.getClass(), codPacienteNew.getId());
+                questionarioPessoal.setCodPaciente(codPacienteNew);
             }
-            pacienteListNew = attachedPacienteListNew;
-            questionarioPessoal.setPacienteList(pacienteListNew);
             questionarioPessoal = em.merge(questionarioPessoal);
-            for (Paciente pacienteListOldPaciente : pacienteListOld) {
-                if (!pacienteListNew.contains(pacienteListOldPaciente)) {
-                    pacienteListOldPaciente.setCodQuestPessoal(null);
-                    pacienteListOldPaciente = em.merge(pacienteListOldPaciente);
-                }
+            if (codPacienteOld != null && !codPacienteOld.equals(codPacienteNew)) {
+                codPacienteOld.getQuestionarioPessoalList().remove(questionarioPessoal);
+                codPacienteOld = em.merge(codPacienteOld);
             }
-            for (Paciente pacienteListNewPaciente : pacienteListNew) {
-                if (!pacienteListOld.contains(pacienteListNewPaciente)) {
-                    QuestionarioPessoal oldCodQuestPessoalOfPacienteListNewPaciente = pacienteListNewPaciente.getCodQuestPessoal();
-                    pacienteListNewPaciente.setCodQuestPessoal(questionarioPessoal);
-                    pacienteListNewPaciente = em.merge(pacienteListNewPaciente);
-                    if (oldCodQuestPessoalOfPacienteListNewPaciente != null && !oldCodQuestPessoalOfPacienteListNewPaciente.equals(questionarioPessoal)) {
-                        oldCodQuestPessoalOfPacienteListNewPaciente.getPacienteList().remove(pacienteListNewPaciente);
-                        oldCodQuestPessoalOfPacienteListNewPaciente = em.merge(oldCodQuestPessoalOfPacienteListNewPaciente);
-                    }
-                }
+            if (codPacienteNew != null && !codPacienteNew.equals(codPacienteOld)) {
+                codPacienteNew.getQuestionarioPessoalList().add(questionarioPessoal);
+                codPacienteNew = em.merge(codPacienteNew);
             }
             em.getTransaction().commit();
         } catch (Exception ex) {
@@ -132,10 +110,10 @@ public class QuestionarioPessoalJpaController implements Serializable {
             } catch (EntityNotFoundException enfe) {
                 throw new NonexistentEntityException("The questionarioPessoal with id " + id + " no longer exists.", enfe);
             }
-            List<Paciente> pacienteList = questionarioPessoal.getPacienteList();
-            for (Paciente pacienteListPaciente : pacienteList) {
-                pacienteListPaciente.setCodQuestPessoal(null);
-                pacienteListPaciente = em.merge(pacienteListPaciente);
+            Paciente codPaciente = questionarioPessoal.getCodPaciente();
+            if (codPaciente != null) {
+                codPaciente.getQuestionarioPessoalList().remove(questionarioPessoal);
+                codPaciente = em.merge(codPaciente);
             }
             em.remove(questionarioPessoal);
             em.getTransaction().commit();
@@ -192,8 +170,18 @@ public class QuestionarioPessoalJpaController implements Serializable {
         }
     }
     
-    /*public QuestionarioPessoal buscarCampos(){
+    //Método que chamará a nameQuery
+    public QuestionarioPessoal buscarCampos(Integer codPaciente){
+        EntityManager em = null;
+        em = getEntityManager();
+        //QuestionarioPessoal quest = new QuestionarioPessoal();
+        Query consulta;
         
-    }*/
+        consulta = em.createQuery("SELECT q FROM QuestionarioPessoal q WHERE q.codPaciente.id = :codPaciente");
+        //consulta = em.createQuery("SELECT q FROM QuestionarioPessoal q, Paciente p WHERE q.id = p.cod_quest_pessoal");
+        consulta.setParameter("codPaciente", codPaciente);
+        return (QuestionarioPessoal)consulta.getSingleResult();
+        
+    }
     
 }

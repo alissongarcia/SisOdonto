@@ -5,10 +5,8 @@
 package modelo;
 
 import java.io.Serializable;
-import java.util.List;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -106,9 +104,7 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "QuestionarioPessoal.findByRqp28C", query = "SELECT q FROM QuestionarioPessoal q WHERE q.rqp28C = :rqp28C"),
     @NamedQuery(name = "QuestionarioPessoal.findByRqp29", query = "SELECT q FROM QuestionarioPessoal q WHERE q.rqp29 = :rqp29"),
     @NamedQuery(name = "QuestionarioPessoal.findByRqp30", query = "SELECT q FROM QuestionarioPessoal q WHERE q.rqp30 = :rqp30"),
-    @NamedQuery(name = "QuestionarioPessoal.findByRqp31", query = "SELECT q FROM QuestionarioPessoal q WHERE q.rqp31 = :rqp31"),
-    
-    @NamedQuery(name = "QuestionarioPessoal.findByCampos", query = "SELECT q FROM QuestionarioPessoal q, Paciente c WHERE q.id = c.cod_quest_pessoal")})
+    @NamedQuery(name = "QuestionarioPessoal.findByRqp31", query = "SELECT q FROM QuestionarioPessoal q WHERE q.rqp31 = :rqp31")})
 public class QuestionarioPessoal implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
@@ -289,8 +285,9 @@ public class QuestionarioPessoal implements Serializable {
     private String rqp30;
     @Column(name = "rqp31")
     private String rqp31;
-    @OneToOne(mappedBy = "codQuestPessoal")
-    private List<Paciente> pacienteList;
+    @JoinColumn(name = "cod_paciente", referencedColumnName = "id")
+    @ManyToOne
+    private Paciente codPaciente;
 
     public QuestionarioPessoal() {
     }
@@ -1003,13 +1000,12 @@ public class QuestionarioPessoal implements Serializable {
         this.rqp31 = rqp31;
     }
 
-    @XmlTransient
-    public List<Paciente> getPacienteList() {
-        return pacienteList;
+    public Paciente getCodPaciente() {
+        return codPaciente;
     }
 
-    public void setPacienteList(List<Paciente> pacienteList) {
-        this.pacienteList = pacienteList;
+    public void setCodPaciente(Paciente codPaciente) {
+        this.codPaciente = codPaciente;
     }
 
     @Override
