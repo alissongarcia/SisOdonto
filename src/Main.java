@@ -38,18 +38,18 @@ public class Main {
         }
 
       
-         ViewGrupos view = new ViewGrupos();
-         view.setVisible(true);
-         view.iniciar();
+//         ViewGrupos view = new ViewGrupos();
+//         view.setVisible(true);
+//         view.iniciar();
          
          ViewExameClinico viewExameClinico = new ViewExameClinico();
          viewExameClinico.setVisible(true);
          
-       WiewDadosPessoais viewDadosPessoais = new WiewDadosPessoais();
-       viewDadosPessoais.setVisible(true);
-       
-       ViewQuestionarioPessoal viewQuestionario = new ViewQuestionarioPessoal();
-       viewQuestionario.setVisible(true);
+//       WiewDadosPessoais viewDadosPessoais = new WiewDadosPessoais();
+//       viewDadosPessoais.setVisible(true);
+//       
+//       ViewQuestionarioPessoal viewQuestionario = new ViewQuestionarioPessoal();
+//       viewQuestionario.setVisible(true);
                
 
         /*PacienteJpaController daoPaciente;

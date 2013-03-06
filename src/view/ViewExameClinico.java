@@ -3,8 +3,13 @@
  * and open the template in the editor.
  */
 package view;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.DefaultComboBoxModel;
+import negocio.Controlador;
 
 import javax.swing.JFrame;
+import modelo.*;
 
 /**
  *
@@ -171,6 +176,10 @@ public class ViewExameClinico extends JFrame {
     private javax.swing.JLabel rotuloQE8;
     private javax.swing.JLabel rotuloQuestao01;
     private javax.swing.JLabel rotuloResultado;
+    
+    private Controlador controlador;
+    private QuestionarioPessoal questPessoal;
+    private List<Paciente> pacientes = new ArrayList();
     
     
     public ViewExameClinico(){   
@@ -344,6 +353,9 @@ public class ViewExameClinico extends JFrame {
         jPanel14 = new javax.swing.JPanel();
         labelSelecao = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox();
+        
+        controlador = new Controlador();
+        questPessoal = new QuestionarioPessoal();
         
         
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -781,7 +793,7 @@ public class ViewExameClinico extends JFrame {
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Selecione o paciente" }));
         
         
-        
+        preencherComboPaciente();
         
         
     }
@@ -1590,8 +1602,106 @@ public class ViewExameClinico extends JFrame {
         botaoDiagnosticar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 
+                String diagnostico_I = diagnostico_Grupo_I();
+                rotuloResultado.setText(diagnostico_I);
+                
             }
         });
+    }
+    
+    public String diagnostico_Grupo_I(){
+                
+        DefaultComboBoxModel modeloPaciente = new DefaultComboBoxModel(pacientes.toArray());
+        jComboBox1.setModel(modeloPaciente);
+        
+        //Pegar o Objeto Paciente com todos os atributos e não somente o nome
+        Paciente p = (Paciente) jComboBox1.getSelectedItem();
+        //Passa por parâmetro o id do Paciente selecionado no combobox
+        questPessoal = controlador.buscarCamposQuestPessoal(p.getId());
+        
+        
+        String rqp3;
+        String QE8AD, QE8AE, QE8BD, QE8BE, QE8CD, QE8CE,
+                        QE8DD, QE8DE, QE8ED, QE8EE, QE8FD, QE8FE,
+                        QE8GD, QE8GE, QE8HD, QE8HE;
+                String QE10AD, QE10AE, QE10BD, QE10BE;
+                String rqe1;
+                String rqE4a, rqE4b, rqE4c, rqE4d;
+
+                //Aqui deve ser o resultado vindo da Query
+                rqp3 = questPessoal.getRqp3();
+
+                //QE8 - Dor muscular extra-oral com palpação
+                // A                
+                QE8AD = ComboBoxQE8AD.getSelectedItem().toString();
+                QE8AE = ComboBoxQE8AE.getSelectedItem().toString();
+                
+                // B                
+                QE8BD = ComboBoxQE8BD.getSelectedItem().toString();
+                QE8BE = ComboBoxQE8BE.getSelectedItem().toString();
+  
+                // C
+                QE8CD = ComboBoxQE8CD.getSelectedItem().toString();
+                QE8CE = ComboBoxQE8CE.getSelectedItem().toString();
+                
+                // D
+                QE8DD = ComboBoxQE8DD.getSelectedItem().toString();
+                QE8DE = ComboBoxQE8DE.getSelectedItem().toString();
+                
+                // E
+                QE8ED = ComboBoxQE8ED.getSelectedItem().toString();
+                QE8EE = ComboBoxQE8EE.getSelectedItem().toString();
+                
+                // F
+                QE8FD = ComboBoxQE8FD.getSelectedItem().toString();
+                QE8FE = ComboBoxQE8FE.getSelectedItem().toString();
+                
+                // G
+                QE8GD = ComboBoxQE8GD.getSelectedItem().toString();
+                QE8GE = ComboBoxQE8GE.getSelectedItem().toString();
+                
+                // H
+                QE8HD = ComboBoxQE8HD.getSelectedItem().toString();
+                QE8HE = ComboBoxQE8HE.getSelectedItem().toString();
+                
+                
+                
+                // QE10 - Dor muscular intra-oral com palpação   QE10AD, QE10AE, QE10BD, QE10BE
+                // A
+                QE10AD = ComboBoxQE10ALD.getSelectedItem().toString();
+                QE10AE = ComboBoxQE10ALE.getSelectedItem().toString();
+                
+                // B
+                QE10BD = ComboBoxQE10BLD.getSelectedItem().toString();
+                QE10BE = ComboBoxQE10BLE.getSelectedItem().toString();
+                
+
+                //  QUESTÃO 1 QE1 
+                rqe1 = ComboBoxQE1.getSelectedItem().toString();
+                
+
+                // QUESTÃO 4                 
+                rqE4a = campoQE4A.getText();
+                rqE4b = campoQE4B.getText();
+                rqE4c = campoQE4C.getText();
+                rqE4d = campoQE4D.getText();
+                
+                //DIAGNOSTICO DO GRUPO 1
+                String diagnostico = "";
+                
+                return diagnostico = controlador.grupo_I(rqp3, QE8AD, QE8AE, QE8BD, QE8BE, QE8CD, QE8CE, QE8DD, QE8DE, QE8ED, QE8EE, QE8FD, QE8FE, QE8GD, QE8GE, QE8HD, QE8HE, QE10AD, QE10AE, QE10BD, QE10BE, rqe1, rqE4a, rqE4b, rqE4c, rqE4d);
+                
+                /*controlador.diagnosticar(rqe3, QE8AD, QE8AE, QE8BD, QE8BE, QE8CD, QE8CE, QE8DD, QE8DE, QE8ED, QE8EE, QE8FD, QE8FE, 
+                        QE8GD, QE8GE, QE8HD, QE8HE, QE10AD, QE10AE, QE10BD, QE10BE, rqe1, campoQE4A.getText(), campoQE4B.getText(), campoQE4C.getText(),
+                        campoQE4D.getText());*/
+    }
+    
+    public void preencherComboPaciente(){
+        List lista = controlador.BuscarPacientes();
+        
+        for(Object p : lista){
+            jComboBox1.addItem(p);
+        }
     }
     
 }

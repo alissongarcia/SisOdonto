@@ -867,6 +867,7 @@ public class WiewDadosPessoais extends JFrame {
         botaoCadastrar.setToolTipText("Cadastrar Paciente");
         botaoCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
+                
             }
         });
 

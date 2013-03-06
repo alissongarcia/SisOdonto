@@ -6,6 +6,8 @@ package negocio;
 
 import dao.DiagnosticoJpaController;
 import dao.PacienteJpaController;
+import dao.QuestionarioPessoalJpaController;
+import java.util.List;
 
 import modelo.*;
 import util.JPAUtil;
@@ -13,13 +15,13 @@ import util.JPAUtil;
 
 /**
  *
- * @author Aragon
+ * @author Alisson
  */
 public class Controlador {
     
     private PacienteJpaController daoPaciente;
     private DiagnosticoJpaController daoDiagnostico;
-    //private RespostaJpaController daoResposta;
+    private QuestionarioPessoalJpaController daoQuestPessoal;
     private JPAUtil emf;
     private Paciente paciente;
     private Diagnostico diagnostico;
@@ -41,7 +43,7 @@ public class Controlador {
         emf = new JPAUtil();
         daoPaciente = new PacienteJpaController(emf.getEmf());
         daoDiagnostico= new DiagnosticoJpaController(emf.getEmf());
-        //daoResposta= new RespostaJpaController(emf.getEmf());
+        daoQuestPessoal = new QuestionarioPessoalJpaController(emf.getEmf());
     }
     
     public void cadastrarPaciente(String nome, String raca, String sexo, int idade, String naturalidade, String nacionalidade, 
@@ -64,59 +66,12 @@ public class Controlador {
         }        
     }
     
-    /*public void diagnosticar(String resposta1, String resposta2, String resposta3, String resposta4, String resposta5, String resposta6, String resposta7,
-            String resposta8, String resposta9, String resposta10, String resposta11, String resposta12, String resposta13, String resposta14, String resposta15, String resposta16, 
-            String resposta17, String resposta18, String resposta19, String resposta20, String resposta21, String resposta22, String resposta23, 
-            String resposta24, String resposta25, String resposta26){
+    public List<Paciente> BuscarPacientes(){
         
-        resposta = new Resposta();
+        return daoPaciente.findPacienteEntities();
         
-        resposta.setRq1(resposta1);
-        resposta.setRq2(resposta2);
-        resposta.setRq3(resposta3);
-        resposta.setRq4(resposta4);
-        resposta.setRq5(resposta5);
-        resposta.setRq6(resposta6);
-        resposta.setRq7(resposta7);
-        resposta.setRq8(resposta8);
-        resposta.setRq9(resposta9);
-        resposta.setRq10(resposta10);
-        
-        resposta.setRq11(resposta11);
-        resposta.setRq12(resposta12);
-        resposta.setRq13(resposta13);
-        resposta.setRq14(resposta14);
-        resposta.setRq15(resposta15);
-        resposta.setRq16(resposta16);
-        resposta.setRq17(resposta17);
-        resposta.setRq18(resposta18);
-        resposta.setRq19(resposta19);
-        resposta.setRq20(resposta20);
-        
-        resposta.setRq21(resposta21);
-        resposta.setRq22(resposta22);
-        resposta.setRq23(resposta23);
-        resposta.setRq24(resposta24);
-        resposta.setRq25(resposta25);
-        resposta.setRq26(resposta26);
-        
-        try {
-            daoResposta.create(resposta);
-        } catch (Exception e) {
-        }       
-        
-        
-        
-         diagnostico = new Diagnostico();
-        diagnostico.setD1(diagnostico_GrupoI);
-        
-        try {
-            
-            daoDiagnostico.create(diagnostico);            
-        } catch (Exception e) {
-        }
-        
-    }*/
+    }
+    
     
     public String grupo_I(String q3, String QE8AD, String QE8AE, String QE8BD, String QE8BE, String QE8CD, String QE8CE,
                         String QE8DD, String QE8DE, String QE8ED, String QE8EE, String QE8FD, String QE8FE, String QE8GD, 
@@ -249,5 +204,12 @@ public class Controlador {
         diagnostico_GrupoII = grupo_2.diagnostico(rqE5A_Abertura_Dir, rE5A_Med_Abert_Direita, rE5B_Med_Fecho_Direita, rqE5B_Fecho_Dir, rqE5C_Direito, rqE7A_Dir_Excursão_Direita, rqE7A_Dir_Excursão_Esquerda, rqE7A_Dir_Protusao, rq14A, rqE4d, rqE4c, rqE4d, rqE6_Med_Excursao_Esquerda, rqE3_Combo);
         return diagnostico_GrupoII;
         
+    }
+    
+    public QuestionarioPessoal buscarCamposQuestPessoal(Integer codPaciente){
+        
+        QuestionarioPessoal quest = daoQuestPessoal.buscarCampos(codPaciente);
+        
+        return quest;
     }
 }

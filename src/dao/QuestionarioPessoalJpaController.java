@@ -170,7 +170,16 @@ public class QuestionarioPessoalJpaController implements Serializable {
         }
     }
     
-    //Método que chamará a nameQuery
+    /**Método para consulta através de uma query
+     
+     * Como resultado obtem-se um QuestionárioPessoal de um determinado Paciente 
+
+     * @author Alisson Garcia
+
+     * @param  codPaciente Integer - Id do Paciente o qual quero obter o QuestionarioPessoal.
+
+     * @return QuestionarioPessoal - Questionário com informações relacionadas a um Paciente
+     */
     public QuestionarioPessoal buscarCampos(Integer codPaciente){
         EntityManager em = null;
         em = getEntityManager();

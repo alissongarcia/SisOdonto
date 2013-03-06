@@ -262,7 +262,8 @@ public class Paciente implements Serializable {
 
     @Override
     public String toString() {
-        return "modelo.Paciente[ id=" + id + " ]";
+        //return "modelo.Paciente[ id=" + id + " ]";
+        return this.nome;
     }
     
 }
