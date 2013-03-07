@@ -6,13 +6,20 @@ package modelo;
 
 import java.io.Serializable;
 import java.util.List;
-import javax.persistence.*;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author alisson
+ * @author Carlos
  */
 @Entity
 @Table(name = "paciente")
@@ -262,8 +269,7 @@ public class Paciente implements Serializable {
 
     @Override
     public String toString() {
-        //return "modelo.Paciente[ id=" + id + " ]";
-        return this.nome;
+        return "modelo.Paciente[ id=" + id + " ]";
     }
     
 }

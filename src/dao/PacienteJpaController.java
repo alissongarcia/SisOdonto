@@ -22,7 +22,7 @@ import modelo.QuestionarioPessoal;
 
 /**
  *
- * @author alisson
+ * @author Carlos
  */
 public class PacienteJpaController implements Serializable {
 

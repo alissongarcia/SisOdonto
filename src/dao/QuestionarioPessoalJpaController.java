@@ -19,7 +19,7 @@ import modelo.QuestionarioPessoal;
 
 /**
  *
- * @author alisson
+ * @author Carlos
  */
 public class QuestionarioPessoalJpaController implements Serializable {
 
@@ -168,29 +168,6 @@ public class QuestionarioPessoalJpaController implements Serializable {
         } finally {
             em.close();
         }
-    }
-    
-    /**Método para consulta através de uma query
-     
-     * Como resultado obtem-se um QuestionárioPessoal de um determinado Paciente 
-
-     * @author Alisson Garcia
-
-     * @param  codPaciente Integer - Id do Paciente o qual quero obter o QuestionarioPessoal.
-
-     * @return QuestionarioPessoal - Questionário com informações relacionadas a um Paciente
-     */
-    public QuestionarioPessoal buscarCampos(Integer codPaciente){
-        EntityManager em = null;
-        em = getEntityManager();
-        //QuestionarioPessoal quest = new QuestionarioPessoal();
-        Query consulta;
-        
-        consulta = em.createQuery("SELECT q FROM QuestionarioPessoal q WHERE q.codPaciente.id = :codPaciente");
-        //consulta = em.createQuery("SELECT q FROM QuestionarioPessoal q, Paciente p WHERE q.id = p.cod_quest_pessoal");
-        consulta.setParameter("codPaciente", codPaciente);
-        return (QuestionarioPessoal)consulta.getSingleResult();
-        
     }
     
 }

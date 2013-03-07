@@ -1,3 +1,24 @@
+CREATE TABLE paciente (
+id INTEGER NOT NULL PRIMARY KEY,
+nome VARCHAR (40),
+rua VARCHAR (40),
+bairro VARCHAR (40),
+numero INTEGER,
+cidade VARCHAR (40),
+raca VARCHAR (40),
+cep VARCHAR (40),
+cpf VARCHAR (40),
+uf VARCHAR (40),
+telefone VARCHAR (40),
+celular VARCHAR (40),
+sexo VARCHAR (40),
+idade INTEGER,
+naturalidade VARCHAR (40),
+nacionalidade VARCHAR (40)
+
+);
+
+
 CREATE TABLE diagnostico (
 id INTEGER NOT NULL PRIMARY KEY,
 d1 VARCHAR (40),
@@ -101,7 +122,7 @@ id INTEGER NOT NULL PRIMARY KEY,
 rqp1 VARCHAR (40),
 rqp2 VARCHAR (40),
 rqp3 VARCHAR (40),
-rqp4 INTEGER (2),
+rqp4 INTEGER ,
 rqp5 VARCHAR (40),
 rqp6 VARCHAR (40),
 rqp7 INTEGER,
@@ -203,23 +224,5 @@ cod_paciente INTEGER CONSTRAINT tblpacienteFK REFERENCES paciente (id)
 );
 
 
-CREATE TABLE paciente (
-id INTEGER NOT NULL PRIMARY KEY,
-nome VARCHAR (40),
-rua VARCHAR (40),
-bairro VARCHAR (40),
-numero INTEGER,
-cidade VARCHAR (40),
-raca VARCHAR (40),
-cep VARCHAR (40),
-cpf VARCHAR (40),
-uf VARCHAR (40),
-telefone VARCHAR (40),
-celular VARCHAR (40),
-sexo VARCHAR (40),
-idade INTEGER,
-naturalidade VARCHAR (40),
-nacionalidade VARCHAR (40)
 
-);
 
