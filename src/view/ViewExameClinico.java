@@ -1723,10 +1723,10 @@ public class ViewExameClinico extends JFrame {
                 exame.setRq5ADir(ComboBoxQE5ADireito.getSelectedItem().toString());
                 exame.setRq5AEsq(ComboBoxQE5AEsquerdo.getSelectedItem().toString());
                 exame.setRq5AMedEstMm(campoQE5ADireito.getText());
-                controlador.inserirExameClinico(exame);
+                //controlador.inserirExameClinico(exame);
                 
-                return diagnostico = controlador.grupo_I(rqp3, QE8AD, QE8AE, QE8BD, QE8BE, QE8CD, QE8CE, QE8DD, QE8DE, QE8ED, QE8EE, QE8FD, QE8FE, QE8GD, QE8GE, QE8HD, QE8HE, QE10AD, QE10AE, QE10BD, QE10BE, rqe1, rqE4a, rqE4b, rqE4c, rqE4d);
-                
+                diagnostico = controlador.grupo_I(rqp3, QE8AD, QE8AE, QE8BD, QE8BE, QE8CD, QE8CE, QE8DD, QE8DE, QE8ED, QE8EE, QE8FD, QE8FE, QE8GD, QE8GE, QE8HD, QE8HE, QE10AD, QE10AE, QE10BD, QE10BE, rqe1, rqE4a, rqE4b, rqE4c, rqE4d);
+                return diagnostico;
                 
                 
                 
@@ -1736,9 +1736,9 @@ public class ViewExameClinico extends JFrame {
     }
     
     public void preencherComboPaciente(){
-        List lista = controlador.BuscarPacientes();
+        pacientes = controlador.BuscarPacientes();
         
-        for(Object p : lista){
+        for(Object p : pacientes){
             ComboBoxSelecionarPaciente.addItem(p);
         }
     }

@@ -45,40 +45,11 @@ public class Main {
          ViewExameClinico viewExameClinico = new ViewExameClinico();
          viewExameClinico.setVisible(true);
          
-//       WiewDadosPessoais viewDadosPessoais = new WiewDadosPessoais();
-//       viewDadosPessoais.setVisible(true);
-//       
-//       ViewQuestionarioPessoal viewQuestionario = new ViewQuestionarioPessoal();
-//       viewQuestionario.setVisible(true);
-               
-
-        /*PacienteJpaController daoPaciente;
-        //DiagnosticoJpaController daoDiagnostico;
-        //RespostaJpaController daoResposta;
-        JPAUtil emf;
-        Paciente paciente;
-        Diagnostico diagnostico;
-        Resposta resposta;
-        Grupo_I grupo_1;
-        Grupo_II grupo_2;
-
-
-        paciente = new Paciente();
-        paciente.setNome("Aragon");
-        //diagnostico = new Diagnostico();
-        //resposta = new Resposta();
-        //grupo_1 = new Grupo_I();
-        emf = new JPAUtil();
-        daoPaciente = new PacienteJpaController(emf.getEmf());
-        //daoDiagnostico = new DiagnosticoJpaController(emf.getEmf());
-        //daoResposta = new RespostaJpaController(emf.getEmf());
-
-        try {
-            daoPaciente.create(paciente);
-        } catch (Exception e) {
-        }
-
-        System.out.println(daoPaciente.getPacienteCount());*/
+       WiewDadosPessoais viewDadosPessoais = new WiewDadosPessoais();
+       viewDadosPessoais.setVisible(true);
+       
+       ViewQuestionarioPessoal viewQuestionario = new ViewQuestionarioPessoal();
+       viewQuestionario.setVisible(true);
         
     }
 }
