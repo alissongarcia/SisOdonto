@@ -5,8 +5,10 @@
 package negocio;
 
 import dao.DiagnosticoJpaController;
+import dao.ExameClinicoJpaController;
 import dao.PacienteJpaController;
 import dao.QuestionarioPessoalJpaController;
+import dao.exceptions.PreexistingEntityException;
 import java.util.List;
 
 import modelo.*;
@@ -22,6 +24,7 @@ public class Controlador {
     private PacienteJpaController daoPaciente;
     private DiagnosticoJpaController daoDiagnostico;
     private QuestionarioPessoalJpaController daoQuestPessoal;
+    private ExameClinicoJpaController daoExame;
     private JPAUtil emf;
     private Paciente paciente;
     private Diagnostico diagnostico;
@@ -42,6 +45,7 @@ public class Controlador {
         grupo_2 = new Grupo_II();
         emf = new JPAUtil();
         daoPaciente = new PacienteJpaController(emf.getEmf());
+        daoExame = new ExameClinicoJpaController(emf.getEmf());
         daoDiagnostico= new DiagnosticoJpaController(emf.getEmf());
         daoQuestPessoal = new QuestionarioPessoalJpaController(emf.getEmf());
     }
@@ -72,6 +76,28 @@ public class Controlador {
         
     }
     
+    public void inserirPaciente(Paciente paciente){
+        
+    }
+    
+    public void inserirQuestPessoal(QuestionarioPessoal quest){
+        try{
+            daoPaciente.create(paciente);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        
+    }
+    
+    public void inserirExameClinico(ExameClinico exame){
+        try{
+            daoExame.create(exame);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        
+        
+    }
     
     public String grupo_I(String q3, String QE8AD, String QE8AE, String QE8BD, String QE8BE, String QE8CD, String QE8CE,
                         String QE8DD, String QE8DE, String QE8ED, String QE8EE, String QE8FD, String QE8FE, String QE8GD, 

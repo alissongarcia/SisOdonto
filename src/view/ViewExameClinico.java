@@ -179,6 +179,7 @@ public class ViewExameClinico extends JFrame {
     
     private Controlador controlador;
     private QuestionarioPessoal questPessoal;
+    private ExameClinico exame;
     private List<Paciente> pacientes = new ArrayList();
     
     
@@ -1689,7 +1690,28 @@ public class ViewExameClinico extends JFrame {
                 //DIAGNOSTICO DO GRUPO 1
                 String diagnostico = "";
                 
+                exame = new ExameClinico();
+                exame.setRq1(ComboBoxQE1.getSelectedItem().toString());
+                exame.setRq21Dir(ComboBoxQE2ALadoDireito.getSelectedItem().toString());
+                exame.setRq22Esq(ComboBoxQE2ALadoEsquerdo.getSelectedItem().toString());
+                //Questão sugeita a alteração
+                exame.setRq3(ComboBoxQE3Abertura.getSelectedItem().toString());
+                
+                exame.setRq4AMm(rqE4a);
+                exame.setRq4BMm(rqE4b);
+                exame.setRq4CMm(rqE4c);
+                exame.setRq4DMm(rqE4d);
+                
+                //Modificar o código aqui
+                exame.setRq5ADir(ComboBoxQE5ADireito.getSelectedItem().toString());
+                exame.setRq5AEsq(ComboBoxQE5AEsquerdo.getSelectedItem().toString());
+                exame.setRq5AMedEstMm(campoQE5ADireito.getText());
+                controlador.inserirExameClinico(exame);
+                
                 return diagnostico = controlador.grupo_I(rqp3, QE8AD, QE8AE, QE8BD, QE8BE, QE8CD, QE8CE, QE8DD, QE8DE, QE8ED, QE8EE, QE8FD, QE8FE, QE8GD, QE8GE, QE8HD, QE8HE, QE10AD, QE10AE, QE10BD, QE10BE, rqe1, rqE4a, rqE4b, rqE4c, rqE4d);
+                
+                
+                
                 
                 /*controlador.diagnosticar(rqe3, QE8AD, QE8AE, QE8BD, QE8BE, QE8CD, QE8CE, QE8DD, QE8DE, QE8ED, QE8EE, QE8FD, QE8FE, 
                         QE8GD, QE8GE, QE8HD, QE8HE, QE10AD, QE10AE, QE10BD, QE10BE, rqe1, campoQE4A.getText(), campoQE4B.getText(), campoQE4C.getText(),
