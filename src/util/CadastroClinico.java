@@ -184,7 +184,9 @@ public class CadastroClinico extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jPanel14 = new javax.swing.JPanel();
         labelSelecao = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
+        ComboBoxSelecionarPaciente = new javax.swing.JComboBox();
+        campoPesquisarPaciente = new javax.swing.JTextField();
+        labelPesquisarPaciente = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -448,7 +450,7 @@ public class CadastroClinico extends javax.swing.JFrame {
                             .addComponent(ComboBoxQE8AE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(ComboBoxQE8BE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(ComboBoxQE8HE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(269, Short.MAX_VALUE))
+                .addContainerGap(271, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1286,7 +1288,7 @@ public class CadastroClinico extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(jLabel3)
                     .addComponent(jLabel4))
-                .addContainerGap(942, Short.MAX_VALUE))
+                .addContainerGap(944, Short.MAX_VALUE))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1312,7 +1314,13 @@ public class CadastroClinico extends javax.swing.JFrame {
         labelSelecao.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         labelSelecao.setText("Selecione o paciente:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Selecione o paciente" }));
+        ComboBoxSelecionarPaciente.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Selecione o paciente" }));
+        ComboBoxSelecionarPaciente.setToolTipText("Selecione o paciente");
+
+        campoPesquisarPaciente.setToolTipText("Digite o nome paciente");
+
+        labelPesquisarPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/pesquisar.gif"))); // NOI18N
+        labelPesquisarPaciente.setToolTipText("Digite o nome do paciente");
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
@@ -1320,9 +1328,12 @@ public class CadastroClinico extends javax.swing.JFrame {
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel14Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelSelecao)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(ComboBoxSelecionarPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelSelecao, javax.swing.GroupLayout.DEFAULT_SIZE, 509, Short.MAX_VALUE)
+                    .addComponent(campoPesquisarPaciente))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(labelPesquisarPaciente)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel14Layout.setVerticalGroup(
@@ -1331,9 +1342,15 @@ public class CadastroClinico extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(labelSelecao)
                 .addGap(18, 18, 18)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelPesquisarPaciente)
+                    .addComponent(campoPesquisarPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ComboBoxSelecionarPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
+
+        jPanel14Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {campoPesquisarPaciente, labelPesquisarPaciente});
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -1501,8 +1518,10 @@ public class CadastroClinico extends javax.swing.JFrame {
     private javax.swing.JComboBox ComboBoxQE8GE;
     private javax.swing.JComboBox ComboBoxQE8HD;
     private javax.swing.JComboBox ComboBoxQE8HE;
+    private javax.swing.JComboBox ComboBoxSelecionarPaciente;
     private javax.swing.JScrollPane ScrollPane;
     private javax.swing.JButton botaoDiagnosticar;
+    private javax.swing.JTextField campoPesquisarPaciente;
     private javax.swing.JTextField campoQE3;
     private javax.swing.JFormattedTextField campoQE4A;
     private javax.swing.JFormattedTextField campoQE4B;
@@ -1516,7 +1535,6 @@ public class CadastroClinico extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField campoQE6AC;
     private javax.swing.JFormattedTextField campoQE6B;
     private javax.swing.JFormattedTextField campoQE6D;
-    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -1540,6 +1558,7 @@ public class CadastroClinico extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JLabel labelPerguntas;
+    private javax.swing.JLabel labelPesquisarPaciente;
     private javax.swing.JLabel labelQ02;
     private javax.swing.JLabel labelQ02Direito;
     private javax.swing.JLabel labelQ02Esquerdo;

@@ -493,7 +493,7 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace pref="269" max="32767" attributes="0"/>
+                          <EmptySpace pref="271" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2356,7 +2356,7 @@
                               <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="942" max="32767" attributes="0"/>
+                          <EmptySpace pref="944" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2448,10 +2448,13 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="labelSelecao" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jComboBox1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="ComboBoxSelecionarPaciente" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelSelecao" alignment="0" pref="509" max="32767" attributes="0"/>
+                              <Component id="campoPesquisarPaciente" alignment="0" max="32767" attributes="0"/>
                           </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="labelPesquisarPaciente" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -2462,8 +2465,13 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="labelSelecao" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="labelPesquisarPaciente" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="campoPesquisarPaciente" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="ComboBoxSelecionarPaciente" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2477,13 +2485,27 @@
                     <Property name="text" type="java.lang.String" value="Selecione o paciente:"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="jComboBox1">
+                <Component class="javax.swing.JComboBox" name="ComboBoxSelecionarPaciente">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="1">
                         <StringItem index="0" value="Selecione o paciente"/>
                       </StringArray>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="Selecione o paciente"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="campoPesquisarPaciente">
+                  <Properties>
+                    <Property name="toolTipText" type="java.lang.String" value="Digite o nome paciente"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="labelPesquisarPaciente">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/view/imagens/pesquisar.gif"/>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="Digite o nome do paciente"/>
                   </Properties>
                 </Component>
               </SubComponents>
