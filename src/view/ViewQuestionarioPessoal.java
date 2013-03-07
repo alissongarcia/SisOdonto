@@ -271,6 +271,8 @@ public class ViewQuestionarioPessoal extends JFrame{
     private javax.swing.JLabel labelSliderValorQuestao12;
     private javax.swing.JLabel labelSliderValorQuestao13;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
+    private javax.swing.JTextField campoPesquisarPaciente;
+    private javax.swing.JLabel labelPesquisarPaciente;
     
     
     public ViewQuestionarioPessoal(){
@@ -543,6 +545,8 @@ public class ViewQuestionarioPessoal extends JFrame{
         jPanel49 = new javax.swing.JPanel();
         labelSelecaoPaciente = new javax.swing.JLabel();
         ComboBoxPaciente = new javax.swing.JComboBox();
+        campoPesquisarPaciente = new javax.swing.JTextField();
+        labelPesquisarPaciente = new javax.swing.JLabel();
         
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -1224,6 +1228,11 @@ public class ViewQuestionarioPessoal extends JFrame{
         labelSelecaoPaciente.setText("Selecione o Paciente");
 
         ComboBoxPaciente.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Selecione um paciente." }));
+        
+        campoPesquisarPaciente.setToolTipText("digite o nome do paciente");
+
+        labelPesquisarPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/pesquisar.gif"))); // NOI18N
+        labelPesquisarPaciente.setToolTipText("digite o nome do paciente");
     }
 
     private void configuracoes() {
@@ -2595,9 +2604,12 @@ public class ViewQuestionarioPessoal extends JFrame{
             jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel49Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelSelecaoPaciente)
-                    .addComponent(ComboBoxPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(ComboBoxPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelSelecaoPaciente, javax.swing.GroupLayout.DEFAULT_SIZE, 341, Short.MAX_VALUE)
+                    .addComponent(campoPesquisarPaciente))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(labelPesquisarPaciente)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel49Layout.setVerticalGroup(
@@ -2605,7 +2617,11 @@ public class ViewQuestionarioPessoal extends JFrame{
             .addGroup(jPanel49Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(labelSelecaoPaciente)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(21, 21, 21)
+                .addGroup(jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(campoPesquisarPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelPesquisarPaciente))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ComboBoxPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
