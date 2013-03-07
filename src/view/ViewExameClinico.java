@@ -575,7 +575,8 @@ public class ViewExameClinico extends JFrame {
        
 
         ComboBoxQE6CMuscular.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
-
+        
+        ComboBoxQE6CArticular.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
         rotuloQE6C.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE6C.setText("Protusão");
 
