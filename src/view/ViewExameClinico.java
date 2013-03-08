@@ -24,8 +24,6 @@ public class ViewExameClinico extends JFrame {
     private javax.swing.JComboBox ComboBoxQE10BLE;
     private javax.swing.JComboBox ComboBoxQE2ALadoDireito;
     private javax.swing.JComboBox ComboBoxQE2ALadoEsquerdo;
-    private javax.swing.JComboBox ComboBoxQE2BLadoDireito;
-    private javax.swing.JComboBox ComboBoxQE2BLadoEsquerdo;
     private javax.swing.JComboBox ComboBoxQE3Abertura;
     private javax.swing.JComboBox ComboBoxQE4CArticular;
     private javax.swing.JComboBox ComboBoxQE4CMuscular;
@@ -66,9 +64,11 @@ public class ViewExameClinico extends JFrame {
     private javax.swing.JComboBox ComboBoxQE8GE;
     private javax.swing.JComboBox ComboBoxQE8HD;
     private javax.swing.JComboBox ComboBoxQE8HE;
+    private javax.swing.JComboBox ComboBoxQuestao14aQuestionario;
+    private javax.swing.JComboBox ComboBoxQuestao14bQuestionario;
+    private javax.swing.JComboBox ComboBoxQuestaoQuestionario03;
     private javax.swing.JScrollPane ScrollPane;
     private javax.swing.JButton botaoDiagnosticar;
-    private javax.swing.JTextField campoPesquisarPaciente;
     private javax.swing.JTextField campoQE3;
     private javax.swing.JFormattedTextField campoQE4A;
     private javax.swing.JFormattedTextField campoQE4B;
@@ -82,7 +82,6 @@ public class ViewExameClinico extends JFrame {
     private javax.swing.JFormattedTextField campoQE6AC;
     private javax.swing.JFormattedTextField campoQE6B;
     private javax.swing.JFormattedTextField campoQE6D;
-    private javax.swing.JComboBox ComboBoxSelecionarPaciente;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -91,12 +90,17 @@ public class ViewExameClinico extends JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel17;
+    private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -106,12 +110,12 @@ public class ViewExameClinico extends JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JLabel labelPerguntas;
-    private javax.swing.JLabel labelPesquisarPaciente;
     private javax.swing.JLabel labelQ02;
     private javax.swing.JLabel labelQ02Direito;
     private javax.swing.JLabel labelQ02Esquerdo;
+    private javax.swing.JLabel labelQuestao3Questionario;
+    private javax.swing.JLabel labelQuestionario;
     private javax.swing.JLabel labelQuestionario1;
-    private javax.swing.JLabel labelSelecao;
     private javax.swing.JLabel rotuloAQE8;
     private javax.swing.JLabel rotuloBQE8;
     private javax.swing.JLabel rotuloCQE8;
@@ -335,9 +339,7 @@ public class ViewExameClinico extends JFrame {
         jPanel3 = new javax.swing.JPanel();
         labelQ02 = new javax.swing.JLabel();
         ComboBoxQE2ALadoDireito = new javax.swing.JComboBox();
-        ComboBoxQE2BLadoDireito = new javax.swing.JComboBox();
         ComboBoxQE2ALadoEsquerdo = new javax.swing.JComboBox();
-        ComboBoxQE2BLadoEsquerdo = new javax.swing.JComboBox();
         labelQ02Direito = new javax.swing.JLabel();
         labelQ02Esquerdo = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
@@ -354,16 +356,26 @@ public class ViewExameClinico extends JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jPanel14 = new javax.swing.JPanel();
-        labelSelecao = new javax.swing.JLabel();
-        ComboBoxSelecionarPaciente = new javax.swing.JComboBox();
-        campoPesquisarPaciente = new javax.swing.JTextField();
-        labelPesquisarPaciente = new javax.swing.JLabel();
+        labelQuestionario = new javax.swing.JLabel();
+        jPanel16 = new javax.swing.JPanel();
+        labelQuestao3Questionario = new javax.swing.JLabel();
+        ComboBoxQuestaoQuestionario03 = new javax.swing.JComboBox();
+        jPanel17 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        ComboBoxQuestao14aQuestionario = new javax.swing.JComboBox();
+        jPanel18 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        ComboBoxQuestao14bQuestionario = new javax.swing.JComboBox();
         
         controlador = new Controlador();
-        questPessoal = new QuestionarioPessoal();
+        questPessoal = new QuestionarioPessoal();        
+        preencherComboPaciente();
+    }
+
+    private void configurações() {
         
         
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+       setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -392,10 +404,57 @@ public class ViewExameClinico extends JFrame {
         ComboBoxQE10ALE.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3" }));
 
         ComboBoxQE10BLE.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3" }));
-        
-        
-        
-        
+
+        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
+        jPanel12.setLayout(jPanel12Layout);
+        jPanel12Layout.setHorizontalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(rotuloQE10)
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(rotuloQE10A)
+                            .addComponent(rotuloQE10B))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(rotuloLDQE10)
+                            .addComponent(ComboBoxQE10ALD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ComboBoxQE10BLD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(38, 38, 38)
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ComboBoxQE10BLE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(rotuloLEQE10)
+                            .addComponent(ComboBoxQE10ALE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel12Layout.setVerticalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(rotuloQE10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rotuloLDQE10)
+                    .addComponent(rotuloLEQE10))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(rotuloQE10A)
+                            .addComponent(ComboBoxQE10ALD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(rotuloQE10B)
+                            .addComponent(ComboBoxQE10BLD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addComponent(ComboBoxQE10ALE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(ComboBoxQE10BLE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(31, Short.MAX_VALUE))
+        );
+
         jPanel11.setBackground(new java.awt.Color(255, 255, 255));
         jPanel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -421,9 +480,57 @@ public class ViewExameClinico extends JFrame {
 
         rotuloQE09.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE09.setText("Questão 09 - Dor muscularl com palpação");
-        
-        
-        
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(rotuloQE09)
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(rotuloQE10A1)
+                            .addComponent(rotuloQE10B1))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(rotuloLDQE11)
+                            .addComponent(rotuloQE09ALD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(rotuloQE09BLD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(38, 38, 38)
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(rotuloQE09BLE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(rotuloLEQE11)
+                            .addComponent(rotuloQE09ALE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(rotuloQE09)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rotuloLDQE11)
+                    .addComponent(rotuloLEQE11))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(rotuloQE10A1)
+                            .addComponent(rotuloQE09ALD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(rotuloQE10B1)
+                            .addComponent(rotuloQE09BLD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addComponent(rotuloQE09ALE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(rotuloQE09BLE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(25, Short.MAX_VALUE))
+        );
+
         jPanel10.setBackground(new java.awt.Color(255, 255, 255));
         jPanel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -489,430 +596,7 @@ public class ViewExameClinico extends JFrame {
         rotuloLDQE8.setText("Lado Direito");
 
         rotuloLEQE8.setText("Lado Esquerdo");
-        
-        
-        
-        jPanel9.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        rotuloQE7.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloQE7.setText("Questão 07 - Ruídos articulares nas excursões");
-
-        ComboBoxQE7BExcusãoDireita.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
-
-        ComboBoxQE7BExcusãoEsquerda.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
-
-        ComboBoxQE7BExcusão.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
-
-        rotuloQE7BProtusão.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloQE7BProtusão.setText("Protrusão");
-
-        rotuloQE7BExcusãoEsquerda.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloQE7BExcusãoEsquerda.setText("Excusão Esquerda");
-
-        rotuloQE7BExcusãoDireita.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloQE7BExcusãoDireita.setText("Excusão Direita");
-
-        rotuloQE7B.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloQE7B.setText("Ruídos -  Esquerdo");
-
-        ComboBoxQE7AExcusãoDireita.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
-
-        ComboBoxQE7AExcusãoEsquerda.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
-
-        ComboBoxQE7AProtusão.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
-
-        rotuloQE7AProtusão.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloQE7AProtusão.setText("Protrusão");
-
-        rotuloQE7AExcusãoEsquerda.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloQE7AExcusãoEsquerda.setText("Excusão Esquerda");
-
-        rotuloQE7AExcusãoDireita.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloQE7AExcusãoDireita.setText("Excusão Direita");
-
-        rotuloQE7A.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloQE7A.setText("Ruídos -  Direito");
-        
-        
-        jPanel8.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        rotuloQE6.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloQE6.setText("Questão 06 - Excursões");
-
-        rotuloQE6A.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloQE6A.setText("Excursão Lateral Direita");
-
-        try {
-            campoQE6A.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-
-        rotuloQE6Muscular.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloQE6Muscular.setText("Dor Muscular");
-
-        rotuloQE6Articular.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloQE6Articular.setText("Dor Articular");
-
-        ComboBoxQE6AArticular.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
-
-        ComboBoxQE6AMuscular.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
-
-        rotuloQE6B.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloQE6B.setText("Excursão Lateral Esquerda");
-
-        try {
-            campoQE6B.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-
-        ComboBoxQE6BMuscular.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
-
-        ComboBoxQE6BArticular.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
-       
-
-        ComboBoxQE6CMuscular.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
-        
-        ComboBoxQE6CArticular.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
-        rotuloQE6C.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloQE6C.setText("Protusão");
-
-        try {
-            campoQE6AC.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-
-        rotuloQE6D.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloQE6D.setText("Desvio de linha média");
-
-        try {
-            campoQE6D.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }        
-
-        ComboBoxQE6DDesvio.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "direito - 1", "esquerdo- 2", "nenhum - 8" }));
-
-        rotuloQE6Desvio.setText("Desvio");    
-        
-        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        rotuloQE5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloQE5.setText("Questão 05- Ruídos articulares (palpação)");
-
-        rotuloQE5A.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloQE5A.setText("Abertura");
-
-        rotuloLDQE5ADireito.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloLDQE5ADireito.setText("Direito");
-
-        rotuloLDQE5AEsquerdo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloLDQE5AEsquerdo.setText("Esquerdo");
-
-        ComboBoxQE5ADireito.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
-
-        ComboBoxQE5AEsquerdo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
-
-        jLabel12.setText("mm");
-
-        jLabel11.setText("mm");
-
-        rotuloLDQE5AA.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloLDQE5AA.setText("Medida do estalido na abertura:");
-
-        rotuloQE5B.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloQE5B.setText("Fechamento");
-
-        rotuloLDQE5BDireito.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloLDQE5BDireito.setText("Direito");
-
-        rotuloLDQE5BEsquerdo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloLDQE5BEsquerdo.setText("Esquerdo");
-
-        ComboBoxQE5BEsquerdo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
-
-        ComboBoxQE5BDireito.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
-
-        jLabel14.setText("mm");
-
-        jLabel13.setText("mm");
-
-        rotuloLDQE5BB.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloLDQE5BB.setText("Medida do estalido na abertura:");
-
-        rotuloQE5C.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloQE5C.setText("Estalido reciproco eliminado durante abertura protrusiva");
-
-        rotuloLDQE5CEsquerdo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloLDQE5CEsquerdo.setText("Esquerdo");
-
-        rotuloLDQE5CDireito.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloLDQE5CDireito.setText("Direito");
-
-        ComboBoxQE5CDireito.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Sim - 0", "Não - 1", "N/A - 8" }));
-
-        ComboBoxQE5CEsquerdo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Sim - 0", "Não - 1", "N/A - 8" }));
-        
-        
-        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        rotuloQE4.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloQE4.setText("Questão 04 - Extensão de movimento vertical");
-
-        rotuloQE4A.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloQE4A.setText("Abertura sem auxilio sem dor em mm");
-
-        try {
-            campoQE4A.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-
-        try {
-            campoQE4B.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-
-        rotuloQE4B.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloQE4B.setText("Abertura máxima sem auxilio em mm");
-
-        rotuloQE4C.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloQE4C.setText("Abertura máxima com auxilio em mm");
-
-        try {
-            campoQE4C.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-
-        try {
-            campoQE4D.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-
-        rotuloQE4D.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloQE4D.setText("Trespasse incisal vertical em mm");
-
-        ComboBoxQE4DMuscular.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
-
-        ComboBoxQE4CMuscular.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
-
-        rotuloLDQE4Muscular.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloLDQE4Muscular.setText("Dor Muscular");
-
-        rotuloLDQE4Articular.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloLDQE4Articular.setText("Dor Articular");
-
-        ComboBoxQE4CArticular.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
-
-        ComboBoxQE4DArticular.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
-        
-        
-        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        rotuloQE3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloQE3.setText("Questão 03 - Padrão de Abertura");
-
-        ComboBoxQE3Abertura.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Reto - 1", "Desvio lateral direito (não corrigido) - 1", "Desvio lateral direito (S) - 2", "Desvio lateral esquerdo (não corrigido) - 3", "Desvio lateral direito (S) - 4", "Outro - 5" }));
-
-        rotuloQE3Tipo.setText("Tipo");
-
-        rotuloQE3Especifique.setText("(especifique)");
-        
-        
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        labelQ02.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        labelQ02.setText("Questão 02 - Você poderia apontar as áreas onde você sente dor? ");
-
-        ComboBoxQE2ALadoDireito.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
-
-        ComboBoxQE2BLadoDireito.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
-
-        ComboBoxQE2ALadoEsquerdo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
-
-        ComboBoxQE2BLadoEsquerdo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
-
-        labelQ02Direito.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        labelQ02Direito.setText("Lado Direito");
-
-        labelQ02Esquerdo.setText("Lado Esquerdo");
-        
-        
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        labelPerguntas.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        labelPerguntas.setText("Perguntas:");
-
-        rotuloQuestao01.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        rotuloQuestao01.setText("Questão 01 - Você tem dor no lado direito da sua face, lado esquerdo ou ambos os lados?");
-
-        ComboBoxQE1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não", "Direito", "Esquerdo", "Ambos", " " }));
-        
-        
-         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        labelQuestionario1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        labelQuestionario1.setText("Questionário");
-        
-        
-        
-        jPanel13.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel13.setForeground(new java.awt.Color(255, 255, 255));
-
-        
-
-        rotuloResultado.setForeground(new java.awt.Color(255, 255, 255));
-        rotuloResultado.setText("*");
-
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("*");
-
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("*");
-
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("*");
-
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("*");
-        
-         jPanel14.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        labelSelecao.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        labelSelecao.setText("Selecione o paciente:");
-
-        ComboBoxSelecionarPaciente.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Selecione o paciente" }));
-        ComboBoxSelecionarPaciente.setToolTipText("Selecione o paciente");
-
-        campoPesquisarPaciente.setToolTipText("Digite o nome paciente");
-
-        labelPesquisarPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/pesquisar.gif"))); // NOI18N
-        labelPesquisarPaciente.setToolTipText("Digite o nome do paciente");
-        
-        
-        preencherComboPaciente();
-        
-        
-    }
-
-    private void configurações() {
-        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
-        jPanel12.setLayout(jPanel12Layout);
-        jPanel12Layout.setHorizontalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel12Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rotuloQE10)
-                    .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(rotuloQE10A)
-                            .addComponent(rotuloQE10B))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(rotuloLDQE10)
-                            .addComponent(ComboBoxQE10ALD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ComboBoxQE10BLD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(38, 38, 38)
-                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ComboBoxQE10BLE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(rotuloLEQE10)
-                            .addComponent(ComboBoxQE10ALE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel12Layout.setVerticalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel12Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(rotuloQE10)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rotuloLDQE10)
-                    .addComponent(rotuloLEQE10))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(rotuloQE10A)
-                            .addComponent(ComboBoxQE10ALD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(rotuloQE10B)
-                            .addComponent(ComboBoxQE10BLD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addComponent(ComboBoxQE10ALE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(ComboBoxQE10BLE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(31, Short.MAX_VALUE))
-        );
-        
-        
-        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
-        jPanel11.setLayout(jPanel11Layout);
-        jPanel11Layout.setHorizontalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel11Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rotuloQE09)
-                    .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(rotuloQE10A1)
-                            .addComponent(rotuloQE10B1))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(rotuloLDQE11)
-                            .addComponent(rotuloQE09ALD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(rotuloQE09BLD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(38, 38, 38)
-                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(rotuloQE09BLE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(rotuloLEQE11)
-                            .addComponent(rotuloQE09ALE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel11Layout.setVerticalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel11Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(rotuloQE09)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rotuloLDQE11)
-                    .addComponent(rotuloLEQE11))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(rotuloQE10A1)
-                            .addComponent(rotuloQE09ALD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(rotuloQE10B1)
-                            .addComponent(rotuloQE09BLD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addComponent(rotuloQE09ALE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rotuloQE09BLE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(25, Short.MAX_VALUE))
-        );
-        
-        
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
@@ -953,7 +637,7 @@ public class ViewExameClinico extends JFrame {
                             .addComponent(ComboBoxQE8AE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(ComboBoxQE8BE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(ComboBoxQE8HE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(269, Short.MAX_VALUE))
+                .addContainerGap(273, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1006,8 +690,49 @@ public class ViewExameClinico extends JFrame {
                     .addComponent(ComboBoxQE8HD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
-        
-        
+
+        jPanel9.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        rotuloQE7.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloQE7.setText("Questão 07 - Ruídos articulares nas excursões");
+
+        ComboBoxQE7BExcusãoDireita.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
+
+        ComboBoxQE7BExcusãoEsquerda.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
+
+        ComboBoxQE7BExcusão.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
+
+        rotuloQE7BProtusão.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloQE7BProtusão.setText("Protrusão");
+
+        rotuloQE7BExcusãoEsquerda.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloQE7BExcusãoEsquerda.setText("Excusão Esquerda");
+
+        rotuloQE7BExcusãoDireita.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloQE7BExcusãoDireita.setText("Excusão Direita");
+
+        rotuloQE7B.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloQE7B.setText("Ruídos -  Esquerdo");
+
+        ComboBoxQE7AExcusãoDireita.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
+
+        ComboBoxQE7AExcusãoEsquerda.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
+
+        ComboBoxQE7AProtusão.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
+
+        rotuloQE7AProtusão.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloQE7AProtusão.setText("Protrusão");
+
+        rotuloQE7AExcusãoEsquerda.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloQE7AExcusãoEsquerda.setText("Excusão Esquerda");
+
+        rotuloQE7AExcusãoDireita.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloQE7AExcusãoDireita.setText("Excusão Direita");
+
+        rotuloQE7A.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloQE7A.setText("Ruídos -  Direito");
+
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
@@ -1078,8 +803,70 @@ public class ViewExameClinico extends JFrame {
                     .addComponent(ComboBoxQE7BExcusão, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
+
+        jPanel8.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        rotuloQE6.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloQE6.setText("Questão 06 - Excursões");
+
+        rotuloQE6A.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloQE6A.setText("Excursão Lateral Direita");
+
+        try {
+            campoQE6A.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+
+        rotuloQE6Muscular.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloQE6Muscular.setText("Dor Muscular");
+
+        rotuloQE6Articular.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloQE6Articular.setText("Dor Articular");
+
+        ComboBoxQE6AArticular.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
+
+        ComboBoxQE6AMuscular.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
+
+        rotuloQE6B.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloQE6B.setText("Excursão Lateral Esquerda");
+
+        try {
+            campoQE6B.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+
+        ComboBoxQE6BMuscular.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
+
+        ComboBoxQE6BArticular.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
+
+        ComboBoxQE6CArticular.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
         
-        
+        ComboBoxQE6CMuscular.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
+
+        rotuloQE6C.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloQE6C.setText("Protusão");
+
+        try {
+            campoQE6AC.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+
+        rotuloQE6D.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloQE6D.setText("Desvio de linha média");
+
+        try {
+            campoQE6D.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        ComboBoxQE6DDesvio.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "direito - 1", "esquerdo- 2", "nenhum - 8" }));
+
+        rotuloQE6Desvio.setText("Desvio");
+
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
@@ -1090,21 +877,17 @@ public class ViewExameClinico extends JFrame {
                     .addComponent(rotuloQE6)
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel8Layout.createSequentialGroup()
-                                .addComponent(rotuloQE6A)
-                                .addGap(18, 18, 18)
-                                .addComponent(campoQE6A, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel8Layout.createSequentialGroup()
-                                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(rotuloQE6B)
-                                    .addComponent(rotuloQE6C)
-                                    .addComponent(rotuloQE6D))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(campoQE6AC, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(campoQE6B, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(campoQE6D, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(47, 47, 47)
+                            .addComponent(rotuloQE6B)
+                            .addComponent(rotuloQE6C)
+                            .addComponent(rotuloQE6D)
+                            .addComponent(rotuloQE6A))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(campoQE6A, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(campoQE6AC, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(campoQE6B, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(campoQE6D, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(ComboBoxQE6DDesvio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel8Layout.createSequentialGroup()
@@ -1124,7 +907,7 @@ public class ViewExameClinico extends JFrame {
                             .addComponent(ComboBoxQE6BMuscular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(ComboBoxQE6CMuscular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(rotuloQE6Desvio))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(629, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1160,10 +943,68 @@ public class ViewExameClinico extends JFrame {
                     .addComponent(ComboBoxQE6DDesvio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(rotuloQE6D)
                     .addComponent(campoQE6D, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        
-        
+
+        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        rotuloQE5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloQE5.setText("Questão 05- Ruídos articulares (palpação)");
+
+        rotuloQE5A.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloQE5A.setText("Abertura");
+
+        rotuloLDQE5ADireito.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloLDQE5ADireito.setText("Direito");
+
+        rotuloLDQE5AEsquerdo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloLDQE5AEsquerdo.setText("Esquerdo");
+
+        ComboBoxQE5ADireito.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
+
+        ComboBoxQE5AEsquerdo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
+
+        jLabel12.setText("mm");
+
+        jLabel11.setText("mm");
+
+        rotuloLDQE5AA.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloLDQE5AA.setText("Medida do estalido na abertura:");
+
+        rotuloQE5B.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloQE5B.setText("Fechamento");
+
+        rotuloLDQE5BDireito.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloLDQE5BDireito.setText("Direito");
+
+        rotuloLDQE5BEsquerdo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloLDQE5BEsquerdo.setText("Esquerdo");
+
+        ComboBoxQE5BEsquerdo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
+
+        ComboBoxQE5BDireito.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
+
+        jLabel14.setText("mm");
+
+        jLabel13.setText("mm");
+
+        rotuloLDQE5BB.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloLDQE5BB.setText("Medida do estalido na abertura:");
+
+        rotuloQE5C.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloQE5C.setText("Estalido reciproco eliminado durante abertura protrusiva");
+
+        rotuloLDQE5CEsquerdo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloLDQE5CEsquerdo.setText("Esquerdo");
+
+        rotuloLDQE5CDireito.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloLDQE5CDireito.setText("Direito");
+
+        ComboBoxQE5CDireito.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Sim - 0", "Não - 1", "N/A - 8" }));
+
+        ComboBoxQE5CEsquerdo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Sim - 0", "Não - 1", "N/A - 8" }));
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
@@ -1275,8 +1116,63 @@ public class ViewExameClinico extends JFrame {
                     .addComponent(ComboBoxQE5CEsquerdo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
-        
-        
+
+        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        rotuloQE4.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloQE4.setText("Questão 04 - Extensão de movimento vertical");
+
+        rotuloQE4A.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloQE4A.setText("Abertura sem auxilio sem dor em mm");
+
+        try {
+            campoQE4A.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+
+        try {
+            campoQE4B.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+
+        rotuloQE4B.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloQE4B.setText("Abertura máxima sem auxilio em mm");
+
+        rotuloQE4C.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloQE4C.setText("Abertura máxima com auxilio em mm");
+
+        try {
+            campoQE4C.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+
+        try {
+            campoQE4D.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+
+        rotuloQE4D.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloQE4D.setText("Trespasse incisal vertical em mm");
+
+        ComboBoxQE4DMuscular.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
+
+        ComboBoxQE4CMuscular.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
+
+        rotuloLDQE4Muscular.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloLDQE4Muscular.setText("Dor Muscular");
+
+        rotuloLDQE4Articular.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloLDQE4Articular.setText("Dor Articular");
+
+        ComboBoxQE4CArticular.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
+
+        ComboBoxQE4DArticular.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "direito - 1", "esquerdo- 2", "ambos - 3" }));
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -1286,37 +1182,29 @@ public class ViewExameClinico extends JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(rotuloQE4)
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(rotuloQE4A)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(rotuloQE4A)
+                            .addComponent(rotuloQE4B)
+                            .addComponent(rotuloQE4D)
+                            .addComponent(rotuloQE4C))
                         .addGap(18, 18, 18)
-                        .addComponent(campoQE4A, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel6Layout.createSequentialGroup()
                                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(rotuloQE4C)
-                                    .addComponent(rotuloQE4D))
-                                .addGap(18, 18, 18)
+                                    .addComponent(campoQE4B, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(campoQE4C, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(campoQE4D, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(campoQE4D, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(campoQE4C, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel6Layout.createSequentialGroup()
-                                .addComponent(rotuloQE4B)
-                                .addGap(18, 18, 18)
-                                .addComponent(campoQE4B, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(51, 51, 51)
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel6Layout.createSequentialGroup()
-                                .addComponent(rotuloLDQE4Muscular)
-                                .addGap(28, 28, 28)
-                                .addComponent(rotuloLDQE4Articular))
-                            .addGroup(jPanel6Layout.createSequentialGroup()
-                                .addComponent(ComboBoxQE4DMuscular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(ComboBoxQE4DArticular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel6Layout.createSequentialGroup()
-                                .addComponent(ComboBoxQE4CMuscular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(ComboBoxQE4CArticular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(rotuloLDQE4Muscular)
+                                    .addComponent(ComboBoxQE4CMuscular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(ComboBoxQE4DMuscular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(29, 29, 29)
+                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(ComboBoxQE4DArticular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(ComboBoxQE4CArticular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(rotuloLDQE4Articular)))
+                            .addComponent(campoQE4A, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
@@ -1325,40 +1213,42 @@ public class ViewExameClinico extends JFrame {
                 .addContainerGap()
                 .addComponent(rotuloQE4)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(rotuloQE4A)
-                            .addComponent(campoQE4A, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(rotuloQE4B)
-                            .addComponent(campoQE4B, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(63, 63, 63))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(rotuloQE4C)
-                            .addComponent(campoQE4C, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(rotuloQE4D)
-                            .addComponent(campoQE4D, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(rotuloLDQE4Muscular)
-                            .addComponent(rotuloLDQE4Articular))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(ComboBoxQE4CMuscular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ComboBoxQE4CArticular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(ComboBoxQE4DMuscular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ComboBoxQE4DArticular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rotuloQE4A)
+                    .addComponent(campoQE4A, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rotuloQE4B)
+                    .addComponent(campoQE4B, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rotuloLDQE4Muscular)
+                    .addComponent(rotuloLDQE4Articular))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rotuloQE4C)
+                    .addComponent(campoQE4C, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ComboBoxQE4CMuscular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ComboBoxQE4CArticular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rotuloQE4D)
+                    .addComponent(campoQE4D, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ComboBoxQE4DMuscular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ComboBoxQE4DArticular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        
-        
+
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        rotuloQE3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloQE3.setText("Questão 03 - Padrão de Abertura");
+
+        ComboBoxQE3Abertura.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Reto - 1", "Desvio lateral direito (não corrigido) - 1", "Desvio lateral direito (S) - 2", "Desvio lateral esquerdo (não corrigido) - 3", "Desvio lateral direito (S) - 4", "Outro - 5" }));
+
+        rotuloQE3Tipo.setText("Tipo");
+
+        rotuloQE3Especifique.setText("(especifique)");
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -1391,8 +1281,22 @@ public class ViewExameClinico extends JFrame {
                     .addComponent(ComboBoxQE3Abertura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(32, Short.MAX_VALUE))
         );
-        
-        
+
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        labelQ02.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        labelQ02.setText("Questão 02 - Você poderia apontar as áreas onde você sente dor? ");
+
+        ComboBoxQE2ALadoDireito.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Articulação - 1", "Músculos- 2", "ambos - 3" }));
+
+        ComboBoxQE2ALadoEsquerdo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Articulação - 1", "Músculos- 2", "ambos - 3" }));
+
+        labelQ02Direito.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        labelQ02Direito.setText("Lado Direito");
+
+        labelQ02Esquerdo.setText("Lado Esquerdo");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -1403,15 +1307,13 @@ public class ViewExameClinico extends JFrame {
                     .addComponent(labelQ02)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ComboBoxQE2BLadoDireito, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(ComboBoxQE2ALadoDireito, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(labelQ02Direito))
                         .addGap(61, 61, 61)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(labelQ02Esquerdo)
-                            .addComponent(ComboBoxQE2BLadoEsquerdo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(ComboBoxQE2ALadoEsquerdo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(670, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1426,14 +1328,20 @@ public class ViewExameClinico extends JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ComboBoxQE2ALadoDireito, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ComboBoxQE2ALadoEsquerdo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ComboBoxQE2BLadoDireito, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ComboBoxQE2BLadoEsquerdo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        
-        
+
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        labelPerguntas.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        labelPerguntas.setText("Perguntas:");
+
+        rotuloQuestao01.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        rotuloQuestao01.setText("Questão 01 - Você tem dor no lado direito da sua face, lado esquerdo ou ambos os lados?");
+
+        ComboBoxQE1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não", "Direito", "Esquerdo", "Ambos", " " }));
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -1462,16 +1370,21 @@ public class ViewExameClinico extends JFrame {
                 .addComponent(ComboBoxQE1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(19, Short.MAX_VALUE))
         );
-        
-        
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        labelQuestionario1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        labelQuestionario1.setText("EXAME CLÍNICO");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(labelQuestionario1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(550, 550, 550))
+                .addGap(414, 414, 414)
+                .addComponent(labelQuestionario1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1480,8 +1393,26 @@ public class ViewExameClinico extends JFrame {
                 .addComponent(labelQuestionario1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        
-        
+
+        jPanel13.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel13.setForeground(new java.awt.Color(255, 255, 255));
+
+        rotuloResultado.setForeground(new java.awt.Color(255, 255, 255));
+        rotuloResultado.setText("*");
+
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("*");
+
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("*");
+
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("*");
+
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("*");
+
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
         jPanel13Layout.setHorizontalGroup(
@@ -1495,7 +1426,7 @@ public class ViewExameClinico extends JFrame {
                     .addComponent(jLabel2)
                     .addComponent(jLabel3)
                     .addComponent(jLabel4))
-                .addContainerGap(942, Short.MAX_VALUE))
+                .addContainerGap(946, Short.MAX_VALUE))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1514,35 +1445,125 @@ public class ViewExameClinico extends JFrame {
                 .addComponent(jLabel4)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        
-        
-        
+
+        jPanel14.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        labelQuestionario.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        labelQuestionario.setText("QUESTÕES DO QUESTIONÁRIO:");
+
+        jPanel16.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        labelQuestao3Questionario.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        labelQuestao3Questionario.setText("Questão 03 - Teve dor na face, maxilares, têmporas, à frente do ouvido ou no ouvido no último mês?");
+
+        ComboBoxQuestaoQuestionario03.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não - 0", "Sim - 1" }));
+
+        javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
+        jPanel16.setLayout(jPanel16Layout);
+        jPanel16Layout.setHorizontalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelQuestao3Questionario)
+                    .addComponent(ComboBoxQuestaoQuestionario03, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel16Layout.setVerticalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(labelQuestao3Questionario, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(ComboBoxQuestaoQuestionario03, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel17.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel5.setText("Questão 14a - Aguma vez teve a mandíbula bloqueada ou presa de forma que não abrisse completamente a boca?");
+
+        ComboBoxQuestao14aQuestionario.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não - 0", "Sim - 1" }));
+
+        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
+        jPanel17.setLayout(jPanel17Layout);
+        jPanel17Layout.setHorizontalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5)
+                    .addComponent(ComboBoxQuestao14aQuestionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel17Layout.setVerticalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ComboBoxQuestao14aQuestionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel18.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel6.setText("Questão 14b - Esta Limitação da abertura mandibular foi suficientemente severa para interferir com a capacidade de comer?");
+
+        ComboBoxQuestao14bQuestionario.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não - 0", "Sim - 1" }));
+
+        javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
+        jPanel18.setLayout(jPanel18Layout);
+        jPanel18Layout.setHorizontalGroup(
+            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel18Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6)
+                    .addComponent(ComboBoxQuestao14bQuestionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel18Layout.setVerticalGroup(
+            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel18Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ComboBoxQuestao14bQuestionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
         jPanel14Layout.setHorizontalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel14Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(ComboBoxSelecionarPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelSelecao, javax.swing.GroupLayout.DEFAULT_SIZE, 509, Short.MAX_VALUE)
-                    .addComponent(campoPesquisarPaciente))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(labelPesquisarPaciente)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel16, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel14Layout.createSequentialGroup()
+                        .addComponent(labelQuestionario)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jPanel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel14Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(labelSelecao)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelPesquisarPaciente)
-                    .addComponent(campoPesquisarPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(labelQuestionario)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ComboBoxSelecionarPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -1563,9 +1584,9 @@ public class ViewExameClinico extends JFrame {
                     .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel14, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(149, Short.MAX_VALUE))
+                    .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel14, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1574,7 +1595,7 @@ public class ViewExameClinico extends JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1605,14 +1626,15 @@ public class ViewExameClinico extends JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(ScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 1105, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(ScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(ScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(ScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 850, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        
-        
+
         pack();
     }
 
@@ -1631,12 +1653,12 @@ public class ViewExameClinico extends JFrame {
     public String diagnostico_Grupo_I(){
                 
         DefaultComboBoxModel modeloPaciente = new DefaultComboBoxModel(pacientes.toArray());
-        ComboBoxSelecionarPaciente.setModel(modeloPaciente);
+    //    ComboBoxSelecionarPaciente.setModel(modeloPaciente);
         
         //Pegar o Objeto Paciente com todos os atributos e não somente o nome
-        Paciente p = (Paciente) ComboBoxSelecionarPaciente.getSelectedItem();
+   //     Paciente p = (Paciente) ComboBoxSelecionarPaciente.getSelectedItem();
         //Passa por parâmetro o id do Paciente selecionado no combobox
-        questPessoal = controlador.buscarCamposQuestPessoal(p.getId());
+//        questPessoal = controlador.buscarCamposQuestPessoal(p.getId());
         
         
         String rqp3;
@@ -1740,7 +1762,7 @@ public class ViewExameClinico extends JFrame {
         pacientes = controlador.BuscarPacientes();
         
         for(Object p : pacientes){
-            ComboBoxSelecionarPaciente.addItem(p);
+//            ComboBoxSelecionarPaciente.addItem(p);
         }
     }
     
