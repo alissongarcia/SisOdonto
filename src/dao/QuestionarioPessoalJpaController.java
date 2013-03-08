@@ -169,14 +169,15 @@ public class QuestionarioPessoalJpaController implements Serializable {
             em.close();
         }
     }
-
-    public QuestionarioPessoal buscarCampos(Integer codPaciente) {
+    
+    public QuestionarioPessoal buscarCampos(Integer codPaciente){
         Query consulta;
         EntityManager em = null;
         em = getEntityManager();
         consulta = em.createQuery("SELECT q FROM QuestionarioPessoal q WHERE q.codPaciente.id = :codPaciente");
         //consulta = em.createQuery("SELECT q FROM QuestionarioPessoal q, Paciente p WHERE q.id = p.cod_quest_pessoal");
         consulta.setParameter("codPaciente", codPaciente);
-        return (QuestionarioPessoal) consulta.getSingleResult();
-    }
+        return (QuestionarioPessoal)consulta.getSingleResult();
+}
+    
 }

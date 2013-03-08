@@ -26,6 +26,11 @@ public class CadastroDadosPessoais extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton4 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
         painelPrincipal = new javax.swing.JPanel();
         labelDadosPessoais = new javax.swing.JLabel();
         painelDados = new javax.swing.JPanel();
@@ -105,6 +110,25 @@ public class CadastroDadosPessoais extends javax.swing.JFrame {
         painelTabelaInterna = new javax.swing.JPanel();
         ScrollPaneTabela = new javax.swing.JScrollPane();
         TabelaPesquisa = new javax.swing.JTable();
+
+        jButton4.setText("jButton4");
+
+        jButton3.setText("jButton3");
+
+        jButton2.setText("jButton2");
+
+        jButton1.setText("jButton1");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 204, 204));
@@ -949,7 +973,12 @@ public class CadastroDadosPessoais extends javax.swing.JFrame {
     private javax.swing.JLabel erroRua;
     private javax.swing.JLabel erroTelefone;
     private javax.swing.JLabel erroUF;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JLabel labelBairro;
     private javax.swing.JLabel labelCPF;
     private javax.swing.JLabel labelCelular;

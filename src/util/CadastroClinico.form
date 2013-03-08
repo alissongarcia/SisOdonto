@@ -6,7 +6,6 @@
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -23,15 +22,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="ScrollPane" min="-2" max="-2" attributes="0"/>
+          <Component id="ScrollPane" min="-2" pref="1105" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="ScrollPane" min="-2" pref="850" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
-          </Group>
+          <Component id="ScrollPane" min="-2" pref="510" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -64,10 +60,10 @@
                           <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
                           <Component id="jPanel4" alignment="0" max="32767" attributes="0"/>
                           <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jPanel13" max="32767" attributes="0"/>
                           <Component id="jPanel14" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jPanel13" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="27" max="32767" attributes="0"/>
+                      <EmptySpace pref="149" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -78,7 +74,7 @@
                       <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanel14" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
@@ -496,7 +492,7 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace pref="273" max="32767" attributes="0"/>
+                          <EmptySpace pref="271" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1106,19 +1102,26 @@
                               <Component id="rotuloQE6" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="rotuloQE6B" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="rotuloQE6C" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="rotuloQE6D" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="rotuloQE6A" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="rotuloQE6A" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="campoQE6A" min="-2" pref="31" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="rotuloQE6B" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="rotuloQE6C" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="rotuloQE6D" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="campoQE6AC" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
+                                              <Component id="campoQE6B" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
+                                              <Component id="campoQE6D" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
                                   </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="campoQE6A" min="-2" pref="31" max="-2" attributes="0"/>
-                                      <Component id="campoQE6AC" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
-                                      <Component id="campoQE6B" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
-                                      <Component id="campoQE6D" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="ComboBoxQE6DDesvio" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
@@ -1147,7 +1150,7 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace pref="629" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1190,7 +1193,7 @@
                               <Component id="rotuloQE6D" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="campoQE6D" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="28" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1744,34 +1747,46 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="rotuloQE4" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="rotuloQE4A" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="rotuloQE4B" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="rotuloQE4D" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="rotuloQE4C" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="rotuloQE4A" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="campoQE4A" min="-2" pref="31" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="campoQE4B" min="-2" pref="31" max="-2" attributes="0"/>
+                                              <Component id="rotuloQE4C" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="rotuloQE4D" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="campoQE4D" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
                                               <Component id="campoQE4C" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
-                                              <Component id="campoQE4D" min="-2" pref="31" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="rotuloLDQE4Muscular" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="ComboBoxQE4CMuscular" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="ComboBoxQE4DMuscular" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="ComboBoxQE4DArticular" min="-2" max="-2" attributes="0"/>
-                                              <Component id="ComboBoxQE4CArticular" min="-2" max="-2" attributes="0"/>
-                                              <Component id="rotuloLDQE4Articular" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <Component id="campoQE4A" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="rotuloQE4B" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="campoQE4B" min="-2" pref="31" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="rotuloLDQE4Muscular" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                          <Component id="rotuloLDQE4Articular" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="ComboBoxQE4DMuscular" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="ComboBoxQE4DArticular" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="ComboBoxQE4CMuscular" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="ComboBoxQE4CArticular" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                               </Group>
                           </Group>
@@ -1785,32 +1800,48 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="rotuloQE4" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="rotuloQE4A" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="campoQE4A" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="rotuloQE4A" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="campoQE4A" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="rotuloQE4B" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="campoQE4B" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="rotuloQE4C" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="campoQE4C" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="rotuloQE4D" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="campoQE4D" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="rotuloLDQE4Muscular" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="rotuloLDQE4Articular" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="ComboBoxQE4CMuscular" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE4CArticular" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="ComboBoxQE4DMuscular" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE4DArticular" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="rotuloQE4B" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="campoQE4B" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rotuloLDQE4Muscular" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="rotuloLDQE4Articular" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="rotuloQE4C" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="campoQE4C" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="ComboBoxQE4CMuscular" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="ComboBoxQE4CArticular" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="rotuloQE4D" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="campoQE4D" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="ComboBoxQE4DMuscular" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="ComboBoxQE4DArticular" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="25" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2060,17 +2091,19 @@
                               <Component id="labelQ02" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="ComboBoxQE2BLadoDireito" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="ComboBoxQE2ALadoDireito" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="labelQ02Direito" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="labelQ02Esquerdo" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ComboBoxQE2BLadoEsquerdo" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="ComboBoxQE2ALadoEsquerdo" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace pref="670" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2088,6 +2121,11 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="ComboBoxQE2ALadoDireito" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="ComboBoxQE2ALadoEsquerdo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="ComboBoxQE2BLadoDireito" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxQE2BLadoEsquerdo" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -2108,8 +2146,20 @@
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="4">
                         <StringItem index="0" value="Nenhum - 0"/>
-                        <StringItem index="1" value="Articula&#xe7;&#xe3;o - 1"/>
-                        <StringItem index="2" value="M&#xfa;sculos- 2"/>
+                        <StringItem index="1" value="direito - 1"/>
+                        <StringItem index="2" value="esquerdo- 2"/>
+                        <StringItem index="3" value="ambos - 3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE2BLadoDireito">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Nenhum - 0"/>
+                        <StringItem index="1" value="direito - 1"/>
+                        <StringItem index="2" value="esquerdo- 2"/>
                         <StringItem index="3" value="ambos - 3"/>
                       </StringArray>
                     </Property>
@@ -2120,8 +2170,20 @@
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="4">
                         <StringItem index="0" value="Nenhum - 0"/>
-                        <StringItem index="1" value="Articula&#xe7;&#xe3;o - 1"/>
-                        <StringItem index="2" value="M&#xfa;sculos- 2"/>
+                        <StringItem index="1" value="direito - 1"/>
+                        <StringItem index="2" value="esquerdo- 2"/>
+                        <StringItem index="3" value="ambos - 3"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="ComboBoxQE2BLadoEsquerdo">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="Nenhum - 0"/>
+                        <StringItem index="1" value="direito - 1"/>
+                        <StringItem index="2" value="esquerdo- 2"/>
                         <StringItem index="3" value="ambos - 3"/>
                       </StringArray>
                     </Property>
@@ -2238,9 +2300,9 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="414" max="-2" attributes="0"/>
-                          <Component id="labelQuestionario1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="labelQuestionario1" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="550" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2260,7 +2322,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Arial" size="18" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="EXAME CL&#xcd;NICO"/>
+                    <Property name="text" type="java.lang.String" value="Question&#xe1;rio"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -2293,7 +2355,7 @@
                               <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="946" max="32767" attributes="0"/>
+                          <EmptySpace pref="944" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2383,18 +2445,16 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
+                      <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="jPanel17" max="32767" attributes="0"/>
-                              <Component id="jPanel16" alignment="0" max="32767" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="labelQuestionario" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              </Group>
-                              <Component id="jPanel18" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="ComboBoxSelecionarPaciente" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelSelecao" alignment="0" pref="509" max="32767" attributes="0"/>
+                              <Component id="campoPesquisarPaciente" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
+                          <Component id="labelPesquisarPaciente" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2402,195 +2462,51 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="labelQuestionario" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelSelecao" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="campoPesquisarPaciente" linkSize="1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelPesquisarPaciente" linkSize="1" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jPanel16" min="-2" max="-2" attributes="0"/>
+                          <Component id="ComboBoxSelecionarPaciente" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jPanel17" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jPanel18" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="labelQuestionario">
+                <Component class="javax.swing.JLabel" name="labelSelecao">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Arial" size="14" style="0"/>
+                      <Font name="Arial" size="16" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="QUEST&#xd5;ES DO QUESTION&#xc1;RIO:"/>
+                    <Property name="text" type="java.lang.String" value="Selecione o paciente:"/>
                   </Properties>
                 </Component>
-                <Container class="javax.swing.JPanel" name="jPanel16">
+                <Component class="javax.swing.JComboBox" name="ComboBoxSelecionarPaciente">
                   <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="1">
+                        <StringItem index="0" value="Selecione o paciente"/>
+                      </StringArray>
                     </Property>
-                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder/>
-                      </Border>
-                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="Selecione o paciente"/>
                   </Properties>
-
-                  <Layout>
-                    <DimensionLayout dim="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="labelQuestao3Questionario" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="ComboBoxQuestaoQuestionario03" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                    <DimensionLayout dim="1">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="labelQuestao3Questionario" min="-2" pref="20" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="ComboBoxQuestaoQuestionario03" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                  </Layout>
-                  <SubComponents>
-                    <Component class="javax.swing.JLabel" name="labelQuestao3Questionario">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Arial" size="12" style="0"/>
-                        </Property>
-                        <Property name="text" type="java.lang.String" value="Quest&#xe3;o 03 - Teve dor na face, maxilares, t&#xea;mporas, &#xe0; frente do ouvido ou no ouvido no &#xfa;ltimo m&#xea;s?"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JComboBox" name="ComboBoxQuestaoQuestionario03">
-                      <Properties>
-                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                          <StringArray count="2">
-                            <StringItem index="0" value="N&#xe3;o - 0"/>
-                            <StringItem index="1" value="Sim - 1"/>
-                          </StringArray>
-                        </Property>
-                      </Properties>
-                    </Component>
-                  </SubComponents>
-                </Container>
-                <Container class="javax.swing.JPanel" name="jPanel17">
+                </Component>
+                <Component class="javax.swing.JTextField" name="campoPesquisarPaciente">
                   <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                    </Property>
-                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder/>
-                      </Border>
-                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="Digite o nome paciente"/>
                   </Properties>
-
-                  <Layout>
-                    <DimensionLayout dim="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="ComboBoxQuestao14aQuestionario" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                    <DimensionLayout dim="1">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="ComboBoxQuestao14aQuestionario" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                  </Layout>
-                  <SubComponents>
-                    <Component class="javax.swing.JLabel" name="jLabel5">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Quest&#xe3;o 14a - Aguma vez teve a mand&#xed;bula bloqueada ou presa de forma que n&#xe3;o abrisse completamente a boca?"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JComboBox" name="ComboBoxQuestao14aQuestionario">
-                      <Properties>
-                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                          <StringArray count="2">
-                            <StringItem index="0" value="N&#xe3;o - 0"/>
-                            <StringItem index="1" value="Sim - 1"/>
-                          </StringArray>
-                        </Property>
-                      </Properties>
-                    </Component>
-                  </SubComponents>
-                </Container>
-                <Container class="javax.swing.JPanel" name="jPanel18">
+                </Component>
+                <Component class="javax.swing.JLabel" name="labelPesquisarPaciente">
                   <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/view/imagens/pesquisar.gif"/>
                     </Property>
-                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder/>
-                      </Border>
-                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="Digite o nome do paciente"/>
                   </Properties>
-
-                  <Layout>
-                    <DimensionLayout dim="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="ComboBoxQuestao14bQuestionario" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                    <DimensionLayout dim="1">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="ComboBoxQuestao14bQuestionario" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                  </Layout>
-                  <SubComponents>
-                    <Component class="javax.swing.JLabel" name="jLabel6">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Quest&#xe3;o 14b - Esta Limita&#xe7;&#xe3;o da abertura mandibular foi suficientemente severa para interferir com a capacidade de comer?"/>
-                      </Properties>
-                    </Component>
-                    <Component class="javax.swing.JComboBox" name="ComboBoxQuestao14bQuestionario">
-                      <Properties>
-                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                          <StringArray count="2">
-                            <StringItem index="0" value="N&#xe3;o - 0"/>
-                            <StringItem index="1" value="Sim - 1"/>
-                          </StringArray>
-                        </Property>
-                      </Properties>
-                    </Component>
-                  </SubComponents>
-                </Container>
+                </Component>
               </SubComponents>
             </Container>
           </SubComponents>

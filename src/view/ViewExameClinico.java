@@ -1670,7 +1670,7 @@ public class ViewExameClinico extends JFrame {
                 String rqE4a, rqE4b, rqE4c, rqE4d;
 
                 //Aqui deve ser o resultado vindo da Query
-                rqp3 = questPessoal.getRqp3();
+                rqp3 = "";
 
                 //QE8 - Dor muscular extra-oral com palpação
                 // A                

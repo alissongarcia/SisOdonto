@@ -77,7 +77,13 @@ public class Controlador {
     }
     
     public void inserirPaciente(Paciente paciente){
-        
+        try{
+            
+            daoPaciente.create(paciente);
+            
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
     
     public void inserirQuestPessoal(QuestionarioPessoal quest){
