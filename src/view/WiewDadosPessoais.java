@@ -5,6 +5,9 @@
 package view;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import modelo.Paciente;
+import negocio.Controlador;
 
 /**
  *
@@ -91,6 +94,9 @@ public class WiewDadosPessoais extends JFrame {
     private javax.swing.JPanel painelTabelaInterna;
     private javax.swing.JPanel painelbotoes2;
     private javax.swing.JPanel paineltabela2;
+    
+    private Paciente paciente;
+    private Controlador controlador;
 
     public WiewDadosPessoais() {
 
@@ -180,8 +186,7 @@ public class WiewDadosPessoais extends JFrame {
         ScrollPaneTabela = new javax.swing.JScrollPane();
         TabelaPesquisa = new javax.swing.JTable();
 
-        
-
+        controlador = new Controlador();
 
     }
 
@@ -887,6 +892,47 @@ public class WiewDadosPessoais extends JFrame {
         botaoCadastrar.setToolTipText("Cadastrar Paciente");
         botaoCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
+                paciente = new Paciente();
+                
+                paciente.setNome(campoNome.getText());
+                paciente.setRua(campoRua.getText());
+                paciente.setBairro(campoBairro.getText());
+                paciente.setNumero(Integer.parseInt(campoNumero.getText()));
+                paciente.setCidade(campoCidade.getText());
+                paciente.setUf(campoUF.getText());
+                paciente.setCep(campoCep.getText());
+                paciente.setCpf(campoCpf.getText());
+                paciente.setNaturalidade(campoNaturalidade.getText());
+                paciente.setNacionalidade(campoNacionalidade.getText());
+                paciente.setIdade(Integer.parseInt(campoIdade.getText()));
+                paciente.setTelefone(campoTelefone.getText());
+                paciente.setCelular(campoCelular.getText());
+                paciente.setSexo(ComboBoxSexo.getSelectedItem().toString());
+                paciente.setRaca(campoRaca.getText());
+                
+                try{
+                    int resposta;
+                    resposta = JOptionPane.showConfirmDialog(null, "Deseja cadastrar esse Paciente?");
+                    if(resposta == 1){
+                        apagarCampos();
+                    }
+                    
+                    else if(resposta == 0){
+                        controlador.inserirPaciente(paciente);
+                        JOptionPane.showMessageDialog(null, "O Paciente: " + paciente.getNome() + "foi cadastrado com sucesso!");
+                        
+                    }
+                    else{
+                        apagarCampos();
+                    }
+                    
+                }catch(Throwable e){
+                    paciente = null;
+                    apagarCampos();
+                    //e.printStackTrace();
+                    System.out.println("Entrou");
+                }
+                
                 
             }
         });
@@ -925,7 +971,27 @@ public class WiewDadosPessoais extends JFrame {
         botaoLimparCampos.setToolTipText("Limpar Campos do Cadastro");
         botaoLimparCampos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
+                
+                paciente = null;
+                apagarCampos();
             }
         });
+    }
+    
+    public void apagarCampos(){
+        campoNome.setText("");
+        campoRua.setText("");
+        campoBairro.setText("");
+        campoNumero.setText(null);
+        campoCidade.setText("");
+        campoUF.setText("");
+        campoCep.setText("");
+        campoCpf.setText("");
+        campoNaturalidade.setText("");
+        campoNacionalidade.setText("");
+        campoIdade.setText(null);
+        campoTelefone.setText("");
+        campoCelular.setText("");
+        campoRaca.setText("");
     }
 }

@@ -35,6 +35,10 @@ CREATE TABLE exame_clinico (
 
 id INTEGER NOT NULL PRIMARY KEY,
 
+rqp3 VARCHAR (40),
+rqp14_a VARCHAR (40),
+rqp14_b VARCHAR (40),
+
 rq1 VARCHAR (40),
 rq2_1_dir VARCHAR (40),
 rq2_2_esq VARCHAR (40),
@@ -51,11 +55,13 @@ rq4_c_dorart VARCHAR (40),
 
 rq5_a_dir VARCHAR (40),
 rq5_a_esq VARCHAR (40),
-rq5_a_med_est_mm VARCHAR (40),
+rq5_a_med_est_dir_mm VARCHAR (40),
+rq5_a_med_est_esq_mm VARCHAR (40),
 
 rq5_b_dir VARCHAR (40),
 rq5_b_esq VARCHAR (40),
-rq5_b_med_est_mm VARCHAR (40),
+rq5_b_med_est_dir_mm VARCHAR (40),
+rq5_b_med_est_esq_mm VARCHAR (40),
 
 rq5_c_dir VARCHAR (40),
 rq5_c_esq VARCHAR (40),
@@ -121,7 +127,7 @@ id INTEGER NOT NULL PRIMARY KEY,
 
 rqp1 VARCHAR (40),
 rqp2 VARCHAR (40),
-rqp3 VARCHAR (40),
+--rqp3 VARCHAR (40),
 rqp4 INTEGER ,
 rqp5 VARCHAR (40),
 rqp6 VARCHAR (40),
@@ -133,8 +139,8 @@ rqp11 INTEGER,
 rqp12 INTEGER,
 rqp13 INTEGER,
 
-rqp14_a VARCHAR (40),
-rqp14_b VARCHAR (40),
+--rqp14_a VARCHAR (40),
+--rqp14_b VARCHAR (40),
 
 rqp15_a VARCHAR (40),
 rqp15_b VARCHAR (40),

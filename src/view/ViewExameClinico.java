@@ -1670,7 +1670,7 @@ public class ViewExameClinico extends JFrame {
                 String rqE4a, rqE4b, rqE4c, rqE4d;
 
                 //Aqui deve ser o resultado vindo da Query
-                rqp3 = questPessoal.getRqp3();
+                rqp3 = "";
 
                 //QE8 - Dor muscular extra-oral com palpação
                 // A                
@@ -1742,7 +1742,7 @@ public class ViewExameClinico extends JFrame {
                 exame.setRq4CMm(rqE4c);
                 exame.setRq4DMm(rqE4d);
                 
-                //Modificar o código aqui
+                //Modificar o código aqui, está faltando um atributo
                 exame.setRq5ADir(ComboBoxQE5ADireito.getSelectedItem().toString());
                 exame.setRq5AEsq(ComboBoxQE5AEsquerdo.getSelectedItem().toString());
                 exame.setRq5AMedEstMm(campoQE5ADireito.getText());
