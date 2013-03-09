@@ -911,14 +911,26 @@ public class WiewDadosPessoais extends JFrame {
                 paciente.setRaca(campoRaca.getText());
                 
                 try{
-                    JOptionPane.showConfirmDialog(null, "Deseja cadastrar esse Paciente?");
-
-                    controlador.inserirPaciente(paciente);
+                    int resposta;
+                    resposta = JOptionPane.showConfirmDialog(null, "Deseja cadastrar esse Paciente?");
+                    if(resposta == 1){
+                        apagarCampos();
+                    }
                     
-                    JOptionPane.showMessageDialog(null, "Paciente:" + paciente.getNome() + "Cadastardo com sucesso!");
+                    else if(resposta == 0){
+                        controlador.inserirPaciente(paciente);
+                        JOptionPane.showMessageDialog(null, "O Paciente: " + paciente.getNome() + "foi cadastrado com sucesso!");
+                        
+                    }
+                    else{
+                        apagarCampos();
+                    }
                     
-                }catch(Exception e){
-                    e.printStackTrace();
+                }catch(Throwable e){
+                    paciente = null;
+                    apagarCampos();
+                    //e.printStackTrace();
+                    System.out.println("Entrou");
                 }
                 
                 
