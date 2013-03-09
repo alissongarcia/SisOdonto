@@ -1,3 +1,5 @@
+package main;
+
 import negocio.Grupo_I;
 import javax.swing.JOptionPane;
 

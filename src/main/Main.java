@@ -1,3 +1,5 @@
+package main;
+
 
 import dao.DiagnosticoJpaController;
 import dao.PacienteJpaController;
