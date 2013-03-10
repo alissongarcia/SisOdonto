@@ -5,20 +5,12 @@
 package modelo;
 
 import java.io.Serializable;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author Carlos
+ * @author alisson
  */
 @Entity
 @Table(name = "exame_clinico")
@@ -26,6 +18,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 @NamedQueries({
     @NamedQuery(name = "ExameClinico.findAll", query = "SELECT e FROM ExameClinico e"),
     @NamedQuery(name = "ExameClinico.findById", query = "SELECT e FROM ExameClinico e WHERE e.id = :id"),
+    @NamedQuery(name = "ExameClinico.findByRqp3", query = "SELECT e FROM ExameClinico e WHERE e.rqp3 = :rqp3"),
+    @NamedQuery(name = "ExameClinico.findByRqp14A", query = "SELECT e FROM ExameClinico e WHERE e.rqp14A = :rqp14A"),
+    @NamedQuery(name = "ExameClinico.findByRqp14B", query = "SELECT e FROM ExameClinico e WHERE e.rqp14B = :rqp14B"),
     @NamedQuery(name = "ExameClinico.findByRq1", query = "SELECT e FROM ExameClinico e WHERE e.rq1 = :rq1"),
     @NamedQuery(name = "ExameClinico.findByRq21Dir", query = "SELECT e FROM ExameClinico e WHERE e.rq21Dir = :rq21Dir"),
     @NamedQuery(name = "ExameClinico.findByRq22Esq", query = "SELECT e FROM ExameClinico e WHERE e.rq22Esq = :rq22Esq"),
@@ -40,10 +35,12 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "ExameClinico.findByRq4CDorart", query = "SELECT e FROM ExameClinico e WHERE e.rq4CDorart = :rq4CDorart"),
     @NamedQuery(name = "ExameClinico.findByRq5ADir", query = "SELECT e FROM ExameClinico e WHERE e.rq5ADir = :rq5ADir"),
     @NamedQuery(name = "ExameClinico.findByRq5AEsq", query = "SELECT e FROM ExameClinico e WHERE e.rq5AEsq = :rq5AEsq"),
-    @NamedQuery(name = "ExameClinico.findByRq5AMedEstMm", query = "SELECT e FROM ExameClinico e WHERE e.rq5AMedEstMm = :rq5AMedEstMm"),
+    @NamedQuery(name = "ExameClinico.findByRq5AMedEstDirMm", query = "SELECT e FROM ExameClinico e WHERE e.rq5AMedEstDirMm = :rq5AMedEstDirMm"),
+    @NamedQuery(name = "ExameClinico.findByRq5AMedEstEsqMm", query = "SELECT e FROM ExameClinico e WHERE e.rq5AMedEstEsqMm = :rq5AMedEstEsqMm"),
     @NamedQuery(name = "ExameClinico.findByRq5BDir", query = "SELECT e FROM ExameClinico e WHERE e.rq5BDir = :rq5BDir"),
     @NamedQuery(name = "ExameClinico.findByRq5BEsq", query = "SELECT e FROM ExameClinico e WHERE e.rq5BEsq = :rq5BEsq"),
-    @NamedQuery(name = "ExameClinico.findByRq5BMedEstMm", query = "SELECT e FROM ExameClinico e WHERE e.rq5BMedEstMm = :rq5BMedEstMm"),
+    @NamedQuery(name = "ExameClinico.findByRq5BMedEstDirMm", query = "SELECT e FROM ExameClinico e WHERE e.rq5BMedEstDirMm = :rq5BMedEstDirMm"),
+    @NamedQuery(name = "ExameClinico.findByRq5BMedEstEsqMm", query = "SELECT e FROM ExameClinico e WHERE e.rq5BMedEstEsqMm = :rq5BMedEstEsqMm"),
     @NamedQuery(name = "ExameClinico.findByRq5CDir", query = "SELECT e FROM ExameClinico e WHERE e.rq5CDir = :rq5CDir"),
     @NamedQuery(name = "ExameClinico.findByRq5CEsq", query = "SELECT e FROM ExameClinico e WHERE e.rq5CEsq = :rq5CEsq"),
     @NamedQuery(name = "ExameClinico.findByRq6AMm", query = "SELECT e FROM ExameClinico e WHERE e.rq6AMm = :rq6AMm"),
@@ -90,9 +87,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class ExameClinico implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "id")
     private Integer id;
+    @Column(name = "rqp3")
+    private String rqp3;
+    @Column(name = "rqp14_a")
+    private String rqp14A;
+    @Column(name = "rqp14_b")
+    private String rqp14B;
     @Column(name = "rq1")
     private String rq1;
     @Column(name = "rq2_1_dir")
@@ -121,14 +125,18 @@ public class ExameClinico implements Serializable {
     private String rq5ADir;
     @Column(name = "rq5_a_esq")
     private String rq5AEsq;
-    @Column(name = "rq5_a_med_est_mm")
-    private String rq5AMedEstMm;
+    @Column(name = "rq5_a_med_est_dir_mm")
+    private String rq5AMedEstDirMm;
+    @Column(name = "rq5_a_med_est_esq_mm")
+    private String rq5AMedEstEsqMm;
     @Column(name = "rq5_b_dir")
     private String rq5BDir;
     @Column(name = "rq5_b_esq")
     private String rq5BEsq;
-    @Column(name = "rq5_b_med_est_mm")
-    private String rq5BMedEstMm;
+    @Column(name = "rq5_b_med_est_dir_mm")
+    private String rq5BMedEstDirMm;
+    @Column(name = "rq5_b_med_est_esq_mm")
+    private String rq5BMedEstEsqMm;
     @Column(name = "rq5_c_dir")
     private String rq5CDir;
     @Column(name = "rq5_c_esq")
@@ -232,6 +240,30 @@ public class ExameClinico implements Serializable {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getRqp3() {
+        return rqp3;
+    }
+
+    public void setRqp3(String rqp3) {
+        this.rqp3 = rqp3;
+    }
+
+    public String getRqp14A() {
+        return rqp14A;
+    }
+
+    public void setRqp14A(String rqp14A) {
+        this.rqp14A = rqp14A;
+    }
+
+    public String getRqp14B() {
+        return rqp14B;
+    }
+
+    public void setRqp14B(String rqp14B) {
+        this.rqp14B = rqp14B;
     }
 
     public String getRq1() {
@@ -346,12 +378,20 @@ public class ExameClinico implements Serializable {
         this.rq5AEsq = rq5AEsq;
     }
 
-    public String getRq5AMedEstMm() {
-        return rq5AMedEstMm;
+    public String getRq5AMedEstDirMm() {
+        return rq5AMedEstDirMm;
     }
 
-    public void setRq5AMedEstMm(String rq5AMedEstMm) {
-        this.rq5AMedEstMm = rq5AMedEstMm;
+    public void setRq5AMedEstDirMm(String rq5AMedEstDirMm) {
+        this.rq5AMedEstDirMm = rq5AMedEstDirMm;
+    }
+
+    public String getRq5AMedEstEsqMm() {
+        return rq5AMedEstEsqMm;
+    }
+
+    public void setRq5AMedEstEsqMm(String rq5AMedEstEsqMm) {
+        this.rq5AMedEstEsqMm = rq5AMedEstEsqMm;
     }
 
     public String getRq5BDir() {
@@ -370,12 +410,20 @@ public class ExameClinico implements Serializable {
         this.rq5BEsq = rq5BEsq;
     }
 
-    public String getRq5BMedEstMm() {
-        return rq5BMedEstMm;
+    public String getRq5BMedEstDirMm() {
+        return rq5BMedEstDirMm;
     }
 
-    public void setRq5BMedEstMm(String rq5BMedEstMm) {
-        this.rq5BMedEstMm = rq5BMedEstMm;
+    public void setRq5BMedEstDirMm(String rq5BMedEstDirMm) {
+        this.rq5BMedEstDirMm = rq5BMedEstDirMm;
+    }
+
+    public String getRq5BMedEstEsqMm() {
+        return rq5BMedEstEsqMm;
+    }
+
+    public void setRq5BMedEstEsqMm(String rq5BMedEstEsqMm) {
+        this.rq5BMedEstEsqMm = rq5BMedEstEsqMm;
     }
 
     public String getRq5CDir() {

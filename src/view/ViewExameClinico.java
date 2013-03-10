@@ -3,6 +3,7 @@
  * and open the template in the editor.
  */
 package view;
+import java.awt.Toolkit;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.DefaultComboBoxModel;
@@ -42,12 +43,12 @@ public class ViewExameClinico extends JFrame {
     private javax.swing.JComboBox ComboBoxQE6CArticular;
     private javax.swing.JComboBox ComboBoxQE6CMuscular;
     private javax.swing.JComboBox ComboBoxQE6DDesvio;
-    private javax.swing.JComboBox ComboBoxQE7AExcusãoDireita;
-    private javax.swing.JComboBox ComboBoxQE7AExcusãoEsquerda;
-    private javax.swing.JComboBox ComboBoxQE7AProtusão;
-    private javax.swing.JComboBox ComboBoxQE7BExcusão;
-    private javax.swing.JComboBox ComboBoxQE7BExcusãoDireita;
-    private javax.swing.JComboBox ComboBoxQE7BExcusãoEsquerda;
+    private javax.swing.JComboBox ComboBoxQE7AExcusaoDireita;
+    private javax.swing.JComboBox ComboBoxQE7AExcusaoEsquerda;
+    private javax.swing.JComboBox ComboBoxQE7AProtusao;
+    private javax.swing.JComboBox ComboBoxQE7BProtusao;
+    private javax.swing.JComboBox ComboBoxQE7BExcusaoDireita;
+    private javax.swing.JComboBox ComboBoxQE7BExcusaoEsquerda;
     private javax.swing.JComboBox ComboBoxQE8AD;
     private javax.swing.JComboBox ComboBoxQE8AE;
     private javax.swing.JComboBox ComboBoxQE8BD;
@@ -64,6 +65,10 @@ public class ViewExameClinico extends JFrame {
     private javax.swing.JComboBox ComboBoxQE8GE;
     private javax.swing.JComboBox ComboBoxQE8HD;
     private javax.swing.JComboBox ComboBoxQE8HE;
+    private javax.swing.JComboBox ComboBoxQE9ALD;
+    private javax.swing.JComboBox ComboBoxQE9ALE;
+    private javax.swing.JComboBox ComboBoxQE9BLD;
+    private javax.swing.JComboBox ComboBoxQE9BLE;
     private javax.swing.JComboBox ComboBoxQuestao14aQuestionario;
     private javax.swing.JComboBox ComboBoxQuestao14bQuestionario;
     private javax.swing.JComboBox ComboBoxQuestaoQuestionario03;
@@ -79,7 +84,7 @@ public class ViewExameClinico extends JFrame {
     private javax.swing.JFormattedTextField campoQE5BDireito;
     private javax.swing.JFormattedTextField campoQE5BEsquerdo;
     private javax.swing.JFormattedTextField campoQE6A;
-    private javax.swing.JFormattedTextField campoQE6AC;
+    private javax.swing.JFormattedTextField campoQE6C;
     private javax.swing.JFormattedTextField campoQE6B;
     private javax.swing.JFormattedTextField campoQE6D;
     private javax.swing.JLabel jLabel1;
@@ -141,10 +146,6 @@ public class ViewExameClinico extends JFrame {
     private javax.swing.JLabel rotuloLEQE11;
     private javax.swing.JLabel rotuloLEQE8;
     private javax.swing.JLabel rotuloQE09;
-    private javax.swing.JComboBox rotuloQE09ALD;
-    private javax.swing.JComboBox rotuloQE09ALE;
-    private javax.swing.JComboBox rotuloQE09BLD;
-    private javax.swing.JComboBox rotuloQE09BLE;
     private javax.swing.JLabel rotuloQE10;
     private javax.swing.JLabel rotuloQE10A;
     private javax.swing.JLabel rotuloQE10A1;
@@ -214,12 +215,12 @@ public class ViewExameClinico extends JFrame {
         ComboBoxQE10ALE = new javax.swing.JComboBox();
         ComboBoxQE10BLE = new javax.swing.JComboBox();
         jPanel11 = new javax.swing.JPanel();
-        rotuloQE09BLE = new javax.swing.JComboBox();
-        rotuloQE09BLD = new javax.swing.JComboBox();
+        ComboBoxQE9BLE = new javax.swing.JComboBox();
+        ComboBoxQE9BLD = new javax.swing.JComboBox();
         rotuloQE10B1 = new javax.swing.JLabel();
         rotuloQE10A1 = new javax.swing.JLabel();
-        rotuloQE09ALD = new javax.swing.JComboBox();
-        rotuloQE09ALE = new javax.swing.JComboBox();
+        ComboBoxQE9ALD = new javax.swing.JComboBox();
+        ComboBoxQE9ALE = new javax.swing.JComboBox();
         rotuloLEQE11 = new javax.swing.JLabel();
         rotuloLDQE11 = new javax.swing.JLabel();
         rotuloQE09 = new javax.swing.JLabel();
@@ -253,16 +254,16 @@ public class ViewExameClinico extends JFrame {
         rotuloLEQE8 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
         rotuloQE7 = new javax.swing.JLabel();
-        ComboBoxQE7BExcusãoDireita = new javax.swing.JComboBox();
-        ComboBoxQE7BExcusãoEsquerda = new javax.swing.JComboBox();
-        ComboBoxQE7BExcusão = new javax.swing.JComboBox();
+        ComboBoxQE7BExcusaoDireita = new javax.swing.JComboBox();
+        ComboBoxQE7BExcusaoEsquerda = new javax.swing.JComboBox();
+        ComboBoxQE7BProtusao = new javax.swing.JComboBox();
         rotuloQE7BProtusão = new javax.swing.JLabel();
         rotuloQE7BExcusãoEsquerda = new javax.swing.JLabel();
         rotuloQE7BExcusãoDireita = new javax.swing.JLabel();
         rotuloQE7B = new javax.swing.JLabel();
-        ComboBoxQE7AExcusãoDireita = new javax.swing.JComboBox();
-        ComboBoxQE7AExcusãoEsquerda = new javax.swing.JComboBox();
-        ComboBoxQE7AProtusão = new javax.swing.JComboBox();
+        ComboBoxQE7AExcusaoDireita = new javax.swing.JComboBox();
+        ComboBoxQE7AExcusaoEsquerda = new javax.swing.JComboBox();
+        ComboBoxQE7AProtusao = new javax.swing.JComboBox();
         rotuloQE7AProtusão = new javax.swing.JLabel();
         rotuloQE7AExcusãoEsquerda = new javax.swing.JLabel();
         rotuloQE7AExcusãoDireita = new javax.swing.JLabel();
@@ -282,7 +283,7 @@ public class ViewExameClinico extends JFrame {
         ComboBoxQE6CArticular = new javax.swing.JComboBox();
         ComboBoxQE6CMuscular = new javax.swing.JComboBox();
         rotuloQE6C = new javax.swing.JLabel();
-        campoQE6AC = new javax.swing.JFormattedTextField();
+        campoQE6C = new javax.swing.JFormattedTextField();
         rotuloQE6D = new javax.swing.JLabel();
         campoQE6D = new javax.swing.JFormattedTextField();
         ComboBoxQE6DDesvio = new javax.swing.JComboBox();
@@ -458,9 +459,9 @@ public class ViewExameClinico extends JFrame {
         jPanel11.setBackground(new java.awt.Color(255, 255, 255));
         jPanel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        rotuloQE09BLE.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3" }));
+        ComboBoxQE9BLE.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3" }));
 
-        rotuloQE09BLD.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3" }));
+        ComboBoxQE9BLD.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3" }));
 
         rotuloQE10B1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE10B1.setText("Ligamento posterior(dentro do ouvido)");
@@ -468,9 +469,9 @@ public class ViewExameClinico extends JFrame {
         rotuloQE10A1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE10A1.setText("Pólo lateral(por fora)");
 
-        rotuloQE09ALD.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3" }));
+        ComboBoxQE9ALD.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3" }));
 
-        rotuloQE09ALE.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3" }));
+        ComboBoxQE9ALE.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3" }));
 
         rotuloLEQE11.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloLEQE11.setText("Lado Esquerdo");
@@ -496,13 +497,13 @@ public class ViewExameClinico extends JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(rotuloLDQE11)
-                            .addComponent(rotuloQE09ALD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(rotuloQE09BLD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(ComboBoxQE9ALD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ComboBoxQE9BLD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(38, 38, 38)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(rotuloQE09BLE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ComboBoxQE9BLE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(rotuloLEQE11)
-                            .addComponent(rotuloQE09ALE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(ComboBoxQE9ALE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel11Layout.setVerticalGroup(
@@ -519,15 +520,15 @@ public class ViewExameClinico extends JFrame {
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(rotuloQE10A1)
-                            .addComponent(rotuloQE09ALD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(ComboBoxQE9ALD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(rotuloQE10B1)
-                            .addComponent(rotuloQE09BLD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(ComboBoxQE9BLD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addComponent(rotuloQE09ALE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ComboBoxQE9ALE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rotuloQE09BLE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(ComboBoxQE9BLE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
@@ -697,11 +698,11 @@ public class ViewExameClinico extends JFrame {
         rotuloQE7.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE7.setText("Questão 07 - Ruídos articulares nas excursões");
 
-        ComboBoxQE7BExcusãoDireita.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
+        ComboBoxQE7BExcusaoDireita.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
 
-        ComboBoxQE7BExcusãoEsquerda.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
+        ComboBoxQE7BExcusaoEsquerda.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
 
-        ComboBoxQE7BExcusão.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
+        ComboBoxQE7BProtusao.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
 
         rotuloQE7BProtusão.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE7BProtusão.setText("Protrusão");
@@ -715,11 +716,11 @@ public class ViewExameClinico extends JFrame {
         rotuloQE7B.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE7B.setText("Ruídos -  Esquerdo");
 
-        ComboBoxQE7AExcusãoDireita.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
+        ComboBoxQE7AExcusaoDireita.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
 
-        ComboBoxQE7AExcusãoEsquerda.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
+        ComboBoxQE7AExcusaoEsquerda.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
 
-        ComboBoxQE7AProtusão.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
+        ComboBoxQE7AProtusao.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nenhum - 0", "Estalido - 1", "Crepitação Grosseira- 2", "Crepitação Fina - 3" }));
 
         rotuloQE7AProtusão.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         rotuloQE7AProtusão.setText("Protrusão");
@@ -752,18 +753,18 @@ public class ViewExameClinico extends JFrame {
                                 .addGap(61, 61, 61)
                                 .addComponent(rotuloQE7BProtusão))
                             .addGroup(jPanel9Layout.createSequentialGroup()
-                                .addComponent(ComboBoxQE7BExcusãoDireita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(ComboBoxQE7BExcusaoDireita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(ComboBoxQE7BExcusãoEsquerda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(ComboBoxQE7BExcusaoEsquerda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(ComboBoxQE7BExcusão, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(ComboBoxQE7BProtusao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel9Layout.createSequentialGroup()
-                                .addComponent(ComboBoxQE7AExcusãoDireita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(ComboBoxQE7AExcusaoDireita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(ComboBoxQE7AExcusãoEsquerda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(ComboBoxQE7AExcusaoEsquerda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(ComboBoxQE7AProtusão, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(ComboBoxQE7AProtusao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel9Layout.createSequentialGroup()
                                 .addComponent(rotuloQE7AExcusãoDireita)
                                 .addGap(75, 75, 75)
@@ -786,9 +787,9 @@ public class ViewExameClinico extends JFrame {
                     .addComponent(rotuloQE7AProtusão))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ComboBoxQE7AExcusãoDireita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ComboBoxQE7AExcusãoEsquerda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ComboBoxQE7AProtusão, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ComboBoxQE7AExcusaoDireita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ComboBoxQE7AExcusaoEsquerda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ComboBoxQE7AProtusao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21)
                 .addComponent(rotuloQE7B)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -798,9 +799,9 @@ public class ViewExameClinico extends JFrame {
                     .addComponent(rotuloQE7BProtusão))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ComboBoxQE7BExcusãoDireita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ComboBoxQE7BExcusãoEsquerda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ComboBoxQE7BExcusão, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ComboBoxQE7BExcusaoDireita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ComboBoxQE7BExcusaoEsquerda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ComboBoxQE7BProtusao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
@@ -850,7 +851,7 @@ public class ViewExameClinico extends JFrame {
         rotuloQE6C.setText("Protusão");
 
         try {
-            campoQE6AC.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##")));
+            campoQE6C.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
@@ -884,7 +885,7 @@ public class ViewExameClinico extends JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(campoQE6A, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(campoQE6AC, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(campoQE6C, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(campoQE6B, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(campoQE6D, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -933,7 +934,7 @@ public class ViewExameClinico extends JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rotuloQE6C)
-                    .addComponent(campoQE6AC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoQE6C, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ComboBoxQE6CMuscular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ComboBoxQE6CArticular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
@@ -1634,8 +1635,9 @@ public class ViewExameClinico extends JFrame {
                 .addComponent(ScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 850, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
+        
         pack();
+         
     }
 
     private void acoesBotoes() {
@@ -1645,10 +1647,13 @@ public class ViewExameClinico extends JFrame {
                 
                 String diagnostico_I = diagnostico_Grupo_I();
                 rotuloResultado.setText(diagnostico_I);
+                System.out.println(diagnostico_I);
                 
             }
         });
-    }
+    } 
+    
+    
     
     public String diagnostico_Grupo_I(){
                 
@@ -1731,6 +1736,11 @@ public class ViewExameClinico extends JFrame {
                 String diagnostico = "";
                 
                 exame = new ExameClinico();
+                
+                exame.setRqp3(ComboBoxQuestaoQuestionario03.getSelectedItem().toString());
+                exame.setRqp14A(ComboBoxQuestao14aQuestionario.getSelectedItem().toString());
+                exame.setRqp14B(ComboBoxQuestao14bQuestionario.getSelectedItem().toString());
+                
                 exame.setRq1(ComboBoxQE1.getSelectedItem().toString());
                 exame.setRq21Dir(ComboBoxQE2ALadoDireito.getSelectedItem().toString());
                 exame.setRq22Esq(ComboBoxQE2ALadoEsquerdo.getSelectedItem().toString());
@@ -1742,20 +1752,89 @@ public class ViewExameClinico extends JFrame {
                 exame.setRq4CMm(rqE4c);
                 exame.setRq4DMm(rqE4d);
                 
-                //Modificar o código aqui, está faltando um atributo
+                //Questão 5
                 exame.setRq5ADir(ComboBoxQE5ADireito.getSelectedItem().toString());
                 exame.setRq5AEsq(ComboBoxQE5AEsquerdo.getSelectedItem().toString());
-                exame.setRq5AMedEstMm(campoQE5ADireito.getText());
-                //controlador.inserirExameClinico(exame);
+                exame.setRq5AMedEstDirMm(campoQE5ADireito.getText());
+                exame.setRq5AMedEstEsqMm(campoQE5AEsquerdo.getText());
+                
+                exame.setRq5BDir(ComboBoxQE5BDireito.getSelectedItem().toString());
+                exame.setRq5BEsq(ComboBoxQE5BEsquerdo.getSelectedItem().toString());
+                exame.setRq5BMedEstDirMm(campoQE5BDireito.getText());
+                exame.setRq5BMedEstEsqMm(campoQE5BEsquerdo.getText());
+                
+                //Questão 6
+                exame.setRq6AMm(campoQE6A.getText());
+                exame.setRq6ADormusc(ComboBoxQE6AMuscular.getSelectedItem().toString());
+                exame.setRq6ADorart(ComboBoxQE6AArticular.getSelectedItem().toString());
+                
+                exame.setRq6BMm(campoQE6B.getText());
+                exame.setRq6BDormusc(ComboBoxQE6BMuscular.getSelectedItem().toString());
+                exame.setRq6BDorart(ComboBoxQE6BArticular.getSelectedItem().toString());
+                
+                exame.setRq6CMm(campoQE6C.getText());
+                exame.setRq6CDormusc(ComboBoxQE6CMuscular.getSelectedItem().toString());
+                exame.setRq6CDorart(ComboBoxQE6CArticular.getSelectedItem().toString());
+                
+                exame.setRq6DMm(campoQE6D.getText());
+                exame.setRq6DDesvio(ComboBoxQE6DDesvio.getSelectedItem().toString());
+                
+                //Questão 7
+                exame.setRq7DirExcDir(ComboBoxQE7AExcusaoDireita.getSelectedItem().toString());
+                exame.setRq7DirExcEsq(ComboBoxQE7AExcusaoEsquerda.getSelectedItem().toString());
+                exame.setRq7DirProtusao(ComboBoxQE7AProtusao.getSelectedItem().toString());
+                
+                exame.setRq7EsqExcDir(ComboBoxQE7BExcusaoDireita.getSelectedItem().toString());
+                exame.setRq7EsqExcEsq(ComboBoxQE7BExcusaoEsquerda.getSelectedItem().toString());
+                exame.setRq7EsqProtusao(ComboBoxQE7BProtusao.getSelectedItem().toString());
+                
+                //Questão 8
+                exame.setRq8ADir(QE8AD);
+                exame.setRq8ADir(QE8AE);
+                
+                exame.setRq8BDir(QE8BD);
+                exame.setRq8BEsq(QE8BE);
+                
+                exame.setRq8CDir(QE8CD);
+                exame.setRq8CEsq(QE8CE);
+                
+                exame.setRq8DDir(QE8DD);
+                exame.setRq8DEsq(QE8DE);
+                
+                exame.setRq8EDir(QE8ED);
+                exame.setRq8EEsq(QE8EE);
+                
+                exame.setRq8FDir(QE8FD);
+                exame.setRq8FEsq(QE8FE);
+                
+                exame.setRq8GDir(QE8GD);
+                exame.setRq8GEsq(QE8GE);
+                
+                exame.setRq8HDir(QE8HD);
+                exame.setRq8HEsq(QE8HE);
+                
+                //Questão 9
+                exame.setRq9ADir(ComboBoxQE9ALD.getSelectedItem().toString());
+                exame.setRq9AEsq(ComboBoxQE9ALE.getSelectedItem().toString());
+                
+                exame.setRq9BDir(ComboBoxQE9BLD.getSelectedItem().toString());
+                exame.setRq9BDir(ComboBoxQE9BLE.getSelectedItem().toString());
+                
+                exame.setRq10ADir(QE10AD);
+                exame.setRq10AEsq(QE10AE);
+                
+                exame.setRq10BDir(QE10BD);
+                exame.setRq10BEsq(QE10BE);
+                
+                Paciente p = new Paciente();
+                
+                exame.setCodPacienteExame(p);
+                
+                controlador.inserirExameClinico(exame);
                 
                 diagnostico = controlador.grupo_I(rqp3, QE8AD, QE8AE, QE8BD, QE8BE, QE8CD, QE8CE, QE8DD, QE8DE, QE8ED, QE8EE, QE8FD, QE8FE, QE8GD, QE8GE, QE8HD, QE8HE, QE10AD, QE10AE, QE10BD, QE10BE, rqe1, rqE4a, rqE4b, rqE4c, rqE4d);
                 return diagnostico;
                 
-                
-                
-                /*controlador.diagnosticar(rqe3, QE8AD, QE8AE, QE8BD, QE8BE, QE8CD, QE8CE, QE8DD, QE8DE, QE8ED, QE8EE, QE8FD, QE8FE, 
-                        QE8GD, QE8GE, QE8HD, QE8HE, QE10AD, QE10AE, QE10BD, QE10BE, rqe1, campoQE4A.getText(), campoQE4B.getText(), campoQE4C.getText(),
-                        campoQE4D.getText());*/
     }
     
     public void preencherComboPaciente(){

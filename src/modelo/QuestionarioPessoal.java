@@ -5,20 +5,12 @@
 package modelo;
 
 import java.io.Serializable;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author Carlos
+ * @author alisson
  */
 @Entity
 @Table(name = "questionario_pessoal")
@@ -28,7 +20,6 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "QuestionarioPessoal.findById", query = "SELECT q FROM QuestionarioPessoal q WHERE q.id = :id"),
     @NamedQuery(name = "QuestionarioPessoal.findByRqp1", query = "SELECT q FROM QuestionarioPessoal q WHERE q.rqp1 = :rqp1"),
     @NamedQuery(name = "QuestionarioPessoal.findByRqp2", query = "SELECT q FROM QuestionarioPessoal q WHERE q.rqp2 = :rqp2"),
-    @NamedQuery(name = "QuestionarioPessoal.findByRqp3", query = "SELECT q FROM QuestionarioPessoal q WHERE q.rqp3 = :rqp3"),
     @NamedQuery(name = "QuestionarioPessoal.findByRqp4", query = "SELECT q FROM QuestionarioPessoal q WHERE q.rqp4 = :rqp4"),
     @NamedQuery(name = "QuestionarioPessoal.findByRqp5", query = "SELECT q FROM QuestionarioPessoal q WHERE q.rqp5 = :rqp5"),
     @NamedQuery(name = "QuestionarioPessoal.findByRqp6", query = "SELECT q FROM QuestionarioPessoal q WHERE q.rqp6 = :rqp6"),
@@ -39,8 +30,6 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "QuestionarioPessoal.findByRqp11", query = "SELECT q FROM QuestionarioPessoal q WHERE q.rqp11 = :rqp11"),
     @NamedQuery(name = "QuestionarioPessoal.findByRqp12", query = "SELECT q FROM QuestionarioPessoal q WHERE q.rqp12 = :rqp12"),
     @NamedQuery(name = "QuestionarioPessoal.findByRqp13", query = "SELECT q FROM QuestionarioPessoal q WHERE q.rqp13 = :rqp13"),
-    @NamedQuery(name = "QuestionarioPessoal.findByRqp14A", query = "SELECT q FROM QuestionarioPessoal q WHERE q.rqp14A = :rqp14A"),
-    @NamedQuery(name = "QuestionarioPessoal.findByRqp14B", query = "SELECT q FROM QuestionarioPessoal q WHERE q.rqp14B = :rqp14B"),
     @NamedQuery(name = "QuestionarioPessoal.findByRqp15A", query = "SELECT q FROM QuestionarioPessoal q WHERE q.rqp15A = :rqp15A"),
     @NamedQuery(name = "QuestionarioPessoal.findByRqp15B", query = "SELECT q FROM QuestionarioPessoal q WHERE q.rqp15B = :rqp15B"),
     @NamedQuery(name = "QuestionarioPessoal.findByRqp15C", query = "SELECT q FROM QuestionarioPessoal q WHERE q.rqp15C = :rqp15C"),
@@ -123,8 +112,6 @@ public class QuestionarioPessoal implements Serializable {
     private String rqp1;
     @Column(name = "rqp2")
     private String rqp2;
-    @Column(name = "rqp3")
-    private String rqp3;
     @Column(name = "rqp4")
     private Integer rqp4;
     @Column(name = "rqp5")
@@ -145,10 +132,6 @@ public class QuestionarioPessoal implements Serializable {
     private Integer rqp12;
     @Column(name = "rqp13")
     private Integer rqp13;
-    @Column(name = "rqp14_a")
-    private String rqp14A;
-    @Column(name = "rqp14_b")
-    private String rqp14B;
     @Column(name = "rqp15_a")
     private String rqp15A;
     @Column(name = "rqp15_b")
@@ -328,14 +311,6 @@ public class QuestionarioPessoal implements Serializable {
         this.rqp2 = rqp2;
     }
 
-    public String getRqp3() {
-        return rqp3;
-    }
-
-    public void setRqp3(String rqp3) {
-        this.rqp3 = rqp3;
-    }
-
     public Integer getRqp4() {
         return rqp4;
     }
@@ -414,22 +389,6 @@ public class QuestionarioPessoal implements Serializable {
 
     public void setRqp13(Integer rqp13) {
         this.rqp13 = rqp13;
-    }
-
-    public String getRqp14A() {
-        return rqp14A;
-    }
-
-    public void setRqp14A(String rqp14A) {
-        this.rqp14A = rqp14A;
-    }
-
-    public String getRqp14B() {
-        return rqp14B;
-    }
-
-    public void setRqp14B(String rqp14B) {
-        this.rqp14B = rqp14B;
     }
 
     public String getRqp15A() {
