@@ -19,7 +19,7 @@ import modelo.QuestionarioPessoal;
 
 /**
  *
- * @author alisson
+ * @author Carlos
  */
 public class QuestionarioPessoalJpaController implements Serializable {
 
@@ -178,6 +178,6 @@ public class QuestionarioPessoalJpaController implements Serializable {
         //consulta = em.createQuery("SELECT q FROM QuestionarioPessoal q, Paciente p WHERE q.id = p.cod_quest_pessoal");
         consulta.setParameter("codPaciente", codPaciente);
         return (QuestionarioPessoal)consulta.getSingleResult();
-    }
+}
     
 }

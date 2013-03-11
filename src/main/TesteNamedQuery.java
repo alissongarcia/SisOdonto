@@ -37,9 +37,9 @@ public class TesteNamedQuery {
         //dao.create(quest);
         
         QuestionarioPessoal o = dao.buscarCampos(codPaciente);
-        //System.out.println("\n\n\n\n\n\n\n\n\n" + o.getRqp3());
-        //System.out.println(o.getRqp14A());
-        //System.out.println(o.getRqp14B());
+    //    System.out.println("\n\n\n\n\n\n\n\n\n" + o.getRqp3());
+    //    System.out.println(o.getRqp14A());
+    //    System.out.println(o.getRqp14B());
 //        System.out.println("\n\n\n\n\n\n\n\n\n" + o.get(0));
 //        System.out.println(o.get(1));
 //        System.out.println(o.get(2));

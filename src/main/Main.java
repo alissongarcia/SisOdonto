@@ -3,8 +3,6 @@ package main;
 
 import dao.DiagnosticoJpaController;
 import dao.PacienteJpaController;
-import java.awt.Dimension;
-import java.awt.Toolkit;
 import modelo.Diagnostico;
 import modelo.Paciente;
 import negocio.Grupo_I;
@@ -22,6 +20,7 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {
+        
         
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -48,12 +47,14 @@ public class Main {
          ViewExameClinico viewExameClinico = new ViewExameClinico();
          viewExameClinico.setVisible(true);
          
-         
-//       WiewDadosPessoais viewDadosPessoais = new WiewDadosPessoais();
-//       viewDadosPessoais.setVisible(true);
-//       
-//       ViewQuestionarioPessoal viewQuestionario = new ViewQuestionarioPessoal();
-//       viewQuestionario.setVisible(true);
+       WiewDadosPessoais viewDadosPessoais = new WiewDadosPessoais();
+       viewDadosPessoais.setVisible(true);
+       
+       ViewQuestionarioPessoal viewQuestionario = new ViewQuestionarioPessoal();
+       Paciente p = new Paciente();
+       p.setNome("Angelo");
+       viewQuestionario.iniciar(p);
+       viewQuestionario.setVisible(true);
         
     }
 }
