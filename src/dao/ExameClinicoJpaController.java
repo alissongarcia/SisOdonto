@@ -19,7 +19,7 @@ import modelo.Paciente;
 
 /**
  *
- * @author Carlos
+ * @author alisson
  */
 public class ExameClinicoJpaController implements Serializable {
 

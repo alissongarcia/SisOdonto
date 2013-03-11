@@ -6,20 +6,13 @@ package modelo;
 
 import java.io.Serializable;
 import java.util.List;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author Carlos
+ * @author alisson
  */
 @Entity
 @Table(name = "paciente")
@@ -42,50 +35,48 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Paciente.findByIdade", query = "SELECT p FROM Paciente p WHERE p.idade = :idade"),
     @NamedQuery(name = "Paciente.findByNaturalidade", query = "SELECT p FROM Paciente p WHERE p.naturalidade = :naturalidade"),
     @NamedQuery(name = "Paciente.findByNacionalidade", query = "SELECT p FROM Paciente p WHERE p.nacionalidade = :nacionalidade")})
-
 public class Paciente implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
-    @Column(name = "ID")
+    @Column(name = "id")
     private Integer id;
-    @Column(name = "NOME")
+    @Column(name = "nome")
     private String nome;
-    @Column(name = "RUA")
+    @Column(name = "rua")
     private String rua;
-    @Column(name = "BAIRRO")
+    @Column(name = "bairro")
     private String bairro;
-    @Column(name = "NUMERO")
+    @Column(name = "numero")
     private Integer numero;
-    @Column(name = "CIDADE")
+    @Column(name = "cidade")
     private String cidade;
-    @Column(name = "RACA")
+    @Column(name = "raca")
     private String raca;
-    @Column(name = "CEP")
+    @Column(name = "cep")
     private String cep;
-    @Column(name = "CPF")
+    @Column(name = "cpf")
     private String cpf;
-    @Column(name = "UF")
+    @Column(name = "uf")
     private String uf;
-    @Column(name = "TELEFONE")
+    @Column(name = "telefone")
     private String telefone;
-    @Column(name = "CELULAR")
+    @Column(name = "celular")
     private String celular;
-    @Column(name = "SEXO")
+    @Column(name = "sexo")
     private String sexo;
-    @Column(name = "IDADE")
+    @Column(name = "idade")
     private Integer idade;
-    @Column(name = "NATURALIDADE")
+    @Column(name = "naturalidade")
     private String naturalidade;
-    @Column(name = "NACIONALIDADE")
+    @Column(name = "nacionalidade")
     private String nacionalidade;
-    @OneToMany(mappedBy = "codPaciente")
-    private List<QuestionarioPessoal> questionarioPessoalList;
     @OneToMany(mappedBy = "codPacienteExame")
     private List<ExameClinico> exameClinicoList;
     @OneToMany(mappedBy = "codPacienteDiag")
     private List<Diagnostico> diagnosticoList;
-    
+    @OneToMany(mappedBy = "codPaciente")
+    private List<QuestionarioPessoal> questionarioPessoalList;
 
     public Paciente() {
     }
@@ -271,6 +262,7 @@ public class Paciente implements Serializable {
 
     @Override
     public String toString() {
-        return this.nome;
+        return "modelo.Paciente[ id=" + id + " ]";
     }
+    
 }

@@ -5,23 +5,15 @@
 package modelo;
 
 import java.io.Serializable;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author Ceduc
+ * @author alisson
  */
 @Entity
-@Table(name = "QUESTIONARIO_PESSOAL")
+@Table(name = "questionario_pessoal")
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "QuestionarioPessoal.findAll", query = "SELECT q FROM QuestionarioPessoal q"),
@@ -114,177 +106,177 @@ public class QuestionarioPessoal implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
-    @Column(name = "ID")
+    @Column(name = "id")
     private Integer id;
-    @Column(name = "RQP1")
+    @Column(name = "rqp1")
     private String rqp1;
-    @Column(name = "RQP2")
+    @Column(name = "rqp2")
     private String rqp2;
-    @Column(name = "RQP4")
-    private String rqp4;
-    @Column(name = "RQP5")
+    @Column(name = "rqp4")
+    private Integer rqp4;
+    @Column(name = "rqp5")
     private String rqp5;
-    @Column(name = "RQP6")
+    @Column(name = "rqp6")
     private String rqp6;
-    @Column(name = "RQP7")
-    private String rqp7;
-    @Column(name = "RQP8")
-    private String rqp8;
-    @Column(name = "RQP9")
-    private String rqp9;
-    @Column(name = "RQP10")
-    private String rqp10;
-    @Column(name = "RQP11")
-    private String rqp11;
-    @Column(name = "RQP12")
-    private String rqp12;
-    @Column(name = "RQP13")
-    private String rqp13;
-    @Column(name = "RQP15_A")
+    @Column(name = "rqp7")
+    private Integer rqp7;
+    @Column(name = "rqp8")
+    private Integer rqp8;
+    @Column(name = "rqp9")
+    private Integer rqp9;
+    @Column(name = "rqp10")
+    private Integer rqp10;
+    @Column(name = "rqp11")
+    private Integer rqp11;
+    @Column(name = "rqp12")
+    private Integer rqp12;
+    @Column(name = "rqp13")
+    private Integer rqp13;
+    @Column(name = "rqp15_a")
     private String rqp15A;
-    @Column(name = "RQP15_B")
+    @Column(name = "rqp15_b")
     private String rqp15B;
-    @Column(name = "RQP15_C")
+    @Column(name = "rqp15_c")
     private String rqp15C;
-    @Column(name = "RQP15_D")
+    @Column(name = "rqp15_d")
     private String rqp15D;
-    @Column(name = "RQP15_E")
+    @Column(name = "rqp15_e")
     private String rqp15E;
-    @Column(name = "RQP15_F")
+    @Column(name = "rqp15_f")
     private String rqp15F;
-    @Column(name = "RQP15_G")
+    @Column(name = "rqp15_g")
     private String rqp15G;
-    @Column(name = "RQP16_A")
+    @Column(name = "rqp16_a")
     private String rqp16A;
-    @Column(name = "RQP16_B")
+    @Column(name = "rqp16_b")
     private String rqp16B;
-    @Column(name = "RQP16_C")
+    @Column(name = "rqp16_c")
     private String rqp16C;
-    @Column(name = "RQP16_D")
+    @Column(name = "rqp16_d")
     private String rqp16D;
-    @Column(name = "RQP18")
+    @Column(name = "rqp18")
     private String rqp18;
-    @Column(name = "RQP17_A")
+    @Column(name = "rqp17_a")
     private String rqp17A;
-    @Column(name = "RQP17_B")
+    @Column(name = "rqp17_b")
     private String rqp17B;
-    @Column(name = "RQP19_A")
+    @Column(name = "rqp19_a")
     private String rqp19A;
-    @Column(name = "RQP19_B")
+    @Column(name = "rqp19_b")
     private String rqp19B;
-    @Column(name = "RQP19_C")
+    @Column(name = "rqp19_c")
     private String rqp19C;
-    @Column(name = "RQP19_D")
+    @Column(name = "rqp19_d")
     private String rqp19D;
-    @Column(name = "RQP19_E")
+    @Column(name = "rqp19_e")
     private String rqp19E;
-    @Column(name = "RQP19_F")
+    @Column(name = "rqp19_f")
     private String rqp19F;
-    @Column(name = "RQP19_G")
+    @Column(name = "rqp19_g")
     private String rqp19G;
-    @Column(name = "RQP19_H")
+    @Column(name = "rqp19_h")
     private String rqp19H;
-    @Column(name = "RQP19_I")
+    @Column(name = "rqp19_i")
     private String rqp19I;
-    @Column(name = "RQP19_J")
+    @Column(name = "rqp19_j")
     private String rqp19J;
-    @Column(name = "RQP19_K")
+    @Column(name = "rqp19_k")
     private String rqp19K;
-    @Column(name = "RQP19_L")
+    @Column(name = "rqp19_l")
     private String rqp19L;
-    @Column(name = "RQP20_A")
+    @Column(name = "rqp20_a")
     private String rqp20A;
-    @Column(name = "RQP20_B")
+    @Column(name = "rqp20_b")
     private String rqp20B;
-    @Column(name = "RQP20_C")
+    @Column(name = "rqp20_c")
     private String rqp20C;
-    @Column(name = "RQP20_D")
+    @Column(name = "rqp20_d")
     private String rqp20D;
-    @Column(name = "RQP20_E")
+    @Column(name = "rqp20_e")
     private String rqp20E;
-    @Column(name = "RQP20_F")
+    @Column(name = "rqp20_f")
     private String rqp20F;
-    @Column(name = "RQP20_G")
+    @Column(name = "rqp20_g")
     private String rqp20G;
-    @Column(name = "RQP20_H")
+    @Column(name = "rqp20_h")
     private String rqp20H;
-    @Column(name = "RQP20_I")
+    @Column(name = "rqp20_i")
     private String rqp20I;
-    @Column(name = "RQP20_J")
+    @Column(name = "rqp20_j")
     private String rqp20J;
-    @Column(name = "RQP20_K")
+    @Column(name = "rqp20_k")
     private String rqp20K;
-    @Column(name = "RQP20_L")
+    @Column(name = "rqp20_l")
     private String rqp20L;
-    @Column(name = "RQP20_M")
+    @Column(name = "rqp20_m")
     private String rqp20M;
-    @Column(name = "RQP20_N")
+    @Column(name = "rqp20_n")
     private String rqp20N;
-    @Column(name = "RQP20_O")
+    @Column(name = "rqp20_o")
     private String rqp20O;
-    @Column(name = "RQP20_P")
+    @Column(name = "rqp20_p")
     private String rqp20P;
-    @Column(name = "RQP20_Q")
+    @Column(name = "rqp20_q")
     private String rqp20Q;
-    @Column(name = "RQP20_R")
+    @Column(name = "rqp20_r")
     private String rqp20R;
-    @Column(name = "RQP20_S")
+    @Column(name = "rqp20_s")
     private String rqp20S;
-    @Column(name = "RQP20_T")
+    @Column(name = "rqp20_t")
     private String rqp20T;
-    @Column(name = "RQP20_U")
+    @Column(name = "rqp20_u")
     private String rqp20U;
-    @Column(name = "RQP20_V")
+    @Column(name = "rqp20_v")
     private String rqp20V;
-    @Column(name = "RQP20_W")
+    @Column(name = "rqp20_w")
     private String rqp20W;
-    @Column(name = "RQP20_X")
+    @Column(name = "rqp20_x")
     private String rqp20X;
-    @Column(name = "RQP20_Y")
+    @Column(name = "rqp20_y")
     private String rqp20Y;
-    @Column(name = "RQP20_Z")
+    @Column(name = "rqp20_z")
     private String rqp20Z;
-    @Column(name = "RQP20_AA")
+    @Column(name = "rqp20_aa")
     private String rqp20Aa;
-    @Column(name = "RQP20_BB")
+    @Column(name = "rqp20_bb")
     private String rqp20Bb;
-    @Column(name = "RQP20_CC")
+    @Column(name = "rqp20_cc")
     private String rqp20Cc;
-    @Column(name = "RQP20_DD")
+    @Column(name = "rqp20_dd")
     private String rqp20Dd;
-    @Column(name = "RQP20_EE")
+    @Column(name = "rqp20_ee")
     private String rqp20Ee;
-    @Column(name = "RQP21")
+    @Column(name = "rqp21")
     private String rqp21;
-    @Column(name = "RQP22")
+    @Column(name = "rqp22")
     private String rqp22;
-    @Column(name = "RQP23_DIA")
-    private String rqp23Dia;
-    @Column(name = "RQP23_MES")
-    private String rqp23Mes;
-    @Column(name = "RQP23_ANO")
-    private String rqp23Ano;
-    @Column(name = "RQP24")
+    @Column(name = "rqp23_dia")
+    private Integer rqp23Dia;
+    @Column(name = "rqp23_mes")
+    private Integer rqp23Mes;
+    @Column(name = "rqp23_ano")
+    private Integer rqp23Ano;
+    @Column(name = "rqp24")
     private String rqp24;
-    @Column(name = "RQP25")
+    @Column(name = "rqp25")
     private String rqp25;
-    @Column(name = "RQP26")
+    @Column(name = "rqp26")
     private String rqp26;
-    @Column(name = "RQP27")
+    @Column(name = "rqp27")
     private String rqp27;
-    @Column(name = "RQP28_A")
+    @Column(name = "rqp28_a")
     private String rqp28A;
-    @Column(name = "RQP28_B")
+    @Column(name = "rqp28_b")
     private String rqp28B;
-    @Column(name = "RQP28_C")
+    @Column(name = "rqp28_c")
     private String rqp28C;
-    @Column(name = "RQP29")
+    @Column(name = "rqp29")
     private String rqp29;
-    @Column(name = "RQP30")
+    @Column(name = "rqp30")
     private String rqp30;
-    @Column(name = "RQP31")
+    @Column(name = "rqp31")
     private String rqp31;
-    @JoinColumn(name = "COD_PACIENTE", referencedColumnName = "ID")
+    @JoinColumn(name = "cod_paciente", referencedColumnName = "id")
     @ManyToOne
     private Paciente codPaciente;
 
@@ -319,11 +311,11 @@ public class QuestionarioPessoal implements Serializable {
         this.rqp2 = rqp2;
     }
 
-    public String getRqp4() {
+    public Integer getRqp4() {
         return rqp4;
     }
 
-    public void setRqp4(String rqp4) {
+    public void setRqp4(Integer rqp4) {
         this.rqp4 = rqp4;
     }
 
@@ -343,59 +335,59 @@ public class QuestionarioPessoal implements Serializable {
         this.rqp6 = rqp6;
     }
 
-    public String getRqp7() {
+    public Integer getRqp7() {
         return rqp7;
     }
 
-    public void setRqp7(String rqp7) {
+    public void setRqp7(Integer rqp7) {
         this.rqp7 = rqp7;
     }
 
-    public String getRqp8() {
+    public Integer getRqp8() {
         return rqp8;
     }
 
-    public void setRqp8(String rqp8) {
+    public void setRqp8(Integer rqp8) {
         this.rqp8 = rqp8;
     }
 
-    public String getRqp9() {
+    public Integer getRqp9() {
         return rqp9;
     }
 
-    public void setRqp9(String rqp9) {
+    public void setRqp9(Integer rqp9) {
         this.rqp9 = rqp9;
     }
 
-    public String getRqp10() {
+    public Integer getRqp10() {
         return rqp10;
     }
 
-    public void setRqp10(String rqp10) {
+    public void setRqp10(Integer rqp10) {
         this.rqp10 = rqp10;
     }
 
-    public String getRqp11() {
+    public Integer getRqp11() {
         return rqp11;
     }
 
-    public void setRqp11(String rqp11) {
+    public void setRqp11(Integer rqp11) {
         this.rqp11 = rqp11;
     }
 
-    public String getRqp12() {
+    public Integer getRqp12() {
         return rqp12;
     }
 
-    public void setRqp12(String rqp12) {
+    public void setRqp12(Integer rqp12) {
         this.rqp12 = rqp12;
     }
 
-    public String getRqp13() {
+    public Integer getRqp13() {
         return rqp13;
     }
 
-    public void setRqp13(String rqp13) {
+    public void setRqp13(Integer rqp13) {
         this.rqp13 = rqp13;
     }
 
@@ -871,27 +863,27 @@ public class QuestionarioPessoal implements Serializable {
         this.rqp22 = rqp22;
     }
 
-    public String getRqp23Dia() {
+    public Integer getRqp23Dia() {
         return rqp23Dia;
     }
 
-    public void setRqp23Dia(String rqp23Dia) {
+    public void setRqp23Dia(Integer rqp23Dia) {
         this.rqp23Dia = rqp23Dia;
     }
 
-    public String getRqp23Mes() {
+    public Integer getRqp23Mes() {
         return rqp23Mes;
     }
 
-    public void setRqp23Mes(String rqp23Mes) {
+    public void setRqp23Mes(Integer rqp23Mes) {
         this.rqp23Mes = rqp23Mes;
     }
 
-    public String getRqp23Ano() {
+    public Integer getRqp23Ano() {
         return rqp23Ano;
     }
 
-    public void setRqp23Ano(String rqp23Ano) {
+    public void setRqp23Ano(Integer rqp23Ano) {
         this.rqp23Ano = rqp23Ano;
     }
 
