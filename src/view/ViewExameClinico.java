@@ -1826,9 +1826,10 @@ public class ViewExameClinico extends JFrame {
                 exame.setRq10BDir(QE10BD);
                 exame.setRq10BEsq(QE10BE);
                 
-                Paciente p = new Paciente();
+                List<Paciente> pacientes = controlador.BuscarPacientes();
                 
-                exame.setCodPacienteExame(p);
+                //exame.setCodPacienteExame(pacientes.get(0));
+                //exame.setId(1);
                 
                 controlador.inserirExameClinico(exame);
                 

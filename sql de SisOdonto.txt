@@ -1,5 +1,5 @@
 CREATE TABLE paciente (
-id INTEGER NOT NULL PRIMARY KEY,
+id Serial NOT NULL PRIMARY KEY,
 nome VARCHAR (40),
 rua VARCHAR (40),
 bairro VARCHAR (40),
@@ -20,7 +20,7 @@ nacionalidade VARCHAR (40)
 
 
 CREATE TABLE diagnostico (
-id INTEGER NOT NULL PRIMARY KEY,
+id Serial NOT NULL PRIMARY KEY,
 d1 VARCHAR (40),
 d2 VARCHAR (40),
 d3 VARCHAR (40),
@@ -33,7 +33,7 @@ cod_paciente_diag INTEGER CONSTRAINT tblpaciente_diagnosticoFK REFERENCES pacien
 
 CREATE TABLE exame_clinico (
 
-id INTEGER NOT NULL PRIMARY KEY,
+id Serial NOT NULL PRIMARY KEY,
 
 rqp3 VARCHAR (40),
 rqp14_a VARCHAR (40),
@@ -123,7 +123,7 @@ cod_paciente_exame INTEGER CONSTRAINT tblpaciente_exameFK REFERENCES paciente (i
 
 CREATE TABLE questionario_pessoal (
 
-id INTEGER NOT NULL PRIMARY KEY,
+id Serial NOT NULL PRIMARY KEY,
 
 rqp1 VARCHAR (40),
 rqp2 VARCHAR (40),

@@ -48,7 +48,7 @@ public class Paciente implements Serializable {
     @Column(name = "bairro")
     private String bairro;
     @Column(name = "numero")
-    private Integer numero;
+    private String numero;
     @Column(name = "cidade")
     private String cidade;
     @Column(name = "raca")
@@ -66,7 +66,7 @@ public class Paciente implements Serializable {
     @Column(name = "sexo")
     private String sexo;
     @Column(name = "idade")
-    private Integer idade;
+    private String idade;
     @Column(name = "naturalidade")
     private String naturalidade;
     @Column(name = "nacionalidade")
@@ -117,11 +117,11 @@ public class Paciente implements Serializable {
         this.bairro = bairro;
     }
 
-    public Integer getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(Integer numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 
@@ -189,11 +189,11 @@ public class Paciente implements Serializable {
         this.sexo = sexo;
     }
 
-    public Integer getIdade() {
+    public String getIdade() {
         return idade;
     }
 
-    public void setIdade(Integer idade) {
+    public void setIdade(String idade) {
         this.idade = idade;
     }
 

@@ -50,7 +50,7 @@ public class Controlador {
         daoQuestPessoal = new QuestionarioPessoalJpaController(emf.getEmf());
     }
     
-    public void cadastrarPaciente(String nome, String raca, String sexo, int idade, String naturalidade, String nacionalidade, 
+    public void cadastrarPaciente(String nome, String raca, String sexo, String idade, String naturalidade, String nacionalidade, 
             String endereco, String cidade, String uf, String cep, String telefone){
         paciente= new Paciente();
         paciente.setNome(nome);

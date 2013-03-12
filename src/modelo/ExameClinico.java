@@ -86,9 +86,9 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "ExameClinico.findByRq10BEsq", query = "SELECT e FROM ExameClinico e WHERE e.rq10BEsq = :rq10BEsq")})
 public class ExameClinico implements Serializable {
     private static final long serialVersionUID = 1L;
+    @GeneratedValue(strategy= GenerationType.SEQUENCE)
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    @Basic(optional = false)
+    //@Basic(optional = false)
     @Column(name = "id")
     private Integer id;
     @Column(name = "rqp3")

@@ -113,25 +113,25 @@ public class QuestionarioPessoal implements Serializable {
     @Column(name = "rqp2")
     private String rqp2;
     @Column(name = "rqp4")
-    private Integer rqp4;
+    private String rqp4;
     @Column(name = "rqp5")
     private String rqp5;
     @Column(name = "rqp6")
     private String rqp6;
     @Column(name = "rqp7")
-    private Integer rqp7;
+    private String rqp7;
     @Column(name = "rqp8")
-    private Integer rqp8;
+    private String rqp8;
     @Column(name = "rqp9")
-    private Integer rqp9;
+    private String rqp9;
     @Column(name = "rqp10")
-    private Integer rqp10;
+    private String rqp10;
     @Column(name = "rqp11")
-    private Integer rqp11;
+    private String rqp11;
     @Column(name = "rqp12")
-    private Integer rqp12;
+    private String rqp12;
     @Column(name = "rqp13")
-    private Integer rqp13;
+    private String rqp13;
     @Column(name = "rqp15_a")
     private String rqp15A;
     @Column(name = "rqp15_b")
@@ -251,11 +251,11 @@ public class QuestionarioPessoal implements Serializable {
     @Column(name = "rqp22")
     private String rqp22;
     @Column(name = "rqp23_dia")
-    private Integer rqp23Dia;
+    private String rqp23Dia;
     @Column(name = "rqp23_mes")
-    private Integer rqp23Mes;
+    private String rqp23Mes;
     @Column(name = "rqp23_ano")
-    private Integer rqp23Ano;
+    private String rqp23Ano;
     @Column(name = "rqp24")
     private String rqp24;
     @Column(name = "rqp25")
@@ -311,11 +311,11 @@ public class QuestionarioPessoal implements Serializable {
         this.rqp2 = rqp2;
     }
 
-    public Integer getRqp4() {
+    public String getRqp4() {
         return rqp4;
     }
 
-    public void setRqp4(Integer rqp4) {
+    public void setRqp4(String rqp4) {
         this.rqp4 = rqp4;
     }
 
@@ -335,59 +335,59 @@ public class QuestionarioPessoal implements Serializable {
         this.rqp6 = rqp6;
     }
 
-    public Integer getRqp7() {
+    public String getRqp7() {
         return rqp7;
     }
 
-    public void setRqp7(Integer rqp7) {
+    public void setRqp7(String rqp7) {
         this.rqp7 = rqp7;
     }
 
-    public Integer getRqp8() {
+    public String getRqp8() {
         return rqp8;
     }
 
-    public void setRqp8(Integer rqp8) {
+    public void setRqp8(String rqp8) {
         this.rqp8 = rqp8;
     }
 
-    public Integer getRqp9() {
+    public String getRqp9() {
         return rqp9;
     }
 
-    public void setRqp9(Integer rqp9) {
+    public void setRqp9(String rqp9) {
         this.rqp9 = rqp9;
     }
 
-    public Integer getRqp10() {
+    public String getRqp10() {
         return rqp10;
     }
 
-    public void setRqp10(Integer rqp10) {
+    public void setRqp10(String rqp10) {
         this.rqp10 = rqp10;
     }
 
-    public Integer getRqp11() {
+    public String getRqp11() {
         return rqp11;
     }
 
-    public void setRqp11(Integer rqp11) {
+    public void setRqp11(String rqp11) {
         this.rqp11 = rqp11;
     }
 
-    public Integer getRqp12() {
+    public String getRqp12() {
         return rqp12;
     }
 
-    public void setRqp12(Integer rqp12) {
+    public void setRqp12(String rqp12) {
         this.rqp12 = rqp12;
     }
 
-    public Integer getRqp13() {
+    public String getRqp13() {
         return rqp13;
     }
 
-    public void setRqp13(Integer rqp13) {
+    public void setRqp13(String rqp13) {
         this.rqp13 = rqp13;
     }
 
@@ -863,27 +863,27 @@ public class QuestionarioPessoal implements Serializable {
         this.rqp22 = rqp22;
     }
 
-    public Integer getRqp23Dia() {
+    public String getRqp23Dia() {
         return rqp23Dia;
     }
 
-    public void setRqp23Dia(Integer rqp23Dia) {
+    public void setRqp23Dia(String rqp23Dia) {
         this.rqp23Dia = rqp23Dia;
     }
 
-    public Integer getRqp23Mes() {
+    public String getRqp23Mes() {
         return rqp23Mes;
     }
 
-    public void setRqp23Mes(Integer rqp23Mes) {
+    public void setRqp23Mes(String rqp23Mes) {
         this.rqp23Mes = rqp23Mes;
     }
 
-    public Integer getRqp23Ano() {
+    public String getRqp23Ano() {
         return rqp23Ano;
     }
 
-    public void setRqp23Ano(Integer rqp23Ano) {
+    public void setRqp23Ano(String rqp23Ano) {
         this.rqp23Ano = rqp23Ano;
     }
 

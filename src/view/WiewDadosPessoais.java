@@ -897,14 +897,14 @@ public class WiewDadosPessoais extends JFrame {
                 paciente.setNome(campoNome.getText());
                 paciente.setRua(campoRua.getText());
                 paciente.setBairro(campoBairro.getText());
-                paciente.setNumero(Integer.parseInt(campoNumero.getText()));
+                paciente.setNumero(campoNumero.getText());
                 paciente.setCidade(campoCidade.getText());
                 paciente.setUf(campoUF.getText());
                 paciente.setCep(campoCep.getText());
                 paciente.setCpf(campoCpf.getText());
                 paciente.setNaturalidade(campoNaturalidade.getText());
                 paciente.setNacionalidade(campoNacionalidade.getText());
-                paciente.setIdade(Integer.parseInt(campoIdade.getText()));
+                paciente.setIdade(campoIdade.getText());
                 paciente.setTelefone(campoTelefone.getText());
                 paciente.setCelular(campoCelular.getText());
                 paciente.setSexo(ComboBoxSexo.getSelectedItem().toString());
